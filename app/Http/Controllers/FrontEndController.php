@@ -219,7 +219,7 @@ class FrontEndController extends Controller
             'authkey' => 'YOUR_SECRET_KEY'
         ])->get('www.mis.esnaad.com/api/v1/esnaad/developments-details/'.$slug);
         $jsonData = $response->json();  
-        dd($jsonData);
+        // dd($jsonData);
 
 
         
