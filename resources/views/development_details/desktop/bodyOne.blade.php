@@ -1,51 +1,43 @@
-<div class="sm:container sm:mx-auto mx-0 px-4 xl:my-10 sm:my-4 mx-auto">
+<div class="sm:container sm:mx-auto mx-0 px-4 xl:my-10 sm:my-4 mx-auto"  @if($langSeg == 'ar') dir="rtl" @endif>
 
     <div class="row-span-2 grid sm:grid-cols-2 gap-4 w-[100%]">
         <div>
             <h2 class="text-esnaad_text font-base my-8 text-2xl xl:text-2xl w-[90%] ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus augue ut ligula
-                accumsan dictum.
+                @if($langSeg == 'ar')
+                    {{$secOne_title_ar}}
+                @else
+                    {{$secOne_title}}
+                @endif
             </h2>
-            <p class="text-esnaad_text font-base my-8 w-[90%] leading-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus augue ut ligula accumsan dictum. Phasellus euismod in lectus nec cursus. Curabitur in sem et elit dignissim
-                condimentum eget ac dui. Nulla non nisl mollis ipsum laoreet ultrices ac in sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus augue ut ligula accumsan dictum.
-                Phasellus euismod in lectus nec cursus. 
+            <p class="text-esnaad_text font-base my-8 w-[90%] leading-8 text-justify">
+                @if($langSeg == 'ar')
+                    {{$SecOne_description}}
+                @else
+                    {{$SecOne_description_ar}}
+                @endif
             </p>
         </div>
-        <div class="text-esnaad_text text-justify font-light m-8 w-full">
-            <div class="row-span-2 grid sm:grid-cols-2 gap-4 w-[100%] mb-8">
+        <div class="text-esnaad_text text-justify font-light m-8 w-full my-auto" dir="rtl">
+            <div class="row-span-2 grid sm:grid-cols-2 gap-4 w-[100%] mb-8" >
                 <div>
-                    <h3 class="text-esnaad_text text-justify font-thin text-xl xl:text-xl w-[90%] tracking-wider">
+                    <h3 class="text-esnaad_ text text-justify font-thin text-lg xl:text-lg w-[90%] tracking-wider">
                         Prices From
                     </h3>
-                    <p class="text-xl xl:text-2xl text-justify font-semibold w-[90%] tracking-wider">
-                        AED 2,184,564
+                    <p class="text-xl xl:text-3xl text-justify font-light w-[90%] tracking-wider" >
+                        AED {{ number_format($starting_price)}}
                     </p>
                 </div>
 
-
                 <div>
-                    <h3 class="text-esnaad_text text-justify font-thin text-xl xl:text-xl w-[90%] tracking-wider">
-                        Area (Sq.Ft) 
-                    </h3>
-                    <p class="text-xl xl:text-2xl text-justify font-semibold w-[90%] tracking-wider">
-                        1,235 - 1,235
-                    </p>
-                </div>
-
-                
-            </div>
-
-            <div class="row-span-2 grid sm:grid-cols-2 gap-4 w-[100%]  mb-8">
-                
-                <div></div>
-
-                <div>
-                    <h3 class="text-esnaad_text text-justify font-thin text-xl xl:text-xl w-[90%] tracking-wider">
+                    <h3 class="text-esnaad_text text-justify font-thin text-lg xl:text-lg w-[90%] tracking-wider">
                         Apartments
                     </h3>
-                    <p class="text-xl xl:text-2xl text-justify font-semibold w-[90%] tracking-wider">
-                        Studio, 1 & 2
+                    <p class="text-xl xl:text-3xl font-light w-[100%] tracking-wider rtl:text-right " dir="ltr">
+                        @if($langSeg == 'ar')
+                            {{$bedrooms}}
+                        @else
+                            {{$bedrooms}}
+                        @endif
                     </p>
                 </div>
             </div>

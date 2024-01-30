@@ -62,6 +62,18 @@
                 font-weight: normal;
                 src: local('Optima Bold'), url('front/fonts/OPTIMA_B.woff') format('woff');
             }
+
+            @font-face {
+                font-family: 'Optima LT W02 Roman';
+                font-style: normal;
+                font-weight: normal;
+                src: url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.eot");
+                src: url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.eot?#iefix")format("embedded-opentype"),
+                url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.woff2")format("woff2"),
+                url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.woff")format("woff"),
+                url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.ttf")format("truetype"),
+                url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.svg#Optima LT W02 Roman")format("svg");
+            }
         </style>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])

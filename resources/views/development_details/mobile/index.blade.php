@@ -2,6 +2,45 @@
 
 <?php $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
 
+<?php
+    $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri_segments = explode('/', $uri_path);
+    $seg1 = $uri_segments[1];
+    if($seg1 == 'en' || $seg1 == 'ar'){
+        $langSeg = $uri_segments[1];
+    }else{
+        $langSeg = 'en';
+    }
+?>
+<?php
+    $id = $response['id'];
+    $name = $response['name'];
+    $namear = $response['name_ar'];
+    $slug = $response['slug_link'];
+    $starting_price = $response['starting_price'];
+    $bedrooms = $response['bedrooms'];
+    $project_video = $response['project_video'];
+
+    $header = $response['header'];
+    $description = $response['description'];
+    $descriptionar = $response['description_ar'];
+
+    $secOne_title = $response['secOne_title'];
+    $secOne_title_ar = $response['secOne_title_ar'];
+    $secTwo_title = $response['secTwo_title'];
+    $secTwo_title_ar = $response['secTwo_title_ar'];
+    $secThree_title = $response['secThree_title'];
+    $secThree_title_ar = $response['secThree_title_ar'];
+    $SecTwo_amenities = $response['SecTwo_amenities'];
+    $SecTwo_amenities_ar = $response['SecTwo_amenities_ar'];
+
+    $SecOne_description         =    $response['SecOne_description'];
+    $SecOne_description_ar      =    $response['SecOne_description_ar'];
+    $SecTwo_description         =    $response['SecTwo_description'];
+    $SecTwo_description_ar      =    $response['SecTwo_description_ar'];
+    $SecThree_description       =    $response['SecThree_description'];
+    $SecThree_description_ar    =    $response['SecThree_description_ar'];
+?>
 @section('luxe_asset_css')
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
@@ -14,9 +53,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
 
-    <link rel="stylesheet" href="{{ asset('owl/owl.carousel.min.css') }}">
-    
-    <link rel="stylesheet" href="{{ asset('owl/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('splide/dist/css/splide.min.css')}}">
 
     <style>
         .iti {
@@ -76,9 +113,7 @@
 @section('luxe_asset_js')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="{{ asset('owl/jquery.min.js') }}"></script>
-
-    <script src="{{ asset('owl/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('splide/dist/js/splide.min.js')}}"></script>
 
 
 

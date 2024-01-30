@@ -1,7 +1,7 @@
 <div class="bg-footer mx-0 py-8 mt-4 mx-auto">
     <div class="row px-4 mb-4">
         <h2 class="text-esnaad_text text-left leading-6 text-xl ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus
+                
         </h2>
     </div>
 
@@ -28,27 +28,31 @@
     <div class="row px-4 grid xl:grid-cols-2 gap-0 h-[100%] w-[100%]">
         <div class="">
             <p class="text-esnaad_text text-justify font-sm xl:font-base my-4 xl:w-[90%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus augue ut ligula accumsan dictum. Phasellus euismod in lectus nec cursus. Curabitur in sem et elit dignissim
-                condimentum eget ac dui. Nulla non nisl mollis ipsum laoreet ultrices ac in sapien. 
-                <span class="hidden" id="more-text2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus augue ut ligula accumsan dictum.
-                    Phasellus euismod in lectus nec cursus. Curabitur in sem et elit dignissim condimentum eget ac dui. Nulla non nisl mollis ipsum laoreet ultrices ac in sapien.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus augue ut ligula accumsan dictum.
-                    Phasellus euismod in lectus nec cursus. Curabitur in sem et elit dignissim condimentum eget ac dui. Nulla non nisl mollis ipsum laoreet ultrices ac in sapien.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus augue ut ligula accumsan dictum.
-                    Phasellus euismod in lectus nec cursus. Curabitur in sem et elit dignissim condimentum eget ac dui. Nulla non nisl mollis ipsum laoreet ultrices ac in sapien.
+                @if($langSeg == 'ar')
+                    {{ \Illuminate\Support\Str::limit($SecThree_description_ar, $limit = 150, $end='') }}
+                @else
+                    {{ \Illuminate\Support\Str::limit($SecThree_description_ar, $limit = 150, $end='') }}
+                @endif
+
+                <span class="hidden" id="more-text">
+                @if($langSeg == 'ar')
+                    {{ preg_replace('/^\s+/', '', substr($SecThree_description, 149)) }}
+                @else
+                    {{ preg_replace('/^\s+/', '', substr($SecThree_description, 149)) }}
+                    
+                @endif
                 </span>
-                <button id="toggle-btn2" class="text-black focus:outline-none underline">Read More...</button>
-                <button id="hide-btn2" class="hidden text-black focus:outline-none underline">Hide...</button>
+                <button id="toggle-btn" class=" text-black focus:outline-none underline">Read More...</button>
+                <button id="hide-btn" class="hidden text-black focus:outline-none underline">Hide...</button>
             </p>
         </div>
     </div>
 </div>
 
 <script>
-    const moreTextEl2 = document.getElementById('more-text2');
-    const toggleBtnEl2 = document.getElementById('toggle-btn2');
-    const hideBtnEl2 = document.getElementById('hide-btn2');
+    const moreTextEl2 = document.getElementById('more-text');
+    const toggleBtnEl2 = document.getElementById('toggle-btn');
+    const hideBtnEl2 = document.getElementById('hide-btn');
 
     toggleBtnEl2.addEventListener('click', () => {
         moreTextEl2.classList.toggle('hidden');

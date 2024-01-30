@@ -1,156 +1,148 @@
 
-{{-- <style>
-    .owl-dots {
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    }
-    .owl-dots button.owl-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #ccc;
-    margin: 0 3px;
-    }
-    .owl-dots button.owl-dot.active {
-    background-color: #000;
-    }
-    .owl-dots button.owl-dot:focus {
-    outline: none;
-    }
-    .owl-nav button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.38) !important;
-    }
-</style> --}}
+@section('developments_gallery_head')
+    <!-- Link to the file hosted on your server, -->
+    <link rel="stylesheet" href="{{ asset('splide/dist/css/splide.min.css')}}">
+
+@endsection
 <style>
-    .main-content {
-    position: relative;
-
-    .owl-theme {
-        .custom-nav {
-            position: absolute;
-            top: 20%;
-            left: 0;
-            right: 0;
-
-            .owl-prev, .owl-next {
-                position: absolute;
-                height: 100px;
-                color: inherit;
-                background: none;
-                border: none;
-                z-index: 100;
-
-                i {
-                    font-size: 2.5rem;
-                    color: #cecece;
-                }
-            }
-
-            .owl-prev {
-                left: 0;
-            }
-
-            .owl-next {
-                right: 0;
-            }
-        }
+    .thumbnails {
+        display: flex;
+        margin: 1rem auto 0;
+        padding: 0;
+        justify-content: center;
     }
-}
+
+
+    .thumbnail {
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        list-style: none;
+        margin: 0 0.2rem;
+        cursor: pointer;
+    }
+
+
+    .thumbnail img {
+        width: 100%;
+        height: auto;
+    }
 </style>
-<div class="bg-footer sm:mx-auto mx-0 px-0 my-0 mx-auto sm:h-[25vh] xl:h-[50vh]">
-    <div class="row-span-2 h-[100%] w-[100%]">
-        {{-- <div class="owl-carousel owl-theme owl-loaded">
-            <div class="owl-stage-outer">
-                <div class="owl-stage">
-                    <div class="item">  
-                        <img class="p-0 m-0" src="{{ asset('developments/14.jpg') }}">
-                    </div>
-                    <div class="item"> 
-                        <img class="p-0 m-0" src="{{ asset('developments/11.jpg') }}">
-                    </div>
-                    <div class="item">
-                        <img class="p-0 m-0" src="{{ asset('developments/10.jpg') }}">
-                    </div>
-                    <div class="item">
-                        <img class="p-0 m-0" src="{{ asset('developments/8.jpg') }}">
-                    </div>
-                </div>
-            </div>
-            <div class="owl-controls">
-                <div class="owl-nav">
-                    <div class="owl-prev">prev</div>
-                    <div class="owl-next">next</div>
-                </div>
-            </div>
-        </div> --}}
-        <div class="main-content">
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?fit=crop&fm=jpg&h=800&q=80&w=1200" alt="Picture 1">
-                </div>
-                <div class="item">
-                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?fit=crop&fm=jpg&h=800&q=80&w=1200" alt="Picture 2">
-                </div>
-                <div class="item">
-                    <img src="https://images.unsplash.com/photo-1509149037-37dc57ccbd13?fit=crop&fm=jpg&h=800&q=80&w=1200" alt="Picture 3">
-                </div>
-                <div class="item">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?fit=crop&fm=jpg&h=800&q=80&w=1200" alt="Picture 4">
-                </div>
-            </div>
-            <div class="owl-theme">
-                <div class="owl-controls">
-                    <div class="custom-nav owl-nav"></div>
-                </div>
+
+<section id="main-carousel" class="splide" aria-label="My Awesome Gallery">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="" width="100%">
+      </li>
+      <li class="splide__slide">
+        <img src="{{ asset('assets/img/carousel-2.jpg') }}" alt="" width="100%">
+      </li>
+      <li class="splide__slide">
+        <img src="{{ asset('assets/img/carousel-3.jpg') }}" alt="" width="100%">
+      </li>
+      <li class="splide__slide">
+        <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="" width="100%">
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<ul id="thumbnails" class="thumbnails">
+  <li class="thumbnail">
+    <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="">
+  </li>
+  <li class="thumbnail">
+    <img src="{{ asset('assets/img/carousel-2.jpg') }}" alt="">
+  </li>
+  <li class="thumbnail">
+    <img src="{{ asset('assets/img/carousel-3.jpg') }}" alt="">
+  </li>
+  <li class="thumbnail">
+    <img src="{{ asset('assets/img/carousel-4.jpg') }}" alt="">
+  </li>
+</ul>
+
+
+<div class="sm:container sm:mx-auto mx-0 px-4 xl:my-20 sm:my-4 mx-auto">
+
+    <div class="row-span-2 grid sm:grid-cols-2 gap-4 h-[100%] w-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
+        <div>
+            <h2 class="text-esnaad_text text-justify font-base my-8 text-2xl xl:text-2xl w-[90%]">
+                @if($langSeg == 'ar')
+                    {{$secTwo_title_ar}}
+                @else
+                    {{$secTwo_title}}
+                @endif
+            </h2>
+            <p class="text-esnaad_text text-justify font-base my-8 w-[90%] leading-8">
+                @if($langSeg == 'ar')
+                    {{$SecTwo_description}}
+                @else
+                    {{$SecTwo_description_ar }}
+                @endif
+            </p>
+        </div>
+        <div class="text-esnaad_text text-justify font-light m-8 w-full">
+            <div class="row w-[100%] h-[30%] mb-8">
+                @if($langSeg == 'ar')
+                    {!! $SecTwo_amenities !!}
+                @else
+                    {!! $SecTwo_amenities_ar !!}
+                @endif
+                
             </div>
         </div>
-        {{-- </div>
-        <div class="owl-carousel">
-          <div class="item">  
-              <img class="p-0 m-0" src="{{ asset('developments/14.jpg') }}">
-          </div>
-          <div class="item">  
-              <img class="p-0 m-0" src="{{ asset('developments/11.jpg') }}">
-          </div>
-          <div class="item">  
-              <img class="p-0 m-0" src="{{ asset('developments/10.jpg') }}">
-          </div>
-          <div class="item">  
-              <img class="p-0 m-0" src="{{ asset('developments/8.jpg') }}">
-          </div>
-      </div>    --}}
     </div>
+
+
 </div>
 
 
+@section('luxe_asset_js')
+<script src="{{ asset('splide/dist/js/splide.min.js')}}"></script>
 <script>
-    $(document).ready(function(){  
-        $('.main-content .owl-carousel').owlCarousel({
-    stagePadding: 50,
-    loop: true,
-    margin: 10,
-    nav: true,
-    navText: [
-        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-    ],
-    navContainer: '.main-content .custom-nav',
-    responsive:{
-        0:{
-            items: 1
-        },
-        600:{
-            items: 3
-        },
-        1000:{
-            items: 5
-        }
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '#main-carousel', {
+    pagination: false,
+    } );
+
+
+    var thumbnails = document.getElementsByClassName( 'thumbnail' );
+    var current;
+
+
+    for ( var i = 0; i < thumbnails.length; i++ ) {
+    initThumbnail( thumbnails[ i ], i );
     }
-});
-    });
+
+
+    function initThumbnail( thumbnail, index ) {
+    thumbnail.addEventListener( 'click', function () {
+        splide.go( index );
+    } );
+    }
+
+
+    splide.on( 'mounted move', function () {
+    var thumbnail = thumbnails[ splide.index ];
+
+
+    if ( thumbnail ) {
+        if ( current ) {
+        current.classList.remove( 'is-active' );
+        }
+
+
+        thumbnail.classList.add( 'is-active' );
+        current = thumbnail;
+    }
+    } );
+
+
+    splide.mount();
+  } );
 </script>
+@endsection
+

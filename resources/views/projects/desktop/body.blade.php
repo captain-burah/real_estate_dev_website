@@ -55,13 +55,31 @@
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6" @if($langSeg == 'ar') dir="rtl" @endif>
                         <div>
-                            <x-new-project-desktop
-                                img="{{asset('/home/COMING_SOON.jpeg')}}"
-                                id="hfdsokanidon"
-                                logo="{{asset('/home/ed.png')}}"
-                                name="THE GULF AVENUE"
-                                location="Nad Al Sheba"
-                            ></x-new-project-desktop>
+                            @foreach($response as $data)
+                                <?php
+                                    $id = $data['id'];
+                                    $name = $data['name'];
+                                    $namear = $data['name_ar'];
+                                    $community = $data['community'];
+                                    $communityar = $data['community_ar'];
+                                    $slug = $data['slug_link'];
+                                    $thumbnail = $data['thumbnail'];
+                                    $logo = $data['logo'];
+                                    $header = $data['header'];
+                                ?>
+                                <x-new-project-desktop
+                                    :id="$id"
+                                    :name="$name"
+                                    :namear="$namear"
+                                    :community="$community"
+                                    :communityar="$communityar"
+                                    :slug="$slug"
+                                    :thumbnail="$thumbnail"
+                                    :logo="$logo"
+                                    :header="$header"
+
+                                ></x-new-project-desktop>
+                            @endforeach
                         </div>
                     </div>
                 </section>

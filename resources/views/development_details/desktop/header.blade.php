@@ -44,21 +44,27 @@
     </style>
 @endsection
 
-<header>
-    <div class="w-full bg-cover bg-center" style="height: 100vh; background-image: url('{{ URL::asset('developments/7.jpg')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
-        <div class="flex items-center justify-left h-full w-full bg-gray-950/70">
 
-            <div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-4 mx-auto text-white">
+<header>
+    <div class="w-full bg-cover bg-center" style="height: 100vh; background-image: url('https://mis.esnaad.com/uploads/projects/{{$id}}/{{$header}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+        <div class="flex items-center @if($langSeg == 'ar') justify-right @else justify-left @endif h-full w-full bg-gray-950/70">
+
+            <div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-4 mx-auto text-white @if($langSeg == 'ar') text-right @else text-left @endif">
                 <h1 class="text-4xl font-semibold ">
-                    The Gulf Villas
+                    @if($langSeg == 'ar')
+                        {{$namear}}
+                    @else
+                        {{$name}}
+                    @endif
                 </h1>
-                <p class="text-base font-light leading-8 w-[45%]">
-                    Our projects are a reflection of our commitment to excellence. From luxurious
-                    residential complexes to state-of-the-art commercial spaces, each project is
-                    designed with attention to detail and a focus on quality.
+                <p class="text-base font-light leading-8 w-[50%] @if($langSeg == 'ar') float-right @else float-left @endif">
+                    @if($langSeg == 'ar')
+                        {{$descriptionar}}
+                    @else
+                        {{$description}}
+                    @endif    
                 </p>
             </div>
-
         </div>
     </div>
 </header>

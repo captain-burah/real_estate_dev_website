@@ -45,10 +45,28 @@
 @endsection
 
 
-<x-new-project
-    img="{{asset('/home/COMING_SOON.jpeg')}}"
-    id="hfdsokanidon"
-    logo="{{asset('/home/ed.png')}}"
-    name="THE GULF AVENUE"
-    location="Nad Al Sheba"
-></x-new-project>
+@foreach($response as $data)
+    <?php
+        $id = $data['id'];
+        $name = $data['name'];
+        $namear = $data['name_ar'];
+        $community = $data['community'];
+        $communityar = $data['community_ar'];
+        $slug = $data['slug_link'];
+        $thumbnail = $data['thumbnail'];
+        $logo = $data['logo'];
+        $header = $data['header'];
+    ?>
+    <x-new-project-desktop
+        :id="$id"
+        :name="$name"
+        :namear="$namear"
+        :community="$community"
+        :communityar="$communityar"
+        :slug="$slug"
+        :thumbnail="$thumbnail"
+        :logo="$logo"
+        :header="$header"
+
+    ></x-new-project-desktop>
+@endforeach

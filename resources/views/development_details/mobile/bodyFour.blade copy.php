@@ -62,25 +62,12 @@
             </p>
         </div>
         <div class="text-esnaad_text text-justify font-light w-full">
-            <div class="row-span-2 grid grid-cols-2 gap-4 w-[100%] ">
-                <div>
-                    <ul class="list-none">
-                        <li class="mb-5">fnjdsafdsa</li>
-                        <li class="mb-5">fnjdsafdsa</li>
-                        <li class="mb-5">fnjdsafdsa</li>
-                        <li class="mb-5">fnjdsafdsa</li>
-                        <li class="mb-5">fnjdsafdsa</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="list-none">
-                        <li class="mb-5">fnjdsafdsa</li>
-                        <li class="mb-5">fnjdsafdsa</li>
-                        <li class="mb-5">fnjdsafdsa</li>
-                        <li class="mb-5">fnjdsafdsa</li>
-                        <li class="mb-5">fnjdsafdsa</li>
-                    </ul>
-                </div>
+            <div class="row w-[100%] ">
+                @if($langSeg == 'ar')
+                    {!! $SecTwo_amenities !!}
+                @else
+                    {!! $SecTwo_amenities_ar !!}
+                @endif
             </div>
         </div>
     </div>

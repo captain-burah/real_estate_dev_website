@@ -8,23 +8,27 @@ use Illuminate\View\Component;
 
 class NewProject extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-
-    public $img;
-    public $logo;
-    public $name;
-    public $location;  
     public $id;
+     public $name;
+     public $namear;
+     public $community;
+     public $communityar;
+     public $slug;
+     public $thumbnail;
+     public $logo;
+     public $header;
 
-    public function __construct($img, $logo, $name, $location, $id)
+    public function __construct($id, $name, $namear, $community, $communityar, $slug, $thumbnail, $logo, $header)
     {
-        $this->img = $img;
-        $this->logo = $logo;
-        $this->name = $name;
-        $this->location = $location;  
         $this->id = $id;
+        $this->name = $name;
+        $this->namear = $namear;
+        $this->community = $community;
+        $this->communityar = $communityar;
+        $this->slug = $slug;
+        $this->thumbnail = $thumbnail;
+        $this->logo = $logo;
+        $this->header = $header;
     }
 
     /**

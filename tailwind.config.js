@@ -63,9 +63,9 @@ export default {
                 footer_form: '#e9e9e9',
                 esnaad_text: '#000000',
             },
-            // fontFamily: {
-            //     body: ['OptimaNew'],
-            // },
+            fontFamily: {
+                body: ['Optima LT W02 Roman'],
+            },
             backgroundImage: {
                 'hero-pattern': "url('/public/front/images/hero/bg-image.jpg')",
                 'hero-pattern2': "url('/public/front/images/bg-hero2.jpg')",

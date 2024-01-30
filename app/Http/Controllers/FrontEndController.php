@@ -208,36 +208,54 @@ class FrontEndController extends Controller
     public function community_details() {
         $this->data['long'] =  55.156860;
         $this->data['lat'] = 25.101131;
-
         return view('communityDetails', $this->data);
     }
 
 
-    public function developments_details($slug)
+    public function developments_details($lang='', $slug)
     {
         // CALL API FROM MIS
-        // $response = Http::withHeaders([
-        //     'authkey' => 'YOUR_SECRET_KEY'
-        // ])->get('www.mis.esnaad.com/public/index.php/api/v1/esnaad/developments-details/'.$slug);
-        // $jsonData = $response->json();  
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/developments-details/'.$slug);
+        $jsonData = $response->json();  
+        dd($jsonData);
+
+
         
         // RETURN AS JSON
         // dd($jsonData);
-        // $this->data['response'] = $jsonData;
+        $this->data['response'] = $jsonData[0];
 
         // RETURN MAP DATA SEPARATELY
-        // $this->data['long'] = $jsonData[0]['longitude'];
-        // $this->data['lat'] = $jsonData[0]['latitude'];
+        $this->data['long'] = $jsonData[0]['longitude'];
+        $this->data['lat'] = $jsonData[0]['latitude'];
 
-        $this->data['long'] =  55.156860;
-        $this->data['lat'] = 25.101131;
+        // $this->data['long'] =  55.156860;
+        // $this->data['lat'] = 25.101131;
 
 
-        return view('development', $this->data);
+        return view('developmentDetails', $this->data);
     }
 
 
     public function projects() {
+
+
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/developments');
+        $jsonData = $response->json();
+        
+        // RETURN AS JSON
+        $this->data['response'] = $jsonData;
+
+        if(count($jsonData) > 0){
+            $this->data['available'] = '1';
+        }
+
+        // dd($jsonData);
+
 
         $jsonSEOData = $this->landingpageseos(2);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
