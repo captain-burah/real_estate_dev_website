@@ -20,6 +20,9 @@
     $starting_price = $response['starting_price'];
     $bedrooms = $response['bedrooms'];
     $project_video = $response['project_video'];
+    $project_image_id = $response['project_image']['id'];
+    $images = $images;
+    $jsonSEOData = $jsonSEOData;
 
     $header = $response['header'];
     $description = $response['description'];
@@ -74,6 +77,7 @@
 @endsection
 
 @section('content')
+
     <section class="my-0">
         @include('development_details.mobile.header')
     </section>

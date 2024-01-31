@@ -218,24 +218,40 @@ class FrontEndController extends Controller
         $response = Http::withHeaders([
             'authkey' => 'YOUR_SECRET_KEY'
         ])->get('www.mis.esnaad.com/api/v1/esnaad/developments-details/'.$slug);
-        $jsonData = $response->json();  
-        // dd($jsonData);
+        $jsonData = $response->json(); 
+        // dd(($jsonData)) ;
+
+        if($jsonData != null){
+            $this->data['images'] = $images = $jsonData['images'];
+
+            $this->data['response'] = $jsonData['resources'][0];
+
+            $this->data['long'] = $jsonData['resources'][0]['longitude'];
+            $this->data['lat'] = $jsonData['resources'][0]['latitude'];
+
+            if($lang == 'ar'){
+                $jsonSEOData = [
+                    'title_en' => $jsonData['resources'][0]['meta_title_ar'],
+                    'description_en' => $jsonData['resources'][0]['meta_description_ar'],
+                    'keywords_en' => $jsonData['resources'][0]['meta_keywords_ar'],
+                ];
+            } else {
+                $jsonSEOData = [
+                    'title_en' => $jsonData['resources'][0]['meta_title'],
+                    'description_en' => $jsonData['resources'][0]['meta_description'],
+                    'keywords_en' => $jsonData['resources'][0]['meta_keywords'],
+                ];
+            }
+
+            // dd($jsonSEOData['title_en']);
+
+            
+
+            return view('developmentDetails', $this->data)->with('jsonSEOData', $jsonSEOData);
+        }
 
 
-        
-        // RETURN AS JSON
-        // dd($jsonData);
-        $this->data['response'] = $jsonData[0];
-
-        // RETURN MAP DATA SEPARATELY
-        $this->data['long'] = $jsonData[0]['longitude'];
-        $this->data['lat'] = $jsonData[0]['latitude'];
-
-        // $this->data['long'] =  55.156860;
-        // $this->data['lat'] = 25.101131;
-
-
-        return view('developmentDetails', $this->data);
+        return redirect()->back()->with('error', 'Project is Not Available for Viewing');
     }
 
 

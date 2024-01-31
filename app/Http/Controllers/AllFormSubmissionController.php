@@ -86,12 +86,12 @@ class AllFormSubmissionController extends Controller
                 'email' => $leads->email,
 
                 'page_url' => $leads->url,
-                'inquiry' => 'Luxe Properties Dubai',
+                'inquiry' => 'ESNAAD Real Estate Development',
                 'type_id' => $leads->type_id,
 
                 'field_ip' => $leads->ip_address,
-                'source' => 'Luxe Properties Dubai',
-                'utm_parameters' => 'Luxe Properties Dubai',
+                'source' => 'ESNAAD Real Estate Development',
+                'utm_parameters' => 'ESNAAD Real Estate Development',
                 'agent' => '0',
             ];
 

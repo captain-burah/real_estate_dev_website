@@ -10,12 +10,21 @@
         
         <?php
             $route_name = request()->route()->getName();
+            $currentUrl = request()->url();
+            $segments = explode('/', $currentUrl);
+            $nameBeforeSlug = $segments[count($segments) - 2];
         ?>
-
-        @if(isset($jsonSEOData))
+        
+        @if($nameBeforeSlug == 'developments')
             <title>{{$jsonSEOData['title_en']}}</title>
             <meta name="description" content="{{$jsonSEOData['description_en']}}" />
             <meta name="keywords" content="{{$jsonSEOData['keywords_en']}}" />
+        @else
+            @if(isset($jsonSEOData))
+                <title>{{$jsonSEOData['title_en']}}</title>
+                <meta name="description" content="{{$jsonSEOData['description_en']}}" />
+                <meta name="keywords" content="{{$jsonSEOData['keywords_en']}}" />
+            @endif
         @endif
 
 

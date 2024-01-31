@@ -14,8 +14,8 @@
 
 
     .thumbnail {
-        width: 70px;
-        height: 70px;
+        width: 150px;
+        height: 150px;
         overflow: hidden;
         list-style: none;
         margin: 0 0.2rem;
@@ -29,39 +29,26 @@
     }
 </style>
 
-<section id="main-carousel" class="splide" aria-label="My Awesome Gallery">
+<section id="main-carousel" class="splide" aria-label="The Spark by ESNAAD Gallery">
   <div class="splide__track">
     <ul class="splide__list">
-      <li class="splide__slide">
-        <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="" width="100%">
-      </li>
-      <li class="splide__slide">
-        <img src="{{ asset('assets/img/carousel-2.jpg') }}" alt="" width="100%">
-      </li>
-      <li class="splide__slide">
-        <img src="{{ asset('assets/img/carousel-3.jpg') }}" alt="" width="100%">
-      </li>
-      <li class="splide__slide">
-        <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="" width="100%">
-      </li>
+      
+      @foreach($images as $image)
+          <li class="splide__slide">
+            <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="lazy" >
+          </li>
+      @endforeach
     </ul>
   </div>
 </section>
 
 
 <ul id="thumbnails" class="thumbnails">
+@foreach($images as $image)
   <li class="thumbnail">
-    <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="">
+    <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="lazy" >
   </li>
-  <li class="thumbnail">
-    <img src="{{ asset('assets/img/carousel-2.jpg') }}" alt="">
-  </li>
-  <li class="thumbnail">
-    <img src="{{ asset('assets/img/carousel-3.jpg') }}" alt="">
-  </li>
-  <li class="thumbnail">
-    <img src="{{ asset('assets/img/carousel-4.jpg') }}" alt="">
-  </li>
+@endforeach
 </ul>
 
 

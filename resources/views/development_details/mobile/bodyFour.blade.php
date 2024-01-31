@@ -29,54 +29,41 @@
     }
 </style>
 
-<section id="main-carousel" class="splide" aria-label="My Awesome Gallery">
+
+<section id="main-carousel" class="splide" aria-label="The Spark by ESNAAD Gallery">
   <div class="splide__track">
     <ul class="splide__list">
-      <li class="splide__slide">
-        <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="" width="100%">
-      </li>
-      <li class="splide__slide">
-        <img src="{{ asset('assets/img/carousel-2.jpg') }}" alt="" width="100%">
-      </li>
-      <li class="splide__slide">
-        <img src="{{ asset('assets/img/carousel-3.jpg') }}" alt="" width="100%">
-      </li>
-      <li class="splide__slide">
-        <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="" width="100%">
-      </li>
+      
+      @foreach($images as $image)
+          <li class="splide__slide">
+            <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="eager" >
+          </li>
+      @endforeach
     </ul>
   </div>
 </section>
 
 
 <ul id="thumbnails" class="thumbnails">
+@foreach($images as $image)
   <li class="thumbnail">
-    <img src="{{ asset('assets/img/carousel-1.jpg') }}" alt="">
+    <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="eager" >
   </li>
-  <li class="thumbnail">
-    <img src="{{ asset('assets/img/carousel-2.jpg') }}" alt="">
-  </li>
-  <li class="thumbnail">
-    <img src="{{ asset('assets/img/carousel-3.jpg') }}" alt="">
-  </li>
-  <li class="thumbnail">
-    <img src="{{ asset('assets/img/carousel-4.jpg') }}" alt="">
-  </li>
+@endforeach
 </ul>
-
 
 <div class="sm:container sm:mx-auto mx-0 px-4 xl:my-20 sm:my-4 mx-auto">
 
     <div class="row-span-2 grid sm:grid-cols-2 gap-4 h-[100%] w-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
         <div>
-            <h2 class="text-esnaad_text text-justify font-base my-8 text-2xl xl:text-2xl w-[90%]">
+            <h2 class="text-esnaad_text text-left font-base my-2 text-lg xl:text-2xl w-[100%]">
                 @if($langSeg == 'ar')
                     {{$secTwo_title_ar}}
                 @else
                     {{$secTwo_title}}
                 @endif
             </h2>
-            <p class="text-esnaad_text text-justify font-base my-8 w-[90%] leading-8">
+            <p class="text-esnaad_text text-left font-base mb-4 mt-3 w-[100%] leading-6">
                 @if($langSeg == 'ar')
                     {{$SecTwo_description}}
                 @else
@@ -84,23 +71,12 @@
                 @endif
             </p>
         </div>
-        <div class="text-esnaad_text text-justify font-light m-8 w-full">
-            <div class="row w-[100%] h-[30%] mb-8">
-                @if($langSeg == 'ar')
-                    {!! $SecTwo_amenities !!}
-                @else
-                    {!! $SecTwo_amenities_ar !!}
-                @endif
-                
-            </div>
-        </div>
     </div>
 
 
 </div>
 
 
-@section('luxe_asset_js')
 <script src="{{ asset('splide/dist/js/splide.min.js')}}"></script>
 <script>
   document.addEventListener( 'DOMContentLoaded', function() {
@@ -144,5 +120,4 @@
     splide.mount();
   } );
 </script>
-@endsection
 

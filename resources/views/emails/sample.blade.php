@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Luxe Properties Dubai</title>
+    <title>ESNAAD Real Estate Development</title>
 </head>
 <body>
-    <p>Luxe Properties Dubai</p>
+    <p>ESNAAD Real Estate Development</p>
     <p>{{$mailData['title']}}</p>
     <p>{{$mailData['body']}}</p>
 </body>

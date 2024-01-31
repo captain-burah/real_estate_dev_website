@@ -17,7 +17,7 @@
                 @endif
             </p>
         </div>
-        <div class="text-esnaad_text text-justify font-light m-8 w-full my-auto" dir="rtl">
+        <div class="text-esnaad_text text-justify font-light m-8 w-full my-auto" @if($langSeg == 'ar') dir="rtl" @endif>
             <div class="row-span-2 grid sm:grid-cols-2 gap-4 w-[100%] mb-8" >
                 <div>
                     <h3 class="text-esnaad_ text text-justify font-thin text-lg xl:text-lg w-[90%] tracking-wider">

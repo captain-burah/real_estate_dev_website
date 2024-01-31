@@ -56,7 +56,7 @@
                         {{$name}}
                     @endif
                 </h1>
-                <h2 class="text-sm font-light px-2">
+                <h2 class="text-base font-light px-2 leading-6">
                     @if($langSeg == 'ar')
                         {{$descriptionar}}
                     @else

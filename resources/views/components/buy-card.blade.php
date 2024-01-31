@@ -137,7 +137,7 @@
                     </button>
                 </div>
                 <div>
-                    <a href="https://wa.me/971585602665?text=Good Day! I would like to have a consultation session on this property - {{ $titleen }}. Thank you LuXe Properties Dubai!"
+                    <a href="https://wa.me/971585602665?text=Good Day! I would like to have a consultation session on this property - {{ $titleen }}. Thank you ESNAAD Real Estate Development!"
                         aria-label="chat-on-whatsapp">
                         <button type="button" class="inline-block w-full py-2 text-white font-light  text-center  align-middle transition-all bg-transparent border border-gray-500 rounded-0 cursor-pointer leading-normal ease-in tracking-tight-rem shadow-xs bg-150 bg-x-25 bg-whatsapp hover:-translate-y-px active:opacity-85 hover:shadow-md"
                             style="font-size: .9rem !important"

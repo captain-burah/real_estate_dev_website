@@ -1,10 +1,6 @@
-<div class="bg-footer mx-0 py-8 mt-4 mx-auto">
-    <div class="row px-4 mb-4">
-        <h2 class="text-esnaad_text text-left leading-6 text-xl ">
-                
-        </h2>
-    </div>
+@if($project_video != null)
 
+<div class="bg-footer mx-0 py-8 mt-4 mx-auto">
     <div class="mx-0 px-0 mx-auto w-full pb-4">
         <div class="row-span-2 grid xl:grid-cols-2 gap-4 h-[100%] w-[100%]">
             <div>
@@ -20,7 +16,6 @@
     </div>
 
 </div>
-
 
 
 
@@ -48,6 +43,7 @@
         </div>
     </div>
 </div>
+@endif
 
 <script>
     const moreTextEl2 = document.getElementById('more-text');

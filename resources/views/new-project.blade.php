@@ -26,7 +26,7 @@
 
     @mobile
     <h1 class="text-gray-800 text-2xl font-light p-6 mx-auto text-center">
-        LuXe Properties Dubai
+        ESNAAD Real Estate Development
     </h1>
     @endmobile
 

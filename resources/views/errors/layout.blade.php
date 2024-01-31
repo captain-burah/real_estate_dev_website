@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title') - LuXe Properties Dubai</title>
+        <title>@yield('title') - ESNAAD Real Estate Development</title>
 
         <!-- Styles -->
         <style>

@@ -13,7 +13,7 @@
                             <div class="space-y-4">
 
                                 <h2 class="mb-8 text-2xl text-gray-800 font-bold">
-                                    LuXe Properties Dubai
+                                    ESNAAD Real Estate Development
                                 </h2>
                             </div>
                             <div class="mt-16 grid space-y-4">

@@ -1,4 +1,4 @@
-<div class="container mx-0 my-8 px-0 mx-auto">
+<div class="container mx-0 my-4 px-0 mx-auto">
     <div class="row-span-2 grid gap-2 h-[100%] w-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
         <div class="group flex flex-col gap-2 rounded-lg text-black " tabindex="1">
             <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
@@ -11,7 +11,7 @@
 
                 </h3>
             </div>
-            <div class="">
+            <div class="text-left">
                 @if($langSeg == 'ar')
                     {!! $SecTwo_amenities !!}
                 @else
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="row my-8 h-[100%] w-[100%]">
+    <div class="row mb-4 mt-2 h-[100%] w-[100%]">
         <div class="" tabindex="1">
             @include('development_details.mobile.buttonsBrochure')
         </div>

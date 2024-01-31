@@ -17,6 +17,8 @@
     $starting_price = $response['starting_price'];
     $bedrooms = $response['bedrooms'];
     $project_video = $response['project_video'];
+    $project_image_id = $response['project_image']['id'];
+    $images = $images;
 
     $header = $response['header'];
     $description = $response['description'];
@@ -39,7 +41,6 @@
     $SecThree_description_ar    =    $response['SecThree_description_ar'];
 ?>
 @section('luxe_asset_css')
-
     @yield('developments_gallery_head')
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>

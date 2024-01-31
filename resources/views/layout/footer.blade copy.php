@@ -39,7 +39,7 @@
     <div>
         <div class="hidden md:block lg:hidden col-span-2 mx-auto mt-12">
             <span class="text-2xl text-center mx-auto">
-                LuXe Properties Dubai
+                ESNAAD Real Estate Development
             </span>
 
             <p class="text-xs w-3/4 text-justify">
@@ -175,7 +175,7 @@
 
         <div class="hidden lg:block col-span-2 mx-auto">
             <span class="lg:text-2xl xl:text-3xl text-center mx-auto">
-                LuXe Properties Dubai
+                ESNAAD Real Estate Development
             </span>
 
             <div class="flex my-8">
@@ -255,7 +255,7 @@
         <div class="flex justify-center my-2">
             <div>
                 <p class="text-xs text-gray-400">
-                    {{ __('© 2023 LUXE PROPERTIES DUBAI | ALL RIGHTS RESERVED') }}
+                    {{ __('© 2023 ESNAAD Real Estate Development | ALL RIGHTS RESERVED') }}
                 </p>
             </div>
         </div>
@@ -299,7 +299,7 @@
         <div class="mt-14">
 
             <span class="text-3xl text-center mx-auto">
-                LuXe Properties Dubai
+                ESNAAD Real Estate Development
             </span>
 
             <p class="text-justify">
@@ -446,7 +446,7 @@
         <div class="flex justify-center my-2">
             <div>
                 <p class="text-xs text-gray-400">
-                    {{ __('© 2023 LUXE PROPERTIES DUBAI | ALL RIGHTS RESERVED') }}
+                    {{ __('© 2023 ESNAAD Real Estate Development | ALL RIGHTS RESERVED') }}
                 </p>
             </div>
         </div>
