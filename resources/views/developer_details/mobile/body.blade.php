@@ -1,6 +1,6 @@
 <div class="">
     <div class="mx-auto max-w-7xl px-0 lg:px-8">
-        <div class=" md:container mx-auto md:px-4 my-8 ">
+        <div class="md:container mx-auto md:px-4 my-8">
             <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5">
                 @foreach($projects as $data)
                     <div>
