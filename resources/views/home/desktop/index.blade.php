@@ -52,7 +52,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            min-height: 400px;
+            min-height: 200px;
             width: 100%;
             height: 100%;
         }
@@ -64,7 +64,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            min-height: 400px;
+            min-height: 200px;
             width: 100%;
             height: 100%;
         }
@@ -73,11 +73,11 @@
         /* blur the background, to make blurred edges that overflow the unblurred image that is on top */
 
         .bg-image-blur {
-            -webkit-filter: blur(20px);
-            -moz-filter: blur(20px);
-            -o-filter: blur(20px);
-            -ms-filter: blur(20px);
-            filter: blur(20px);
+            -webkit-filter: blur(2px);
+            -moz-filter: blur(2px);
+            -o-filter: blur(2px);
+            -ms-filter: blur(2px);
+            filter: blur(2px);
         }
     </style>
 @endsection
@@ -93,7 +93,7 @@
     @include('home.desktop.sectionOne')
 
 
-    <div class="py-8">
+    <div class="py-4">
         @include('home.desktop.sectionTwo')
     </div>
 

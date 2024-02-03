@@ -17,8 +17,13 @@
                         {{ __('frontend.homeSectionThreeImage') }}
                     </div>
                     <img class="max-h-[24rem] w-full object-cover "
-                    src="{{ asset('home/COMING_SOON.jpeg')}}"                    
-                    alt="esnaad-project-card">
+                        src="{{ asset('home/COMING_SOON.webp')}}"                    
+                        alt="esnaad-project-coming-soon"
+                        title="COMING-SOON"
+                        height="auto"
+                        width="auto"
+                        loading="lazy"
+                    >
                 </div>
             </div>
             <div class="col-span-3 my-auto">

@@ -109,7 +109,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
-    $( document ).ready(function() {
+        
         if (localStorage.getItem('subscriptionSubmitted')) {
             $('#submitButtonDone').show();
             $('#submitButton').hide(); 
@@ -139,8 +139,7 @@
 
             $('#subscriptionForm').show();
             $('#subscriptionFormMobile').show();
-        }
-    });
+        };
 
     // Check if the form has been submitted before
     // if (localStorage.getItem('subscriptionSubmitted')) {

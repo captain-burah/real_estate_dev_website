@@ -25,7 +25,7 @@
                         <div class="col-span-2">
                             <div class="mx-auto">
                                 <span class="text-3xl text-gray-900 text-center mx-auto py-5" >
-                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo-footer" class="mb-5">
+                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
                                 </span>
 
                                 <p class="text-md text-black w-full text-justify mb-6">
@@ -241,7 +241,7 @@
                         <div class="col-span-2" @if($langSeg == 'ar') dir="RTL" @endif>
                             <div class="mx-auto">
                                 <span class="text-3xl text-gray-900 text-center mx-auto py-5" >
-                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo-footer" class="mb-5">
+                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
                                 </span>
 
                                 <p class="text-md text-black text-justify mb-6 w-[80%]">
@@ -441,7 +441,7 @@
                         <div class="py-4">
                             <div class="mx-auto">
                                 <span class="text-3xl text-gray-900 text-center mx-auto py-5" >
-                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo-footer" class="mb-5">
+                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
                                 </span>
 
                                 <p class="text-md text-black text-justify mb-6 w-full leading-6" >
