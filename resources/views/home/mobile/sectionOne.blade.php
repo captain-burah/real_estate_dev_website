@@ -18,7 +18,7 @@
     </div>
 
     <div class="row mt-8 p-0">
-        <img src="{{ asset('home/13.jpg')}}">
+        <img src="{{ asset('home/13.webp')}}">
     </div>
 </div>
 

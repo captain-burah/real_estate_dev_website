@@ -1,5 +1,5 @@
 <section id="component_home_section_one">
-<div class="container px-0 px-4 mx-auto h-[40vh] mt-20">
+<div class="container px-0 px-4 mx-auto mt-20">
     <div class="row my-auto h-[100%]">
         <div class="grid grid-cols-2 gap-12 mb-5 mx-auto h-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
             <div class="my-auto">

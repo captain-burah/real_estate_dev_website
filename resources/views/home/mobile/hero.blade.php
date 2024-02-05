@@ -28,7 +28,7 @@
 <div class="video-wrapper bg-hero bg-cover bg-no-repeat bg-top object-cover overflow-hidden max-w-full ">
     <div class="relative isolate  h-full flex flex-1 flex-col justify-between">
         
-        <video playsinline autoplay muted loop poster="/developments/6.jpg">
+        <video playsinline autoplay muted loop poster="/developments/6.webp">
             <source src="{{ asset('home/HERO.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>

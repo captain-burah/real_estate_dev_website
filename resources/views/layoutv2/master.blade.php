@@ -27,6 +27,117 @@
             @endif
         @endif
 
+        <!-- Social Media Links -->
+        <meta property="og:title" content="{{$jsonSEOData['title_en']}}">
+        <meta property="og:description" content="{{$jsonSEOData['description_en']}}">
+        <meta property="og:image" content="URL to your main website image">
+
+        <!-- Facebook -->
+        <meta property="og:url" content="URL to your website">
+        <meta property="og:type" content="website">
+        <meta property="fb:app_id" content="Your Facebook App ID">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@YourTwitterHandle">
+        <meta name="twitter:creator" content="@YourTwitterHandle">
+
+        <!-- Instagram -->
+        <meta property="og:instagram" content="YourInstagramUsername">
+
+        <!-- LinkedIn -->
+        <meta property="og:linkedin" content="YourLinkedInProfileURL">
+
+        <!-- Pinterest -->
+        <meta property="og:pinterest" content="YourPinterestUsername">
+
+        <!-- YouTube -->
+        <meta property="og:youtube" content="YourYouTubeChannelURL">
+
+
+
+        {{-- Canonical Links --}}
+        @php
+            // Get the current URL without the query string
+            $baseUrl = url()->current();
+            header("Cache-Control: max-age=2592000");
+
+            // Check if the current page is the first page
+            if (!request()->has('page') || request()->get('page') == 1) {
+
+                $current_url_2 = $_SERVER['REQUEST_URI'];
+
+                if (strpos($current_url_2, 'en') !== false) {
+                    $langhref = 'en';
+                    $rel_type = 'canonical';
+                } 
+                elseif (strpos($current_url_2, 'ru') !== false) {
+                    $langhref = 'ru';
+                    $rel_type = 'canonical';
+                } 
+                elseif (strpos($current_url_2, 'ar') !== false) {
+                    $langhref = 'ar';
+                    $rel_type = 'canonical';
+                } 
+                else {
+                    $langhref = 'x-default';
+                    $rel_type = 'canonical';
+                }
+                $canonicalUrl = $baseUrl; // Use the base URL for the first page
+            } 
+            else {
+                $current_url_2 = $_SERVER['REQUEST_URI'];
+
+                if (strpos($current_url_2, 'en') !== false) {
+                    $langhref = 'en';
+                    $rel_type = 'canonical';
+                } 
+                elseif (strpos($current_url_2, 'ar') !== false) {
+                    $langhref = 'ar';
+                    $rel_type = 'canonical';
+                } 
+                else {
+                    $langhref = 'x-default';
+                    $rel_type = 'canonical';
+                }
+                $canonicalUrl = $baseUrl . '?page=' . request()->get('page'); // Append the page query parameter
+            }                
+        @endphp
+
+        <link rel="{{$rel_type}}" href="<?php echo $canonicalUrl;?>" hreflang="{{$langhref}}">
+
+        <script type="application/ld+json" >
+			[{"@context":"https://schema.org","@type":"Organization","@id":"https://esnaad.com","name":"ESNAAD Real Estate Development","url":"https://esnaad.com","sameAs":[],"logo":{"@type":"ImageObject","url":"https://www.esnaad.com/public/logo-dark-2.png","width":"184","height":"35"}}]</script>
+
+
+
+        <script type="application/ld+json">{
+			"@context": "http://schema.org",
+			"@type": "SiteNavigationElement",
+			"name": [
+				"Home",
+				"Our Developments",
+				"Why Invest In Dubai?",
+				"Construction Updates",
+				"Our Communities",
+				"NEWS Updates",
+				"Careers",  
+				"About ESNAAD",
+				"Contact Us"
+			],
+			"url": [
+				"https://esnaad.com",
+				"https://www.esnaad.com/en/projects",
+				"https://www.esnaad.com/en/invest-in-dubai",
+				"https://www.esnaad.com/en/constructions",
+				"https://www.esnaad.com/en/communities
+				"https://www.esnaad.com/en/news",
+				"https://www.esnaad.com/en/careers",
+				"https://www.esnaad.com/en/about-us",
+				"https://www.esnaad.com/en/contact"
+			]
+		}</script>
+
 
         <style>
             html,body{

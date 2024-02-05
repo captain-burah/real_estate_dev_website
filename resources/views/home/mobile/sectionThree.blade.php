@@ -18,7 +18,7 @@
             {{ __('frontend.homeSectionThreeImage') }}
         </div>
         <img class="max-h-[24rem] w-full object-cover "
-        src="{{ asset('home/COMING_SOON.jpeg')}}"                    
+        src="{{ asset('home/COMING_SOON.webp')}}"                    
         alt="esnaad-project-card">
     </div>
 </div>
