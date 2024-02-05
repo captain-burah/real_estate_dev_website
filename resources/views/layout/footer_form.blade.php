@@ -142,9 +142,9 @@
         };
 
     // Check if the form has been submitted before
-    if (localStorage.getItem('subscriptionSubmitted')) {
-        disableForm();
-    }
+    // if (localStorage.getItem('subscriptionSubmitted')) {
+    //     disableForm();
+    // }
 
     $('#subscriptionForm').on('submit', function(e){
         e.preventDefault();

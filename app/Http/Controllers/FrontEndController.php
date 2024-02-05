@@ -681,7 +681,8 @@ class FrontEndController extends Controller
             dd($e->getMessage());
         }
 
-        return redirect()->back()->with('success', 'Your inquiry has been submitted!');   
+        // return redirect()->back()->with('success', 'Your inquiry has been submitted!');   
+        return redirect()->to('https://demo.esnaad.com/en/contact-us/thanks');
 
         // try{           
 
