@@ -929,4 +929,9 @@ class FrontEndController extends Controller
         $this->data['source'] = $source = "broker_registration";
         return view('thankyou', $this->data);
     }
+
+    public function subscription_thanks($lang = '') {
+        $this->data['source'] = $source = "subscription";
+        return view('thankyou', $this->data);
+    }
 }
