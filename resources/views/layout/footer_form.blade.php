@@ -181,7 +181,7 @@
                     $('#submitButtonDone').show();
                     $('#submitButton').hide();  
                     $('#subscriptionForm').hide();
-                    document.location.href = '/careers/thanks';
+                    document.location.href = 'en/careers/thanks';
 
                 }else{
                     printErrorMsg(data.error);
