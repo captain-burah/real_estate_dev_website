@@ -27,11 +27,6 @@
             @endif
         @endif
 
-        <!-- Social Media Links -->
-        <!-- <meta property="og:title" content="{{$jsonSEOData['title_en']}}">
-        <meta property="og:description" content="{{$jsonSEOData['description_en']}}">
-        <meta property="og:image" content="URL to your main website image"> -->
-
         <!-- Facebook -->
         <meta property="og:url" content="URL to your website">
         <meta property="og:type" content="website">
