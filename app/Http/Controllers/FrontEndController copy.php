@@ -143,7 +143,7 @@ class FrontEndController extends Controller
 
 
 
-    public function home($lang='') {
+    public function home() {
 
         $jsonSEOData = $this->landingpageseos(1);
 
@@ -162,7 +162,7 @@ class FrontEndController extends Controller
     // }
 
 
-    public function communities_details($lang='', $slug)
+    public function communities_details($slug)
     {
 
         $jsonSEOData = $this->landingpageseos(3);
@@ -189,13 +189,13 @@ class FrontEndController extends Controller
     }
 
 
-    public function developments($lang='') {
+    public function developments() {
         $this->data['long'] =  55.156860;
         $this->data['lat'] = 25.101131;
         return view('developmentDetails', $this->data);
     }
 
-    public function communities($lang='') {
+    public function communities() {
         $jsonSEOData = $this->landingpageseos(5);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
@@ -205,7 +205,7 @@ class FrontEndController extends Controller
         return view('communities', $this->data);
     }
 
-    public function community_details($lang='') {
+    public function community_details() {
         $this->data['long'] =  55.156860;
         $this->data['lat'] = 25.101131;
         return view('communityDetails', $this->data);
@@ -255,7 +255,7 @@ class FrontEndController extends Controller
     }
 
 
-    public function projects($lang='') {
+    public function projects() {
 
 
         $response = Http::withHeaders([
@@ -279,7 +279,7 @@ class FrontEndController extends Controller
     }
 
 
-    public function communities_registration($lang='', Request $request)
+    public function communities_registration(Request $request)
     {
         // dd($request);
         try{
@@ -301,7 +301,7 @@ class FrontEndController extends Controller
     }
 
 
-    public function about($lang='') {
+    public function about() {
         $jsonSEOData = $this->landingpageseos(3);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
         $this->data['long'] =  55.265547;
@@ -309,14 +309,14 @@ class FrontEndController extends Controller
         return view('about', $this->data);
     }
 
-    public function contact($lang='') {
+    public function contact() {
         $jsonSEOData = $this->landingpageseos(4);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
         return view('contact', $this->data);
     }
 
 
-    public function invest($lang='') {
+    public function invest() {
         $jsonSEOData = $this->landingpageseos(8);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
@@ -324,7 +324,7 @@ class FrontEndController extends Controller
     }
 
 
-    public function constructions($lang='') {
+    public function constructions() {
         $jsonSEOData = $this->landingpageseos(6);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
@@ -348,7 +348,7 @@ class FrontEndController extends Controller
     }
 
 
-    public function news($lang='') {
+    public function news() {
         $jsonSEOData = $this->landingpageseos(7);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
@@ -372,7 +372,7 @@ class FrontEndController extends Controller
     }
 
 
-    public function news_details($lang='', $slug) {
+    public function news_details($slug) {
 
         $jsonSEOData = $this->landingpageseos(3);
 
@@ -402,7 +402,7 @@ class FrontEndController extends Controller
     }
 
 
-    public function constructions_details($lang='', $slug) {
+    public function constructions_details($slug) {
 
         $jsonSEOData = $this->landingpageseos(3);
 
@@ -434,7 +434,7 @@ class FrontEndController extends Controller
 
 
 
-    public function privacy_and_policy($lang='', ) {
+    public function privacy_and_policy() {
 
         $jsonSEOData = $this->landingpageseos(9);
         
@@ -443,7 +443,7 @@ class FrontEndController extends Controller
         return view('privacy-and-policy', $this->data);        
     }
 
-    public function terms_and_conditions($lang='', ) {
+    public function terms_and_conditions() {
         
         $jsonSEOData = $this->landingpageseos(10);
         
@@ -464,7 +464,7 @@ class FrontEndController extends Controller
 
 
 
-    public function agency_registration_post($lang='', Request $request) {
+    public function agency_registration_post(Request $request) {
         /**
          * EMAIL SEND OFF
          * ===================================
@@ -560,7 +560,7 @@ class FrontEndController extends Controller
 
 
 
-    public function subscription_form($lang='', Request $request) {
+    public function subscription_form(Request $request) {
         
         try{
             $data = [
@@ -660,7 +660,7 @@ class FrontEndController extends Controller
 
 
 
-    public function contact_form_post($lang='', Request $request) {
+    public function contact_form_post(Request $request) {
         $tel = $request->country_code + $request->phone;
         // dd($tel);
         try{
@@ -733,7 +733,7 @@ class FrontEndController extends Controller
 
 
 
-    public function project_detail_inquiry($lang='', Request $request) {
+    public function project_detail_inquiry(Request $request) {
         $tel = $request->country_code + $request->phone;
 
         try{
@@ -763,7 +763,7 @@ class FrontEndController extends Controller
 
 
     
-    public function project_detail_brochure_download($lang='', Request $request) {
+    public function project_detail_brochure_download(Request $request) {
         $tel = $request->country_code_brochure + $request->phone_brochure;
 
         try{
@@ -841,7 +841,7 @@ class FrontEndController extends Controller
 
 
 
-    public function careers($lang='') {
+    public function careers() {
         $jsonSEOData = $this->landingpageseos(11);
         
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
@@ -852,7 +852,7 @@ class FrontEndController extends Controller
 
 
 
-    public function career_registration_post_v1($lang='', Request $request) {
+    public function career_registration_post_v1(Request $request) {
         $verification_code = $request->input('4srMa62q63awVETd4mo9');
         try{
             $data = [
@@ -868,7 +868,7 @@ class FrontEndController extends Controller
     }
 
 
-    public function career_registration_post_v2($lang='', Request $request){
+    public function career_registration_post_v2(Request $request){
         $data = [
             'name'      =>  $request->applicant_name, 
             'email'      =>  $request->applicant_email, 
@@ -905,28 +905,535 @@ class FrontEndController extends Controller
 
 
 
-    public function careers_thanks($lang = '') {
-        $this->data['source'] = $source = "careers";
-        return view('thankyou', $this->data);
-    }   
 
-    public function project_details_thanks($lang = '') {
-        $this->data['source'] = $source = "project_details";
-        return view('thankyou', $this->data);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function buy() {
+
+        $this->footer();
+
+        $this->landingpageseos(10);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        $this->data['property_to_be_shown'] = 'all';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
     }
 
-    public function communities_thanks($lang = '') {
-        $this->data['source'] = $source = "communities";
-        return view('thankyou', $this->data);
+
+    public function new_projects() {
+
+        $this->footer();
+
+        $this->landingpageseos(11);
+
+        /**
+         * NOTE
+         *
+         * THE FOLLOWING CODE CONTAINS A MORE OPTIMIZED DATA GATHERING TECHNIQUE
+         * ALONG WITH RELATIONSHIPS BY REMOVING REDUNDANT DATA.
+         *
+         * HENCE, AVOID CHANGING IT TO THE CASUAL METHOD OF RETRIEVING DATA
+         * FROM A DATABASE.
+         *
+         */
+        $properties = Project::with(
+            [
+                'images',
+                'locationss' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+                'project_types' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+                'developer' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+
+            ]
+        )->where('pro_status', '1')->select('id', 'slug_link', 'sub_type_id', 'agent_id', 'location', 'project_price', 'title_en', 'est_completion_en', 'pro_status')->orderby('id', 'desc')->paginate(12);
+
+        $this->data['properties'] = $properties;
+
+        return view('new-project', $this->data);
     }
 
-    public function contact_us_thanks($lang = '') {
-        $this->data['source'] = $source = "contact_us";
-        return view('thankyou', $this->data);
+
+
+    public function dubai_developers() {
+
+        $this->footer();
+
+        $this->landingpageseos(13);
+
+        $properties = Developer::select(['name_en', 'slug_link', 'id', 'image'])->where('status', '1')->orderBy('name_en')->paginate(16);
+
+        $this->data['property_to_be_shown'] = 'all';
+
+        $this->data['properties'] = $properties;
+
+        return view('developer', $this->data);
     }
 
-    public function broker_registration_thanks($lang = '') {
-        $this->data['source'] = $source = "broker_registration";
-        return view('thankyou', $this->data);
+
+    public function blogs() {
+
+        $blogs = Blog::select(['name_en', 'id', 'slug_link', 'image_url', 'updated_at'])->orderby('id', 'desc')->paginate(13);
+
+        $last_blog = Blog::select(['name_en', 'id', 'slug_link', 'image_url', 'updated_at'])->orderBy('id', 'desc')->first();
+
+        $this->data['last_blog'] = $last_blog;
+
+        $this->data['blogs'] = $blogs;
+
+        $this->footer();
+
+        $this->landingpageseos(15);
+
+        return view('blog', $this->data);
     }
+
+
+    public function blog_details($month, $data, $slug) {
+
+        // dd('blog details');
+
+        $blogs = Blog::select(['name_en', 'id', 'slug_link', 'image_url', 'updated_at', 'description_en', 'meta_title_en', 'meta_keywords_en', 'meta_description_en'])->where('slug_link', $slug)->orderby('id', 'desc')->get();
+
+        $this->data['properties'] = $blogs[0];
+
+        $this->footer();
+
+        return view('blogDetails', $this->data);
+
+    }
+
+
+
+
+
+
+
+
+    public function new_projects_details($slug) {
+
+        $this->footer();
+
+        /**
+         * NOTE
+         *
+         * THE FOLLOWING CODE CONTAINS A MORE OPTIMIZED DATA GATHERING TECHNIQUE
+         * ALONG WITH RELATIONSHIPS BY REMOVING REDUNDANT DATA.
+         *
+         * HENCE, AVOID CHANGING IT TO THE CASUAL METHOD OF RETRIEVING DATA
+         * FROM A DATABASE.
+         *
+         */
+        $properties = Project::with(
+            [
+                'images',
+                'project_locations',
+                'communities' => function ($query)
+                {
+                    $query->select('description_en', 'id');
+                },
+                'locationss' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+                'project_types' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+                'developer' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+            ]
+        )->where('slug_link', $slug)->select(
+            'id',
+            'slug_link',
+            'sub_type_id',
+            'agent_id',
+            'location',
+            'project_price',
+            'community_id',
+            'title_en',
+            'est_completion_en',
+            'pro_status',
+            'bedrooms',
+            'description_en',
+            'community_en',
+            'address_en', 'meta_title_en', 'meta_keywords_en', 'meta_description_en'
+        )->orderby('id', 'desc')->get();
+
+        $property_id = $properties[0]->id;
+
+        // dd($properties[0]->project_locations);
+
+
+        // SIMILAR PROJECTS
+        $similar_properties = Project::with(
+            [
+                'images',
+                'locationss' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+                'project_types' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+                'developer' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+
+            ]
+        )->where('pro_status', '1')->where('location', $properties[0]->location)->where('id', '!=', $properties[0]->id)->select('id', 'slug_link', 'sub_type_id', 'agent_id', 'location', 'project_price', 'title_en', 'est_completion_en', 'pro_status')->orderby('id', 'desc')->paginate(4);
+        // SIMILAR PROJECTS
+
+        $images = Project_image::where('project_id', $property_id)->get();
+
+        $this->data['properties'] = $properties[0];
+
+        $this->data['similar_properties'] = $similar_properties;
+
+        $this->data['images'] = $images;
+
+        $this->project_map_individually($properties[0]->id, $properties);
+
+        return view('new-project_detail', $this->data);
+    }
+
+
+
+
+    public function buy_ready_villas() {
+        $this->footer();
+
+        $this->landingpageseos(8);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('property_release', '2')->where('cat_id', '2')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        // dd($properties);
+
+        $this->data['property_to_be_shown'] = 'villa';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+
+    public function buy_ready_apartments() {
+        $this->footer();
+
+        $this->landingpageseos(9);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('property_release', '2')->where('cat_id', '1')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        $this->data['property_to_be_shown'] = 'appartment';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+
+    public function buy_ready_townhouses() {
+        $this->footer();
+
+        $this->landingpageseos(7);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('property_release', '2')->where('cat_id', '8')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        $this->data['property_to_be_shown'] = 'townhouse';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+
+    public function buy_offplan_villas() {
+        $this->footer();
+
+        $this->landingpageseos(5);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('property_release', '1')->where('cat_id', '2')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        // dd($properties);
+
+        $this->data['property_to_be_shown'] = 'villa';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+
+    public function buy_offplan_apartments() {
+        $this->footer();
+
+        $this->landingpageseos(4);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('property_release', '1')->where('cat_id', '1')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        $this->data['property_to_be_shown'] = 'appartment';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+
+    public function buy_offplan_townhouses() {
+        $this->footer();
+
+        $this->landingpageseos(6);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('property_release', '1')->where('cat_id', '8')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        $this->data['property_to_be_shown'] = 'townhouse';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+
+    public function buy_details($slug) {
+
+        $this->footer();
+
+        /**
+         * NOTE
+         *
+         * THE FOLLOWING CODE CONTAINS A MORE OPTIMIZED DATA GATHERING TECHNIQUE
+         * ALONG WITH RELATIONSHIPS BY REMOVING REDUNDANT DATA.
+         *
+         * HENCE, AVOID CHANGING IT TO THE CASUAL METHOD OF RETRIEVING DATA
+         * FROM A DATABASE.
+         *
+         */
+
+        $properties = Property::with(
+            [
+                'property_category' => function($query)
+                {
+                    $query->select('cat_name_en', 'id');
+                },
+                'locationss' => function ($query)
+                {
+                    $query->select('title_en', 'id', 'description_en');
+                },
+                'property_locations',
+
+                'agentss' =>function($query)
+                {
+                    $query->select('slug_link', 'name_en', 'designation_en', 'language_en', 'description_en', 'phone', 'email', 'image');
+                },
+            ]
+        )->where('slug_link', $slug)->select(
+            'id',
+            'slug_link',
+            'title_en',
+            'agent_id',
+            'location',
+            'price',
+            'bedrooms',
+            'bathrooms',
+            'parking',
+            'permit_no',
+            'reference_no',
+            'description_en',
+            'property_release', 'meta_title_en', 'meta_keywords_en', 'meta_description_en'
+        )->where('slug_link', $slug)->orderby('id', 'desc')->get();
+
+        $property_id = $properties[0]->id;
+
+        // SIMILAR PROJECTS
+            $similar_properties = Property::with(['images', 'property_category', 'locationss','cityss'])->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->where('id', '!=', $properties[0]->id)->where('location', $properties[0]->location)->orderby('id', 'desc')->paginate(4);
+        // SIMILAR PROJECTS
+
+        $images = Properties_image::where('property_id', $property_id)->get();
+
+        // dd($properties[0]->id);
+
+        // dd($images);
+
+        $this->data['properties'] = $properties[0];
+
+        $this->data['similar_properties'] = $similar_properties;
+
+        $this->data['images'] = $images;
+
+        $this->property_map_individually($properties[0]->id, $properties);
+
+        return view('buy-details', $this->data);
+    }
+
+
+
+    public function dubai_developers_details($slug) {
+
+        $this->footer();
+
+        $developer = Developer::with(['images'])->select(['name_en', 'slug_link', 'id', 'image', 'description_en', 'meta_title_en', 'meta_keywords_en', 'meta_description_en'])->where('slug_link', $slug)->get();
+
+        $projects = Project::with(
+            [
+                'images',
+
+                'locationss' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+                'project_types' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+                'developer' => function ($query)
+                {
+                    $query->select('name_en', 'id');
+                },
+
+            ]
+        )->select('id', 'slug_link', 'sub_type_id', 'agent_id', 'location', 'project_price', 'title_en', 'est_completion_en', 'pro_status')->where('agent_id', $developer[0]->id)->orderby('id', 'desc')->get();
+
+
+        $image = Developer_image::where('developer_id', $developer[0]->id)->get();
+
+        $this->data['properties'] = $developer[0];
+
+        $this->data['images'] = $image;
+
+        $this->data['projects'] = $projects;
+
+        return view('developerDetails', $this->data);
+    }
+
+
+
+
+
+
+
+
+    public function buy_villas() {
+        $this->footer();
+
+        $this->landingpageseos(2);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('cat_id', '2')->where('cat_id', '2')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        // dd($properties);
+
+        $this->data['property_to_be_shown'] = 'villa';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+    public function buy_apartments() {
+        $this->footer();
+
+        $this->landingpageseos(1);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('cat_id', '1')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        // dd($properties);
+
+        $this->data['property_to_be_shown'] = 'villa';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+    public function buy_townhouses() {
+        $this->footer();
+
+        $this->landingpageseos(3);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('cat_id', '8')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        // dd($properties);
+
+        $this->data['property_to_be_shown'] = 'villa';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+    public function buy_offplan_properties() {
+        $this->footer();
+
+        $this->landingpageseos(17);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('property_release', '1')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        // dd($properties);
+
+        $this->data['property_to_be_shown'] = 'villa';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
+
+    public function buy_ready_properties() {
+        $this->footer();
+
+        $this->landingpageseos(16);
+
+        $properties = Property::with(['images', 'property_category', 'locationss','cityss'])->where('property_release', '2')->select('id', 'slug_link', 'cat_id', 'location', 'location_str', 'price', 'title_en', 'bedrooms', 'bathrooms', 'area', 'property_release')->orderby('id', 'desc')->paginate(12);
+
+        // dd($properties);
+
+        $this->data['property_to_be_shown'] = 'villa';
+
+        $this->data['properties'] = $properties;
+
+        return view('buy', $this->data);
+    }
+
 }

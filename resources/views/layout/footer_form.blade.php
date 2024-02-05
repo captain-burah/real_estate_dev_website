@@ -181,11 +181,11 @@
                     $('#submitButtonDone').show();
                     $('#submitButton').hide();  
                     $('#subscriptionForm').hide();
+                    document.location.href = '/careers/thanks';
 
                 }else{
                     printErrorMsg(data.error);
                     alert(data.error);
-
                 }
             }
         });
@@ -240,6 +240,7 @@
                     $('#submitButtonMobileDone').show();
                     $('#submitButtonMobile').hide();  
                     $('#subscriptionFormMobile').hide();
+                    document.location.href = 'en/careers/thanks';
                 }else{
                     printErrorMsg(data.error);
                     alert(data.error);

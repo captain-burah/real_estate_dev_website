@@ -88,6 +88,13 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
 
     Route::post('/career-registration-post-v2', [FrontEndController::class, 'career_registration_post_v2'])->name('career.registration.post.v2');
 
+    Route::get('/careers/thanks', [FrontEndController::class, 'careers_thanks'])->name('careers-thanks');
+    Route::get('/project-details/thanks', [FrontEndController::class, 'project_details_thanks'])->name('project-details-thanks');
+    Route::get('/communities/thanks', [FrontEndController::class, 'communities_thanks'])->name('communities-thanks');
+    Route::get('/contact-us/thanks', [FrontEndController::class, 'contact_us_thanks'])->name('contact-us-thanks');
+    Route::get('/broker-registration/thanks', [FrontEndController::class, 'broker_registration_thanks'])->name('broker-registration-thanks');
+
+
 
     Route::get('/thankyou', function() {
         return view('thankyou');
