@@ -142,9 +142,9 @@
         };
 
     // Check if the form has been submitted before
-    // if (localStorage.getItem('subscriptionSubmitted')) {
-    //     disableForm();
-    // }
+    if (localStorage.getItem('subscriptionSubmitted')) {
+        disableForm();
+    }
 
     $('#subscriptionForm').on('submit', function(e){
         e.preventDefault();
@@ -173,15 +173,15 @@
             success:function(data)
             {
                 if($.isEmptyObject(data.error)){
-                    // sessionStorage.removeItem("form_submission");
-                    // sessionStorage.setItem("form_submission", "true");
+                    sessionStorage.removeItem("form_submission");
+                    sessionStorage.setItem("form_submission", "true");
                     // modalClose('mymodalcentered');
                     $('#submitComplete').show();
                     $('#submitIncomplete').hide();
                     $('#submitButtonDone').show();
                     $('#submitButton').hide();  
                     $('#subscriptionForm').hide();
-                    document.location.href = 'en/careers/thanks';
+                    document.location.href = 'en/subscription/thanks';
 
                 }else{
                     printErrorMsg(data.error);
@@ -232,15 +232,15 @@
             success:function(data)
             {
                 if($.isEmptyObject(data.error)){
-                    // sessionStorage.removeItem("form_submission");
-                    // sessionStorage.setItem("form_submission", "true");
+                    sessionStorage.removeItem("form_submission");
+                    sessionStorage.setItem("form_submission", "true");
                     // modalClose('mymodalcentered');
                     $('#submitCompleteMobile').show();
                     $('#submitIncompleteMobile').hide();
                     $('#submitButtonMobileDone').show();
                     $('#submitButtonMobile').hide();  
                     $('#subscriptionFormMobile').hide();
-                    document.location.href = 'en/careers/thanks';
+                    document.location.href = 'en/subscription/thanks';
                 }else{
                     printErrorMsg(data.error);
                     alert(data.error);
