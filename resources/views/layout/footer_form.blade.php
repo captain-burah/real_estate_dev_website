@@ -11,6 +11,27 @@
     }
 ?>
 
+<style>
+
+    #loading {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid rgba(0,0,0);
+        border-radius: 50%;
+        border-top-color: #000;
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+    }
+</style>
+
 @notmobile
     <div class="block py-24 sm:py-12 bg-footer_form" id="footer_form" style="visibility:hidden">
         <div class="container mx-auto px-2 lg:px-8"  @if($langSeg == 'ar') dir="RTL" @endif>    
@@ -46,6 +67,10 @@
                             </button>
                             <button type="submit" id="submitButton" class=" w-full text-sm text-white hover:text-black px-2 py-2 bg-black hover:bg-transparent border border-black hover:border-black rounded-0">
                                 {{__('frontend.footerFormSubscribe')}}
+                            </button>
+                            <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm text-black px-2 py-2 border border-black rounded-0">
+                                <div id="loading"></div>
+                                Verifying
                             </button>
                         </div>
                     </div>
@@ -109,8 +134,34 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
-        
-        if (localStorage.getItem('subscriptionSubmitted')) {
+        function setCookie(name, value, daysToExpire) {
+            var expires = "";
+            
+            if (daysToExpire) {
+                var date = new Date();
+                date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            
+            document.cookie = name + "=" + value + expires + "; path=/";
+        };
+
+        // Function to get a specific cookie by name
+        function getCookie(cookieName) {
+            var name = cookieName + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i].trim();
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+
+            return null; // Return null if the cookie is not found
+        };
+        if (getCookie('_ivqLdoulWNJqMw')) {
             $('#submitButtonDone').show();
             $('#submitButton').hide(); 
             $('#submitButtonMobileDone').show();
@@ -149,11 +200,15 @@
     $('#subscriptionForm').on('submit', function(e){
         e.preventDefault();
 
-        if (localStorage.getItem('subscriptionSubmitted')) {
-            // alert('You have already submitted the form');
+        document.getElementById("submitButton").disabled = true;
+        document.getElementById('submitButton').style.display = 'none';
+        document.getElementById('submitVerifying').style.display = 'inline-block';
+
+        // if (localStorage.getItem('subscriptionSubmitted')) {
+        //     // alert('You have already submitted the form');
             
-            return;
-        }
+        //     return;
+        // }
 
         var formData = new FormData(this);
 
@@ -173,8 +228,7 @@
             success:function(data)
             {
                 if($.isEmptyObject(data.error)){
-                    sessionStorage.removeItem("form_submission");
-                    sessionStorage.setItem("form_submission", "true");
+                    setCookie("_ivqLdoulWNJqMw", true, 1);
                     // modalClose('mymodalcentered');
                     $('#submitComplete').show();
                     $('#submitIncomplete').hide();
