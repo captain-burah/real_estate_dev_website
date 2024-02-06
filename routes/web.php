@@ -91,6 +91,7 @@ Route::post('/contact-form-post', [FrontEndController::class, 'contact_form_post
     Route::get('/careers/thanks', [FrontEndController::class, 'careers_thanks'])->name('careers-thanks');
     Route::get('/subscription/thanks', [FrontEndController::class, 'subscription_thanks'])->name('subscription-thanks');
     Route::get('/project-details/thanks', [FrontEndController::class, 'project_details_thanks'])->name('project-details-thanks');
+    Route::get('/project-brochure/thanks', [FrontEndController::class, 'project_brochure_thanks'])->name('project-brochure-thanks');
     Route::get('/communities/thanks', [FrontEndController::class, 'communities_thanks'])->name('communities-thanks');
     Route::get('/contact-us/thanks', [FrontEndController::class, 'contact_us_thanks'])->name('contact-us-thanks');
     Route::get('/broker-registration/thanks', [FrontEndController::class, 'broker_registration_thanks'])->name('broker-registration-thanks');

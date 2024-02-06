@@ -908,31 +908,36 @@ class FrontEndController extends Controller
 
     public function careers_thanks($lang = '') {
         $this->data['source'] = $source = "careers";
-        return view('thankyou', $this->data);
+        return view('thankyou2', $this->data);
     }   
 
     public function project_details_thanks($lang = '') {
         $this->data['source'] = $source = "project_details";
-        return view('thankyou', $this->data);
+        return view('thankyou2', $this->data);
     }
 
     public function communities_thanks($lang = '') {
         $this->data['source'] = $source = "communities";
-        return view('thankyou', $this->data);
+        return view('thankyou2', $this->data);
     }
 
     public function contact_us_thanks($lang = '') {
         $this->data['source'] = $source = "contact_us";
-        return view('thankyou', $this->data);
+        return view('thankyou2', $this->data);
     }
 
     public function broker_registration_thanks($lang = '') {
         $this->data['source'] = $source = "broker_registration";
-        return view('thankyou', $this->data);
+        return view('thankyou2', $this->data);
     }
 
     public function subscription_thanks($lang = '') {
         $this->data['source'] = $source = "subscription";
         return view('thankyou', $this->data);
+    }
+
+    public function brochure_thanks($lang = '') {
+        $this->data['source'] = $source = "brochure";
+        return view('thankyou2', $this->data);
     }
 }
