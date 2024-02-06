@@ -199,15 +199,15 @@ class FrontEndController extends Controller
         $jsonSEOData = $this->landingpageseos(5);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
-        $this->data['long'] =  55.156860;
-        $this->data['lat'] = 25.101131;
+        $this->data['long'] =  55.356684;
+        $this->data['lat'] = 25.128245;
 
         return view('communities', $this->data);
     }
 
     public function community_details($lang='') {
-        $this->data['long'] =  55.156860;
-        $this->data['lat'] = 25.101131;
+        $this->data['long'] =  55.356684;
+        $this->data['lat'] = 25.128245;
         return view('communityDetails', $this->data);
     }
 

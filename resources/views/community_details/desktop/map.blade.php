@@ -1,8 +1,8 @@
 
-<div class="sm:mx-auto mx-0 px-0 sm:mt-4 sm:mb-0 mx-auto">
+<div class="sm:mx-auto mx-0 px-0 sm:mb-0 mx-auto">
 
 
-        <p class="mt-18 mb-4 text-3xl font-thin mx-auto w-full text-center">
+        <p class="-4 text-3xl font-thin mx-auto w-full text-center">
             {{-- Community Map of {{ $response[0]['title'] }} --}}
         </p>
         

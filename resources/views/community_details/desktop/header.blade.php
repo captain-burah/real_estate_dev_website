@@ -47,17 +47,21 @@
 
 
 <header class="">
-    <div class="w-full bg-cover bg-center" style="height: 70vh; background-image: url('home/15.jpg'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
-        <div class="flex items-center justify-center h-full w-full bg-gray-950/70">
-            <div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-4 mx-auto text-white">
-                <h1 class="text-4xl font-bold ">
-                    Our Diversified Communities
+    <div class="w-full bg-cover bg-center" style="height: 75vh; background-image: url('{{ URL::asset('developments/4.jpg')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+    {{-- <div class="w-full bg-cover bg-center" style="height: 40vh;"> --}}
+        <div class="flex items-center justify-center h-full w-full bg-black bg-opacity-60" style="padding-top: 10vh;">
+            <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto  text-white">
+                <h1 class="text-4xl font-thin text-center">
+                    {{__('frontend.communityDetailsH')}}
                 </h1>
-                <h2 class="text-lg font-light mt-2 leading-8">
-                    We would like to give you a guide to each of the many appealing neighborhoods in Dubai, 
-                    each with its own unique facilities, so you may choose the one that's best for you.
-                </h2>
+                <div class="w-[600px] text-center mx-auto">
+                    <h2 class="text-base w-200 text-center font-thin mt-2 leading-8">
+                        
+                    {{__('frontend.communityDetailsP')}}
+                    </h2>
+                </div>
             </div>
         </div>
     </div>
 </header>
+

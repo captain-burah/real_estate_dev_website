@@ -44,10 +44,6 @@
             @include('community_details.desktop.buttons')
         </section>
 
-        <section class="m-0">
-            @include('community_details.desktop.gallery')
-        </section>
-
         <section class="my-0" id="project_detail_map_section">
             @include('community_details.desktop.map')
         </section>

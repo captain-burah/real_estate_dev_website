@@ -221,9 +221,15 @@ return [
         /**
          * COMMUNITY DETAILS
          */
-        "communityDetailsH" => "Our Diversified Communities",
-        "communityDetailsP" => "We would like to give you a guide to each of the many appealing neighborhoods in Dubai, 
-                    each with its own unique facilities, so you may choose the one that's best for you.ode",
+        "communityDetailsH" => "Mohammed Bin Rashid City",
+        "communityDetailsP" => "MBR City: Tomorrow's Tradition, a visionary oasis in the heart of Dubai, reshaping urban life styles and beckoning the world to the future of sustainable luxury.",
+
+        "communityDetailsH2" => "Beneath the Arabian sun, a sprawling canvas unfolds, where avant-garde structures reach for the heavens, and each street is a stanza in the ode to modernity and tradition. Dubai's commitment to excellence finds its muse in MBR, a magnetic allure for seekers of global ventures, a sanctuary where investors, businesses, and residents converge in pursuit of a harmonious fusion.",
+        "communityDetailsP2" => "Here, in this oasis of dreams, MBR is not merely a city but a powerhouse, a crescendo of economic activities that propels Dubai to the zenith of global eminence. Tourism, commerce, real estate – the city's offerings are a melody that resonates across borders, contributing to the emirate's crown as a premier destination. Amidst the opulence, the Dubai Mall stands, a modern marvel adorned with the riches of global fashion and the echoes of laughter in its vibrant corridors. A symphony of lights and luxury, where desires find refuge and dreams unfold in every storefront.
+
+        As the day unfolds, embark on a journey to the iconic Burj Khalifa, a sentinel of the skyline, piercing the heavens with its majestic spire. Here, the cityscape unfolds beneath your gaze, a breathtaking panorama that weaves tales of ambition and achievement.
+        
+        For those seeking the embrace of nature, the Miracle Garden blooms like a canvas of colors, a floral tapestry that whispers secrets of life in the heart of the desert. Amidst petals and fragrant breezes, find solace and renewal in this oasis of serenity.",
         
 
 
