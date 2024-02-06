@@ -17,9 +17,9 @@
         to { -webkit-transform: rotate(360deg); }
     }
 </style>
-<div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-8 sm:my-4 mx-auto">
-    <div class="container mx-auto my-8">
-        <form class="flex flex-col items-start w-full"  method="post" action="/en/agency-registration-post" id="contact-desktop-form">
+<div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-8 sm:my-4 mx-auto" id="agency-registration-form">
+    <div class="container mx-auto my-8 px-4">
+        <form class="flex flex-col items-start w-full"  method="post" action="/en/agency-registration-post" id="uploadForm">
             @csrf
                
             <div class="icon bg-black text-white w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
@@ -39,6 +39,30 @@
             <button type="submit" id="submitForm" class="w-full mt-6 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Submit</button>
             <button type="button" id="submitVerifying" hidden disabled class="w-full mt-8 bg-transparent border text-black font-semibold p-3"><div id="loading"></div> Verifying</button>
         </form>
+    </div>
+</div>
+
+
+<div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-4 mx-auto hidden" id="agency-registration-form-submitted">
+    <div class="md:w-[80%] xl:w-[50%] mx-auto my-8">
+        <!-- component -->
+        <div class="flex  items-center justify-center ">
+            <div class="rounded-lg  px-16 py-14">
+                <div class="flex justify-center">
+                <div class="rounded-full bg-green-200 p-6">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-full bg-green-500 p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                    </div>
+                </div>
+                </div>
+                <h3 class="my-4 text-center text-3xl font-semibold text-gray-700">Successful!</h3>
+                <p class="w-[100%] text-center font-normal text-gray-600">
+                    Thank you for submitting your information. Your registration has been recorded and is currently awaiting verification by our customer support team. You will receive a notification via email once the process is complete
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -126,7 +150,6 @@
                     }
                 });
                 $('#uploadForm').on('submit', function(e){
-
                     e.preventDefault();
                     document.getElementById('submitForm').style.display = 'none';
                     document.getElementById('submitVerifying').style.display = 'inline-block';

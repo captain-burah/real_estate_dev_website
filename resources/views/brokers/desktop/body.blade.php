@@ -42,7 +42,6 @@
             <button type="submit" id="submitForm" class="w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Register Now</button>
             <button type="button" id="submitVerifying" hidden disabled class="w-full mt-8 bg-transparent border text-black font-semibold p-3"><div id="loading"></div> Verifying</button>
         </form>
-
     </div>
 </div>
 
