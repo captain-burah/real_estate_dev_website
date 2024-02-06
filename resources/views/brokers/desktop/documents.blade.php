@@ -18,7 +18,7 @@
                 file:cursor-pointer
                 "
                 accept=".pdf, .jpg, .jpeg"
-                required/>
+                />
             </td>
         </tr>
 
@@ -34,7 +34,7 @@
                 file:cursor-pointer
                 "
                 accept=".pdf, .jpg, .jpeg"
-                required/>
+                />
             </td>
         </tr>
 
@@ -51,7 +51,7 @@
                 file:cursor-pointer
                 "
                 accept=".pdf, .jpg, .jpeg"
-                required/>
+                />
             </td>
         </tr>
 
@@ -67,7 +67,7 @@
                 file:cursor-pointer
                 "
                 accept=".pdf, .jpg, .jpeg"
-                required/>
+                />
             </td>
         </tr>
 
@@ -83,7 +83,7 @@
                 file:cursor-pointer
                 "
                 accept=".pdf, .jpg, .jpeg"
-                required/>
+                />
             </td>
         </tr>
 
@@ -99,7 +99,7 @@
                 file:cursor-pointer
                 "
                 accept=".pdf, .jpg, .jpeg"
-                required/>
+                />
                 <span class=" text-sm">(all three in one document)</span>
             </td>
         </tr>
