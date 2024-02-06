@@ -151,7 +151,7 @@
                                             <tr style="border-collapse:collapse">
                                             <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:30px;padding-right:30px">
                                                 <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
-                                                    Project Name - {{ $data['enquiry_type'] }}
+                                                    Project Name - {{ $data['project'] }}
                                                 </p>
                                             </td>
                                             </tr>

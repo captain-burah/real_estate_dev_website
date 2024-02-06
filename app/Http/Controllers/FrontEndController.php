@@ -761,6 +761,7 @@ class FrontEndController extends Controller
 
     
     public function project_detail_brochure_download($lang='', Request $request) {
+        
         $tel = $request->country_code_brochure + $request->phone_brochure;
 
         try{
@@ -769,7 +770,6 @@ class FrontEndController extends Controller
                 'name'      =>  $request->name_brochure, 
                 'email'     =>  $request->email_brochure,
                 'ip'     =>  $request->getClientIp(),
-                'enquiry_type'     =>  $request->enquiry_type_brochure,
                 'project'     =>  $request->project_brochure,
                 'phone'     =>  $request->phone_brochure,
                 'tel'     =>  $tel,
@@ -784,56 +784,8 @@ class FrontEndController extends Controller
             dd($e->getMessage());
         }
 
-        // try{
+        return redirect()->back()->with('success', 'Your inquiry has been submitted!');   
 
-        //     $data = [
-        //         'name'      =>  $request->name_brochure, 
-        //         'email'     =>  $request->email_brochure,
-        //         'ip'     =>  $request->getClientIp(),
-        //         'enquiry_type'     =>  $request->enquiry_type_brochure,
-        //         'project'     =>  $request->project_brochure,
-        //         'project_id'     =>  $request->project_id,
-        //         'phone'     =>  $request->phone_brochure,
-        //         'tel'     =>  $tel,
-        //         'country_code'     =>  $request->country_code_brochure,
-        //     ];
-
-        //     $curl = curl_init();
-
-        //     $url = 'https://mis.esnaad.com/api/project-brochure-download';
-
-        //     curl_setopt_array($curl, array(
-        //         CURLOPT_URL => $url,    
-        //         CURLOPT_RETURNTRANSFER => true,
-        //         CURLOPT_ENCODING => '',
-        //         CURLOPT_MAXREDIRS => 10,
-        //         CURLOPT_TIMEOUT => 0,
-        //         CURLOPT_FOLLOWLOCATION => true,
-        //         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        //         CURLOPT_CUSTOMREQUEST => 'POST',
-        //         CURLOPT_POSTFIELDS => $data,
-        //         CURLOPT_HTTPHEADER => array(
-        //             'Cookie: XSRF-TOKEN=eyJpdiI6ImdjVUpXbDhCbk9BSGFWOTZsTTZSL0E9PSIsInZhbHVlIjoiUUJrWTlWOVVnb00zWDhzVk1kQTBTWWNYcHlvZXA0OXpEMWVVREUyTlZXR3Z2dkNMSlZZb1JMK3ppNjROazMzYlczalc0NHVBKzZ6WWhPYTloT3d4UmI0U0ptZUR6S0JsbmRrdlZzSThQSVNOUi90WGw0WkRhYXpTUFVIQXZGS0wiLCJtYWMiOiIxMTA2OWI1ZmZjMjZiY2I5ZGRjZWQyNmIwNGY1ZTRmMjgwNTk5YWFmODE1YzU4ODg3MWNmN2ViZTkzNjg4ODEzIiwidGFnIjoiIn0%3D'
-        //         ),
-        //     ));
-
-        //     $response = curl_exec($curl);
-
-        //     if ($response === false) {
-        //         $error = curl_error($curl);
-        //         $errno = curl_errno($curl);
-
-        //         echo "Error: " . $error . " (Error code: " . $errno . ")";
-        //     } else {
-        //         // Process successful response
-        //         echo $response;
-        //     }
-
-        //     curl_close($curl);
-
-        // } catch (\Exception $e) {
-        //     dd($e->getMessage());
-        // }
     }
 
 
@@ -909,6 +861,11 @@ class FrontEndController extends Controller
 
     public function project_details_thanks($lang = '') {
         $this->data['source'] = $source = "project_details";
+        return view('thankyou2', $this->data);
+    }
+
+    public function project_brochure_thanks($lang = '') {
+        $this->data['source'] = $source = "project_brochure";
         return view('thankyou2', $this->data);
     }
 

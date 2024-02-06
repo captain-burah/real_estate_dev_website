@@ -1,4 +1,4 @@
-<div class="sm:container sm:mx-auto mx-0 px-4 xl:my-10 sm:my-4 mx-auto"  @if($langSeg == 'ar') dir="rtl" @endif>
+<div class="sm:container sm:mx-auto mx-0 px-4 xl:my-10 sm:my-4 mx-auto" id="projectSectionOne"  @if($langSeg == 'ar') dir="rtl" @endif>
 
     <div class="row-span-2 grid sm:grid-cols-2 gap-4 w-[100%]">
         <div>

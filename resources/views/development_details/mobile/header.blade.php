@@ -109,7 +109,11 @@
                     <div class="px-2 w-full" style="max-height: 40vh;">
 
                         <div class="mb-6">
-                            Living in 
+                        @if($langSeg == 'ar')
+                            {{$namear}}
+                        @else
+                            {{$name}}
+                        @endif
                         </div>
 
                         <div class="mb-6">
