@@ -289,15 +289,12 @@ class FrontEndController extends Controller
                 'phone'     =>  $request->phone,
                 'country_code'   =>  $request->country_code
             ];
-
-            // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            Mail::to('web@edgerealty.ae')->send(new CommunityInquiry($data));
-
+            Mail::mailer('noreply')->to('lead@esnaad.com')->send(new CommunityInquiry($data));
+            Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new CommunityInquiry($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
-
-        return view('thankyou');
+        return Response::json(['message' => 'verification sent'], 200);
     }
 
 
