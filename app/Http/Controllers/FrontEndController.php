@@ -732,7 +732,7 @@ class FrontEndController extends Controller
 
 
     public function project_detail_inquiry($lang='', Request $request) {
-        $tel = $request->country_code + $request->phone;
+        $tel = $request->country_code + $request->phone;        
 
         try{
             
@@ -740,16 +740,15 @@ class FrontEndController extends Controller
                 'name'      =>  $request->name, 
                 'email'     =>  $request->email,
                 'ip'     =>  $request->getClientIp(),
-                'enquiry_type'     =>  $request->enquiry_type,
+                'enquiry_type'     =>  $request->project,
                 'project'     =>  $request->project,
                 'phone'     =>  $request->phone,
                 'tel'     =>  $tel,
                 'country_code'     =>  $request->country_code,
             ];
 
-            // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            // Mail::mailer('noreply')->to('lead@esnaad.com')->send(new SubscriptionInquiry($data));
-            // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new ProjectInquiry($data));
+            Mail::mailer('noreply')->to('lead@esnaad.com')->send(new ProjectInquiry($data));
+            Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new ProjectInquiry($data));
 
         } catch (\Exception $e) {
             dd($e->getMessage());

@@ -34,7 +34,7 @@
                         </div>
                         <h3 class="my-4 text-center text-3xl font-semibold text-gray-700">Successful!</h3>
                         <p class="w-[100%] text-center font-normal text-gray-600">
-                            Thank you for submitting your information. One of our representatives will contact you soon on your enquiry.
+                            Thank you for submitting your information. Your registration has been recorded and is currently awaiting verification by our customer support team. You will receive a notification via email once the process is complete
                         </p>
                     </div>
                 </div>
@@ -59,12 +59,12 @@
                         *Please don't forget to look in your spam or junk folder just in case
                     </p> --}}
                 </div>
-                <form id="new-project-details-desktop-form" method="post" action="en/project-detail-inquiry" class="w-full">
-                    @csrf
+                <form id="inquiryForm" class="w-full" >
                     <div class="px-4  w-full" style="max-height: 40vh;">
-                        <input type="hidden" id="project" name="project" value="{{$name}}">
+                        <input type="hidden" id="project" name="project" value="project_name">
                         <input type="hidden" id="country_code" name="country_code">
                         <input type="hidden" id="url" name="url" value="{{$actual_link}}">
+                        <input type="hidden" id="enquiry_type" name="enquiry_type" value="">
 
                         <div class="mb-6">
                             <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-0 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Your Name"  required>
@@ -145,90 +145,73 @@
 
     {{-- FORM SUBMIT INTEREST --}}
     <script>
-        $(document).ready(function () {
-            /**
-             * INITIATE HEADERS WITH CSRF TOKENIZATION
-             * FOR FORM SUBMISSION
-             */
-            // Function to set a cookie
-            function setCookie(name, value, daysToExpire) {
-                var expires = "";
-                
-                if (daysToExpire) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                
-                document.cookie = name + "=" + value + expires + "; path=/";
-            };
-            
-            // Function to get a cookie
-            function getCookie(cookieName) {
-                var name = cookieName + "=";
-                var decodedCookie = decodeURIComponent(document.cookie);
-                var cookieArray = decodedCookie.split(';');
 
-                for (var i = 0; i < cookieArray.length; i++) {
-                    var cookie = cookieArray[i].trim();
-                    if (cookie.indexOf(name) === 0) {
-                        return cookie.substring(name.length, cookie.length);
-                    }
-                }
+        
 
-                return null; // Return null if the cookie is not found
-            };
+        // Example: Get the value of the "user" cookie
+        var projectInquiry = getCookie("project_inquiry_submitted");
 
-            if (getCookie('_q2vWT4junrLR')) {
-                var successView = document.getElementById("form_ready");
+        // Use the value as needed
+        if (!projectInquiry) {
+           
+        // var agency_reg_form_bool = sessionStorage.getItem('project_inquiry_submitted');
+        // if(!agency_reg_form_bool) {
+
+            $('#inquiryForm').on('submit', function(e){
+                e.preventDefault();
+
+                var formData = new FormData(this);
+
+                setCookie("project_inquiry_submitted", "true", 7);
+
+                var successView = document.getElementById("inquiryForm");
                 successView.classList.add("hidden");
 
-                var formView = document.getElementById("form_submitted");
+                var formView = document.getElementById("projectInquiryCompletedForm");
                 formView.classList.remove("hidden");
-            } else {
-                $('#new-project-details-desktop-form').on('submit', function(e){
 
-                    /**
-                     * INITIATE AN AJAX SCRIPT FOR THE FORM SUBMISSION
-                     * ALONG WITH POST ROUTE METHOD AND URL. IF RESPONSE
-                     * IS A SUCCESS DISPLAY THE THANK YOU MODAL AND
-                     * UPDATE THE FORM SESSION IN SESSION-STORAGE OF BROWSER
-                     *
-                    */
-                    e.preventDefault(); //---cancel default form submissions
-                    var formData = new FormData(this); //---get alll the form data here
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content')
-                        }
-                    });
-                    $.ajax({
-                        type:'POST',
-                        headers: //---set the headers for cross-origin policies between domains
-                        {
-                            'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
-                            'Access-Control-Allow-Origin': 'https://esnaad.com/en/project-detail-inquiry'
-                        },
-                        url: "/en/project-detail-inquiry",
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success:function(data) 
-                        {
-                            if($.isEmptyObject(data.error)){ //---if success
-                                setCookie("_q2vWT4junrLR", true, 1); //---set a cookie
-                                document.location.href = '/en/project-details/thanks'; //---redirect to thank you page for seo
-                            }else{
-                                printErrorMsg(data.error);//---show error
-                            }
-                        }
-                    });
-
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                        'authkey': 'YOUR_SECRET_KEY',
+                    }
                 });
-            }
-            
-            
-        });
+
+                $.ajax({
+                    type:'POST',
+                    {{ URL('en/project-detail-inquiry') }}",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success:function(data)
+                    {
+                        // if($.isEmptyObject(data.error)){
+
+                        // }else{
+                        //     printErrorMsg(data.error);
+                        //     alert(data.error);
+
+                        // }
+                    }
+                });
+
+                // Simulate a successful submission
+                // alert('Subscription successful!');
+
+                // Disable the form to prevent further submissions
+                // disableForm();
+
+                // Store the submission status in local storage
+                // localStorage.setItem('subscriptionSubmitted', 'true');
+            });
+        }
+            else {
+            var successView = document.getElementById("inquiryForm");
+            successView.classList.add("hidden");
+
+            var formView = document.getElementById("projectInquiryCompletedForm");
+            formView.classList.remove("hidden");
+        }
     </script>
 
 @endsection
