@@ -94,7 +94,8 @@ return [
         'homeSectionTwoH' => "OUR LATEST PROJECTS",
         'homeSectionThreeH' => "OUR LATEST PROJECTS",
         'homeSectionThreeImage' => "Coming Soon",
-        'homeSectionThreeP' => "Ongoing Flagship Project: “The Spark by ESNAAD” by ESNAAD",
+        'homeSectionThreeP' => "Embrace the Journey of Life and Investments: Building a Home, Nurturing Dreams, and Securing Futures - Where Every Brick Holds the Promise of a Lifetime",
+        // 'homeSectionThreeP' => "Ongoing Flagship Project: “The Spark by ESNAAD” by ESNAAD",
         'homeSectionThreeP2' => "Welcome to ESNAAD's innovative world, where our ongoing flagship project,
                 'The Spark by ESNAAD,'in Meydan District 11, stands as a testament to our
                 commitment to innovation

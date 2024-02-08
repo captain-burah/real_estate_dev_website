@@ -32,9 +32,6 @@
                     {{ __('frontend.homeSectionThreeP') }}  
                 </p>
 
-                <p class="text-base text-left mt-4 leading-relax leading-6">
-                    {{ __('frontend.homeSectionThreeP2') }}  
-                </p>
             </div>
         </div>
     </div>
