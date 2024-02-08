@@ -10,9 +10,9 @@
                     {{__('frontend.homeSectionOneP1')}}
                 </p>
 
-                {{-- <p class="text-sm xl:text-base leading-8 mt- text-left">
+                <p class="text-sm xl:text-base leading-8 mt-2 text-left">
                     {{__('frontend.homeSectionOneP2')}}
-                </p> --}}
+                </p>
             </div>
             <div class="my-auto">
                 <img src="{{ asset('home/13.webp') }}"  title="ESNAAD-Our-Story" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">

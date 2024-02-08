@@ -38,11 +38,6 @@
             transform: translateY(-15px);
         }
     }
-    "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura
-                Holdings. Established in 2005, Aura Holdings is a prominent player in the real
-                estate and construction sector. Founded by our visionary CEO Ashraf
-                Elbendari, our journey began with successful ventures as subcontractors,
-                establishing our expertise and commitment to excellence.",
 </style>
 
 <section class="video-wrapper hero bg-hero bg-cover bg-no-repeat bg-top object-cover overflow-hidden max-w-full h-[70vh] " data-v-6d98d5bc="">
@@ -53,7 +48,7 @@
   <div class="absolute top-0 right-0 bottom-0 left-0 bg-backdrop z-[2] bg-black bg-opacity-60" data-v-6d98d5bc=""></div>
   <div class="absolute flex flex-col items-center z-[3] mobile:px-4" data-v-6d98d5bc="">
     <div class="info flex justify-center items-center flex-col text-white mt-[60px] p-0 mobile:p-2" data-v-6d98d5bc="">
-      <h1 class="text-xl title-font-thin mobile:text-60p ltr:leading-none" data-v-6d98d5bc="">{{__('frontend.heroH')}}</h1>
+      <h1 class="text-3xl title-font-thin mobile:text-60p ltr:leading-none" data-v-6d98d5bc="">{{__('frontend.heroH')}}</h1>
     </div>
   </div>
   <a href="#component_home_section_one"  id="scrollToSection" class="component-header__arrow-down absolute bottom-[10px] text-white z-[3]" data-v-6d98d5bc=""  style="cursor:pointer !important">

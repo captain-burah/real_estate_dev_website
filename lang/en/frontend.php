@@ -48,14 +48,19 @@ return [
         /**
          * HOME
          */
-        'heroH' => "A team of innovators and builders pioneering progressive forms of large-scale urban development",
-        'homeSectionOneH' => "Welcome to ESNAAD - Shaping Dreams, Building Legacies",
-        'homeSectionOneP1' => "Thank you for considering ESNAAD, where we transform dreams into reality.
-                Whether you're seeking a new home or an investment opportunity, ESNAAD
-                is dedicated to crafting spaces that go beyond the ordinary. Explore the
-                possibilities with 'The Spark by ESNAAD,' where life sparks with endless
-                opportunities.",
-        'homeSectionOneP2' => "The brand is dedicated to delivering luxurious projects with levels of designs beyond imaginations, craftsmanship and services that offer unique and a tailored one-stop shop to our clients from around the world, looking beyond what is, to see what could be. Our objective is to build market leading new luxury homes in locations ready for regeneration. Professional in our approach, entrepreneurial in our thinking and loyal in our relationships, Esnaad Real Estate Developments is all about mutual benefit, We combine innovation and outstanding design to deliver uniquely crafted homes and neighbourhoods.",
+        'heroH' => "Welcome to ESNAAD - Shaping Dreams, Building Legacies",
+        'homeSectionOneH' => "Our Story",
+        'homeSectionOneP1' => "Immersed in the rich tapestry of the real estate and construction industry for over
+        two decades, ESNAAD is a beacon of innovation and commitment. Our story is more
+        than a chronicle of years; it's a testament to our passion for elevating living
+        experiences through spaces that resonate with sophistication and impeccable
+        craftsmanship.",
+        'homeSectionOneP2' => "With a visionary outlook, ESNAAD aspires to transcend conventional boundaries in
+                the real estate realm. Our dedication is not merely to construct buildings but to
+                curate lifestyles that transcend the ordinary. Inspired by a global perspective, we
+                invite clients from around the world to explore a unique, tailored, and holistic
+                approach to real estate—a journey beyond bricks and mortar, where dreams unfold
+                and futures are secured.",
         'homeSectionTwoH1' => "THE THREE PILLARS",   
         'homeSectionTwoH2' => "OF ESNAAD'S PHILOSOPHIES",
         'homeSectionTwoDesign' => "Our designs blend aesthetics with functionality, creating homes that are as beautiful as they are comfortable while we weave architectural dreams into reality",
