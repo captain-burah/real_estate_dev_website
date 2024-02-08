@@ -1,12 +1,12 @@
 <div class="max-w-full rounded-0 overflow-hidden" >
 
     <div class="w-full group">
-        <div class="relative overflow-hidden">
+        <div class="relative overflow-hidden shadow-lg">
 
-            <div class="grid grid-cols-1 ">
+            <div class="grid grid-cols-1  ">
 
                 <img
-                    class="sm:w-full object-cover shadow"
+                    class="sm:w-full object-cover"
                     src="{{ asset($url)}}"
                     alt="esnaad-quality-and-services"
                     title="esnaad-philosophies"
@@ -20,7 +20,7 @@
             
         </div>
         <div class=" h-full w-full flex items-center justify-center">
-                <span class="mt-10 px-4 text-center text-base font-base  leading-8">
+                <span class="mt-10 px-0 text-justify text-base font-base  leading-8">
                     {{ __('frontend.'.$description) }}
                 </span>
             </div>

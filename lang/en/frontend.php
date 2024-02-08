@@ -63,25 +63,45 @@ return [
                 and futures are secured.",
         'homeSectionTwoH1' => "THE THREE PILLARS",   
         'homeSectionTwoH2' => "OF ESNAAD'S PHILOSOPHIES",
-        'homeSectionTwoDesign' => "Our designs blend aesthetics with functionality, creating homes that are as beautiful as they are comfortable while we weave architectural dreams into reality",
-        'homeSectionTwoQuality' => "We are committed to delivering quality in every aspect of its projects, from the choice of materials and equipment, to the execution and supervision of the construction",
-        'homeSectionTwoExcelence' => "Relentless pursuit of the highest standards, achieved through dedication, skill and a commitment to surpassing expectations",
+        'homeSectionTwoDesign' => "In our pursuit of design excellence, we embrace the journey of life and investments.
+                ESNAAD envisions the construction of homes as more than physical structures; each
+                brick holds the promise of a lifetime. Our designs are not just aesthetic expressions
+                but thoughtful compositions that embody the essence of creating spaces where
+                memories are woven, dreams are actualized, and investments flourish with
+                enduring value.",
+        'homeSectionTwoQuality' => "Embedded in the DNA of ESNAAD is an unwavering commitment to quality. This
+                commitment permeates every facet of our projects, from the selection of premium
+                materials and cutting-edge equipment to the meticulous execution and supervision
+                of construction. Quality, for us, is not a mere benchmark but a foundational
+                principle that defines the very essence of our approach. It's a commitment to
+                delivering not just homes but lasting legacies.",
+        'homeSectionTwoExcelence' => "In the pursuit of excellence, ESNAAD sets forth to redefine industry standards.
+                Through dedication, skill, and an unyielding commitment to surpassing
+                expectations, excellence becomes more than a goal—it's a culture. We believe in
+                pushing boundaries, constantly innovating, and setting new benchmarks in the real
+                estate landscape. Our pursuit of excellence is a driving force that propels us to
+                shape the future of real estate, one exceptional project at a time.",
         'homeSectionTwoH' => "OUR LATEST PROJECTS",
-        'homeSectionTwoDesign' => "Embrace the Journey of Life and Investments: Building a Home, Nurturing Dreams, and Securing Futures - Where Every Brick Holds the Promise of a Lifetime",
         'homeSectionThreeH' => "OUR LATEST PROJECTS",
         'homeSectionThreeImage' => "Coming Soon",
-        'homeSectionThreeP' => "Embrace the Journey of Life and Investments: Building a Home, Nurturing Dreams, and Securing Futures - Where Every Brick Holds the Promise of a Lifetime",
+        'homeSectionThreeP' => "Ongoing Flagship Project: “The Spark by ESNAAD” by ESNAAD",
+        'homeSectionThreeP2' => "Welcome to ESNAAD's innovative world, where our ongoing flagship project,
+                'The Spark by ESNAAD,'in Meydan District 11, stands as a testament to our
+                commitment to innovation
+                and high-quality
+                developments. This
+                contemporary masterpiece features a B+G+5+R building, offering 1 and 2
+                Bedroom Apartments. We are dedicated to transforming this vision into a
+                reality that exceeds expectations, incorporating a design-led approach,
+                contemporary aesthetics, and a focus on delivering exceptional value for
+                money.",
 
 
         /**
          * ABOUT
          */
         "aboutH" => "About ESNAAD",
-        "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura
-                Holdings. Established in 2005, Aura Holdings is a prominent player in the real
-                estate and construction sector. Founded by our visionary CEO Ashraf
-                Elbendari, our journey began with successful ventures as subcontractors,
-                establishing our expertise and commitment to excellence.",
+        "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura Holdings. Established in 2005, Aura Holdings is a prominent player in the real estate and construction sector. Founded by our visionary CEO Ashraf Elbendari, our journey began  with successful ventures as a real estate expert & contractors, establishing our expertise and commitment to excellence.",
 
         "aboutMobileP1" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura
                 Holdings - a prominent player in the real estate and construction sector ",

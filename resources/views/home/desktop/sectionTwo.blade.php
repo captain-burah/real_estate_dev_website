@@ -5,7 +5,7 @@
         </h2>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-17 mb-5 mx-auto" >
+    <div class="grid md:grid-cols-3 gap-7 mb-5 mx-auto" >
 
         <?php //LOAD COMPONENT INDEX CARD ?>
         <x-index-card

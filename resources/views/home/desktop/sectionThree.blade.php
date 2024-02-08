@@ -32,6 +32,10 @@
                 <p class="text-xl mt-10 text-justify leading-8">
                     {{ __('frontend.homeSectionThreeP') }}
                 </p>
+
+                <p class="text-base mt-10 text-justify leading-8">
+                    {{ __('frontend.homeSectionThreeP2') }}
+                </p>
             </div>
         </div>
     </div>
