@@ -50,17 +50,27 @@ return [
          */
         'heroH' => "Welcome to ESNAAD - Shaping Dreams, Building Legacies",
         'homeSectionOneH' => "Our Story",
+        
         'homeSectionOneP1' => "Immersed in the rich tapestry of the real estate and construction industry for over
-        two decades, ESNAAD is a beacon of innovation and commitment. Our story is more
-        than a chronicle of years; it's a testament to our passion for elevating living
-        experiences through spaces that resonate with sophistication and impeccable
-        craftsmanship.",
+                two decades, ESNAAD is a beacon of innovation and commitment. Our story is more
+                than a chronicle of years; it's a testament to our passion for elevating living
+                experiences through spaces that resonate with sophistication and impeccable
+                craftsmanship.",
+        
         'homeSectionOneP2' => "With a visionary outlook, ESNAAD aspires to transcend conventional boundaries in
                 the real estate realm. Our dedication is not merely to construct buildings but to
                 curate lifestyles that transcend the ordinary. Inspired by a global perspective, we
                 invite clients from around the world to explore a unique, tailored, and holistic
                 approach to real estate—a journey beyond bricks and mortar, where dreams unfold
                 and futures are secured.",
+        
+        'homeSectionOneP3' => "At the heart of our mission is the endeavor to lead the market in crafting new luxury
+                homes in areas poised for regeneration. We approach our work with
+                professionalism, harbor an entrepreneurial spirit, and value loyalty in our
+                relationships. ESNAAD Real Estate Developments is a fusion of innovation and
+                exquisite design, striving to deliver homes and neighborhoods that are not just
+                spaces but expressions of a refined lifestyle.",
+
         'homeSectionTwoH1' => "THE THREE PILLARS",   
         'homeSectionTwoH2' => "OF ESNAAD'S PHILOSOPHIES",
         'homeSectionTwoDesign' => "In our pursuit of design excellence, we embrace the journey of life and investments.
