@@ -113,8 +113,7 @@ return [
         "aboutH" => "About ESNAAD",
         "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura Holdings. Established in 2005, Aura Holdings is a prominent player in the real estate and construction sector. Founded by our visionary CEO Ashraf Elbendari, our journey began  with successful ventures as a real estate expert & contractors, establishing our expertise and commitment to excellence.",
 
-        "aboutMobileP1" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura
-                Holdings - a prominent player in the real estate and construction sector ",
+        "aboutMobileP1" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura Holdings. Established in 2005, Aura Holdings is a prominent player in the real estate and construction sector.",
         
         "aboutMobileP2" => "With our dedication to innovative thinking, consistent excellence, and the pursuit of perfection, we redefine luxury.
                 We are committed to creating spaces that celebrate life, encapsulate your dreams, and add value to the community",
