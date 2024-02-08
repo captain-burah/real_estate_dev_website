@@ -1,35 +1,51 @@
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6" >
-
+<?php
+    $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri_segments = explode('/', $uri_path);
+    $seg1 = $uri_segments[1];
+    if($seg1 == 'en' || $seg1 == 'ar'){
+        $langSeg = $uri_segments[1];
+    }else{
+        $langSeg = 'en';
+    }
+?>
+<div class="max-w-6xl mx-auto p-0">
             <div class="w-full bg-white rounded-0 sahdow-lg overflow-hidden flex flex-col justify-center items-center">
-                <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[34rem]">
+                <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[50rem] w-[100%] z-0">
                     <div
-                        class="text-white text-xl rounded-0 absolute inset-0  bg-black bg-opacity-80 flex justify-center items-center ">
-                    </div>
-                    <img class="h-full w-full object-cover "
-                    src="{{$img}}"
-                    
-                    alt="esnaad-project-card">
+                        class="text-white text-xl rounded-0 absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center ">
+                    </div>                    
+                    <img class="h-[100%] w-[100%] object-cover     "
+                        src="https://mis.esnaad.com/uploads/projects/{{$id}}/{{$thumbnail}}"
+                        alt="esnaad-project-card"
+                        title="{{$thumbnail}}"
+                        height="300px"
+                        width="auto"
+                        loading="lazy"
+                    >
                 </div>
-                <div class="row grid grid-cols-3 mt-4">
-                    <div>
-                        <div class="absolute xs:ml-[5vw] xs:mt-[-6vh]  sm:w-22">
-                            <img class="h-full w-full object-cover m-0 p-0 "
-                                src="{{$logo}}"
-                                alt="esnaad-project-card"
-                            >
-                        </div>
-                    </div>
-                    <div class="col-span-2 min-w-[100vw]" @if($langSeg == 'ar') dir="rtl" @endif>
-                        <h2 class="text-xl text-black font-bold text-left min-w-[100vw]">{{$name}}</h2>
-                        <p class="text-base text-black font-thin text-left">{{$location}}</p>
+                <div class="row mx-auto mt-4 z-20">
+                    <div class="mt-[-80px] w-full mx-auto">
+                        <img class="object-cover m-0 p-0  z-90 text-center mx-auto border border-gray-200"
+                            width="140px" height="auto"
+                            src="https://mis.esnaad.com/uploads/projects/{{$id}}/{{$logo}}"
+                            alt="esnaad-project-card"
+                            title="{{$logo}}"
+                            loading="lazy"
+                            height="auto"
+                            width="auto"
+                        >
                     </div>
                 </div>
-                <div class="text-center py-8 sm:py-6 w-[100%]">
-                    <a href="{{url($langSeg.'/project-details')}}" class="bg-black border-black text-sm text-white font-thin py-4 px-20 rounded-0">
+                <div class="row w-full mx-auto mt-4 z-20">
+                    <div  >
+                        <h2 class="text-xl text-black font-bold text-center">@if($langSeg == 'ar'){{$namear}}@else {{$name}} @endif</h2>
+                        <p class="text-base text-black font-thin text-center">@if($langSeg == 'ar'){{$community}}@else {{$community}} @endif</p>
+                    </div>
+                </div>
+                <div class="text-center py-4 sm:py-4 w-full">
+                    <a href="{{ url('en/developments/'.$slug) }}" class="bg-black border-black text-sm text-white font-thin py-3 px-10 rounded-0">
                         Explore More
                     </a>
                 </div>
             </div>
-        </div>
     </div>

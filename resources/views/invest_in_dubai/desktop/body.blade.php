@@ -1,5 +1,5 @@
 <div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-10 sm:my-4 mx-auto">
-    <div class="row mx-auto mt-8">
+    {{-- <div class="row mx-auto mt-8">
         <div class="mx-auto">
             <p class=" font-thin leading-8 text-base text-justify mt-5">
                 {{__('frontend.investP1')}}
@@ -7,7 +7,7 @@
             </p>
         </div>
 
-    </div>
+    </div> --}}
 
     <div class="mx-auto mt-10">
         <h2 class="text-3xl font-thin text-center">
@@ -61,6 +61,27 @@
                 <h3 class="font-bold">{{__('frontend.investH9')}}</h3>
                 <p class=" font-thin leading-8 text-base text-justify">
                     {{__('frontend.investP9')}}<br><br> 
+                </p>
+            </div>
+
+            <div class="border p-4 shadow-sm">
+                <h3 class="font-bold">{{__('frontend.investH10')}}</h3>
+                <p class=" font-thin leading-8 text-base text-justify">
+                    {{__('frontend.investP10')}}<br><br> 
+                </p>
+            </div>
+
+            <div class="border p-4 shadow-sm">
+                <h3 class="font-bold">{{__('frontend.investH11')}}</h3>
+                <p class=" font-thin leading-8 text-base text-justify">
+                    {{__('frontend.investP11')}}<br><br> 
+                </p>
+            </div>
+
+            <div class="border p-4 shadow-sm">
+                <h3 class="font-bold">{{__('frontend.investH12')}}</h3>
+                <p class=" font-thin leading-8 text-base text-justify">
+                    {{__('frontend.investP12')}}<br><br> 
                 </p>
             </div>
         </div>

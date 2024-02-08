@@ -35,7 +35,7 @@
       
       @foreach($images as $image)
           <li class="splide__slide">
-            <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="lazy" >
+            <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" style="height: auto !important;" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="lazy" >
           </li>
       @endforeach
     </ul>
@@ -93,7 +93,9 @@
 <script>
   document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '#main-carousel', {
-    pagination: false,
+        pagination: false,
+        perPage: 2,
+
     } );
 
 

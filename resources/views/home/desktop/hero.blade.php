@@ -1,33 +1,33 @@
 
 <style>
-        video {
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
+    video {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
 
-        }
-        .video-wrapper {
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    }
+    .video-wrapper {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        body {
-        background: black;
-        }
+    body {
+    background: black;
+    }
 
-        .component-header__arrow-down {
-            animation: bounce 1.5s infinite;
-        }
-        @keyframes bounce {
+    .component-header__arrow-down {
+        animation: bounce 1.5s infinite;
+    }
+    @keyframes bounce {
         0% {
             transform: translateY(-15px);
         }
@@ -38,7 +38,11 @@
             transform: translateY(-15px);
         }
     }
-
+    "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura
+                Holdings. Established in 2005, Aura Holdings is a prominent player in the real
+                estate and construction sector. Founded by our visionary CEO Ashraf
+                Elbendari, our journey began with successful ventures as subcontractors,
+                establishing our expertise and commitment to excellence.",
 </style>
 
 <section class="video-wrapper hero bg-hero bg-cover bg-no-repeat bg-top object-cover overflow-hidden max-w-full h-[70vh] " data-v-6d98d5bc="">
@@ -49,10 +53,10 @@
   <div class="absolute top-0 right-0 bottom-0 left-0 bg-backdrop z-[2] bg-black bg-opacity-60" data-v-6d98d5bc=""></div>
   <div class="absolute flex flex-col items-center z-[3] mobile:px-4" data-v-6d98d5bc="">
     <div class="info flex justify-center items-center flex-col text-white mt-[60px] p-0 mobile:p-2" data-v-6d98d5bc="">
-      <h1 class="text-3xl title-font-thin mobile:text-60p ltr:leading-none" data-v-6d98d5bc="">A team of innovators and builders pioneering progressive forms of large-scale urban development</h1>
+      <h1 class="text-xl title-font-thin mobile:text-60p ltr:leading-none" data-v-6d98d5bc="">{{__('frontend.heroH')}}</h1>
     </div>
   </div>
-  <a href="#projectSectionOne"  id="scrollToSection" class="component-header__arrow-down absolute bottom-[10px] text-white z-[3]" data-v-6d98d5bc=""  style="cursor:pointer !important">
+  <a href="#component_home_section_one"  id="scrollToSection" class="component-header__arrow-down absolute bottom-[10px] text-white z-[3]" data-v-6d98d5bc=""  style="cursor:pointer !important">
     <img src="{{asset('down-arrow.png')}}" id="component_header_arrow_down" height="auto" width="auto" style="height:50px !important; width: auto;" alt="esnaad-view-more" title="View More" loading="eager"/>
 </a>  
 </section>  

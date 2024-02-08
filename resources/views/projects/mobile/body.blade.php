@@ -44,6 +44,7 @@
     </style>
 @endsection
 
+<section class="max-w-8xl mx-auto px-4 py-4">
 
 @foreach($response as $data)
     <?php
@@ -57,7 +58,7 @@
         $logo = $data['logo'];
         $header = $data['header'];
     ?>
-    <x-new-project-desktop
+    <x-new-project
         :id="$id"
         :name="$name"
         :namear="$namear"
@@ -68,5 +69,6 @@
         :logo="$logo"
         :header="$header"
 
-    ></x-new-project-desktop>
+    ></x-new-project>
 @endforeach
+</section>

@@ -1,11 +1,14 @@
+@php
+    $shortenedText = Str::limit(__('frontend.aboutLegacy'), 250, '...');
+@endphp
+
+
 <div class="container mx-auto  px-4 m-0 mt-5 mb-0">
     <div class="row">
         <div class="grid md:grid-cols-1 mx-auto">
-            <div class="">
-                <p class="leading-6 text-base text-justify">
-                    {{__('frontend.aboutP2')}}                    
-                </p>
-
+            <div class="paragraph-container">
+                <p id="mobileAboutP" class="leading-6 text-base text-justify" >{{$shortenedText }}</p>
+                <button class="mt-2 underline" id="read-more-btn-about-mobile" data-full-text="{{ __('frontend.aboutLegacy') }}">Read More</button>
             </div>
         </div>
     </div>
@@ -86,6 +89,15 @@
 </div>
 
 <script>
+    $(document).ready(function() {
+        $('#read-more-btn-about-mobile').click(function() {
+            var fullText = $(this).data('full-text');
+            $('#mobileAboutP').text(fullText);
+            $(this).hide();
+        });
+    });
+
+
     const moreTextEl = document.getElementById('more-text');
     const toggleBtnEl = document.getElementById('toggle-btn');
     const hideBtnEl = document.getElementById('hide-btn');

@@ -10,12 +10,12 @@
 ?>
 <div class="max-w-6xl mx-auto p-0">
             <div class="w-full bg-white rounded-0 sahdow-lg overflow-hidden flex flex-col justify-center items-center">
-                <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[50rem] z-0">
+                <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[50rem] w-[100%] z-0">
                     <div
                         class="text-white text-xl rounded-0 absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center ">
                     </div>
                     
-                    <img class="h-[300px] w-[100%] object-cover "
+                    <img class="h-[100%] w-[100%] object-cover     "
                         src="https://mis.esnaad.com/uploads/projects/{{$id}}/{{$thumbnail}}"
                         alt="esnaad-project-card"
                         title="{{$thumbnail}}"
@@ -26,7 +26,7 @@
                 </div>
                 <div class="row w-full grid grid-cols-5 mt-4 z-20">
                     <div class="col-span-2 mt-[-70px] w-full mx-auto">
-                        <img class="object-cover m-0 p-0  z-90 text-center mx-auto"
+                        <img class="object-cover m-0 p-0  z-90 text-center mx-auto border border-gray-200"
                             width="160px" height="auto"
                             src="https://mis.esnaad.com/uploads/projects/{{$id}}/{{$logo}}"
                             alt="esnaad-project-card"

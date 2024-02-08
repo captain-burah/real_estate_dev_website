@@ -8,8 +8,10 @@ return [
          * FOOOTER
          */
                 // Form
-        'footerFormH2' => "Subscribe for Updates",
-        'footerFormP1' => "Stay in the loop and be the first to know about exciting news, exclusive offers, and important updates. Subscribe to our newsletter for a curated dose of inspiration delivered directly to your inbox.",
+        'footerFormH2' => "Get in Touch with Us or Connect with Us",
+        'footerFormP1' => "Your real estate aspirations deserve personalised attention. Please provide the
+        necessary details, and our dedicated team will swiftly assist you in your inquiry.
+        Connect with us as a Client or Broker and let ESNAAD be your trusted partner.",
         'footerFormP2' => "Thank You! Your Email subscription has been recorded. Feel free to check your emails regularly for important news on our latest trends.",
         
         'footerFormSubscribe' => "Subscribe",
@@ -46,8 +48,13 @@ return [
         /**
          * HOME
          */
-        'homeSectionOneH' => "OUR STORY",
-        'homeSectionOneP1' => "Inspired by over 20 years of expertise within the real estate industry & construction, elevating your living experiences with our thoughtfully crafted spaces, where every detail reflects our dedication to creating homes that stand as a testament to sophistication and superior craftsmanship.",
+        'heroH' => "A team of innovators and builders pioneering progressive forms of large-scale urban development",
+        'homeSectionOneH' => "Welcome to ESNAAD - Shaping Dreams, Building Legacies",
+        'homeSectionOneP1' => "Thank you for considering ESNAAD, where we transform dreams into reality.
+                Whether you're seeking a new home or an investment opportunity, ESNAAD
+                is dedicated to crafting spaces that go beyond the ordinary. Explore the
+                possibilities with 'The Spark by ESNAAD,' where life sparks with endless
+                opportunities.",
         'homeSectionOneP2' => "The brand is dedicated to delivering luxurious projects with levels of designs beyond imaginations, craftsmanship and services that offer unique and a tailored one-stop shop to our clients from around the world, looking beyond what is, to see what could be. Our objective is to build market leading new luxury homes in locations ready for regeneration. Professional in our approach, entrepreneurial in our thinking and loyal in our relationships, Esnaad Real Estate Developments is all about mutual benefit, We combine innovation and outstanding design to deliver uniquely crafted homes and neighbourhoods.",
         'homeSectionTwoH1' => "THE THREE PILLARS",   
         'homeSectionTwoH2' => "OF ESNAAD'S PHILOSOPHIES",
@@ -65,32 +72,65 @@ return [
          * ABOUT
          */
         "aboutH" => "About ESNAAD",
-        "aboutP" => "Experience unrivalled elegance with Dubai's one finest real estate developer ESNAAD, with our dedication to innovative thinking, consistent excellence, and the pursuit of perfection, we redefine luxury.
-                We are committed to creating spaces that celebrate life, encapsulate your dreams, and add value to the community",
+        "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura
+                Holdings. Established in 2005, Aura Holdings is a prominent player in the real
+                estate and construction sector. Founded by our visionary CEO Ashraf
+                Elbendari, our journey began with successful ventures as subcontractors,
+                establishing our expertise and commitment to excellence.",
 
-        "aboutMobileP1" => "Experience unrivalled elegance with Dubai's one finest real estate developer ESNAAD",
+        "aboutMobileP1" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura
+                Holdings - a prominent player in the real estate and construction sector ",
+        
         "aboutMobileP2" => "With our dedication to innovative thinking, consistent excellence, and the pursuit of perfection, we redefine luxury.
                 We are committed to creating spaces that celebrate life, encapsulate your dreams, and add value to the community",
+        "aboutLegacyLink" => "About Us",
+        "aboutLegacy" => "ESNAAD, a dynamic subsidiary of UAE-based Aura Holdings, stands as a
+                pioneering force in Dubai's real estate sector. Established under the
+                visionary leadership of founder and CEO Ashraf Elbendari, ESNAAD has
+                swiftly become synonymous with excellence, innovation, and unwavering
+                commitment to quality. Driven by a mission to enrich lives through
+                exceptional living spaces that transcend mere functionality, ESNAAD has
+                successfully completed ventures. With over 2,000 global customers, the
+                majority hailing from the GCC region and Europe with Arab origins, ESNAAD
+                strategically focuses its expansion plans on Dubai for the next five years.
+                Guided by a philosophy anchored in Aesthetic Functionality, Uncompromising
+                Quality, and a Relentless Pursuit of Excellence, ESNAAD aims to contribute to
+                the reshaping of Dubai’s real estate landscape. The company embraces
+                sustainability, adhering to UAE Green Building standards, sourcing locally,
+                and integrating eco-friendly features into its developments. ESNAAD's
+                commitment goes beyond construction; it extends to community integration,
+                ensuring vibrant living spaces that foster a sense of belonging. The company
+                prioritizes transparency, customer-centricity, and enduring quality,
+                exemplified by its hands-on management for rigorous project quality control.
+                As ESNAAD continues to shape the future of Dubai's real estate, the
+                company invites individuals seeking premium living experiences to connect
+                with a legacy of contemporary design, quality craftsmanship, and
+                unparalleled value for money. For more information, visit and witness the commitment to
+                excellence that defines ESNAAD's approach to real estate.",
         
         "aboutH1" => "Company Core Values",
         "aboutH2" => "Company Mission",
-        "aboutH3" => "Company Vission",
-        "aboutP1" => "At ESNAAD, we are guided by our core values, which define who we are and what we do. 
-                With Integrity we act with honesty, transparency, and accountability in all our dealings with our
-                customers, partners, employees, and society following and pursuing excellence in everything we do, from the quality of our developments and
-                services, to the performance of our teams, to the satisfaction of our stakeholders.
-                We embrace innovation as a way to create value, solve problems, and improve our
-                processes and developments.",
-        "aboutP2" => "Our mission is to create innovative and sustainable living spaces that enhance the quality of life of our stakeholders and investors. 
-                We aim to achieve this by empowering dreams, building legacies while redefining luxury living in the heart of Dubai. 
-                With a commitment to excellence, we envision and create dynamic communities that 
-                inspire a lifestyle of distinction working with talented and professional partners that share our vision and values,
-                and that provide us with the best expertise and resources in the industry.",
-        "aboutP3" => "Our vision is to be the region’s leading premium real estate development and investment company, with a 
-                Design, Quality and Excellence whilst, Developing our organization and culture, and fostering a work environment that
-                attracts, motivates, and retains the best talent in the industry. We innovate and improve our processes and developments, to adopt to the latest
-                trends in technologies and best practices as to the code of conduct within the realm of real estate while maintaining the highest standards of 
-                honesty and openness in all of our relationships.",
+        "aboutH3" => "Company Vision",
+        "aboutP1" => "At ESNAAD, our values form the bedrock of
+                our endeavours, guiding every decision and action. Placing our customers at the heart of
+                everything we do, we are dedicated to understanding their needs and
+                aspirations. We embrace innovation as a driving force behind our
+                projects. Balancing aesthetics with functionality, we seek innovative
+                solutions that elevate the living experience, ensuring our
+                developments remain at the forefront of contemporary design. ",
+        "aboutP2" => "ESNAAD is dedicated to enriching lives by creating
+                exceptional living spaces that go beyond mere functionality. The company is
+                committed to delivering unparalleled value through the development of high-
+                quality residences in prime locations. Striving to set new standards in the
+                real estate market, ESNAAD aims to provide homes that inspire, enhance
+                well-being, and contribute positively to the communities it serves.",
+        "aboutP3" => "ESNAAD envisions a future where our commitment to
+                excellence and innovation reshapes the landscape of Dubai's real estate.
+                Inspired by the visionary leadership of H.H. Sheikh Mohammed Bin Rashid Al
+                Maktoum, we aim to be at the forefront of transformative developments,
+                contributing to the city's progressive growth. As the company expands its
+                presence, its vision is to become a developer synonymous with cutting-edge
+                design, sustainable practices, and enduring value.",
 
 
         /**
@@ -108,7 +148,7 @@ return [
         /**
          * INVEST IN DUBAI
          */
-        "investH" => "INVEST IN DUBAI",
+        "investH" => "Why Dubai?",
         "investP" => "Investing in Dubai presents a compelling opportunity for individuals and businesses seeking a dynamic and globally competitive environment.",
         "investP1" => "One of the key attractions is Dubai's commitment to foreign investors,
                 allowing them 100% ownership of their businesses. This policy underscores the city's dedication to facilitating
@@ -117,55 +157,84 @@ return [
                 opportunities. The pro-business environment in Dubai, coupled with a high standard of living and a pool of
                 global talents, creates an ecosystem conducive to innovation and success.",
         
-        "investH2" => "Why Invest In Dubai?",
+        "investH2" => "Reasons to Choose Dubai as Your New Home or Investment
+        Destination",
 
-        "investH3" => "Strategic Location",
-        "investP3" => "Dubai is a major hub for international business due to its advantageous location at the intersection of Europe,
-                    Asia, and Africa. Its proximity to important markets makes connectivity and access simple.",
+        "investH3" => "Stable Currency and Financial Hub:",
+        "investP3" => "Dubai boasts a robust and stable
+                economy with the UAE Dirham pegged to the US Dollar since 1973. This
+                commitment to stability, maintained at a constant rate since 1997, positions
+                Dubai as one of the most secure financial hubs globally, ensuring a reliable
+                foundation for investors and residents alike.",
         
-        "investH4" => "Tax Advantage",
-        "investP4" => "Dubai offers both individuals and businesses a tax-free environment. It is a desirable location for investors
-                    seeking to avoid corporate taxes, capital gains taxes, and personal income taxes. optimize their financial
-                    returns.",
+        "investH4" => "Tax Advantages for Maximum Returns:",
+        "investP4" => "Benefit from a tax-friendly
+                environment in Dubai, offering zero income tax, zero capital gains tax, and
+                zero wealth tax. These tax incentives create a conducive atmosphere for
+                investors and business professionals, allowing them to maximize returns on
+                their investments.",
         
-        "investH5" => "Stable Political Environment",
-        "investP5" => "Due to its political stability, doing business in Dubai is safe and predictable. A favourable investment climate is
-                    influenced by the government's dedication to economic development and diversification.",
+        "investH5" => "World-Class Healthcare Hub:",
+        "investP5" => "Dubai's commitment to healthcare is
+                exemplified by substantial investments in the sector, making it a preferred
+                destination for health and well-being. Access to state-of-the-art medical
+                facilities and services ensures that residents experience world-class
+                healthcare in the heart of the city.",
         
-        "investH6" => "Robust Population Growth",
-        "investP6" => "The city's strong population growth propels investment opportunities, which benefits Dubai's real estate
-                    market. Due to its strong economy and excellent standard of living, Dubai has seen a substantial increase in the
-                    number of local and foreign residents over time. The demand for residential and commercial real estate is
-                    fueled by this population growth, which is good news for real estate investors.",
+        "investH6" => "Global Connectivity:",
+        "investP6" => "With direct flights to 97 countries, Dubai stands as a
+                global aviation hub. Hosting the world's leading airlines, Dubai's airports
+                provide easy connectivity, making international travel seamless for residents
+                and businesses.",
         
-        "investH7" => "Exclusive 10-Year Golden Visa",
-        "investP7" => "Dubai offers a 10-year Golden Visa program to certain real estate investors. For example, if you invest two
-                    million AED in a ESNAAD Property, you may be eligible for a Golden Visa, which will grant you the ability to long
-                    term resident rights in UAE. Investors can easily renew their Golden Visa as long as they are eligible, and it
-                    provides them with convenient long-term residency, with a five- to ten-year duration.",
+        "investH7" => "Diverse and Inclusive Community:",
+        "investP7" => "ome to over 200 nationalities, Dubai
+                epitomizes communal harmony, diversity, and inclusion. As a cosmopolitan
+                safe haven, it fosters a sense of belonging for residents from various cultural
+                backgrounds, creating a rich tapestry of global experiences",
         
-        "investH8" => "Creating Sustainable Communities",
-        "investP8" => "At ESNAAD, we prioritize sustainability in all of our developments to ensure that modern living, technology, and
-                    the natural world coexist peacefully. Our projects include green areas, eco-friendly practices, and energy-
-                    efficient designs to give residents a sustainable and well-rounded lifestyle. Setting environmental stewardship
-                    as a top priority helps Dubai realize its goal of becoming a sustainable city and gives investors a chance to
-                    match their capital with responsible development ideals.",
+        "investH8" => "Safety and Low Crime Rates:",
+        "investP8" => "Ranked as one of the world's safest
+                countries, the UAE has developed an advanced law enforcement system,
+                resulting in consistently low crime rates. Dubai's commitment to security
+                ensures a peaceful living environment for all residents.",
         
-        "investH9" => "Tourism Hub",
-        "investP9" => "In addition to its popularity as a travel destination, Dubai offers a consistent stream of new clients to
-                    companies. The tourism industry is still expanding, which is good news for companies in the hospitality,
-                    entertainment, and related sectors.",
+        "investH9" => "Exemplary Covid-19 Response:",
+        "investP9" => "The UAE has set a global standard for
+                crisis preparedness, showcasing a high level of protection against the
+                pandemic. Dubai's proactive measures and robust healthcare infrastructure
+                contribute to a safe and resilient community.",
 
+        "investH10" => "World-Class Infrastructure and Amenities:",
+        "investP10" => "Dubai provides an
+                environment where communities thrive, supported by excellent
+                infrastructure, public transport, parks, entertainment facilities, and more.
+                The city's continuous development ensures a high quality of life for its
+                residents.",
+
+        "investH11" => "Strategic Location for Global Opportunities:",
+        "investP11" => "ubai's strategic location
+                extends beyond its city infrastructure to include a robust legal system, public
+                transport, parks, entertainment, and more. The city serves as a gateway to
+                global opportunities, attracting individuals and businesses seeking a dynamic
+                and thriving environment.",
         
-        /**
+        "investH12" => "Open and Free Economic System:",
+        "investP12" => "ai's open economic policies,
+                minimal government control, and private sector regulation make it an ideal
+                destination for Foreign Direct Investment (FDI). This open and free economic
+                system gives Dubai a competitive edge on the global stage, attracting
+                businesses and entrepreneurs from around the world.",
+        
+                /**
          * CAREERS
          */
 
-        "careersH" => "CAREERS",
-        "careersP" => "Join us in shaping the future. Your journey starts here",
-        "careersP1" => "Ready to take the next step in your career? 
-                Submit your application now! We eagerly anticipate the addition of motivated and skilled 
-                individuals to the ESNAAD community",
+        "careersH" => "Career Development Centre",
+        "careersP" => "Join us on our journey of innovation and excellence.",
+        "careersP1" => "We welcome your
+                application! Fill in your details, attach your CV, and our Human Capital team
+                will review your application and get in touch with you.",
         "careersEnterVerification" => "Enter Verification Code",
         "careersSentToEmail" => "We've sent a code to",
         "careersVerificationFailed" => "Verification Failed! Enter the code sent to your email",
@@ -195,14 +264,18 @@ return [
          * PROJECT PAGE
          */
         "projectH" => "OUR DEVELOPMENTS",
-        "projectP" => "Our projects are a reflection of our commitment to excellence. From luxurious residential complexes to state-of-the-art commercial spaces, each project is designed with attention to detail and a focus on quality",
+        "projectP" => "ESNAAD boasts a diverse project portfolio, having successfully completed
+                numerous ventures. From boutique compounds to modern high-rises, each
+                project showcases our unwavering commitment to excellence.",
         
         
         /**
          * CONSTRUCTION PAGE
          */
         "constructionH" => "CONSTRUCTIONS",
-        "constructionP" => "Shaping Dubai's Skyline: Discover our latest constructions and witness the future unfold. Dive into unparalleled progress in the heart of the city's dynamic landscape. Your vision, our expertise—building tomorrow, today.",
+        "constructionP" => "Stay updated with ESNAAD's latest news, events, and insights through our
+                media section. Press releases, photos, videos, and blogs offer a
+                comprehensive view of our endeavours.",
         
         /**
          * NEWS PAGE
