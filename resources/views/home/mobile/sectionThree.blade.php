@@ -28,7 +28,7 @@
     <div class="row mb-4">
         <div class="grid md:grid-cols-2 gap-12 mx-auto">
             <div>
-                <p class="text-xl text-left leading-relax leading06">
+                <p class="text-base text-left leading-relax leading06">
                     {{ __('frontend.homeSectionThreeP') }}  
                 </p>
 
