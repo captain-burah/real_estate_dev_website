@@ -11,7 +11,7 @@
 </style>
 
 
-<div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-4 mx-auto">
+<div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-8 mx-auto">
     <div class="flex justify-center ...">
         <div class="mx-4">
             <button onclick="openModal('mymodalcentered-community-register')"   class=" w-100 bg-gray-900 hover:bg-gray-700 border-gray-900 hover:border-gray-700 text-sm xl:text-base border-4 text-white py-1 px-2 rounded-0" type="button">

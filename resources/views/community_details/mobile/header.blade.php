@@ -45,15 +45,22 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="height: 70vh; background-image: url('home/15.jpg'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+    <div class="w-full bg-cover bg-center" style="height: 70vh; background-image: url('https://mis.esnaad.com/uploads/communities/{{$id}}/header_image/{{$header_image}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
         <div class="flex items-center justify-center h-full w-full bg-gray-950/70">
             <div class="container mx-0 px-0 mx-auto text-white">
                 <h1 class="text-2xl font-semibold px-2">
-                    Our Diversified Communities
+                    @if($langSeg === 'ar')
+                        {{$namear}}
+                    @else
+                        {{$name}}
+                    @endif
                 </h1>
                 <h2 class="text-lg font-light mt-2 px-2 leading-8">
-                    We would like to give you a guide to each of the many appealing neighborhoods in Dubai, 
-                    each with its own unique facilities, so you may choose the one that's best for you.
+                    @if($langSeg === 'ar')
+                        {{$headingar}}
+                    @else
+                        {{$heading}}
+                    @endif
                 </h2>
             </div>
         </div>

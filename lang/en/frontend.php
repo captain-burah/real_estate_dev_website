@@ -10,6 +10,12 @@ return [
         "aboutUs" => "ABOUT US",
         "ourCompany" => "OUR COMPANY",
         "ceoMessageNav" => "CEO MESSAGE & VISION",
+
+
+        /**
+         * BUTTONS
+         */
+        "exploreMore" => "Exlore More",
         
 
         /**

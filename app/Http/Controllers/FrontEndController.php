@@ -196,19 +196,70 @@ class FrontEndController extends Controller
     }
 
     public function communities($lang='') {
+        
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/communities-index');
+        $jsonData = $response->json();
+
+        // dd($jsonData);
+        
+        // RETURN AS JSON
+        $this->data['response'] = $jsonData;
+
+        if(count($jsonData) > 0){
+            $this->data['available'] = '1';
+        }
+
+        // dd($jsonData);
+
+
         $jsonSEOData = $this->landingpageseos(5);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
-
-        $this->data['long'] =  55.356684;
-        $this->data['lat'] = 25.128245;
-
         return view('communities', $this->data);
     }
 
-    public function community_details($lang='') {
-        $this->data['long'] =  55.356684;
-        $this->data['lat'] = 25.128245;
-        return view('communityDetails', $this->data);
+    public function community_details($lang='', $slug ) {
+        
+        // CALL API FROM MIS
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/communities-details/'.$slug);
+        $jsonData = $response->json(); 
+        // dd(($jsonData)) ;
+
+        if($jsonData != null){
+            // $this->data['images'] = $images = $jsonData['images'];
+
+            $this->data['response'] = $jsonData[0];
+
+            $this->data['long'] = $jsonData[0]['longitude'];
+            $this->data['lat'] = $jsonData[0]['latitude'];
+
+            if($lang == 'ar'){
+                $jsonSEOData = [
+                    'title_en' => $jsonData[0]['meta_title_ar'],
+                    'description_en' => $jsonData[0]['meta_description_ar'],
+                    'keywords_en' => $jsonData[0]['meta_keywords_ar'],
+                ];
+            } else {
+                $jsonSEOData = [
+                    'title_en' => $jsonData[0]['meta_title'],
+                    'description_en' => $jsonData[0]['meta_description'],
+                    'keywords_en' => $jsonData[0]['meta_keywords'],
+                ];
+            }
+
+            // dd($jsonSEOData['title_en']);
+            // dd($this->data);
+
+            
+
+            return view('communityDetails', $this->data)->with('jsonSEOData', $jsonSEOData);
+        }
+
+
+        return redirect()->back()->with('error', 'Project is Not Available for Viewing');
     }
 
 

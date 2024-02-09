@@ -77,7 +77,6 @@
                                     :thumbnail="$thumbnail"
                                     :logo="$logo"
                                     :header="$header"
-
                                 ></x-new-project-desktop>
                             @endforeach
                         </div>

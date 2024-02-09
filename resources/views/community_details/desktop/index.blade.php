@@ -9,6 +9,32 @@
         $langSeg = 'en';
     }
 ?>
+
+<?php
+    $id = $response['id'];
+    $name = $response['title'];
+    $namear = $response['title_ar'];
+    $slug = $response['slug_link'];
+
+    $address = $response['address'];
+    $addressar = $response['address_ar'];
+
+    $heading = $response['heading'];
+    $headingar = $response['heading_ar'];
+
+    $description = $response['description'];
+    $descriptionar = $response['description_ar'];
+
+    $header_image = $response['header_image'];
+
+    $meta_title = $response['meta_title'];
+    $meta_title_ar = $response['meta_title_ar'];
+    $meta_description =       $response['meta_description'];
+    $meta_description_ar =    $response['meta_description_ar'];
+    $meta_keywords =       $response['meta_keywords'];
+    $meta_keywords_ar =    $response['meta_keywords_ar'];
+
+?>
 @section('luxe_asset_css')
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
@@ -40,7 +66,7 @@
             @include('community_details.desktop.body')
         </section>
 
-        <section class="m-0">
+        <section class="my-4">
             @include('community_details.desktop.buttons')
         </section>
 
