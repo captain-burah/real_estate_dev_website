@@ -45,16 +45,16 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="height:40vh; background-image: url({{ asset('home/ABOUT.webp') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
-        <div class="flex items-center justify-left h-full w-full">
+    <div class="w-full bg-cover bg-center" style="height:40vh; background-image: url({{ asset('home/14.jpg') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+        <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-50">
             <div class="container mx-6 my-auto">
                     
                 <h1 class="text-xl text-white font-bold uppercase mx-auto text-left mb-2 mt-15">
-                    {{__('frontend.aboutH')}}
+                        {{__('frontend.ceoH')}}  
                 </h1>
                 
                 <p class="text-white font-thin leading-relax text-base text-left">
-                    {{__('frontend.aboutMobileP1')}}
+                        {{__('frontend.ceoP')}}           
                 </p>
             </div>
         </div>

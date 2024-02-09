@@ -36,7 +36,7 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
 
     Route::get('/about-us', [FrontEndController::class, 'about'])->name('esnaad.about');
     
-    Route::get('/ceo-msg', [FrontEndController::class, 'ceo_msg'])->name('esnaad.ceo-msg');
+    Route::get('/ceo-message', [FrontEndController::class, 'ceo_msg'])->name('esnaad.ceo-msg');
 
     Route::get('/communities/{slug}', [FrontEndController::class, 'communities_details'])->name('esnaad.communities');
 

@@ -32,7 +32,7 @@
              @include('ceo_msg.mobile.header')
         </section>
 
-        <section class="my-3">
+        <section class="my-0">
             @include('ceo_msg.mobile.body')
         </section>
 

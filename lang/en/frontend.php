@@ -3,7 +3,15 @@
 // lang/en/messages.php
  
 return [
-    
+        
+        /**
+         * NAVBAR
+         */
+        "aboutUs" => "ABOUT US",
+        "ourCompany" => "OUR COMPANY",
+        "ceoMessageNav" => "CEO MESSAGE & VISION",
+        
+
         /**
          * FOOOTER
          */

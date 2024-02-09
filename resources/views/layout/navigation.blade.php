@@ -89,12 +89,33 @@
 
             <div class="flex items-center">
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:flex mx-auto no-underline w-auto 2xl:px-8 md:px-2">
-                    <x-nav-link href="{{ url($langSeg.'/about-us') }}" aria-label="navbar-route" rel='canonical'>
-                        {{ __('ABOUT US') }}
-                    </x-nav-link>
-                </div>
+                <x-dropdown align="left" width="40">
+                    <x-slot name="trigger">
+                        <button class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex inline-flex items-center px-3 py-2  leading-4 font-medium rounded-md text-gray-700 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                            <div class="inline-flex items-center px-0 space-x-8 pt-1 border-indigo-400 font-thin text-xs md:text-[12px] xl:text-lg text-center  leading-5 text-black transition duration-150 ease-in-out">
+                                {{ __('frontend.aboutUs') }}                                
+                            </div>
+
+                            <div class="ml-1">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                    </x-slot>
+
+                    <x-slot name="content" class="bg-white border-0">
+                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}" aria-label="navbar-route" rel='canonical'>
+                            {{ __('frontend.ourCompany') }}
+                            
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}">
+                            {{ __('frontend.ceoMessageNav') }}
+                            
+                        </x-dropdown-link>
+                    </x-slot>
+                </x-dropdown>
+
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex mx-auto no-underline 2xl:px-8 md:px-2">
                     <x-nav-link href="{{ url($langSeg.'/projects') }}" aria-label="navbar-route" rel='canonical'>
