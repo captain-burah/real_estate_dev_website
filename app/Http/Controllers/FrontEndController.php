@@ -297,6 +297,11 @@ class FrontEndController extends Controller
         return Response::json(['message' => 'verification sent'], 200);
     }
 
+    public function ceo_msg($lang='') {
+        $jsonSEOData = $this->landingpageseos(3);
+        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        return view('ceo_msg', $this->data);
+    }
 
     public function about($lang='') {
         $jsonSEOData = $this->landingpageseos(3);

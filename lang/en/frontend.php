@@ -107,12 +107,50 @@ return [
                 contemporary aesthetics, and a focus on delivering exceptional value for
                 money.",
 
+        /**
+         * CEO MESSAGE
+         */
+        "ceoH" => "CEO's Message & Vision",
+        "ceoP" => "Founded by our visionary CEO, Ashraf Elbendari, the journey began with successful projects as a real estate expert and contractor, establishing its expertise and commitment towards excellence",
+        "ceoMsg1"=>"Welcome to ESNAAD, where our commitment to excellence is not just a goal;
+                it's our legacy. Since our establishment in 2023, ESNAAD has been an
+                integral part of Aura Holdings, contributing to the real estate and
+                construction sector's growth and innovation since 2005. As the founder and
+                CEO, I am proud to lead a team dedicated to crafting not just buildings, but
+                enduring lifestyles.",
+        "ceoMsg2"=>"Our journey began with successful ventures as subcontractors, establishing
+                our expertise and commitment to excellence. ESNAAD's legacy is not just
+                about constructing structures; it's about shaping dreams and building
+                communities. Every project we undertake is a testament to our unwavering
+                dedication to quality, innovation, and creating spaces that stand as
+                benchmarks in the industry.",
+        "ceoMsg3" => "ESNAAD is not just a developer; we are creators of unique living experiences.
+                Our projects, ranging from luxury boutique compounds to modern high-rises,
+                showcase a commitment to sophistication and quality that sets the standard
+                for sophisticated living. Each venture is an opportunity for us to transform
+                spaces into vibrant communities, and our ongoing flagship project, 'The
+                Spark by ESNAAD' in Meydan District 11, epitomises this dedication.",
+        
+        "ceoMsg4" => "At ESNAAD, our endeavours go beyond constructing buildings; they involve
+                creating environments that inspire, enhance well-being, and contribute
+                positively to the communities we serve. ",
+
+        "ceoMsg5" => "Our commitment to excellence and
+                innovation is unwavering, and we are driven by a vision to contribute to the
+                reshaping of Dubai's real estate landscape ",
+
+        "ceoMsg6" => "As we move forward, our focus remains on delivering projects that redefine
+                contemporary living. Join us on this journey and let ESNAAD be your trusted
+                partner in realising your dreams. Thank you for considering ESNAAD, where
+                each project is not just a structure, but a testament to our commitment to
+                shaping the future of real estate.",
+
 
         /**
          * ABOUT
          */
         "aboutH" => "About ESNAAD",
-        "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura Holdings. Established in 2005, Aura Holdings is a prominent player in the real estate and construction sector. Founded by our visionary CEO Ashraf Elbendari, our journey began  with successful ventures as a real estate expert & contractors, establishing our expertise and commitment to excellence.",
+        "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura Holdings - a prominent player in the real estate and construction sector.",
 
         "aboutMobileP1" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura Holdings. Established in 2005, Aura Holdings is a prominent player in the real estate and construction sector.",
         
@@ -177,34 +215,7 @@ return [
         "contactEmail" => "Email: ",
         "contactFormH" => "Reach out to us",
         "contactFormP" => "We're delighted to assist you! Please use the form below to get in touch with our team. Whether you have questions, feedback, or inquiries, we're here to help.",
-        "contactCeoMsg1"=>"Welcome to ESNAAD, where our commitment to excellence is not just a goal;
-                it's our legacy. Since our establishment in 2023, ESNAAD has been an
-                integral part of Aura Holdings, contributing to the real estate and
-                construction sector's growth and innovation since 2005. As the founder and
-                CEO, I am proud to lead a team dedicated to crafting not just buildings, but
-                enduring lifestyles.",
-        "contactCeoMsg2"=>"Our journey began with successful ventures as subcontractors, establishing
-                our expertise and commitment to excellence. ESNAAD's legacy is not just
-                about constructing structures; it's about shaping dreams and building
-                communities. Every project we undertake is a testament to our unwavering
-                dedication to quality, innovation, and creating spaces that stand as
-                benchmarks in the industry.",
-        "contactCeoMsg3" => "ESNAAD is not just a developer; we are creators of unique living experiences.
-                Our projects, ranging from luxury boutique compounds to modern high-rises,
-                showcase a commitment to sophistication and quality that sets the standard
-                for sophisticated living. Each venture is an opportunity for us to transform
-                spaces into vibrant communities, and our ongoing flagship project, 'The
-                Spark by ESNAAD' in Meydan District 11, epitomises this dedication.",
-        "contactCeoMsg4" => "At ESNAAD, our endeavours go beyond constructing buildings; they involve
-                creating environments that inspire, enhance well-being, and contribute
-                positively to the communities we serve. Our commitment to excellence and
-                innovation is unwavering, and we are driven by a vision to contribute to the
-                reshaping of Dubai's real estate landscape.",
-        "contactCeoMsg5" => "As we move forward, our focus remains on delivering projects that redefine
-                contemporary living. Join us on this journey and let ESNAAD be your trusted
-                partner in realising your dreams. Thank you for considering ESNAAD, where
-                each project is not just a structure, but a testament to our commitment to
-                shaping the future of real estate.",
+        
         
         
 

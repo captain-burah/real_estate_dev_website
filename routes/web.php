@@ -35,6 +35,8 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
     Route::get('/', [FrontEndController::class, 'home'])->name('esnaad.home');
 
     Route::get('/about-us', [FrontEndController::class, 'about'])->name('esnaad.about');
+    
+    Route::get('/ceo-msg', [FrontEndController::class, 'ceo_msg'])->name('esnaad.ceo-msg');
 
     Route::get('/communities/{slug}', [FrontEndController::class, 'communities_details'])->name('esnaad.communities');
 
@@ -74,7 +76,7 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
 
     Route::post('/subscription-form', [FrontEndController::class, 'subscription_form'])->name('subscription.form');
 
-Route::post('/contact-form-post', [FrontEndController::class, 'contact_form_post'])->name('contact.form.post');
+    Route::post('/contact-form-post', [FrontEndController::class, 'contact_form_post'])->name('contact.form.post');
 
     Route::post('/project-detail-inquiry', [FrontEndController::class, 'project_detail_inquiry'])->name('project.detail.inquiry');
 
