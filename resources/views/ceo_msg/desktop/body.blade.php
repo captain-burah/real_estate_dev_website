@@ -5,9 +5,7 @@
         <div class="grid grid-cols-7 gap-0 mb-5">
             
 
-            <div class="row col-span-2 h-[100%] w-[100%]">
-                <img src="{{ asset('home/WEB-PORTRAIT.jpg') }}" style="height: 100% !important; object-fit: cover;" title="ESNAAD-ABOUT-INTRO-IMAGE" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
-            </div>
+            
 
             <div class="row col-span-5 h-[100%] w-[100%] shadow-lg p-10 border border-gray-100">
                 
@@ -59,6 +57,10 @@
                 <p class="text-base font-thin text-right leading-8 mt-4 w-full">
                     Ashraf Elbendari, CEO                      
                 </p>
+            </div>
+
+            <div class="row col-span-2 h-[100%] w-[100%]">
+                <img src="{{ asset('assets/img/img-error2.webp') }}" style="height: 100% !important; object-fit: cover;" title="ESNAAD-ABOUT-INTRO-IMAGE" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
             </div>
         </div>
 
