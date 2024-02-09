@@ -93,7 +93,7 @@
                     <x-slot name="trigger">
                         <button class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex inline-flex items-center px-3 py-2  leading-4 font-medium rounded-md text-gray-700 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                             <div class="inline-flex items-center px-0 space-x-8 pt-1 border-indigo-400 font-thin text-xs md:text-[12px] xl:text-lg text-center  leading-5 text-black transition duration-150 ease-in-out">
-                                {{ __('frontend.aboutUs') }}                                
+                                {{ __('frontend.desktop_aboutUs') }}
                             </div>
 
                             <div class="ml-1">
@@ -106,11 +106,11 @@
 
                     <x-slot name="content" class="bg-white border-0">
                         <x-dropdown-link href="{{ url($langSeg.'/about-us') }}" class="text-base" aria-label="navbar-route" rel='canonical'>
-                            {{ __('frontend.ourCompany') }}
+                            {{ __('frontend.desktop_ourCompany') }}
                         </x-dropdown-link>
                         
                         <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}" class="text-base" aria-label="navbar-route" rel='canonical'>
-                            {{ __('frontend.ceoMessageNav') }}
+                            {{ __('frontend.desktop_ceoMessageNav') }}
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown>
@@ -118,13 +118,13 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex mx-auto no-underline 2xl:px-8 md:px-2">
                     <x-nav-link href="{{ url($langSeg.'/projects') }}" aria-label="navbar-route" rel='canonical'>
-                        {{ __('PROJECTS') }}
+                        {{ __('frontend.desktop_developments') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex mx-auto no-underline 2xl:px-8 md:px-2">
                     <x-nav-link href="{{ url($langSeg.'/communities') }}" aria-label="navbar-route" rel='canonical'>
-                        {{ __('COMMUNITIES') }}
+                        {{ __('frontend.desktop_communities') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -234,19 +234,19 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex mx-auto no-underline 2xl:px-8 md:px-2">
                     <x-nav-link href="{{ url($langSeg.'/constructions') }}"  aria-label="navbar-route" rel='canonical'>
-                        {{ __('CONSTRUCTION') }}
+                        {{ __('frontend.desktop_construction') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex text-center 2xl:px-8 md:px-2">
                     <x-nav-link href="{{ url($langSeg.'/news') }}"  aria-label="navbar-route" rel='canonical'>
-                        {{ __('NEWS') }}
+                        {{ __('frontend.desktop_news') }}
                     </x-nav-link>
                 </div> 
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex text-center 2xl:px-8 md:px-2">
                     <x-nav-link href="{{ url($langSeg.'/contact') }}"   aria-label="navbar-route" rel='canonical'>
-                        {{ __('CONTACT US') }}
+                        {{ __('frontend.desktop_contact_us') }}
                     </x-nav-link>
                 </div>
 

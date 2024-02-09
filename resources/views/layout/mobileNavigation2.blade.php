@@ -65,13 +65,15 @@
     </div>
     
     <ul class="hidden bg-white lg:block space-y-6 pt-8 pb-4 pl-[10vw]  " >
-        <li ><a href="{{ url($langSeg.'/') }}" class="text-dark" rel="canonical">Home</a></li>
-        <li ><a href="{{ url($langSeg.'/about-us') }}" class="text-dark" rel="canonical">About</a></li>
-        <li ><a href="{{ url($langSeg.'/projects') }}" class="text-dark" rel="canonical">Projects</a></li>
-        <li ><a href="{{ url($langSeg.'/communities') }}" class="text-dark" rel="canonical">Communities</a></li>
-        <li ><a href="{{ url($langSeg.'/constructions') }}" class="text-dark" rel="canonical">Construction</a></li>
-        <li ><a href="{{ url($langSeg.'/news') }}" class="text-dark" rel="canonical">News</a></li>
-        <li ><a href="{{ url($langSeg.'/contact') }}" class="text-dark" rel="canonical">Contact Us</a></li>
+        <li ><a href="{{ url($langSeg.'/') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_home') }}</a></li>
+        <li ><a href="{{ url($langSeg.'/about-us') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_aboutUs') }}</a></li>
+        <li ><a href="{{ url($langSeg.'/projects') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_developments') }}</a></li>
+        <li ><a href="{{ url($langSeg.'/communities') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_communities') }}</a></li>
+        <li ><a href="{{ url($langSeg.'/constructions') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_constructions') }}</a></li>
+        <li ><a href="{{ url($langSeg.'/news') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_news') }}</a></li>
+        <li ><a href="{{ url($langSeg.'/contact') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_contact_us') }}</a></li>
+        <li ><a href="{{ url($langSeg.'/ceo-message') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_ceoMessageNav') }}</a></li>
+
         <li >
           <div class="flex flex-row ...">
             <div class="p-0 py-auto my-auto">Language </div>

@@ -540,17 +540,25 @@
                                 <li class="text-md text-black my-3">
                                     <a href="{{ URL($langSeg.'/about-us') }}" aria-label="about-us" rel="canonical">{{ __('frontend.footerLinksAboutEsnaad') }}</a>
                                 </li>
+                                
+                                <li class="text-md text-black my-3">
+                                    <a href="{{ URL($langSeg.'/ceo-message')}}" aria-label="broker-registration" rel="canonical">{{ __('frontend.mobile_ceoMessageNav') }}</a>
+                                </li>
                                 <li class="text-md text-black my-3">
                                     <a href="{{ URL($langSeg.'/invest-in-dubai') }}" aria-label="invest-in-dubai" rel="canonical">{{ __('frontend.footerLinksWhyInvest') }}</a>
                                 </li>
+                                
+                                
                                 <li class="text-md text-black my-3">
-                                    <a href="{{ URL($langSeg.'/broker-registration') }}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
+                                    <a href="{{ URL($langSeg.'/contact') }}" aria-label="contact-us" rel="canonical">{{ __('frontend.footerLinksContact') }}</a>
                                 </li>
+
                                 <li class="text-md text-black my-3">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
+
                                 <li class="text-md text-black my-3">
-                                    <a href="{{ URL($langSeg.'/contact') }}" aria-label="contact-us" rel="canonical">{{ __('frontend.footerLinksContact') }}</a>
+                                    <a href="{{ URL($langSeg.'/broker-registration') }}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
                                 </li>
                             </ul>
                         </div>

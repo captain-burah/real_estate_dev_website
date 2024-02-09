@@ -7,9 +7,29 @@ return [
         /**
          * NAVBAR
          */
-        "aboutUs" => "ABOUT US",
-        "ourCompany" => "OUR COMPANY",
-        "ceoMessageNav" => "CEO MESSAGE & VISION",
+        "desktop_aboutUs" => "ABOUT US",
+        "desktop_ourCompany" => "OUR COMPANY",
+        "desktop_ceoMessageNav" => "CEO MESSAGE & VISION",
+        "desktop_home" => "HOME",
+        "desktop_developments" => "DEVELOPMENTS",
+        "desktop_communities" => "COMMUNITIES",
+        "desktop_construction" => "CONSTRUCTIONS",
+        "desktop_contact_us" => "CONTACT US",
+        "desktop_news" => "NEWS",
+
+        "mobile_aboutUs" => "About Us",
+        "mobile_news" => "News",
+        "mobile_ourCompany" => "Our Company",
+        "mobile_ceoMessageNav" => "CEO Message & Vision",
+        "mobile_home" => "Home",
+        "mobile_developments" => "Our Developments",
+        "mobile_constructions" => "Constructions",
+        "mobile_communities" => "Our Communities",
+        "mobile_contact_us" => "Contact Us",
+        "mobile_language" => "Language",
+        "mobile_invest_in_dubai" => "Why Invest in Dubai?",
+        "mobile_broker_registration" => "Broker Registration",
+        "mobile_careers" => "Careers",
 
 
         /**
