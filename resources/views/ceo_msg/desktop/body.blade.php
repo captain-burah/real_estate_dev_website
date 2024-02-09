@@ -1,18 +1,20 @@
+<style>
+    .drop-shadow-lg {
+      --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.4));
+    }
+</style>
+
 
 <div class="w-full p-6">
-    <div class="sm:container px-8 pt-0 sm:mx-auto mx-0  sm:mb-4 mx-auto">
 
-        <div class="grid grid-cols-7 gap-0 mb-5">
-            
+    <div class="sm:container px-8 my-5 sm:mx-auto mx-0 sm:mb-4 mx-auto border border-gray-100">
 
-            
+        <div class="grid grid-cols-7 gap-0 my-5">
 
             <div class="row col-span-5 h-[100%] w-[100%] p-10 ">
                 
-
                 <blockquote class="relative ">
-
-                  
+  
                     <div class="relative z-10">
 
                             <p class="text-base font-thin text-justify leading-8 text-black">
@@ -60,7 +62,10 @@
             </div>
 
             <div class="row col-span-2 h-[100%] w-[100%] p-10">
-                <img src="{{ asset('home/ceo-msg4.jpg') }}" style="height: 65vh !important; object-fit: cover;" title="ESNAAD-ABOUT-INTRO-IMAGE" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
+                <div class="shadow-sm my-auto" >
+                <img src="{{ asset('home/ceo-msg4.jpg') }}" class="filter drop-shadow-lg" style="height: 65vh !important; object-fit: cover;" title="ESNAAD-ABOUT-INTRO-IMAGE" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
+                </div>
+
             </div>
         </div>
 

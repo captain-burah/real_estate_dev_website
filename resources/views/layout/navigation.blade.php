@@ -105,13 +105,12 @@
                     </x-slot>
 
                     <x-slot name="content" class="bg-white border-0">
-                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}" aria-label="navbar-route" rel='canonical'>
+                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}" class="text-base" aria-label="navbar-route" rel='canonical'>
                             {{ __('frontend.ourCompany') }}
-                            
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}">
+                        
+                        <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}" class="text-base" aria-label="navbar-route" rel='canonical'>
                             {{ __('frontend.ceoMessageNav') }}
-                            
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown>
