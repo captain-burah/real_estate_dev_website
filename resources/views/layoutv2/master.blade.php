@@ -190,6 +190,23 @@
                 url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.ttf")format("truetype"),
                 url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.svg#Optima LT W02 Roman")format("svg");
             }
+
+            @media screen and (max-width : 1920px){
+                .large_screens{
+                    display:block;
+                }
+                .microsoft_screens{
+                    display:none;
+                }
+            }
+            @media screen and (max-width : 1368){
+                .large_screens{
+                    display:none;
+                }
+                .microsoft_screens{
+                    display:block;
+                }
+            }
         </style>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -263,9 +280,7 @@
                 }
             }
         ?>
-        <?php
-            $esnaad_screen_width = " <script>document.write(screen.width); </script>";
-        ?>
+        <?php?>
 
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDTQRDXP"
@@ -274,13 +289,9 @@
 
         <div class="min-h-screen ">
 
-            @notmobile
+            @notmobile       
                 <nav x-data="{ open: false }" class="bg-white p-0 m-0 z-50 shadow " id="sample" style="position: fixed; width: 100vw !important" >
-                    @if($esnaad_screen_width > 1368)
-                        @include('layout.navigation')
-                    @else
-                        @include('layout.navigationTablet')
-                    @endif
+                    @include('layout.navigation')
                 </nav>
             @endnotmobile
 
