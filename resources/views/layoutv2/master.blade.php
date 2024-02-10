@@ -263,6 +263,9 @@
                 }
             }
         ?>
+        <?php
+            $esnaad_screen_width = " <script>document.write(screen.width); </script>";
+        ?>
 
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDTQRDXP"
@@ -271,9 +274,13 @@
 
         <div class="min-h-screen ">
 
-            @notmobile       
+            @notmobile
                 <nav x-data="{ open: false }" class="bg-white p-0 m-0 z-50 shadow " id="sample" style="position: fixed; width: 100vw !important" >
-                    @include('layout.navigation')
+                    @if($esnaad_screen_width > 1368)
+                        @include('layout.navigation')
+                    @else
+                        @include('layout.navigationTablet')
+                    @endif
                 </nav>
             @endnotmobile
 
