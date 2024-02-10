@@ -1,12 +1,12 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-<div class="m-0 p-0">
+<div class="fixed top-0 z-50 w-full z-50 m-0 p-0">
   
-  <div class="w-full text-gray-700  bg-white dark-mode:text-gray-200">
+  <div class="w-full text-gray-700  bg-white ">
 
-    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl">
 
       <div class="flex flex-row items-center justify-between p-4">
-        <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+        <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">
           <img style="height: 30px !important;" class="px-2" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo-navbar">
         </a>
         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
@@ -17,13 +17,13 @@
         </button>
       </div>
 
-      <nav :class="{'flex': open, 'hidden': !open}" class="h-[100%] z-10 flex-col flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row m-0 p-0">
+      <nav :class="{'flex': open, 'hidden': !open}" class="h-[100%] z-10 w-[100vw] shadow flex-col flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row py-8 px-4">
         
-        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_home') }}</a>
+        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_home') }}</a>
         
         <div @click.away="open = false" class="relative" x-data="{ open: false }">
-          <button @click="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-smv font-base text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-            <span class="">
+          <button @click="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-smv font-base text-left bg-transparent rounded-lg  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+            <span class="mt-2 text-base font-base bg-transparent rounded-lg 4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
               {{ __('frontend.mobile_aboutUs') }}
             </span>
           </button>
@@ -31,29 +31,29 @@
           <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
             <div class="px-2 pt-2 pb-4 bg-white rounded-0  shadow-md">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/about-us') }}" >{{ __('frontend.mobile_ourCompany') }}</a>
-                <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/ceo-message') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_ceoMessageNav') }}</a>
+                <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/about-us') }}" >{{ __('frontend.mobile_ourCompany') }}</a>
+                <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/ceo-message') }}"rel="canonical">{{ __('frontend.mobile_ceoMessageNav') }}</a>
               </div>
             </div>
           </div>
         </div>   
 
-        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/projects') }}">{{ __('frontend.mobile_developments') }}</a>
-        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/communities') }}">{{ __('frontend.mobile_communities') }}</a></li>
-        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/invest-in-dubai') }}">{{ __('frontend.mobile_invest_in_dubai') }}</a>
-        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/constructions') }}">{{ __('frontend.mobile_constructions') }}</a></li>
-        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/news') }}">{{ __('frontend.mobile_news') }}</a></li>
-        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/contact') }}">{{ __('frontend.mobile_contact_us') }}</a></li>
+        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/projects') }}">{{ __('frontend.mobile_developments') }}</a>
+        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/communities') }}">{{ __('frontend.mobile_communities') }}</a></li>
+        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/invest-in-dubai') }}">{{ __('frontend.mobile_invest_in_dubai') }}</a>
+        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/constructions') }}">{{ __('frontend.mobile_constructions') }}</a></li>
+        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/news') }}">{{ __('frontend.mobile_news') }}</a></li>
+        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url($langSeg.'/contact') }}">{{ __('frontend.mobile_contact_us') }}</a></li>
         
         <div @click.away="open = false" class="relative" x-data="{ open: false }">
-          <button @click="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-smv font-base text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-            <span class="">
+          <button @click="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-smv font-base text-left bg-transparent rounded-lg  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+            <span class="mt-2 text-base font-base bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
               {{ __('frontend.mobile_language') }}
             </span>
           </button>
           
           <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
-            <div class="px-2 pt-2 pb-4 bg-white rounded-0  shadow-md">
+            <div class="px-2 pt-2 pb-4 bg-white rounded-0  shadow">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <a href="{{$finalUrlen}}" class="text-dark flex" rel="canonical">
                   <img 

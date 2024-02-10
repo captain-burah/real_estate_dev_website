@@ -271,7 +271,7 @@
 
         <div class="min-h-screen ">
 
-            @notmobile                
+            @notmobile       
                 <nav x-data="{ open: false }" class="bg-white p-0 m-0 z-50 shadow " id="sample" style="position: fixed; width: 100vw !important" >
                     @include('layout.navigation')
                 </nav>
