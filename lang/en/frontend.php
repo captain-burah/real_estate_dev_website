@@ -9,7 +9,7 @@ return [
          */
         "desktop_aboutUs" => "ABOUT US",
         "desktop_ourCompany" => "OUR COMPANY",
-        "desktop_ceoMessageNav" => "CEO MESSAGE & VISION",
+        "desktop_ceoMessageNav" => "CEO MESSAGE",
         "desktop_home" => "HOME",
         "desktop_developments" => "DEVELOPMENTS",
         "desktop_communities" => "COMMUNITIES",
@@ -20,7 +20,7 @@ return [
         "mobile_aboutUs" => "About Us",
         "mobile_news" => "News",
         "mobile_ourCompany" => "Our Company",
-        "mobile_ceoMessageNav" => "CEO Message & Vision",
+        "mobile_ceoMessageNav" => "CEO Message",
         "mobile_home" => "Home",
         "mobile_developments" => "Our Developments",
         "mobile_constructions" => "Constructions",
@@ -35,7 +35,7 @@ return [
         /**
          * BUTTONS
          */
-        "exploreMore" => "Exlore More",
+        "exploreMore" => "Explore More",
         
 
         /**

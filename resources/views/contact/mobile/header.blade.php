@@ -45,8 +45,8 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="height:60vh; background-image: url({{ asset('home/CONTACT.webp') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
-        <div class="flex items-center justify-center h-full w-full">
+    <div class="w-full bg-cover bg-center" style="height:60vh; background-image: url({{ asset('home/contact_us.webp') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+        <div class="flex items-center justify-center h-full w-full  bg-black bg-opacity-40">
             <div class="container">
                     
                 <h1 class="text-3xl text-white font-light uppercase mx-auto text-center">

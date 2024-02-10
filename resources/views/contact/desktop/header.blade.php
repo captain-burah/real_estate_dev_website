@@ -48,8 +48,8 @@
 
 <header class="]">
     
-    <div class="w-full bg-cover bg-center" style="height: 75vh; background-image: url({{ asset('home/CONTACT.webp') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
-        <div class="flex items-center justify-center h-full w-full">
+    <div class="w-full bg-cover bg-center" style="height: 75vh; background-image: url({{ asset('home/contact_us.webp') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+        <div class="flex items-center justify-center h-full w-full bg-black bg-opacity-40">
             <div class="md:container mx-auto pt-20">
                     
                 <h1 class="xl:text-4xl md:text-4xl mx-auto text-white font-light uppercase text-center">

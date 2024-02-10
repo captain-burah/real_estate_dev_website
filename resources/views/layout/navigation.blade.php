@@ -84,36 +84,31 @@
 
 </style>
 @notmobile
-    <div class=" container  mx-auto 2xl:px-8 md:px-28">
+    <div class=" container  mx-auto px-0 md:px-28 lg:px-0 xl:px-28 2xl:px-0">
         <div class="flex justify-between h-20">
 
             <div class="flex items-center">
 
-                <x-dropdown align="left" width="40">
+                <x-dropdown align="left">
                     <x-slot name="trigger">
-                        <button class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex inline-flex items-center px-3 py-2  leading-4 font-medium rounded-md text-gray-700 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div class="inline-flex items-center px-0 space-x-8 pt-1 border-indigo-400 font-thin text-xs md:text-[12px] xl:text-lg text-center  leading-5 text-black transition duration-150 ease-in-out">
-                                {{ __('frontend.desktop_aboutUs') }}
-                            </div>
-
-                            <div class="ml-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </button>
+                      <button class="hidden space-x-8 sm:-my-px sm:flex inline-flex items-center px-3 py-2 leading-4 font-medium rounded-md text-gray-700 bg-white focus:outline-none transition ease-in-out duration-150 hover:bg-gray-100 hover:text-gray-900">
+                        <div class="inline-flex items-center px-0 space-x-8 pt-1 border-indigo-400 font-thin text-xs md:text-[12px] xl:text-lg text-center leading-5 text-black transition duration-150 ease-in-out">
+                          {{ __('frontend.desktop_aboutUs') }}
+                        </div>
+                      </button>
                     </x-slot>
-
-                    <x-slot name="content" class="bg-white border-0">
-                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}" class="text-base" aria-label="navbar-route" rel='canonical'>
-                            {{ __('frontend.desktop_ourCompany') }}
-                        </x-dropdown-link>
-                        
-                        <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}" class="text-base" aria-label="navbar-route" rel='canonical'>
-                            {{ __('frontend.desktop_ceoMessageNav') }}
-                        </x-dropdown-link>
+                  
+                    <x-slot name="content" class="bg-white border-0 absolute z-50 hidden transition duration-150 ease-in-out">
+                      <x-dropdown-link href="{{ url($langSeg.'/about-us') }}" class="font-thin text-xs md:text-[12px] xl:text-base text-left leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
+                        {{ __('frontend.desktop_ourCompany') }}
+                      </x-dropdown-link>
+                  
+                      <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}" class="font-thin text-xs md:text-[12px] xl:text-base text-left leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
+                        {{ __('frontend.desktop_ceoMessageNav') }}
+                      </x-dropdown-link>
                     </x-slot>
-                </x-dropdown>
+                  </x-dropdown>
+                  
 
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex mx-auto no-underline 2xl:px-8 md:px-2">
@@ -249,41 +244,90 @@
                         {{ __('frontend.desktop_contact_us') }}
                     </x-nav-link>
                 </div>
+                
 
-                <div class="hidden absolute  space-x-8 sm:-my-px sm:flex text-center float-right" style="right: 0;">
-                    <x-dropdown align="left" width="40">
+                <div class="hidden absolute  space-x-8 sm:-my-px sm:flex text-center float-right" style="right: 30px;">
+                    @if($langSeg === 'ar')
+                        <x-nav-link href="{{$finalUrlen}}" aria-label="navbar-route" rel='canonical'>
+                            <div class="flex">
+                                <div class="flex-none my-auto">
+                                    
+                                    <img 
+                                        src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEXUlEQVR4nO2Yj09TVxTH+0/NCTKKOCUoKBTZpPwQZUwCbChxZrgYolkIicRsI8vi5rZs7mfCzH6VgdMMgQGR8aMi/gKFMUv7Xkv7XmlL+9q+73Lv6ys8Hq8tUp1Z3je5aZr0nnM/99x77jk1GHTp0qVLly5dz4GiHIe1WglG8Pl3D/By6W8wFltSHrJsGS8ohqzN2DIWW5B7sBudn07Dx/nh/eQiFrN3UHsqAHv+bvh/+QkQRQXIgs2HE60j/wlA4+khPJz3Ijg8BOZgsWQrcxs8755TA8iO2CNVEO7eUUAQpt6+xyiq/v2ZABRWXkXXr3MQWAbus61xG2xlGULWSWpHBRC42gNHQb7046zt4D94D2LArwBZ9gk0nDtLup8KQI7Jgrb3J8G5A1j+5iss5hrpXPJJviMSidtRAVzumkXI6wP/YSdsO16kEwmQv3t1UbKm73tQ0zyQVoDXmgeo3dDkBNiKsvi8pZMnEHHYFf6FcFQNQIyY6//AzQkWwswDOGuPxo24GuoQnp9TGImKIn7u/Rt7y3u3BJBX1oOvr8xC8PDgLnSsbl5JEVaGBlWbN3l7CYffvLExgDxa2kbBOgN098nlpmHMzqTREUMhhUGXO0jD/iQALW2jYFjZzx7Jz0sZG/pZ8kh+yDEjcxMCkEF2llyksIdT7AzJBiQrrNfElAtVb9xICUAR6ddrlJGeU0eaJJDCKmUCSQogj5o1Z5MpP5TwbIYjYlIA8rYE+dhdy9qe8K7df8ih7tSfG64rZYD12cH3/bdY3CVnh2x4L30MURBUzrUAVgb64SgqiGc77kIHRJ9v09lOBYA0SwsgXTL87wBs6xw+78OgA2ToEUBaj1C6L5mehZIo5YdsX4VUm0ejykYnvLAAV1NjfKeddbUQZmeSRmB4jFUtJjQxDsb8quKVDzsYWkLsP7xxD5ISQOv5cbg5ZVElBoP09ZVbO3veLvo6O51++lonA5CLOAcbUNoNh6VXPtYD2HfvpN95Pii9yqbu1AEqGvrwl9Wp2qmVwQE4Sg5Ii8rcRrslweWmEco3S2V1KgC0jD7UQ+siUtuvVYRl4T79dnweW1WO0O0pWKeXUN3UnxggoVFFa2dGaOoWbt1x48jx/i31AxWNfRizutSbRWom037NzVIBkLDaGY2wrineli9/oRnWJ+3IckwWtHdawfHJj6v/xytwsP7kaTQ0PgbG/Ep8Ae4z7yDMsvRiHdC4WFvtiQsqNRLGo0dw1h9bTRj1x7QBojwPT3sbDRv5MVNqQnBkGLNzPBpahhIuYKsAxtioPTmIuzPK/6mIAtevwb4vT+Mhi0bh+6EL9j250nHJyYL3s0sIeAO4+OU9+gdTKs7TAWAsttDj2fHRFHz+sAIi6vWCO9+uBnDWVK/m4ebjiNgeY2iUQWnt9ZSdphPAGBumo9fosV0vFQBx4ijcS1s7m92Pt87d3LSzpwFgjI2mMyOY/2dZG0CXLl26dOnSZXj2+hdh4D9R4Q/X/wAAAABJRU5ErkJggg==" 
+                                        alt="English-Language" 
+                                        height="auto"
+                                        width="auto"
+                                        style="height: 25px; width: 25px;"
+                                        loading="eager"
+                                        title="English"
+                                    />
+                                </div>
+                                <div class="flex-1 p-1 font-thin text-xs md:text-[12px] xl:text-lg text-center  leading-5 text-black transition duration-150 ease-in-out">
+                                    EN
+                                </div>
+                            </div>
+                        </x-nav-link>
+                        
+                    @else
+                        <x-nav-link href="{{$finalUrl}}"> 
+                            <div class="flex">
+                                <div class="flex-none my-auto">
+                                    <img 
+                                        src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcElEQVR4nO3VsQ3EMAgFUKaKUlzF7edJI1mR3HOty5T25T2JARDwiQCAfzC+Rz2ps32WqNBAM4GyQjNH3KRQidHxhkd29XuJCg10EygrNHPEXQqVGB1veGSZuUSFBtIEygrNHHFKoRKjY+dHBgCxoR+KvePZGHXRaQAAAABJRU5ErkJggg==" 
+                                        alt="Arabic-Language" 
+                                        height="auto"
+                                        width="auto"
+                                        style="height: 25px; width: 25px;"
+                                        loading="eager"
+                                        title="Arabic"
+                                    />
+                                </div>
+                                <div class="flex-1 p-1 font-thin text-xs md:text-[12px] xl:text-lg text-center  leading-5 text-black transition duration-150 ease-in-out">
+                                    AR
+                                </div>
+                            </div>
+                        </x-nav-link>
+                    @endif
+                    
+                    {{-- <x-dropdown align="left" width="40">
                         <x-slot name="trigger">
                             <button class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex inline-flex items-center px-3 py-2  leading-4 font-medium rounded-md text-gray-700 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                <div>
-                                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                        width="20.000000pt" height="20.000000pt" viewBox="0 0 48.000000 48.000000"
-                                        preserveAspectRatio="xMidYMid meet">
-                                        <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)"
-                                        fill="#000000" stroke="none">
-                                        <path d="M32 428 c-16 -16 -16 -110 0 -126 7 -7 34 -12 60 -12 l48 0 0 -51 0
-                                        -50 -32 3 c-25 2 -34 8 -36 26 -2 12 -10 22 -19 22 -12 0 -14 -7 -8 -37 15
-                                        -82 81 -146 163 -159 34 -5 42 -4 42 9 0 9 -9 18 -19 22 -16 5 -51 59 -51 79
-                                        0 3 11 6 25 6 16 0 25 6 25 15 0 10 -10 15 -30 15 -28 0 -30 3 -30 37 0 29 3
-                                        34 12 25 29 -29 38 -13 38 67 0 44 4 82 9 85 17 11 39 -5 55 -39 21 -44 21
-                                        -45 -14 -45 -20 0 -30 -5 -30 -15 0 -10 11 -15 35 -15 33 0 35 -2 35 -33 0
-                                        -24 -6 -35 -22 -42 -21 -9 -23 -18 -26 -103 -2 -58 1 -92 7 -92 18 0 90 54 91
-                                        68 0 17 -25 15 -40 -3 -22 -27 -30 -16 -30 45 l0 60 70 0 70 0 0 -44 c0 -36
-                                        -4 -45 -21 -49 -12 -3 -18 -10 -14 -16 8 -15 38 -14 53 1 16 16 16 110 0 126
-                                        -7 7 -34 12 -60 12 l-48 0 0 36 c0 34 1 35 33 32 25 -2 33 -8 35 -26 5 -37 27
-                                        -19 24 19 -4 45 -42 101 -88 130 -32 20 -52 23 -128 24 -53 0 -92 -4 -94 -10
-                                        -1 -5 13 -11 33 -13 l35 -3 0 -60 c0 -60 -8 -71 -30 -44 -8 10 -30 15 -61 15
-                                        l-49 0 0 45 c0 38 3 45 20 45 11 0 20 7 20 15 0 18 -41 20 -58 3z m328 -73
-                                        l34 -35 -31 0 c-21 0 -32 6 -36 18 -2 9 -8 25 -12 35 -11 28 8 20 45 -18z
-                                        m-202 -227 c17 -46 7 -47 -36 -5 l-37 37 30 0 c25 0 33 -6 43 -32z"/>
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <div class="ml-1">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </div>
+                                @if($langSeg === 'ar')
+                                    <div class="flex">
+                                        <div class="flex-none ">
+                                            
+                                            <img 
+                                                src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEXUlEQVR4nO2Yj09TVxTH+0/NCTKKOCUoKBTZpPwQZUwCbChxZrgYolkIicRsI8vi5rZs7mfCzH6VgdMMgQGR8aMi/gKFMUv7Xkv7XmlL+9q+73Lv6ys8Hq8tUp1Z3je5aZr0nnM/99x77jk1GHTp0qVLly5dz4GiHIe1WglG8Pl3D/By6W8wFltSHrJsGS8ohqzN2DIWW5B7sBudn07Dx/nh/eQiFrN3UHsqAHv+bvh/+QkQRQXIgs2HE60j/wlA4+khPJz3Ijg8BOZgsWQrcxs8755TA8iO2CNVEO7eUUAQpt6+xyiq/v2ZABRWXkXXr3MQWAbus61xG2xlGULWSWpHBRC42gNHQb7046zt4D94D2LArwBZ9gk0nDtLup8KQI7Jgrb3J8G5A1j+5iss5hrpXPJJviMSidtRAVzumkXI6wP/YSdsO16kEwmQv3t1UbKm73tQ0zyQVoDXmgeo3dDkBNiKsvi8pZMnEHHYFf6FcFQNQIyY6//AzQkWwswDOGuPxo24GuoQnp9TGImKIn7u/Rt7y3u3BJBX1oOvr8xC8PDgLnSsbl5JEVaGBlWbN3l7CYffvLExgDxa2kbBOgN098nlpmHMzqTREUMhhUGXO0jD/iQALW2jYFjZzx7Jz0sZG/pZ8kh+yDEjcxMCkEF2llyksIdT7AzJBiQrrNfElAtVb9xICUAR6ddrlJGeU0eaJJDCKmUCSQogj5o1Z5MpP5TwbIYjYlIA8rYE+dhdy9qe8K7df8ih7tSfG64rZYD12cH3/bdY3CVnh2x4L30MURBUzrUAVgb64SgqiGc77kIHRJ9v09lOBYA0SwsgXTL87wBs6xw+78OgA2ToEUBaj1C6L5mehZIo5YdsX4VUm0ejykYnvLAAV1NjfKeddbUQZmeSRmB4jFUtJjQxDsb8quKVDzsYWkLsP7xxD5ISQOv5cbg5ZVElBoP09ZVbO3veLvo6O51++lonA5CLOAcbUNoNh6VXPtYD2HfvpN95Pii9yqbu1AEqGvrwl9Wp2qmVwQE4Sg5Ii8rcRrslweWmEco3S2V1KgC0jD7UQ+siUtuvVYRl4T79dnweW1WO0O0pWKeXUN3UnxggoVFFa2dGaOoWbt1x48jx/i31AxWNfRizutSbRWom037NzVIBkLDaGY2wrineli9/oRnWJ+3IckwWtHdawfHJj6v/xytwsP7kaTQ0PgbG/Ep8Ae4z7yDMsvRiHdC4WFvtiQsqNRLGo0dw1h9bTRj1x7QBojwPT3sbDRv5MVNqQnBkGLNzPBpahhIuYKsAxtioPTmIuzPK/6mIAtevwb4vT+Mhi0bh+6EL9j250nHJyYL3s0sIeAO4+OU9+gdTKs7TAWAsttDj2fHRFHz+sAIi6vWCO9+uBnDWVK/m4ebjiNgeY2iUQWnt9ZSdphPAGBumo9fosV0vFQBx4ijcS1s7m92Pt87d3LSzpwFgjI2mMyOY/2dZG0CXLl26dOnSZXj2+hdh4D9R4Q/X/wAAAABJRU5ErkJggg==" 
+                                                alt="English-Language" 
+                                                height="auto"
+                                                width="auto"
+                                                style="height: 25px; width: 25px;"
+                                                loading="eager"
+                                                title="English"
+                                            />
+                                        </div>
+                                        <div class="flex-1 text-base p-1">
+                                            EN
+                                        </div>
+                                    </div>
+                                @else
+                                    <div class="flex">
+                                        <div class="flex-none ">
+                                            <img 
+                                                src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcElEQVR4nO3VsQ3EMAgFUKaKUlzF7edJI1mR3HOty5T25T2JARDwiQCAfzC+Rz2ps32WqNBAM4GyQjNH3KRQidHxhkd29XuJCg10EygrNHPEXQqVGB1veGSZuUSFBtIEygrNHHFKoRKjY+dHBgCxoR+KvePZGHXRaQAAAABJRU5ErkJggg==" 
+                                                alt="Arabic-Language" 
+                                                height="auto"
+                                                width="auto"
+                                                style="height: 25px; width: 25px;"
+                                                loading="eager"
+                                                title="Arabic"
+                                            />
+                                        </div>
+                                        <div class="flex-1 text-base p-1">
+                                            AR
+                                        </div>
+                                    </div>
+                                @endif
                             </button>
                         </x-slot>
 
@@ -326,7 +370,7 @@
                                 </div>
                             </x-dropdown-link>
                         </x-slot>
-                    </x-dropdown>
+                    </x-dropdown> --}}
                 </div>
             </div>
             
