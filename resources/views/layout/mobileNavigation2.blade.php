@@ -74,7 +74,7 @@
       <li>
         <details class="group">
             <summary
-                class="flex items-center justify-between gap-2 text-black font-medium marker:content-none hover:cursor-pointer">
+                class="flex items-center justify-between gap-2 text-black font-medium marker:content-none group-hover:outline hover:cursor-pointer">
                 <span class="flex gap-2">
                   <span>
                     {{ __('frontend.mobile_aboutUs') }}
