@@ -43,6 +43,8 @@
     </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
     $(document).ready(function() {
         $('#read-more-btn-about-mobile').click(function() {
@@ -54,21 +56,5 @@
             $('#mobileAboutP3').text(fullText3);
             $(this).hide();
         });
-    });
-
-    const moreTextEl = document.getElementById('more-text');
-    const toggleBtnEl = document.getElementById('toggle-btn');
-    const hideBtnEl = document.getElementById('hide-btn');
-
-    toggleBtnEl.addEventListener('click', () => {
-        moreTextEl.classList.toggle('hidden');
-        toggleBtnEl.classList.toggle('hidden');
-        hideBtnEl.classList.toggle('hidden');
-    });
-
-    hideBtnEl.addEventListener('click', () => {
-        moreTextEl.classList.toggle('hidden');
-        toggleBtnEl.classList.toggle('hidden');
-        hideBtnEl.classList.toggle('hidden');
     });
 </script>

@@ -592,6 +592,7 @@
             }
         },1000);
     </script>
+    
 
     @yield('luxe_asset_js')
 
