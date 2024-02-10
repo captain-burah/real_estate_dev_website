@@ -64,7 +64,12 @@
       </div>
     </div>
 
-    <ul class="flex flex-col gap-2 max-w-[280px] mx-auto mt-24 bg-white hidden lg:block space-y-6 pb-4 pt-4 pl-[10vw]">
+
+
+
+
+
+    <ul class="flex flex-col gap-2 max-w-[280px] mx-auto mt-24 bg-white hidden lg:block space-y-6 pb-4 pt-4 pl-[5vw]">
       <li ><a href="{{ url($langSeg.'/') }}" class="text-dark" rel="canonical">{{ __('frontend.mobile_home') }}</a></li>
       <li>
         <details class="group">
