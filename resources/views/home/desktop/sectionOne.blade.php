@@ -3,7 +3,7 @@
     <div class="row my-auto h-[100%]">
         <div class="grid grid-cols-2 gap-12 mb-5 mx-auto h-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
             <div class="my-auto">
-                <h2 class=" text-xl xl:text-3xl font-thin">
+                <h2 class=" text-xl xl:text-3xl font-thin uppercase">
                     {{__('frontend.homeSectionOneH')}}
                 </h2>
                 <p class="text-sm xl:text-base leading-8 mt-2 text-left">
