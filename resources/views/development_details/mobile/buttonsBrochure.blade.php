@@ -23,7 +23,7 @@
 <div class="mx-0 px-0 ">
     <div class="mx-0">
         <button onclick="openModal('mymodalcentered-brochure-register')"   class="underline font-bold text-lg mx-auto w-full" type="button">
-            Download Brochure
+            {{ __('frontend.projectDownloadBrochure') }}
         </button>
 
         <dialog id="mymodalcentered-brochure-register" class="bg-transparent relative w-screen h-screen">
@@ -57,7 +57,7 @@
 
                     <div class="flex flex-col items-start w-full" id="form_brochure_ready">
                         <div class="p-4 flex items-stretch w-full">
-                            <div class="font-thin text-xl text-gray-900">Register Your Interest</div>
+                            <div class="font-thin text-xl text-gray-900">{{ __('frontend.projectDownloadBrochure') }}</div>
                             <svg onclick="modalClose('mymodalcentered-community-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                                 <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                             </svg>

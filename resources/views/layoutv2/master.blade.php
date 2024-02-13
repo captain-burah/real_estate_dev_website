@@ -302,8 +302,63 @@
             <div class="relative">
                 @yield('content')
             </div>
+
+            {{-- @notmobile --}}
+            <section class="" style="position: fixed; z-index: -10;  left: 0; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+                <style>
+                    .bounce2 {
+                        display: inline-block;
+                        position: relative;
+                        -moz-animation: bounce 1.5s infinite linear;
+                        -o-animation: bounce 1.5s infinite linear;
+                        -webkit-animation: bounce 1.5s infinite linear;
+                        animation: bounce 1.5s infinite linear;
+                        }
+                        @-webkit-keyframes bounce2 {
+                            0% { top: 0; }
+                            50% { top: -0.3em; }
+                            70% { top: -0.4em; }
+                            100% { top: 0; }
+                        }
+                        @-moz-keyframes bounce2 {
+                            0% { top: 0; }
+                            50% { top: -0.3em; }
+                            70% { top: -0.4em; }
+                            100% { top: 0; }
+                        }
+                        @-o-keyframes bounce2 {
+                            0% { top: 0; }
+                            50% { top: -0.3em; }
+                            70% { top: -0.4em; }
+                            100% { top: 0; }
+                        }
+                        @-ms-keyframes bounce2 {
+                            0% { top: 0; }
+                            50% { top: -0.3em; }
+                            70% { top: -0.4em; }
+                            100% { top: 0; }
+                        }
+                        @keyframes bounce2 {
+                            0% { top: 0; }
+                            50% { top: -0.3em; }
+                            70% { top: -0.4em; }
+                            100% { top: 0; }
+                        }
+                </style>
+
+                <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
+                    <a href="https://wa.link/pzf7z4"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Chat on WhatsApp">
+                        <img src="{{ asset('home/wa.png') }}" class="rounded-circle p-1" style="width: 60px; background-color: #000 !important; border-radius: 50% !important; float: right !important;" alt="Avatar" />
+                    </a>		
+                    
+                </div>
+            </section>
+        {{-- @endnotmobile --}}
             
+        <section style="z-index: 20;">
             @include('layout.footer')
+        </section>
+            
 
         </div>
 

@@ -85,46 +85,17 @@ return [
         'heroH' => "Welcome to ESNAAD - Shaping Dreams, Building Legacies",
         'homeSectionOneH' => "Our Story",
         
-        'homeSectionOneP1' => "Immersed in the rich tapestry of the real estate and construction industry for over
-                two decades, ESNAAD is a beacon of innovation and commitment. Our story is more
-                than a chronicle of years; it's a testament to our passion for elevating living
-                experiences through spaces that resonate with sophistication and impeccable
-                craftsmanship.",
+        'homeSectionOneP1' => "Embark on an extraordinary journey shaped by over two decades of profound expertise in the dynamic realms of real estate and construction. ESNAAD, a name synonymous with innovation and excellence, is dedicated to elevating your living experiences through meticulously crafted spaces. Every detail within our creations serves as an eloquent testament to our unwavering commitment to sophistication and superior craftsmanship.",
         
-        'homeSectionOneP2' => "With a visionary outlook, ESNAAD aspires to transcend conventional boundaries in
-                the real estate realm. Our dedication is not merely to construct buildings but to
-                curate lifestyles that transcend the ordinary. Inspired by a global perspective, we
-                invite clients from around the world to explore a unique, tailored, and holistic
-                approach to real estate—a journey beyond bricks and mortar, where dreams unfold
-                and futures are secured.",
+        'homeSectionOneP2' => "Inspired by a legacy steeped in over 20 years of industry expertise, ESNAAD takes pride in going beyond the ordinary. We don't just build homes; we curate lifestyles that transcend expectations. Our designs, craftsmanship, and services redefine luxury, offering a unique and tailored one-stop destination for clients hailing from diverse corners of the globe. At ESNAAD, we don't merely envision what is; we envisage what could be, pushing boundaries and setting new benchmarks.",
         
-        'homeSectionOneP3' => "At the heart of our mission is the endeavor to lead the market in crafting new luxury
-                homes in areas poised for regeneration. We approach our work with
-                professionalism, harbor an entrepreneurial spirit, and value loyalty in our
-                relationships. ESNAAD Real Estate Developments is a fusion of innovation and
-                exquisite design, striving to deliver homes and neighborhoods that are not just
-                spaces but expressions of a refined lifestyle.",
+        'homeSectionOneP3' => "ESNAAD's objective is to pioneer market-leading luxury homes, strategically positioned in locations poised for regeneration. Our approach is not just professional; it's entrepreneurial in thinking and loyal in relationships. We believe in mutual benefit, seamlessly blending innovation and outstanding design to create homes and neighborhoods that stand as testaments to our commitment.",
 
         'homeSectionTwoH1' => "THE THREE PILLARS",   
         'homeSectionTwoH2' => "OF ESNAAD'S PHILOSOPHIES",
-        'homeSectionTwoDesign' => "In our pursuit of design excellence, we embrace the journey of life and investments.
-                ESNAAD envisions the construction of homes as more than physical structures; each
-                brick holds the promise of a lifetime. Our designs are not just aesthetic expressions
-                but thoughtful compositions that embody the essence of creating spaces where
-                memories are woven, dreams are actualized, and investments flourish with
-                enduring value.",
-        'homeSectionTwoQuality' => "Embedded in the DNA of ESNAAD is an unwavering commitment to quality. This
-                commitment permeates every facet of our projects, from the selection of premium
-                materials and cutting-edge equipment to the meticulous execution and supervision
-                of construction. Quality, for us, is not a mere benchmark but a foundational
-                principle that defines the very essence of our approach. It's a commitment to
-                delivering not just homes but lasting legacies.",
-        'homeSectionTwoExcelence' => "In the pursuit of excellence, ESNAAD sets forth to redefine industry standards.
-                Through dedication, skill, and an unyielding commitment to surpassing
-                expectations, excellence becomes more than a goal—it's a culture. We believe in
-                pushing boundaries, constantly innovating, and setting new benchmarks in the real
-                estate landscape. Our pursuit of excellence is a driving force that propels us to
-                shape the future of real estate, one exceptional project at a time.",
+        'homeSectionTwoDesign' => "Embrace the profound journey of life and investments with ESNAAD, where building a home goes beyond bricks and mortar. We are not just in the business of nurturing dreams; we are architects of futures, securing promises that last a lifetime. Every brick laid by ESNAAD holds the promise of a legacy, a testament to our enduring commitment.",
+        'homeSectionTwoQuality' => "Our commitment to quality extends far beyond the superficial. It encompasses every facet of our projects, from the meticulous selection of materials and equipment to the precise execution and supervision of construction. At ESNAAD, we are driven by a relentless pursuit of the highest standards, achieved through unwavering dedication, unmatched skill, and a commitment to not just meet but surpass expectations.",
+        'homeSectionTwoExcelence' => "Join us in shaping dreams, building legacies, and transforming lives. ESNAAD is not just a developer; we are creators of lifestyles. Every project we undertake is a masterpiece, and every home is a canvas reflecting our commitment to redefining the future of real estate. Welcome to ESNAAD – where innovation meets excellence, and every space is a celebration of sophistication.",
         'homeSectionTwoH' => "OUR LATEST PROJECTS",
         'homeSectionThreeH' => "OUR LATEST PROJECTS",
         'homeSectionThreeImage' => "Coming Soon",
@@ -148,7 +119,7 @@ return [
         "ceoP" => "Founded by our visionary CEO, Ashraf Elbendari, the journey began with successful projects as a real estate expert and contractor, establishing its expertise and commitment towards excellence",
         "ceoMsg1"=>"Welcome to ESNAAD, where our commitment to excellence is not just a goal;
                 it's our legacy. Since our establishment in 2023, ESNAAD has been an
-                integral part of Aura Holdings, contributing to the real estate and
+                integral part in contributing to the real estate and
                 construction sector's growth and innovation since 2005. As the founder and
                 CEO, I am proud to lead a team dedicated to crafting not just buildings, but
                 enduring lifestyles.",
@@ -375,6 +346,11 @@ return [
         "projectP" => "ESNAAD boasts a diverse project portfolio, having successfully completed
                 numerous ventures. From boutique compounds to modern high-rises, each
                 project showcases our unwavering commitment to excellence.",
+
+
+        "projectRegisterInterest" => "Register Your Interest",
+        "projectDownloadBrochure" => "Download Brochure",
+        "buttonClose" => "Close",        
         
         
         /**

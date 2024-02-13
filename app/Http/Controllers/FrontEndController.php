@@ -276,6 +276,7 @@ class FrontEndController extends Controller
             $this->data['images'] = $images = $jsonData['images'];
 
             $this->data['response'] = $jsonData['resources'][0];
+            $this->data['pid'] = $jsonData['resources'][0]['id'];
 
             $this->data['long'] = $jsonData['resources'][0]['longitude'];
             $this->data['lat'] = $jsonData['resources'][0]['latitude'];
@@ -294,7 +295,7 @@ class FrontEndController extends Controller
                 ];
             }
 
-            // dd($jsonSEOData['title_en']);
+            // dd($this->data);
 
             
 
