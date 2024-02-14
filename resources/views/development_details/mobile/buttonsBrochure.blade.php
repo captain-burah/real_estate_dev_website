@@ -406,7 +406,9 @@
                         {
                             if($.isEmptyObject(data.error)){ //---if success
                                 setCookie("_Ws3YktbxvVzS", true, 1); //---set a cookie
-                                document.location.href = '/en/project-brochure/thanks'; //---redirect to thank you page for seo
+                                // document.location.href = '/en/project-brochure/thanks'; //---redirect to thank you page for seo
+                                var brochure_link = $("#brochurelink").val();
+                                document.location.href = brochure_link; //---redirect to thank you page for seo
                             }else{
                                 printErrorMsg(data.error);//---show error
                             }

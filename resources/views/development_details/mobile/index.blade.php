@@ -23,6 +23,7 @@
     $project_image_id = $response['project_image']['id'];
     $images = $images;
     $jsonSEOData = $jsonSEOData;
+    $brochurelink = $response['brochure_link'];
 
     $header = $response['header'];
     $description = $response['description'];
@@ -77,6 +78,9 @@
 @endsection
 
 @section('content')
+    <input hidden id="brochurelink" value="{{$brochurelink}}">
+    
+    <input hidden id="pid" value="{{$pid}}">
 
     <section class="my-0">
         @include('development_details.mobile.header')
