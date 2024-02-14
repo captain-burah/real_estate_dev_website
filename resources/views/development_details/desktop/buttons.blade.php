@@ -807,7 +807,7 @@
         </div>
     </div>
 </dialog>
-
+{{-- 
 @section('intel-input')
     
     <script>
@@ -962,5 +962,5 @@
     </script>
 
 @endsection
-
+ --}}
 
