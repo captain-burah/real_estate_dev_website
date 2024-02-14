@@ -19,6 +19,7 @@
     $project_video = $response['project_video'];
     $project_image_id = $response['project_image']['id'];
     $images = $images;
+    $brochurelink = $response['brochure_link'];
 
     $header = $response['header'];
     $description = $response['description'];
@@ -64,6 +65,8 @@
 
 @section('content')
         
+    <input hidden id="pid" value="{{$pid}}">
+    <input hidden id="brochurelink" value="{{$brochurelink}}">
 
         <section class="my-0">
             @include('development_details.desktop.header')
@@ -92,6 +95,8 @@
 @section('luxe_asset_js')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></scrip>
     <script src="{{ asset('splide/dist/js/splide.min.js')}}"></script>
+    <script src="{{ asset('js/development_details/H9U71GVy27r2KLA3fG150xO.min.js')}}"></script>
+
 
     @yield('intel-input')
 

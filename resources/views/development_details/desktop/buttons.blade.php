@@ -481,18 +481,19 @@
 
             
             <div class="flex flex-col items-start w-full" id="form_ready_brochure">
-                <div class="p-7 flex items-stretch w-full" style="background-color: red;">
-                    <div class="font-bold text-xl text-white " >{{ __('frontend.projectDownloadBrochure') }} (Under Development)</div>
+                <div class="p-7 flex items-stretch w-full">
+                    <div class="font-bold text-xl text-black " >{{ __('frontend.projectDownloadBrochure') }}</div>
                     <svg onclick="modalClose('mymodalcentered-brochure-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                         <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
-                <form id="new-project-details-desktop-brochure-form" method="post" action="en/project-detail-inquiry" class="w-full">
+                <form id="new-project-details-desktop-brochure-form" class="flex flex-col items-start w-full" action="en/project-detail-inquiry" method="post" >
                     @csrf
                     <div class="px-4 w-full" style="max-height: 40vh;">
                         <input type="hidden" id="project_brochure" name="project_brochure" value="{{$name}}">
                         <!-- <input type="hidden" id="country_code_brochure" name="country_code_brochure"> -->
                         <input type="hidden" id="url_brochure" name="url_brochure" value="{{$actual_link}}">
+                        <input type="hidden" id="MAVmKG09eI4aX8uv" name="MAVmKG09eI4aX8uv">
 
                         <div class="mb-6">
                             <input type="text" id="name2" name="name_brochure" class="w-full px-4 py-2 border rounded-0 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="{{__('frontend.formFullName')}}"  required>
@@ -747,9 +748,68 @@
 </dialog>
 
 
+<dialog id="mymodalcentered-brochure-verify" class="bg-transparent relative w-screen h-screen">
+    <div class="p-7 flex justify-center items-center fixed left-0 top-0 w-full h-full bg-black bg-opacity-80 transition-opacity duration-300 opacity-0">
+        <div class="bg-white flex rounded-0 w-1/4 relative"> 
+            <div class="flex flex-col items-start w-full hidden" id="form_submitted">
+                <div class="p-7 flex items-stretch w-full">
+                    <svg onclick="modalClose('mymodalcentered-community-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                    </svg>
+                </div>
+                <div class="flex flex-col items-start w-full">
+                    <div class="rounded-lg  px-16 py-14">
+                        <div class="flex justify-center">
+                        <div class="rounded-full bg-green-200 p-6">
+                            <div class="flex h-16 w-16 items-center justify-center rounded-full bg-green-500 p-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        </div>
+                        <h3 class="my-4 text-center text-3xl font-semibold text-gray-700">Successful!</h3>
+                        <p class="w-[100%] text-center font-normal text-gray-600">
+                            Thank you for submitting your information. One of our representatives will contact you soon on your enquiry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="flex flex-col items-start w-full" id="form_ready_brochure">
+                <div class="p-7 flex items-stretch w-full">
+                    <div class="font-bold text-xl text-black" >{{ __('frontend.projectDownloadBrochure') }}</div>
+                    <svg onclick="modalClose('mymodalcentered-brochure-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                    </svg>
+                </div>
+                <form id="verificationForm" class="flex flex-col items-start w-full p-6" action="en/project-detail-inquiry" method="post" >
+                        <h3 class="text-2xl text-gray-900 font-semibold text-center mx-auto">{{__('frontend.careersEnterVerification')}}</h3>
+                        <table class="w-full">
+                            <tbody>
+                                <caption class="my-4">
+                                    {{__('frontend.careersSentToEmail')}} <span id="email_placeholder"></span>
+                                </caption>
+                                <tr class="mx-auto text-center">
+                                    <td class="mx-auto text-center"><input type="text" class="text-center mx-auto" name="applicant_code" id="applicant_code" placeholder="xxxx - xxxx - xxxx - xxxx" class=" w-full" ></td>
+                                </tr>
+                                <tr class="mx-auto text-center hidden">
+                                    <td class="mx-auto text-center text-red-900"><small>{{__('frontend.careersVerificationFailed')}}</small></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button"  id="verificationFormSubmit" class="w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Verify</button>
+                        {{-- <button type="button" id="ResendVerificationCode" class="w-full mt-4 text-black font-thin">Didn't get a code? <span class="font-bold">Click to resend</button> --}}
+                    </form>
+            </div>
+
+        </div>
+    </div>
+</dialog>
+{{-- 
 @section('intel-input')
     
-    {{-- FORM SUBMIT --}}
     <script>
         $(document).ready(function () {
             
@@ -902,5 +962,5 @@
     </script>
 
 @endsection
-
+ --}}
 

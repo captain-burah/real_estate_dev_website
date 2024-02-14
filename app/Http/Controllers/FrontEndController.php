@@ -307,6 +307,22 @@ class FrontEndController extends Controller
     }
 
 
+    public function project_brochure_post_v1($lang='', Request $request){
+        $verification_code = $request->input('MAVmKG09eI4aX8uv');
+        try{
+            $data = [
+                'verification_code' =>  $verification_code, 
+            ];
+
+            Mail::mailer('noreply')->to($request->email_brochure)->send(new verificationEmail($data));
+
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
+        return Response::json(['message' => 'verification sent'], 200);
+    }
+
+
     public function projects($lang='') {
 
 
@@ -841,8 +857,7 @@ class FrontEndController extends Controller
             dd($e->getMessage());
         }
 
-        return redirect()->back()->with('success', 'Your inquiry has been submitted!');   
-
+        return Response::json(['message' => 'verification sent'], 200);   
     }
 
 

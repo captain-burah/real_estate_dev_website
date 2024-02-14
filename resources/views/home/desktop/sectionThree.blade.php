@@ -7,7 +7,7 @@
             
         </h3>
     </div>
-    <div class="row my-10">
+    <div class="row">
         <div class="grid grid-cols-5 gap-12 mb-5 mx-auto">
             
             <div class="col-span-2 w-full bg-white sahdow-lg overflow-hidden flex flex-col justify-center items-center ">

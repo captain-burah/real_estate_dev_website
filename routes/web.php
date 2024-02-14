@@ -98,6 +98,9 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
     Route::get('/contact-us/thanks', [FrontEndController::class, 'contact_us_thanks'])->name('contact-us-thanks');
     Route::get('/broker-registration/thanks', [FrontEndController::class, 'broker_registration_thanks'])->name('broker-registration-thanks');
 
+    Route::post('/project-brochure-post-v1', [FrontEndController::class, 'project_brochure_post_v1'])->name('project.brochure.post.v1');
+
+
 
 
     Route::get('/thankyou', function() {
