@@ -807,4 +807,160 @@
         </div>
     </div>
 </dialog>
+{{-- 
+@section('intel-input')
+    
+    <script>
+        $(document).ready(function () {
+            
+            /**
+             * INITIATE HEADERS WITH CSRF TOKENIZATION
+             * FOR FORM SUBMISSION
+             */
+            // Function to set a cookie
+            function setCookie(name, value, daysToExpire) {
+                var expires = "";
+                
+                if (daysToExpire) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                
+                document.cookie = name + "=" + value + expires + "; path=/";
+            };
+            
+            // Function to get a cookie
+            function getCookie(cookieName) {
+                var name = cookieName + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var cookieArray = decodedCookie.split(';');
+
+                for (var i = 0; i < cookieArray.length; i++) {
+                    var cookie = cookieArray[i].trim();
+                    if (cookie.indexOf(name) === 0) {
+                        return cookie.substring(name.length, cookie.length);
+                    }
+                }
+
+                return null; // Return null if the cookie is not found
+            };
+
+            var pid = {!! json_encode($pid) !!};  //--get project id
+            var cookie_id_reg = '_' + pid + '_q2vWT4junrLR';  //---append the brochure code with project id to separate it from others
+            var cookie_id_broc = '_' + pid + '_rO13oN8QOv';  //---append the brochure code with project id to separate it from others
+
+
+
+            //---register interest section
+            if (getCookie(cookie_id_reg)) {
+                var successView = document.getElementById("form_ready");
+                successView.classList.add("hidden");
+
+                var formView = document.getElementById("form_submitted");
+                formView.classList.remove("hidden");
+            } else {
+                $('#new-project-details-desktop-form').on('submit', function(e){
+
+                    /**
+                     * INITIATE AN AJAX SCRIPT FOR THE FORM SUBMISSION
+                     * ALONG WITH POST ROUTE METHOD AND URL. IF RESPONSE
+                     * IS A SUCCESS DISPLAY THE THANK YOU MODAL AND
+                     * UPDATE THE FORM SESSION IN SESSION-STORAGE OF BROWSER
+                     *
+                    */
+                    e.preventDefault(); //---cancel default form submissions
+                    var formData = new FormData(this); //---get alll the form data here
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content')
+                        }
+                    });
+                    $.ajax({
+                        type:'POST',
+                        headers: //---set the headers for cross-origin policies between domains
+                        {
+                            'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
+                            'Access-Control-Allow-Origin': 'https://esnaad.com/en/project-detail-inquiry'
+                        },
+                        url: "/en/project-detail-inquiry",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success:function(data) 
+                        {
+                            if($.isEmptyObject(data.error)){ //---if success
+                                var pid = {!! json_encode($pid) !!};  //--get project id
+                                var cookie_id = '_' + pid + '_q2vWT4junrLR';  //---append the brochure code with project id to separate it from others
+                                document.location.href = '/en/project-details/thanks'; //---redirect to thank you page for seo
+                            }else{
+                                printErrorMsg(data.error);//---show error
+                            }
+                        }
+                    });
+
+                });
+            }
+            
+
+
+            //---brochure download section
+            if (getCookie(cookie_id_broc)) {
+                var successViewBrochure = document.getElementById("form_brochure_ready");
+                successViewBrochure.classList.add("hidden");
+
+                var formViewBrochure = document.getElementById("form_brochure_submitted");
+                formViewBrochure.classList.remove("hidden");
+            } else {
+                $('#new-project-details-desktop-brochure-form').on('submit', function(e){
+
+                    /**
+                     * INITIATE AN AJAX SCRIPT FOR THE FORM SUBMISSION
+                     * ALONG WITH POST ROUTE METHOD AND URL. IF RESPONSE
+                     * IS A SUCCESS DISPLAY THE THANK YOU MODAL AND
+                     * UPDATE THE FORM SESSION IN SESSION-STORAGE OF BROWSER
+                     *
+                    */
+                    e.preventDefault(); //---cancel default form submissions
+                    document.getElementById('submitFormBrochure').style.display = 'none';
+                    document.getElementById('submitVerifyingBrochure').style.display = 'inline-block';
+                    var formData = new FormData(this); //---get alll the form data here
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content')
+                        }
+                    });
+                    $.ajax({
+                        type:'POST',
+                        headers: //---set the headers for cross-origin policies between domains
+                        {
+                            'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
+                            'Access-Control-Allow-Origin': 'https://esnaad.com/en/project-detail-brochure-download'
+                        },
+                        url: "/en/project-detail-brochure-download",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success:function(data) 
+                        {
+                            if($.isEmptyObject(data.error)){ //---if success
+                                var pid = {!! json_encode($pid) !!};  //--get project id
+                                var cookie_id = '_' + pid + '_rO13oN8QOv';  //---append the brochure code with project id to separate it from others
+                                setCookie(cookie_id, true, 1); //---set the cookie
+                                document.location.href = '/en/project-brochure/thanks'; //---redirect to thank you page for seo
+                            }else{
+                                printErrorMsg(data.error);//---show error
+                            }
+                        }
+                    });
+
+                });
+            }
+            
+            
+        });
+    </script>
+
+@endsection
+ --}}
 
