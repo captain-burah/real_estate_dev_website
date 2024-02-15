@@ -78,7 +78,7 @@
                                 </div>
 
                                 <div class="mb-6">
-                                    <select name="country_code_brochure"  class="w-full" >
+                                    <select name="country_code_brochure"  class="w-full" required>
                                         <option value="" Selected>Country Code</option>
                                         <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
                                         <optgroup label="Other countries">
