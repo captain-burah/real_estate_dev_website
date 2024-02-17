@@ -36,6 +36,7 @@ return [
          * BUTTONS
          */
         "exploreMore" => "Explore More",
+        "popupNotInterested" => "I'm not interested",
         
 
         /**

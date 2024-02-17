@@ -298,11 +298,18 @@
                 @include('layout.mobileNavigation2')
             @endmobile
 
+            
             <div class="relative">
                 @yield('content')
             </div>
 
-            {{-- @notmobile --}}
+            @desktop
+                <section id="newsletter-modal" class="hidden">
+                    @include('layout.popup')
+                </section>
+            @enddesktop
+
+
             <section class="" style="position: fixed; z-index: -10;  left: 0; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
                 <style>
                     .bounce2 {
@@ -352,16 +359,29 @@
                     
                 </div>
             </section>
-        {{-- @endnotmobile --}}
             
-        <section style="z-index: 20;">
-            @include('layout.footer')
-        </section>
+            
+            <section style="z-index: 20;">
+                @include('layout.footer')
+            </section>
+
+
+            @desktop
+                <script src="{{ asset('js/popup/Zmymn335HXL2Vpz5.min.js')}}"></script>
+            @enddesktop
             
 
         </div>
 
-
-
-
+        <script>
+            function initNewsletterModal() {
+                if (!localStorage.getItem('newsletter-modal')) {
+                    setTimeout(() => {
+                        document.getElementById('newsletter-modal').classList.remove('hidden');
+                    }, 1);
+                }
+            }    
+            initNewsletterModal();
+    
+        </script>
 </html>
