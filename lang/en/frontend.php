@@ -16,6 +16,13 @@ return [
         "desktop_construction" => "CONSTRUCTIONS",
         "desktop_contact_us" => "CONTACT US",
         "desktop_news" => "NEWS",
+        "desktop_media" => "MEDIA",
+        "desktop_press_release" => "PRESS RELEASE",
+        "desktop_blogs" => "BLOGS",
+        "desktop_gallery" => "GALLERY",
+        "desktop_careers" => "CAREERS",
+
+
 
         "mobile_aboutUs" => "About Us",
         "mobile_news" => "News",
@@ -30,6 +37,10 @@ return [
         "mobile_invest_in_dubai" => "Why Invest in Dubai?",
         "mobile_broker_registration" => "Broker Registration",
         "mobile_careers" => "Careers",
+        "mobile_media" => "Media",
+        "mobile_press_release" => "Press Release",
+        "mobile_blogs" => "Blogs",
+        "mobile_gallery" => "Gallery",
 
 
         /**
@@ -361,12 +372,35 @@ return [
         "constructionP" => "Stay updated with ESNAAD's latest news, events, and insights through our
                 media section. Press releases, photos, videos, and blogs offer a
                 comprehensive view of our endeavours.",
-        
+
         /**
          * NEWS PAGE
          */
-        "newsH" => "NEWS",
+        "mediaH2" => "Press Release",
+        "mediaH3" => "Blogs",
+        "mediaH4" => "Gallery",
+
+        /**
+         * NEWS PAGE
+         */
+        "newsH" => "PRESS RELEASE",
         "newsP" => "Breaking Grounds and Headlines: Stay abreast of Dubai's dynamic real estate landscape with our News Hub. Unearth the latest updates on our cutting-edge projects, government initiatives, and industry trends shaping the city's future.",
+
+        /**
+         * GALLERY PAGE
+         */
+        "galleryH" => "GALLERY",
+        "galleryP" => "Stay updated with ESNAAD's latest news, events, and insights through our
+        media section. Press releases, photos, videos, and blogs offer a
+        comprehensive view of our endeavours.",
+        "galleryImages" => "Images",
+        "galleryVideos" => "Videos",
+
+        /**
+         * BLOG PAGE
+         */
+        "blogH" => "BLOGS",
+        "blogP" => "Innovative Designs: Unveiling cutting-edge architecture that blends functionality with aesthetics, seamlessly integrating with Dubai's vibrant tapestry.",
         
         
         /**

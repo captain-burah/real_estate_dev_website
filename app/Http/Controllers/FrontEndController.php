@@ -965,4 +965,106 @@ class FrontEndController extends Controller
         $this->data['source'] = $source = "brochure";
         return view('thankyou2', $this->data);
     }
+
+
+    public function media_gallery($lang = ''){
+        
+        $jsonSEOData = $this->landingpageseos(3);
+
+        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+
+        // CALL API FROM MIS
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/gallery');
+        $jsonData = $response->json();  
+        $date = $jsonData[0]['created_at'];
+        // dd($date->format('dd/mm/yy'));
+        // dd($jsonData[0]['created_at']);
+
+
+        if(count($jsonData) > 0){
+            $this->data['available'] = '1';
+        }
+        
+        // RETURN AS JSON
+        $this->data['response'] = $jsonData;
+
+        return view('gallery', $this->data);
+    }
+
+    public function media_blogs($lang = ''){
+        
+        $jsonSEOData = $this->landingpageseos(4);
+
+        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+
+        // CALL API FROM MIS
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/blogs');
+
+        $jsonData = $response->json();  
+        
+        $date = $jsonData[0]['created_at'];
+
+
+        if(count($jsonData) > 0){
+            $this->data['available'] = '1';
+        }
+        
+        // RETURN AS JSON
+        $this->data['response'] = $jsonData;
+
+        return view('blogs', $this->data);
+    }
+
+    public function media_gallery_details($lang='', $slug) {
+
+        // CALL API FROM MIS
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/gallery/'.$slug);
+
+        $jsonData = $response->json();  
+
+        // dd($jsonData);
+
+        if(count($jsonData) > 0){
+            $this->data['available'] = '1';
+        }
+
+        // dd($jsonData);
+        if(count($jsonData[0]['website_gallery_medias']) > 0){
+            $this->data['available'] = '1';
+        }
+
+        
+        // RETURN AS JSON
+        $this->data['response'] = $jsonData[0];
+
+        return view('gallery_details', $this->data);
+    }
+
+
+    public function media_blogs_details($lang='', $slug) {
+
+        // CALL API FROM MIS
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/blogs/'.$slug);
+
+        $jsonData = $response->json();  
+
+        // dd($jsonData);
+
+        if(count($jsonData) > 0){
+            $this->data['available'] = '1';
+        }
+        
+        // RETURN AS JSON
+        $this->data['response'] = $jsonData[0];
+
+        return view('blogs_details', $this->data);
+    }
 }

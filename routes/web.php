@@ -50,7 +50,13 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
 
     Route::get('/community-details', [FrontEndController::class, 'community_details'])->name('esnaad.community.details');
 
-    Route::get('/media-center', [FrontEndController::class, 'media_center'])->name('esnaad.media_center');
+    Route::get('/media-gallery', [FrontEndController::class, 'media_gallery'])->name('esnaad.media_gallery');
+
+    Route::get('/media-gallery/{slug}', [FrontEndController::class, 'media_gallery_details'])->name('esnaad.gallery.detail');
+
+    Route::get('/blogs', [FrontEndController::class, 'media_blogs'])->name('esnaad.media_blogs');
+
+    Route::get('/blogs/{slug}', [FrontEndController::class, 'media_blogs_details'])->name('esnaad.blogs.detail');
 
     Route::get('/contact', [FrontEndController::class, 'contact'])->name('esnaad.contact');
 
@@ -60,9 +66,9 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
     
     Route::get('/constructions/{slug}', [FrontEndController::class, 'constructions_details'])->name('esnaad.constructions.detail');
 
-    Route::get('/news', [FrontEndController::class, 'news'])->name('esnaad.news');
+    Route::get('/press-release', [FrontEndController::class, 'news'])->name('esnaad.news');
 
-    Route::get('/news/{slug}', [FrontEndController::class, 'news_details'])->name('esnaad.news.detail');
+    Route::get('/press-release/{slug}', [FrontEndController::class, 'news_details'])->name('esnaad.news.detail');
 
     Route::post('/communities/register-your-interest', [FrontEndController::class, 'communities_registration'])->name('esnaad.communities.registration');
 

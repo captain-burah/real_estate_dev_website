@@ -1,3 +1,23 @@
+<div class="mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl mt-8 ">
+    <div class="container mx-auto flex flex-col items-start md:flex- min-h-[7vh]">
+        <div class="mb-4 w-[20vw] flex justify-center space-x-4 p-0 bg-white rounded-lg gap-6 mx-auto">
+            <a href="{{ url('/en/press-release')}}" class="text-black text-xl font-light underline underline-offset-4">
+                {{ __('frontend.mediaH2') }}
+            </a>
+            <a href="{{ url('/en/blogs')}}" class="text-gray-400 text-xl font-light hover:text-gray-900 transition duration-150 ease-out hover:ease-in">
+                {{ __('frontend.mediaH3') }}
+            </a>
+            <a href="{{ url('/en/media-gallery')}}" class="text-gray-400 text-xl font-light  hover:text-gray-900 transition duration-150 ease-out hover:ease-in ">
+                {{ __('frontend.mediaH4') }}
+            </a>
+        </div>
+
+        <div class="mb-4 w-[10vw] flex justify-center space-x-4 p-0 bg-white rounded-lg gap-6 mx-auto">
+            <hr class="border-double border-gray-300 w-full" >
+        </div>
+    </div>
+</div>
+
 @if(isset($available))
     <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto">
         <div class="grid xl:grid-cols-3- lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5">
