@@ -54,7 +54,7 @@ return [
          * FOOOTER
          */
                 // Form
-        'footerFormH2' => "Get in Touch with Us or Connect with Us",
+        'footerFormH2' => "Get in Touch with Us",
         'footerFormP1' => "Your real estate aspirations deserve personalised attention. Please provide the
         necessary details, and our dedicated team will swiftly assist you in your inquiry.
         Connect with us as a Client or Broker and let ESNAAD be your trusted partner.",

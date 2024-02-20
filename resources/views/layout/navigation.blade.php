@@ -200,9 +200,9 @@
                     @endtablet
 
                     @desktop
-                        <a href="{{ url($langSeg.'/') }}" aria-label="home-route" rel='canonical'>
+                        <a href="{{ url($langSeg.'/') }}" aria-label="home-route hidden 3xl:visible" rel='canonical'>
                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                width="100%" height="36.000pt" viewBox="0 0 665.000000 190.000000"
+                                width="100%" height="28.000pt" viewBox="0 0 665.000000 190.000000"
                                 preserveAspectRatio="xMidYMid meet">
 
                                 <g transform="translate(0.000000,190.000000) scale(0.100000,-0.100000)"
@@ -257,12 +257,6 @@
                     </x-nav-link>
                 </div>
 
-                {{-- <div class="hidden space-x-8 sm:-my-px sm:flex text-center 2xl:px-8 md:px-2">
-                    <x-nav-link href="{{ url($langSeg.'/news') }}"  aria-label="navbar-route" rel='canonical'>
-                        {{ __('frontend.desktop_news') }}
-                    </x-nav-link>
-                </div>  --}}
-
                 <div class="group relative cursor-pointer">
 
                     <div class="flex items-center justify-between space-x-5 bg-white px-4 mx-4">
@@ -276,7 +270,7 @@
                     <div class="invisible absolute z-50 flex w-full flex-col bg-white mx-8 pb-1 pt-4 text-gray-800 shadow-xl group-hover:visible">
             
                         <x-dropdown-link href="{{ url($langSeg.'/press-release') }}"  class="font-thin text-xs my-2 md:text-[12px] xl:text-base text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
-                            {{ __('frontend.desktop_press_release') }}
+                            {{ __('frontend.desktop_press_release') }} 
                         </x-dropdown-link>
             
                         <x-dropdown-link href="{{ url($langSeg.'/blogs') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-base text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
