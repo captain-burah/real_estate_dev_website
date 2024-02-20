@@ -310,7 +310,7 @@
             @enddesktop
 
 
-            <section class="" style="position: fixed; z-index: -10;  left: 0; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+            <section class="" style="position: fixed; z-index: -10;  right: 0; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
                 <style>
                     .bounce2 {
                         display: inline-block;
