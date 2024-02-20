@@ -45,15 +45,15 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="margin-top: 60px; height: 40vh; background-image: url('{{ URL::asset('home/9.jpg')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
-        <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-70">
+    <div class="w-full bg-cover bg-center" style="margin-top: 60px; height: 40vh; background-image: url('{{ URL::asset('assets/img/curved-images/curved11-small.jpg')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+        <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-50">
 
             <div class="container mx-0 px-0 mx-auto text-white">
                 <h1 class="text-xl font-light px-2">
-                    {{__('frontend.newsH')}}
+                    {{__('frontend.blogH')}}
                 </h1>
                 <p class="text-base font-thin leading-6 px-2 pt-2">
-                    {{__('frontend.newsP')}}
+                    {{__('frontend.blogP')}}
                 </p>
                 
             </div>
