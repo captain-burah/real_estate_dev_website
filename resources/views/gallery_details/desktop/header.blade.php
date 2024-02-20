@@ -49,9 +49,9 @@
 <header>
 
    
-    <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl">
+    <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl" @if($langSeg == 'ar') dir="rtl" @endif>
         <div class=" flex flex-col items-start md:flex-">
-            <div class="ml-0 md:mr-12 sticky">
+            <div class=" @if($langSeg == 'ar') mr-0 md:ml-12" @else  @endif sticky" >
                 <div class="container mx-auto w-full h-full xl:mt-[15vh]">
                     <style>
                         ul {
@@ -62,9 +62,15 @@
                             padding-left: 10px;
                         }
                     </style>
-                    <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                        <a href="{{ url('/en/media-gallery') }}" class="text-base font-thin text-black">
-                            Media / Gallery
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap" >
+                        <a href="{{ url('/en/blogs') }}" class="text-base font-thin text-black">
+                            {{__('frontend.mobile_media')}}
+                        </a>
+                        <span class="mx-2 text-base text-black">
+                            /
+                        </span> 
+                        <a href="{{ url('/en/blogs') }}" class="text-base font-thin text-black">
+                            {{__('frontend.mobile_gallery')}}
                         </a>
                         <span class="mx-2 text-base text-black">
                             /
@@ -72,19 +78,7 @@
                         <p class="text-base font-thin text-black">
                             {{ $title }}
                         </p>
-                    </div>
-                    {{-- <div class="grid grid-cols-2 gap-4 place-content-between">
-                        <div class="">
-                            <p class="text-sm mb-2">Published {{\Carbon\Carbon::parse($created_at)->format('j F, Y')}}</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="inline-flex float-right text-right">
-                                @include('constructions_details.desktop.buttons')
-                            </div>
-                        </div>
-                    </div> --}}
-
-                    
+                    </div>                    
                 </div>
             </div>
             

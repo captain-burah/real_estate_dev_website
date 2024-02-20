@@ -7,25 +7,26 @@
             <div class="w-full">
                 <div class="space-y-10">
                     <div>
-                        <h1 class="text-2xl font-bold mb-4">
+                        <h1 class="text-2xl font-bold mb-4" @if($langSeg == 'ar') dir="rtl" @endif>
                             @if($langSeg == 'ar')
                                 {{$titlear}}
                             @else
                                 {{$title}}
                             @endif
                         </h1>
-                        <div class="grid grid-cols-2 gap-4 place-content-between">
+                        
+                        <div class="grid grid-cols-2 gap-4 place-content-between" @if($langSeg == 'ar') dir="rtl" @endif>
                             <div class="">
-                                <p class="text-sm mb-2">Published {{\Carbon\Carbon::parse($created_at)->format('j F, Y')}}</p>
+                                <p class="text-sm mb-2">{{ __('frontend.blogPublish') }} {{\Carbon\Carbon::parse($created_at)->format('j F, Y')}}</p>
                             </div>
-                            <div class="text-right">
-                                <div class="inline-flex float-right text-right">
-                                    @include('constructions_details.desktop.buttons')
+                            <div class="@if($langSeg == 'ar') text-left @else text-right @endif">
+                                <div class="inline-flex @if($langSeg == 'ar')  float-left text-left @else  float-right text-right @endif">
+                                    @include('blogs_details.mobile.buttons')
                                 </div>
                             </div>
                         </div>
 
-                        <img src="{{ URL("https://mis.esnaad.com/uploads/news/".$id."/header_image/".$header_image)}}" alt="Ensaad-news-article {{$title}}" class="object-cover w-full h-56 mb-6 rounded-0 shadow-md sm:h-80 2xl:h-[60vh]">                          
+                        <img src="{{ URL("https://mis.esnaad.com/uploads/blogs/".$id."/header_image/".$header_image)}}" alt="Ensaad-news-article {{$title}}" class="object-cover w-full h-56 mb-6 rounded-0 shadow-md sm:h-80 2xl:h-[60vh]">                          
 
                         @if($langSeg == 'ar')
                             {!! $descriptionar !!}

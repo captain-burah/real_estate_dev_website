@@ -19,8 +19,8 @@
 </div>
 
 @if(isset($available))
-    <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto">
-        <div class="grid xl:grid-cols-3- lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5">
+    <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto" >
+        <div class="grid xl:grid-cols-3- lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5" >
 
             @foreach($response as $data)
                 <?php

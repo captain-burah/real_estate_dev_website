@@ -15,6 +15,7 @@
                                     {{$title}}
                                 @endif
                             </h1>
+                            
                             @if($langSeg == 'ar')
                                 {!! $descriptionar !!}
                             @else

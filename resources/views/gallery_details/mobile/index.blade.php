@@ -24,6 +24,7 @@
     $sluglink = $response['slug_link'];
     $thumbnail = $response['thumbnail'];
     $description = $response['description'];
+    $descriptionar = $response['description_ar'];
     $header_image = $response['header_image'];
     $images = $response['website_gallery_medias'];
     $created_at = $response['created_at'];

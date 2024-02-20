@@ -52,7 +52,7 @@
     <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl">
         <div class=" flex flex-col items-start px-4">
             <div class="ml-0 md:mr-12 sticky">
-                <div class="container mx-auto w-full h-full mt-[15vh]">
+                <div class="container mx-auto w-full h-full mt-[15vh]" >
                     <style>
                         ul {
                             padding-left: 30px;
@@ -67,15 +67,22 @@
                         {{$title}}
                     </h1>
 
-                    <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                        <a href="/news" class="text-sm text-black">
-                            NEWS
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap" >
+                        <a href="{{ url('/en/blogs') }}" class="text-base font-thin text-black">
+                            {{__('frontend.mobile_media')}}
                         </a>
-                        <span class="mx-2 text-sm text-black">
+                        <span class="mx-2 text-base text-black">
                             /
                         </span> 
+                        <a href="{{ url('/en/blogs') }}" class="text-base font-thin text-black">
+                            {{__('frontend.mobile_blogs')}}
+                        </a>
                         <p class="text-sm capitalize text-black">
-                            {{ $title }}
+                            @if($langSeg == 'ar') 
+                                {{ $titlear }}
+                            @else
+                                {{ $title }}
+                            @endif
                         </p>
                     </div>
 

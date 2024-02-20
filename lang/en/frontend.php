@@ -401,6 +401,8 @@ return [
          */
         "blogH" => "BLOGS",
         "blogP" => "Innovative Designs: Unveiling cutting-edge architecture that blends functionality with aesthetics, seamlessly integrating with Dubai's vibrant tapestry.",
+        "blogPublish" => "Published",
+
         
         
         /**
