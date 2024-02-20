@@ -53,11 +53,13 @@ return [
         /**
          * FOOOTER
          */
-                // Form
-        'footerFormH2' => "Get in Touch with Us",
-        'footerFormP1' => "Your real estate aspirations deserve personalised attention. Please provide the
-        necessary details, and our dedicated team will swiftly assist you in your inquiry.
-        Connect with us as a Client or Broker and let ESNAAD be your trusted partner.",
+        // Form
+        'footerFormH2' => "Connect with Us",
+        'footerFormP1' => "
+                Your real estate aspirations deserve personalised attention. Please provide the
+                necessary details, and our dedicated team will swiftly assist you in your inquiry.
+                Connect with us as a Client or Broker and let ESNAAD be your trusted partner.",
+
         'footerFormP2' => "Thank You! Your Email subscription has been recorded. Feel free to check your emails regularly for important news on our latest trends.",
         
         'footerFormSubscribe' => "Subscribe",

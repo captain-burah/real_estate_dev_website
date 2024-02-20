@@ -303,6 +303,11 @@
                 @yield('content')
             </div>
 
+            @desktop
+                <section id="newsletter-modal" class="hidden">
+                    @include('layout.popup')
+                </section>
+            @enddesktop
 
 
             <section class="" style="position: fixed; z-index: -10;  right: 0; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
@@ -361,6 +366,9 @@
             </section>
 
 
+            @desktop
+                <script src="{{ asset('js/popup/Zmymn335HXL2Vpz5.min.js')}}"></script>
+            @enddesktop
             
 
         </div>
