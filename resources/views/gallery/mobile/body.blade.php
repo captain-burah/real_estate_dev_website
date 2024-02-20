@@ -8,33 +8,40 @@
                     $title = $data['title'];
                     $titlear = $data['title_ar'];
                     $sluglink = $data['slug_link'];
-                    $date = $data['created_at'];
                     $thumbnail = $data['thumbnail'];
+                    $created_at = $data['created_at'];
                 ?>
                 <div class="">
-                    <div class="mx-auto px-0 ">
-                        <div class="max-w-full cursor-pointer rounded-0 bg-white p-2 shadow">
+                    <div class="mx-auto px-0 mb-4  ">
+                        <div class="max-w-full cursor-pointer rounded-0 bg-white shadow ">
                             <div class="row">
-                                <img class="w-full rounded-0 object-cover object-center" src="{{ asset('developments/3.jpg')}}" alt="news-thumbnail"/>
+                                <img class="w-full rounded-0 object-cover object-center" src="https://www.mis.esnaad.com/uploads/gallery/{{$id}}/thumbnail/{{$thumbnail}}"
+                                    height="250px"
+                                    width="auto"
+                                    loading="lazy"
+                                    style="height: 250px !important;"
+                                    alt="ESNAAD Media Unit - Gallery - {{$title}}"
+                                />
                             </div>
-                            <div class="row pt-4">
-                                <div class="grid grid-cols-7">
-                                    <div class="col-span-2 text-center">
-                                        <img class="w-full h-[20vw] w-[20vw]  rounded-0 object-cover object-center" 
-                                            src="{{ asset('developments/1.jpg')}}" 
-                                            height="3vw"
-                                            width="3vw"
-                                            alt="project-logo" 
-                                        />
-                                    </div>
-                                    <div class="col-span-5">
-                                        <p class="ml-4 text-lg font-thin text-black">{{$title}}</p>
-                                        {{-- <p class="ml-4 mb-4 font-thin text-sm text-black">{{ Carbon\Carbon::parse($date)->format('j F Y') }}</p> --}}
-                                        <a href="{{ URL($langSeg.'/news/'.$sluglink) }}" class="ml-4 mb-4 bg-black text-white px-15 py-3">
-                                            Explore
-                                        </a>
-                                    </div>
+                            <div class="row">
+                                <div>
+                                    <p class="mt-4 pl-4 text-2xl text-center font-thin text-black">
+                                        @if($langSeg == 'ar')
+                                            {{$titlear}}
+                                        @else
+                                            {{$title}}
+                                        @endif
+                                    </p>
+                                    <p class="mb-4 ml-4 font-thin text-center text-black text-sm">
+                                        {{ date('jS F Y', strtotime($created_at)) }}
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="row text-center pb-5 pt-2">
+                                <a href="{{ URL($langSeg.'/media-gallery/'.$sluglink) }}" 
+                                    class="bg-black text-white px-15 py-3">
+                                    Explore
+                                </a>
                             </div>
                         </div>
                     </div>

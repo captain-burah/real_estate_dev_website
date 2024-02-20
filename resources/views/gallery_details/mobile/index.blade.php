@@ -25,29 +25,23 @@
     $thumbnail = $response['thumbnail'];
     $description = $response['description'];
     $header_image = $response['header_image'];
-    $images = $response['website_news_images'];
+    $images = $response['website_gallery_medias'];
     $created_at = $response['created_at'];
 ?>
+<?php
+$uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$uri_segments = explode('/', $uri_path);
+$seg1 = $uri_segments[1];
+if($seg1 == 'en' || $seg1 == 'ar'){
+    $langSeg = $uri_segments[1];
+}else{
+    $langSeg = 'en';
+}
+?>
     @mobile
-        {{-- <section>
-             @include('news_details.mobile.header')
-        </section> --}}
         <section>
-            @include('news_details.mobile.body')
+            @include('gallery_details.mobile.body')
         </section>
-{{-- 
-
-        <section class="my-3">
-            @include('community_details.mobile.buttons')
-        </section>
-
-        <section class="my-3">
-            @include('community_details.mobile.gallery')
-        </section>
-
-        <section class="my-3" id="project_detail_map_section">
-            @include('community_details.mobile.map')
-        </section> --}}
 
     @endmobile
 

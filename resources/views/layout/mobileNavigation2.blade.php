@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <div class="fixed top-0 z-50 w-full z-50 m-0 p-0">
   
-  <div class="w-full text-gray-700  bg-white ">
+  <div class="w-full text-gray-700  bg-white shadow-md">
 
     <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl">
 
