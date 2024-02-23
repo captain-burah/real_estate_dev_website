@@ -137,7 +137,7 @@
     
     </div>
     
-    <div class="mx-auto my-8">
+    {{-- <div class="mx-auto my-8">
         
 
         <h2 class="font-bold leading-8 text-base mt-5 text-justify">
@@ -188,5 +188,5 @@
         <p class=" font-thin leading-8 text-base  text-left">
             {{__('frontend.investP9')}}
         </p>
-    </div>
+    </div> --}}
 </div>

@@ -253,66 +253,66 @@ return [
         "investH2" => "Reasons to Choose Dubai as Your New Home or Investment
         Destination",
 
-        "investH3" => "Stable Currency and Financial Hub:",
+        "investH3" => "Stable Currency and Financial Hub",
         "investP3" => "Dubai boasts a robust and stable
                 economy with the UAE Dirham pegged to the US Dollar since 1973. This
                 commitment to stability, maintained at a constant rate since 1997, positions
                 Dubai as one of the most secure financial hubs globally, ensuring a reliable
                 foundation for investors and residents alike.",
         
-        "investH4" => "Tax Advantages for Maximum Returns:",
+        "investH4" => "Tax Advantages for Maximum Returns",
         "investP4" => "Benefit from a tax-friendly
                 environment in Dubai, offering zero income tax, zero capital gains tax, and
                 zero wealth tax. These tax incentives create a conducive atmosphere for
                 investors and business professionals, allowing them to maximize returns on
                 their investments.",
         
-        "investH5" => "World-Class Healthcare Hub:",
+        "investH5" => "World-Class Healthcare Hub",
         "investP5" => "Dubai's commitment to healthcare is
                 exemplified by substantial investments in the sector, making it a preferred
                 destination for health and well-being. Access to state-of-the-art medical
                 facilities and services ensures that residents experience world-class
                 healthcare in the heart of the city.",
         
-        "investH6" => "Global Connectivity:",
+        "investH6" => "Global Connectivity",
         "investP6" => "With direct flights to 97 countries, Dubai stands as a
                 global aviation hub. Hosting the world's leading airlines, Dubai's airports
                 provide easy connectivity, making international travel seamless for residents
                 and businesses.",
         
-        "investH7" => "Diverse and Inclusive Community:",
+        "investH7" => "Diverse and Inclusive Community",
         "investP7" => "ome to over 200 nationalities, Dubai
                 epitomizes communal harmony, diversity, and inclusion. As a cosmopolitan
                 safe haven, it fosters a sense of belonging for residents from various cultural
                 backgrounds, creating a rich tapestry of global experiences",
         
-        "investH8" => "Safety and Low Crime Rates:",
+        "investH8" => "Safety and Low Crime Rates",
         "investP8" => "Ranked as one of the world's safest
                 countries, the UAE has developed an advanced law enforcement system,
                 resulting in consistently low crime rates. Dubai's commitment to security
                 ensures a peaceful living environment for all residents.",
         
-        "investH9" => "Exemplary Covid-19 Response:",
+        "investH9" => "Exemplary Covid-19 Response",
         "investP9" => "The UAE has set a global standard for
                 crisis preparedness, showcasing a high level of protection against the
                 pandemic. Dubai's proactive measures and robust healthcare infrastructure
                 contribute to a safe and resilient community.",
 
-        "investH10" => "World-Class Infrastructure and Amenities:",
+        "investH10" => "World-Class Infrastructure and Amenities",
         "investP10" => "Dubai provides an
                 environment where communities thrive, supported by excellent
                 infrastructure, public transport, parks, entertainment facilities, and more.
                 The city's continuous development ensures a high quality of life for its
                 residents.",
 
-        "investH11" => "Strategic Location for Global Opportunities:",
+        "investH11" => "Strategic Location for Global Opportunities",
         "investP11" => "ubai's strategic location
                 extends beyond its city infrastructure to include a robust legal system, public
                 transport, parks, entertainment, and more. The city serves as a gateway to
                 global opportunities, attracting individuals and businesses seeking a dynamic
                 and thriving environment.",
         
-        "investH12" => "Open and Free Economic System:",
+        "investH12" => "Open and Free Economic System",
         "investP12" => "ai's open economic policies,
                 minimal government control, and private sector regulation make it an ideal
                 destination for Foreign Direct Investment (FDI). This open and free economic
