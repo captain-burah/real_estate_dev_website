@@ -56,22 +56,6 @@
         </tr>
 
         <tr>
-            <td>Broker Card</td>
-            <td><input type="file" name="broker_card_id"
-                class="block w-full text-sm text-slate-500
-                border border-gray-600
-                file:mr-4 file:py-2 file:px-4
-                file:rounded-0 file:border-0
-                file:text-sm file:font-semibold
-                file:bg-black file:text-gray-50
-                file:cursor-pointer
-                "
-                accept=".pdf, .jpg, .jpeg"
-                />
-            </td>
-        </tr>
-
-        <tr>
             <td>Valid VAT Certificate / VAT NOC</td>
             <td><input type="file" name="valid_vat_certificate_or_noc_id"
                 class="block w-full text-sm text-slate-500
@@ -88,19 +72,18 @@
         </tr>
 
         <tr>
-            <td>Passport, VISA and Emirates ID</td>
-            <td><input type="file" name="passport_visa_eid_id"
+            <td>Passport, VISA, Emirates ID and Broker Card</td>
+            <td><input type="file" name="authorized_p_docx"
                 class="block w-full text-sm text-slate-500
-                border border-gray-600
-                file:mr-4 file:py-2 file:px-4
-                file:rounded-0 file:border-0
-                file:text-sm file:font-semibold
-                file:bg-black file:text-gray-50
-                file:cursor-pointer
-                "
+                    border border-gray-600
+                    file:mr-4 file:py-2 file:px-4
+                    file:rounded-0 file:border-0
+                    file:text-sm file:font-semibold
+                    file:bg-black file:text-gray-50
+                    file:cursor-pointer"
                 accept=".pdf, .jpg, .jpeg"
                 />
-                <span class=" text-sm">(all three in one document)</span>
+                <span class=" text-sm float-right">* all four in one pdf document</span>
             </td>
         </tr>
     </tbody>

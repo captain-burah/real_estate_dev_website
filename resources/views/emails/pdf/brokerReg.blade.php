@@ -201,7 +201,7 @@
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $trade_license }} : <br>
+                                                            {{ $trade_license }} <br>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -214,7 +214,7 @@
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $trade_license_expiry}} : <br>
+                                                            {{ $trade_license_expiry}} <br>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -227,7 +227,7 @@
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $rera_certificate }} : <br>
+                                                            {{ $rera_certificate }} <br>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -240,10 +240,82 @@
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $rera_certificate_expiry }}	: <br>
+                                                            {{ $rera_certificate_expiry }} <br>
                                                         </p>
                                                     </td>
                                                 </tr>
+
+                                                <tr style="border-collapse:collapse;border:0.5px solid #000">
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            Company P.O. Box Number	: <br>
+                                                        </p>
+                                                    </td>
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            
+                                                            {{ $company_po_box }} <br>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="border-collapse:collapse;border:0.5px solid #000">
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            Company Address	: <br>
+                                                        </p>
+                                                    </td>
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            
+                                                            {{ $company_address }}<br>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="border-collapse:collapse;border:0.5px solid #000">
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            Company Email	: <br>
+                                                        </p>
+                                                    </td>
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            
+                                                            {{ $company_email }}<br>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="border-collapse:collapse;border:0.5px solid #000">
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            Company Land Line Number	: <br>
+                                                        </p>
+                                                    </td>
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            
+                                                            {{ $company_country_code }}	- {{ $company_landline}} <br>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="border-collapse:collapse;border:0.5px solid #000">
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            Company Website	: <br>
+                                                        </p>
+                                                    </td>
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            
+                                                            {{ $company_website }} <br>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+
+
                                             </tbody>
                                             </table>
                                         </td>
@@ -335,7 +407,7 @@
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $authorized_p_contact }}<br>
+                                                            {{ $authorized_p_country_code }} - {{ $authorized_p_contact }}<br>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -389,6 +461,20 @@
                                                 <tr style="border-collapse:collapse;border:0.5px solid #000">
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            Account Title	: <br>
+                                                        </p>
+                                                    </td>
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
+                                                            
+                                                            {{ $account_title }} <br>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+
+                                                <tr style="border-collapse:collapse;border:0.5px solid #000">
+                                                    <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
+                                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             Bank Name : <br>
                                                         </p>
                                                     </td>
@@ -420,7 +506,7 @@
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $bank_city }} : <br>
+                                                            {{ $bank_city }}<br>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -433,10 +519,11 @@
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $account_no}} : <br>
+                                                            {{ $account_no }}<br>
                                                         </p>
                                                     </td>
                                                 </tr>
+                                                
                                                 <tr style="border-collapse:collapse;border:0.5px solid #000">
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
@@ -446,23 +533,25 @@
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $iban }} : <br>
+                                                            {{ $iban }}<br>
                                                         </p>
                                                     </td>
                                                 </tr>
+
                                                 <tr style="border-collapse:collapse;border:0.5px solid #000">
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="left" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
-                                                            Account Title	: <br>
+                                                            SWIFT Code : <br>
                                                         </p>
                                                     </td>
                                                     <td class="es-m-txt-l" bgcolor="#ffffff" align="right" style="Margin:0;padding-bottom:10px;padding-top:10px;padding-left:30px;padding-right:30px">
                                                         <p style="text-align: right; Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
                                                             
-                                                            {{ $account_title }}	: <br>
+                                                            {{ $swift_code }}<br>
                                                         </p>
                                                     </td>
                                                 </tr>
+                                                
 
                                             </tbody>
                                             </table>
@@ -543,7 +632,7 @@
                                             
                                             <tr style="border-collapse:collapse">
                                             <td align="left" style="padding:0;Margin:0;padding-top:25px">
-                                                <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666">
+                                                <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666">
                                                     This email is generated by our automated system. Please do not reply directly to this email. 
                                                     If you have any questions or concerns, kindly contact our support team at info@esnaad.com.
                                                 </p>

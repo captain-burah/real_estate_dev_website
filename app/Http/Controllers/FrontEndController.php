@@ -578,12 +578,20 @@ class FrontEndController extends Controller
             'trade_license_expiry'      =>  $request->trade_license_expiry, 
             'rera_certificate'      =>  $request->rera_certificate, 
             'rera_certificate_expiry'      =>  $request->rera_certificate_expiry, 
+            'company_po_box'      =>  $request->company_po_box, 
+            'company_address'      =>  $request->company_address, 
+            'company_email'      =>  $request->company_email, 
+            'company_po_box'      =>  $request->company_po_box, 
+            'company_country_code'      =>  $request->company_country_code, 
+            'company_landline'      =>  $request->company_landline, 
+            'company_website'      =>  $request->company_website, 
             
             'authorized_p_name'      =>  $request->authorized_p_name, 
             'authorized_p_country'      =>  $request->authorized_p_country, 
             'authorized_p_passport'      =>  $request->authorized_p_passport, 
             'authorized_p_position'      =>  $request->authorized_p_position, 
             'authorized_p_email'      =>  $request->authorized_p_email, 
+            'authorized_p_country_code'      =>  $request->authorized_p_country_code, 
             'authorized_p_contact'      =>  $request->authorized_p_contact, 
             'authorized_p_address'      =>  $request->authorized_p_address, 
             'authorized_p_city'      =>  $request->authorized_p_city, 
@@ -593,6 +601,7 @@ class FrontEndController extends Controller
             'bank_city'      =>  $request->bank_city, 
             'account_no'      =>  $request->account_no, 
             'iban'      =>  $request->iban, 
+            'swift_code'      =>  $request->swift_code, 
             'account_title'      =>  $request->account_title, 
         ];
 
@@ -600,11 +609,12 @@ class FrontEndController extends Controller
         try{
             /**STAGE II */
             $pdf = PDF::loadView('emails.pdf.brokerReg', $data);
-            $pdf->getDomPDF()->getCanvas()->get_cpdf()->setEncryption("esnaad_12345", "admin_password");
+            // $pdf->getDomPDF()->getCanvas()->get_cpdf()->setEncryption("esnaad_12345", "admin_password");
+            $pdf->getDomPDF()->getCanvas()->get_cpdf();
 
             /**STAGE III */
             Mail::mailer('noreply')->send('emails.brokerReg', $data, function($message)use($data, $pdf, $request) {
-                    $first_segment = $message->to("leads@mis.esnaad.com")
+                    $first_segment = $message->to("registrations@broker.esnaad.com")
                         ->subject("ESNAAD Notification - Broker Registration")
                         ->attachData($pdf->output(), "Broker-registration-details.pdf");
                     

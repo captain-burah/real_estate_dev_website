@@ -3,6 +3,12 @@
         <caption class="my-4 underline">
             Banking Information
         </caption>
+
+        <tr>
+            <td>Account / Beneficiary Name</td>
+            <td><input type="text" name="account_title" id="account_title" placeholder="ex: JASON SMITH" class=" w-full" ></td>
+        </tr>
+
         <tr>
             <td style="width: 235px !important">Bank Name</td>
             <td><input type="text" name="bank_name" id="bank_name" placeholder="eg: ABC Financial Insitution." class=" w-full" ></td>
@@ -276,9 +282,10 @@
             <td>IBAN Number</td>
             <td><input type="text" name="iban" id="iban" placeholder="ex: xxxxxxxxxxxxx" class=" w-full" ></td>
         </tr>
+
         <tr>
-            <td>Account Title</td>
-            <td><input type="text" name="account_title" id="account_title" placeholder="ex: JASON SMITH" class=" w-full" ></td>
+            <td>SWIFT Code</td>
+            <td><input type="text" name="swift_code" id="swift_code" placeholder="ex: xxxxxxxxxxxxx" class=" w-full" ></td>
         </tr>
     </tbody>
 </table>
