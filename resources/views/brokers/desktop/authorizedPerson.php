@@ -516,4 +516,3 @@
     </tbody>
 </table>
 
-<input type="hidden" name="country_code" id="country_code">
