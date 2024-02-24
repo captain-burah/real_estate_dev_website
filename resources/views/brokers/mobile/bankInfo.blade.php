@@ -1,6 +1,6 @@
 <div class="grid grid-cols-1 gap-4">
     <div class="mt-16 underline text-xl">
-        Company Information
+        Bank Information
     </div>
 
     <div>
@@ -280,6 +280,11 @@
     <div>
         <td>Account Title</td>
         <td><input type="text" name="account_title" id="account_title" placeholder="ex: JASON SMITH" class=" w-full"></td>
+    </div>
+
+    <div>
+        <td>SWIFT Code</td>
+        <td><input type="text" name="swift_code" id="swift_code" placeholder="ex: xxxxxxxxxxxxx" class=" w-full" ></td>
     </div>
 </div>
 
