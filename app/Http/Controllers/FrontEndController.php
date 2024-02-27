@@ -482,8 +482,10 @@ class FrontEndController extends Controller
         $response = Http::withHeaders([
             'authkey' => 'YOUR_SECRET_KEY'
         ])->get('www.mis.esnaad.com/api/v1/esnaad/constructions/'.$slug);
+        
 
         $jsonData = $response->json();  
+        
 
         if(count($jsonData) > 0){
             $this->data['available'] = '1';

@@ -7,46 +7,45 @@
                     $id = $data['id'];
                     $title = $data['title'];
                     $titlear = $data['title_ar'];
+                    $description = $data['description'];
+                    $descriptionar = $data['description_ar'];
                     $sluglink = $data['slug_link'];
                     $thumbnail = $data['thumbnail'];
+                    $growth = $data['growth'];
                 ?>
                 <div class="">
                     <div class="mx-auto px-0 ">
-                        <div class="max-w-full cursor-pointer rounded-0 bg-white p-2 shadow">
+                        <div class="max-w-full cursor-pointer rounded-0 border p-0 shadow">
                             <div class="row">
-                                {{-- <img class="w-full rounded-0 object-cover object-center" src="{{ URL($langSeg.'/https://mis.esnaad.com/uploads/construction/'.$id.'/thumbnail/'.$thumbnail)}}" alt="product" /> --}}
-                                <img class="w-full rounded-0 object-cover object-center" src="{{ asset('developments/3.jpg')}}" alt="product" />
+                                <img class="w-full rounded-0 object-cover object-center" src="{{ URL('https://mis.esnaad.com/uploads/construction/'.$id.'/thumbnail/'.$thumbnail) }}"
+                                    height="400px"
+                                    width="auto"
+                                    loading="lazy"
+                                    style="height: 400px !important;"
+                                    alt="ESNAAD Media Unit - Gallery - {{$title}}"
+                                />
                             </div>
-                            <div class="row pt-4">
-                                <div class="grid grid-cols-7">
-                                    <div class="col-span-2 text-center">
-                                        <img class="w-full h-[20vw] w-[20vw]  rounded-0 object-cover object-center" 
-                                            src="{{ asset('developments/1.jpg')}}" 
-                                            height="3vw"
-                                            width="3vw"
-                                            alt="project-logo" 
-                                        />
+                            <div class="row my-2 px-4">
+                                <div>
+                                    <p class="mt-4 pl-4 text-2xl text-center font-thin">
+                                        @if($langSeg == 'ar')
+                                            {{$titlear}}
+                                        @else
+                                            {{$title}}
+                                        @endif
+                                    </p>
+                                    <div class="mt-2 h-6 relative w-auto rounded-full overflow-hidden">
+                                        <div class=" w-full h-full bg-gray-200 absolute "></div>
+                                        <div class=" h-full bg-yellow-400 sm:bg-green-500 absolute" style="width:30%"><div class="h-full w-full mx-auto text-sm text-center pt-1 text-white font-bold">30%</div></div>
                                     </div>
-                                    <div class="col-span-5 mb-4">
-                                            <p class="mt-4 pl-4 text-2xl font-thin text-black">{{$title}}</p>
-                                            <p class="mb-2 ml-4 font-thin text-black">Nad Al Sheba</p>
-                                            <div class="mt-2 ml-4 mb-4 h-4 relative w-auto rounded-full overflow-hidden">
-                                                <div class=" w-full h-full bg-gray-200 absolute "></div>
-                                                <div class=" h-full bg-black sm:bg-black absolute" style="width:30%"><div class="h-full w-full mx-auto text-xs text-center text-white font-bold">30%</div></div>
-                                            </div>
-                                            <a href="{{ URL($langSeg.'/constructions/'.$sluglink) }}" 
-                                                class="mt-2 ml-4 mb-4 bg-black text-white px-15 py-3">
-                                                Explore
-                                            </a>
-                                        </div>
                                 </div>
                             </div>
-                            {{-- <div class="row text-center pb-5 pt-2">
-                                <a href="{{ URL($langSeg.'/constructions/the-gulf-villas') }}" 
-                                    class="bg-black text-white px-15 py-3">
+                            <div class="row text-center pb-5 pt-2">
+                                <a href="{{ URL($langSeg.'/constructions/'.$sluglink) }}" 
+                                    class="bg-white text-black px-15 py-3">
                                     Explore
                                 </a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>

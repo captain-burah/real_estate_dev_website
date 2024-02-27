@@ -63,13 +63,13 @@
                         }
                     </style>
                     <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                        <a href="/constructions" class="text-sm font-thin text-black">
+                        <a href="/constructions" class="text-sm font-thin">
                             Constructions
                         </a>
-                        <span class="mx-2 text-sm text-black">
+                        <span class="mx-2 text-sm">
                             /
                         </span> 
-                        <p class="text-sm font-base text-black ">
+                        <p class="text-sm font-base ">
                             {{ $title }}
                         </p>
                     </div>                    

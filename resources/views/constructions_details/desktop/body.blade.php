@@ -27,13 +27,7 @@
                                 <div class="flex-1 mx-auto my-auto">
                                     <div class="w-10 xl:w-10 bg-white rounded-3xl p-1 mx-auto my-auto">
                                         <a href="whatsapp://send?text={{$actual_link}}" data-action="share/whatsapp/share" aria-label="whatsapp-share-community">
-                                            <img
-                                                src="{{ asset('front/icons/wa.svg')}}"
-                                                class="w-fit rounded h-full"
-                                                alt="social-media-ig"
-                                                height="auto"
-                                                width="auto"
-                                            >
+                                            <img src="{{ asset('sm/wa.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                         </a>
                                     </div>
                                 </div>
@@ -41,11 +35,7 @@
                                 <div class="flex-1 mx-auto">
                                     <div class="w-9 xl:w-10 bg-white rounded-3xl p-1 mx-auto">
                                         <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fedgerealty.ae%2F" target="_blank" ria-label="facebook-share-community">
-                                            <img
-                                                src="{{ asset('front/icons/fb.png')}}"
-                                                class="w-fit rounded"
-                                                alt="social-media-fb"
-                                            >
+                                            <img src="{{ asset('sm/fb.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                         </a>
                                     </div>
                                 </div>
@@ -53,11 +43,7 @@
                                 <div class="flex-1 mx-auto">
                                     <div class="w-9 xl:w-10 bg-white rounded-3xl p-1 mx-auto">
                                         <a href="https://www.linkedin.com/sharing/share-offsite/?url={{$actual_link}}" aria-label="community-linkedin-share">
-                                            <img
-                                                src="{{ asset('front/icons/in.png')}}"
-                                                class="w-fit rounded"
-                                                alt="social-media-in"
-                                            >
+                                            <img src="{{ asset('sm/in.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                         </a>
                                     </div>
                                 </div>
@@ -65,11 +51,7 @@
                                 <div class="flex-1 mx-auto">
                                     <div class="w-9 xl:w-10 bg-white rounded-3xl p-1 mx-auto">
                                         <a href="https://twitter.com/intent/tweet?url={{$actual_link}}" aria-label="twitter-X-share-community">
-                                            <img
-                                                src="{{ asset('front/icons/x.png')}}"
-                                                class="w-fit rounded"
-                                                alt="social-media-tw"
-                                            >
+                                            <img src="{{ asset('sm/x.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                         </a>
                                     </div>
                                 </div>
