@@ -7,14 +7,14 @@ return [
         /**
          * NAVBAR
          */
-        "desktop_aboutUs" => "ABOUT US",
+        "desktop_aboutUs" => "ABOUT",
         "desktop_ourCompany" => "OUR COMPANY",
         "desktop_ceoMessageNav" => "CEO MESSAGE",
         "desktop_home" => "HOME",
         "desktop_developments" => "DEVELOPMENTS",
         "desktop_communities" => "COMMUNITIES",
         "desktop_construction" => "CONSTRUCTIONS",
-        "desktop_contact_us" => "CONTACT US",
+        "desktop_contact_us" => "CONTACT",
         "desktop_news" => "NEWS",
         "desktop_media" => "MEDIA",
         "desktop_press_release" => "PRESS RELEASE",
