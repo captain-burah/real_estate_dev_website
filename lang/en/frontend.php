@@ -2,8 +2,7 @@
  
 // lang/en/messages.php
  
-return [
-        
+return [        
         /**
          * NAVBAR
          */
@@ -21,7 +20,6 @@ return [
         "desktop_blogs" => "BLOGS",
         "desktop_gallery" => "GALLERY",
         "desktop_careers" => "CAREERS",
-
 
 
         "mobile_aboutUs" => "About Us",
@@ -114,7 +112,8 @@ return [
         'homeSectionThreeH' => "OUR LATEST PROJECTS",
         'homeSectionThreeImage' => "Coming Soon",
         // 'homeSectionThreeP' => "Embrace the Journey of Life and Investments: Building a Home, Nurturing Dreams, and Securing Futures - Where Every Brick Holds the Promise of a Lifetime",
-        'homeSectionThreeP' => "Ongoing Flagship Project: “The Spark by ESNAAD” by ESNAAD",
+        // 'homeSectionThreeP' => "Ongoing Flagship Project: “The Spark by ESNAAD” by ESNAAD",
+        'homeSectionThreeP' => "Discover a new standard of living in Dubai at 'The Spark by ESNAAD' by ESNAAD, a visionary residential project in Mohamed Bin Rashid City, District 11. ESNAAD stands out for its commitment to design, quality, and unmatched value for money.",
         'homeSectionThreeP2' => "Welcome to ESNAAD's innovative world, where our ongoing flagship project,
                 'The Spark by ESNAAD,'in Meydan District 11, stands as a testament to our commitment to innovation and high-quality developments. This contemporary masterpiece features a B+G+5+R building, offering 1 and 2
                 Bedroom Apartments. We are dedicated to transforming this vision into a reality that exceeds expectations, incorporating a design-led approach, contemporary aesthetics, and a focus on delivering exceptional value for

@@ -64,7 +64,7 @@ export default {
                 esnaad_text: '#000000',
             },
             fontFamily: {
-                body: ['Optima LT W02 Roman'],
+                body: ['Roboto, sans-serif'],
             },
             backgroundImage: {
                 'hero-pattern': "url('/public/front/images/hero/bg-image.jpg')",

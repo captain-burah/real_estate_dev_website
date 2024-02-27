@@ -134,8 +134,13 @@
 
 
         <style>
+
+            html {
+            
+            }
             html,body{
-                background-color: #fff !important;
+                @apply text-gray-800;
+                background-color: #000 !important;
                 max-width: 100%;
                 overflow-x: hidden;
             }
@@ -226,7 +231,7 @@
     </head>
 
 
-    <body class="font-body bg-white" style="background-color: #fff !important;">
+    <body class="font-body bg-black text-white" style="background-color: #1C1C1C !important; color: #ccc !important; ">
 
         <?php
             $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -289,7 +294,7 @@
         <div class="min-h-screen ">
 
             @notmobile       
-                <nav x-data="{ open: false }" class="bg-white p-0 m-0 z-50 shadow " id="sample" style="position: fixed; width: 100vw !important" >
+                <nav x-data="{ open: false }" class="bg-white p-0 m-0 z-50 shadow "  id="sample" style="position: fixed; width: 100vw !important; background-color: #1C1C1C !important; color: #ccc !important;">
                     @include('layout.navigation')
                 </nav>
             @endnotmobile

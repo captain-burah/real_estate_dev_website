@@ -18,8 +18,8 @@
                     {{__('frontend.homeSectionOneP3')}}
                 </p>
             </div>
-            <div class="my-auto">
-                <img src="{{ asset('home/13.webp') }}"  title="ESNAAD-Our-Story" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
+            <div class="my-auto pt-2">
+                <img src="{{ asset('home/project/12-1.webp') }}"  title="ESNAAD-Our-Story" alt="ESNAAD OUR STORY" loading="lazy" width="auto" height="auto">
 
                 <!-- <div class="placeholder">
 
