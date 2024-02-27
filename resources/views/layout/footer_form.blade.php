@@ -33,16 +33,16 @@
 </style>
 
 @notmobile
-    <div class="block py-24 sm:py-12 bg-footer_form" id="footer_form" style="visibility:hidden">
+    <div class="block py-24 sm:py-12    " id="footer_form" style="visibility:hidden" style="background-color: #1c1c1c !important; color: #ccc !important">
         <div class="container mx-auto px-2 lg:px-8"  @if($langSeg == 'ar') dir="RTL" @endif>    
             <div class="row mb-5">
                 <h2 class="text-4xl font-base">
                     {{__('frontend.footerFormH2')}}
                 </h2>
-                <p class="w-[75%] text-gray-800" id="submitIncomplete">
+                <p class="w-[75%]" id="submitIncomplete">
                     {{__('frontend.footerFormP1')}}
                 </p>
-                <p class="w-[75%] text-gray-800 my-10" id="submitComplete">
+                <p class="w-[75%] my-10" id="submitComplete">
                     {{__('frontend.footerFormP2')}}
                 </p>
             </div>
@@ -54,21 +54,21 @@
                         <input type="hidden" name="ip_address" value="{{$ip_address}}">
                     
                         <div class="border-b border-gray-500">
-                            <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-gray-400 focus:ring-gray-400" type="text" placeholder="{{__('frontend.formFullName')}}" name="name" aria-label="Full name" autocomplete="off" required>
+                            <input class="appearance-none bg-transparent border-none w-full  mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-white focus:ring-white" type="text" placeholder="{{__('frontend.formFullName')}}" name="name" aria-label="Full name" autocomplete="off" required>
                         </div>
 
                         <div class="border-b border-gray-500">
-                            <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-gray-400 focus:ring-gray-400" type="email" placeholder="{{__('frontend.formEmail')}}" name="email" aria-label="Email" required>
+                            <input class="appearance-none bg-transparent border-none w-full  mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-white focus:ring-white" type="email" placeholder="{{__('frontend.formEmail')}}" name="email" aria-label="Email" required>
                         </div>
 
                         <div id="submitComplete">
-                            <button type="button" id="submitButtonDone" class=" w-full text-sm text-gray-500 px-2 py-2 bg-transparent border border-gray-500 rounded-0">
+                            <button type="button" id="submitButtonDone" class=" w-full text-sm text-white px-2 py-2 bg-transparent border border-gray-50 rounded-0">
                                 {{__('frontend.footerFormSubmissionCompleted')}}
                             </button>
-                            <button type="submit" id="submitButton" class=" w-full text-sm text-white hover:text-black px-2 py-2 bg-black hover:bg-transparent border border-black hover:border-black rounded-0">
+                            <button type="submit" id="submitButton" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0">
                                 {{__('frontend.footerFormSubscribe')}}
                             </button>
-                            <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm text-black px-2 py-2 border border-black rounded-0">
+                            <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
                                 <div id="loading"></div>
                                 Verifying
                             </button>
@@ -106,19 +106,19 @@
 
                         <input type="hidden" name="ip_address" value="{{$ip_address}}">
 
-                        <div class="border-b border-gray-500 my-2">
-                            <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-gray-400 focus:ring-gray-400" type="text" placeholder="{{__('frontend.formFullName')}}" name="name" aria-label="Full name">
+                        <div class="border-b border-white my-2">
+                            <input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-white focus:ring-white" type="text" placeholder="{{__('frontend.formFullName')}}" name="name" aria-label="Full name">
                         </div>
 
-                        <div class="border-b border-gray-500 my-2">
-                            <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-gray-400 focus:ring-gray-400" type="email" placeholder="{{__('frontend.formEmail')}}" name="email" aria-label="Email">
+                        <div class="border-b border-white my-2">
+                            <input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-white focus:ring-white" type="email" placeholder="{{__('frontend.formEmail')}}" name="email" aria-label="Email">
                         </div>
 
                         <div class=" my-2">
-                            <button type="submit" id="submitButtonMobile" class=" w-full text-sm text-white hover:text-black px-2 py-2 bg-black hover:bg-transparent border border-black hover:border-black rounded-0">
+                            <button type="submit" id="submitButtonMobile" class=" w-full text-sm text-white px-2 py-2  border border-white rounded-0">
                                 {{__('frontend.footerFormSubscribe')}}
                             </button>
-                            <button type="button" id="submitButtonMobileDone" class=" w-full text-sm text-black text-gray-500 px-2 py-2 bg-black bg-transparent border border-gray-500 rounded-0">
+                            <button type="button" id="submitButtonMobileDone" class=" w-full text-sm text-black text-white px-2 py-2  border border-white rounded-0">
                                 {{__('frontend.footerFormSubmissionCompleted')}}
                             </button>
                         </div>

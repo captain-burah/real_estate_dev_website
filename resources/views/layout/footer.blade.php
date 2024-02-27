@@ -5,6 +5,11 @@
     .footer-li {
         padding-left: -30px !important;
     }
+
+    svg {
+        color: #fff !important;
+
+    }
 </style>
 
     @notmobile
@@ -25,10 +30,10 @@
                         <div class="col-span-2">
                             <div class="mx-auto">
                                 <span class="text-3xl text-gray-900 text-center mx-auto py-5" >
-                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                    <img style="height: 60px !important;" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
                                 </span>
 
-                                <p class="text-md text-black w-full text-justify mb-6">
+                                <p class="text-md  w-full text-justify mb-6">
                                     {{ __('frontend.footerEsnaadP') }}
                                 </p>
                                 <div class="flex my-8 w-full text-justify my-auto inline-block align-middle w-50">
@@ -146,19 +151,19 @@
                             </p>
 
                             <ul class="list-none footer-li" style="padding-left:    0px !important;">
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/about-us') }}" aria-label="about-us" rel="canonical">{{ __('frontend.footerLinksAboutEsnaad') }}</a>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/invest-in-dubai') }}" aria-label="invest-in-dubai" rel="canonical">{{ __('frontend.footerLinksWhyInvest') }}</a>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/agency-registration') }}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/contact') }}" aria-label="contact-us" rel="canonical">{{ __('frontend.footerLinksContact') }}</a>
                                 </li>
 
@@ -171,7 +176,7 @@
                             </p>
 
                             <ul class="list-none footer-li leading-10" style="padding-left: 0px !important;">
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <div  class="inline-flex items-center">
                                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                             width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
@@ -199,7 +204,7 @@
                                         {{ __('frontend.footerAddress') }}
                                     </div>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <div class="inline-flex items-center">
                                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                             width="13.000000pt" height="13.000000pt" viewBox="0 0 512.000000 512.000000"
@@ -222,7 +227,7 @@
                                         {{ __('frontend.footerContacts') }}
                                     </div>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <div class="inline-flex items-center" >
                                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                             width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
@@ -259,7 +264,7 @@
 
                     <div class="flex justify-left my-2">
                         <div>
-                            <p class="text-base text-black">
+                            <p class="text-base ">
                                 ESNAAD © {{ now()->year }} All Rights Reserved | Terms & Conditions | Privacy & Policy
                             </p>
                         </div>
@@ -281,11 +286,11 @@
 
                         <div class="col-span-2" @if($langSeg == 'ar') dir="RTL" @endif>
                             <div class="mx-auto">
-                                <span class="text-3xl text-gray-900 text-center mx-auto py-5" >
-                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                <span class="text-3xl text-white text-center mx-auto py-5" >
+                                    <img style="height: 60px !important;" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
                                 </span>
 
-                                <p class="text-md text-black text-justify mb-6 w-[80%]">
+                                <p class="text-md text-justify mb-6 w-[80%]">
                                     {{ __('frontend.footerEsnaadP') }}
                                 </p>
                                 <div class="flex my-8 text-justify my-auto inline-block align-middle w-[50%]">
@@ -293,11 +298,15 @@
                                     <div class="flex-1">
                                         <div class="w-8 bg-footer rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_FB') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
-                                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+                                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" style="color: #fff !important;">
                                                     <defs>
                                                         <image  width="49" height="49" id="imgFb" href="data:image/png;base64,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"/>
                                                     </defs>
                                                     <style>
+                                                        image{
+                                                            color: #fff !important;
+                                                            background-color: #fff !important;
+                                                        }
                                                     </style>
                                                     <use id="Facebook2" href="#imgFb" x="0" y="0"/>
                                                 </svg>
@@ -395,24 +404,24 @@
                         </div>
 
                         <div @if($langSeg == 'ar') dir="RTL" @endif>
-                            <p class="text-md font-bold text-black">
+                            <p class="text-md font-bold ">
                                 {{ __('frontend.footerLinks') }}
                             </p>
 
                             <ul class="list-none footer-li" style="padding-left: 0px !important;">
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/about-us') }}" aria-label="about-us" rel="canonical">{{ __('frontend.footerLinksAboutEsnaad') }}</a>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/invest-in-dubai') }}" aria-label="invest-in-dubai" rel="canonical">{{ __('frontend.footerLinksWhyInvest') }}</a>
                                 </li>
-                                <li class="text-md text-black my-2" aria-label="">
+                                <li class="text-md  my-2" aria-label="">
                                     <a href="{{ URL($langSeg.'/agency-registration') }}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
                                 </li>
-                                <li class="text-md text-black my-2" aria-label="">
+                                <li class="text-md  my-2" aria-label="">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="career-registration" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/contact') }}" aria-label="contact-us" rel="canonical">{{ __('frontend.footerLinksContact') }}</a>
                                 </li>
 
@@ -420,12 +429,12 @@
                         </div>
 
                         <div @if($langSeg == 'ar') dir="RTL" @endif>
-                            <p class="text-md font-bold text-black">
+                            <p class="text-md font-bold ">
                                 {{ __('frontend.footerContacts') }}
                             </p>
 
                             <ul class="list-none footer-li leading-10" style="padding-left: 0px !important;">
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <div  class="inline-flex items-center">
                                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                             width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
@@ -453,7 +462,7 @@
                                         {{ __('frontend.footerAddress') }}
                                     </div>
                                 </li>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <div class="inline-flex items-center">
                                         <a href="tel:{{ env('COMPANY_PHONE') }}" class="inline-flex items-center"></a>
                                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -481,7 +490,7 @@
                                     </div>
                                 </li>
                                 <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
-                                <li class="text-md text-black my-2">
+                                <li class="text-md  my-2">
                                     <div class="inline-flex items-center" >
                                         <a href="mailto:{{env('COMPANY_EMAIL')}}" class="inline-flex items-center">
                                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -519,7 +528,7 @@
 
                     <div class="flex justify-left my-2">
                         <div>
-                            <p class="text-base text-black">
+                            <p class="text-base ">
                                 ESNAAD © {{ now()->year }} All Rights Reserved | <a href="{{ URL($langSeg.'/terms-and-conditions') }}" aria-label="terms-and-conditions" > Terms & Conditions</a> | <a href="{{ URL($langSeg.'/privacy-and-policy') }}" aria-label="privacy-and-policy" > Privacy & Policy </a>
                             </p>
                         </div>
@@ -542,10 +551,10 @@
                         <div class="py-4">
                             <div class="mx-auto">
                                 <span class="text-3xl text-gray-900 text-center mx-auto py-5" >
-                                    <img style="height: 60px !important;" src="{{ asset('logo-dark-2.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                    <img style="height: 60px !important;" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
                                 </span>
 
-                                <p class="text-md text-black text-justify mb-6 w-full leading-6" >
+                                <p class="text-md  text-justify mb-6 w-full leading-6" >
                                     {{ __('frontend.footerEsnaadP') }}
                                 </p>
                                 <div class="flex justify-between my-8 text-justify my-auto inline-block align-middle ">
@@ -657,7 +666,7 @@
                         </div>
                     </div>
 
-                    <div class="group flex flex-col gap-2 rounded-lg text-black " tabindex="1">
+                    <div class="group flex flex-col gap-2 rounded-lg  " tabindex="1">
                         <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
                             <span> {{ __('frontend.footerLinks') }} </span>
                             <img
@@ -667,27 +676,27 @@
                         </div>
                         <div class="hidden h-auto max-h-0 items-center opacity-0 transition-all group-focus:block group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
                             <ul class="list-none footer-li capitalize leading-8" style="padding-left: 0px !important;">
-                                <li class="text-md text-black my-3">
+                                <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/about-us') }}" aria-label="about-us" rel="canonical">{{ __('frontend.footerLinksAboutEsnaad') }}</a>
                                 </li>
                                 
-                                <li class="text-md text-black my-3">
+                                <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/ceo-message')}}" aria-label="broker-registration" rel="canonical">{{ __('frontend.mobile_ceoMessageNav') }}</a>
                                 </li>
-                                <li class="text-md text-black my-3">
+                                <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/invest-in-dubai') }}" aria-label="invest-in-dubai" rel="canonical">{{ __('frontend.footerLinksWhyInvest') }}</a>
                                 </li>
                                 
                                 
-                                <li class="text-md text-black my-3">
+                                <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/contact') }}" aria-label="contact-us" rel="canonical">{{ __('frontend.footerLinksContact') }}</a>
                                 </li>
 
-                                <li class="text-md text-black my-3">
+                                <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
 
-                                <li class="text-md text-black my-3">
+                                <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/broker-registration') }}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
                                 </li>
                             </ul>
@@ -698,7 +707,7 @@
                 <div class="col-span-2 mx-auto my-2">
                     <div class="flex justify-center mt  mt-6">
                         <div>
-                            <p class="text-base font-thin text-black leading-8">
+                            <p class="text-base font-thin  leading-8">
                                 ESNAAD © {{ now()->year }} All Rights Reserved <br>
                                 <a href="{{ URL($langSeg.'/terms-and-conditions') }}" aria-label="terms-and-conditions" rel="canonical">Terms & Conditions</a>
                                 <a href="{{ URL($langSeg.'/privacy-and-policy') }}" aria-label="privacy-and-policy" rel="canonical">| Privacy & Policy</a>

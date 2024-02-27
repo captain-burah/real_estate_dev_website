@@ -10,19 +10,20 @@
     <div class="row">
         <div class="grid grid-cols-5 gap-12 mb-5 mx-auto">
             
-            <div class="col-span-2 w-full bg-white sahdow-lg overflow-hidden flex flex-col justify-center items-center ">
+            <div class="col-span-2 w-full overflow-hidden flex flex-col justify-center items-center ">
                 <div class="relative overflow-hidden max-h-[24rem] ">
-                    <div
+                    {{-- <div
                         class="text-white text-2xl absolute inset-0  flex justify-center items-center shadow ">
-                        {{-- {{ __('frontend.homeSectionThreeImage') }} --}}
-                    </div>
-                    <img class="max-h-[24rem] w-full object-cover "
+                        {{ __('frontend.homeSectionThreeImage') }}
+                    </div> --}}
+                    <img class=" w-full object-cover "
                         src="{{ asset('home/project/2.webp')}}"                    
                         alt="esnaad-project-coming-soon"
                         title="COMING-SOON"
                         height="auto"
                         width="auto"
                         loading="lazy"
+                        style="width: 100% !important;"
                     >
                 </div>
             </div>

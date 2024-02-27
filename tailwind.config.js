@@ -59,12 +59,12 @@ export default {
                 whatsapp: '#1B9C85',
                 white: '#fff',
                 black: '#000',
-                footer: '#f4f4f4',
-                footer_form: '#e9e9e9',
+                footer: '#1c1c1c',
+                footer_form: '#1c1c1c',
                 esnaad_text: '#000000',
             },
             fontFamily: {
-                body: ['Roboto, sans-serif'],
+                body: ['Optima LT W02 Roman'],
             },
             backgroundImage: {
                 'hero-pattern': "url('/public/front/images/hero/bg-image.jpg')",
