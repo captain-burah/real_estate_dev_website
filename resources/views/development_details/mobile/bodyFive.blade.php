@@ -13,9 +13,9 @@
             </div>
             <div class="text-left">
                 @if($langSeg == 'ar')
-                    {!! $SecTwo_amenities !!}
-                @else
                     {!! $SecTwo_amenities_ar !!}
+                @else
+                    {!! $SecTwo_amenities !!}
                 @endif
             </div>
 

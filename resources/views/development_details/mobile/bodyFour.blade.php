@@ -65,9 +65,9 @@
             </h2>
             <p class=" text-left font-base mb-4 mt-3 w-[100%] leading-6">
                 @if($langSeg == 'ar')
-                    {{$SecTwo_description}}
+                    {{$SecTwo_description_ar}}
                 @else
-                    {{$SecTwo_description_ar }}
+                    {{$SecTwo_description }}
                 @endif
             </p>
         </div>
