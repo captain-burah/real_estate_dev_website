@@ -44,9 +44,9 @@
     
             
 
-            <div class="mt-4 w-full float-right text-right">
+            {{-- <div class="mt-4 w-full float-right text-right">
                 <img src="{{ asset('home/signature2.png') }}" class="float-right" style="height: 15vh !important;" title="ESNAAD-" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
-            </div>
+            </div> --}}
 
             <p class="text-base font-thin text-right leading-8 mt-4 w-full">
                 Ashraf Elbendari, CEO                      
