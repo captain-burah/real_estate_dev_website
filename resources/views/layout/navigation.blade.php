@@ -86,7 +86,7 @@
 
 </style>
 @notmobile
-    <div class=" mx-auto 2xl:px-4 md:px-20 ">
+    <div class="container mx-auto 2xl:px-4 md:px-20 ">
         <div class="flex justify-between h-20">
 
             <div class="flex items-center">
