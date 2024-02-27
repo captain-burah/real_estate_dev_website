@@ -36,7 +36,7 @@
                                     </p>
                                     <div class="mt-2 h-6 relative w-auto rounded-full overflow-hidden">
                                         <div class=" w-full h-full bg-gray-200 absolute "></div>
-                                        <div class=" h-full bg-yellow-400 sm:bg-green-500 absolute" style="width:{{$growth}}%"><div class="h-full w-full mx-auto text-sm text-center pt-1 text-white font-bold">{{$growth}}</div></div>
+                                        <div class=" h-full bg-yellow-400 sm:bg-green-500 absolute" style="width:{{$growth}}%"><div class="h-full w-full mx-auto text-sm text-center pt-1 text-white font-bold"> &nbsp; &nbsp;</div></div>
                                     </div>
                                 </div>
                             </div>
