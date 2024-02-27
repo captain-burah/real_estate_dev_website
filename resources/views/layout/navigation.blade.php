@@ -261,7 +261,7 @@
 
                     <div class="flex items-center justify-between space-x-5 bg-white px-4 mx-4">
                         <button onClick="" class="hidden space-x-8 sm:-my-px sm:flex inline-flex items-center px-3 py-2  leading-4 font-medium rounded-md text-gray-700 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div class="inline-flex items-center px-0 pt-1 font-thin text-xs md:text-[12px] xl:text-lg text-center  leading-5 text-black transition duration-150 ease-in-out">
+                            <div class="inline-flex items-center px-0 pt-1 font-thin text-xs md:text-[12px] xl:text-[16px] 2xl:text-lg text-center  leading-5 text-black transition duration-150 ease-in-out">
                                 {{ __('frontend.desktop_media') }}
                             </div>
                         </button>
@@ -269,19 +269,19 @@
             
                     <div class="invisible absolute z-50 flex w-full flex-col bg-white mx-8 pb-1 pt-4 text-gray-800 shadow-xl group-hover:visible">
             
-                        <x-dropdown-link href="{{ url($langSeg.'/press-release') }}"  class="font-thin text-xs my-2 md:text-[12px] xl:text-base text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
+                        <x-dropdown-link href="{{ url($langSeg.'/press-release') }}"  class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
                             {{ __('frontend.desktop_press_release') }} 
                         </x-dropdown-link>
             
-                        <x-dropdown-link href="{{ url($langSeg.'/blogs') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-base text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
+                        <x-dropdown-link href="{{ url($langSeg.'/blogs') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
                             {{ __('frontend.desktop_blogs') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link href="{{ url($langSeg.'/media-gallery') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-base text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
+                        <x-dropdown-link href="{{ url($langSeg.'/media-gallery') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
                             {{ __('frontend.desktop_gallery') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link href="{{ url($langSeg.'/careers') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-base text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
+                        <x-dropdown-link href="{{ url($langSeg.'/careers') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
                             {{ __('frontend.desktop_careers') }}
                         </x-dropdown-link>
             
