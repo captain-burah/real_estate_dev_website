@@ -17,7 +17,8 @@
                 file:rounded-0 file:border-0
                 file:text-sm file:font-semibold
                 file:bg-black file:text-gray-50
-                file:cursor-pointer
+                file:cursor-pointer 
+                bg-transparent focus:outline-none focus:border-white focus:ring-white
                 "
                 accept=".pdf, .jpg, .jpeg"
                 />
@@ -33,7 +34,8 @@
                 file:rounded-0 file:border-0
                 file:text-sm file:font-semibold
                 file:bg-black file:text-gray-50
-                file:cursor-pointer
+                file:cursor-pointer 
+                bg-transparent focus:outline-none focus:border-white focus:ring-white
                 "
                 accept=".pdf, .jpg, .jpeg"
                 />
@@ -49,7 +51,8 @@
                 file:rounded-0 file:border-0
                 file:text-sm file:font-semibold
                 file:bg-black file:text-gray-50
-                file:cursor-pointer
+                file:cursor-pointer 
+                bg-transparent focus:outline-none focus:border-white focus:ring-white
                 "
                 accept=".pdf, .jpg, .jpeg"
                 />
@@ -65,7 +68,8 @@
                 file:rounded-0 file:border-0
                 file:text-sm file:font-semibold
                 file:bg-black file:text-gray-50
-                file:cursor-pointer
+                file:cursor-pointer 
+                bg-transparent focus:outline-none focus:border-white focus:ring-white
                 "
                 accept=".pdf, .jpg, .jpeg"
                 />
@@ -81,7 +85,8 @@
                     file:rounded-0 file:border-0
                     file:text-sm file:font-semibold
                     file:bg-black file:text-gray-50
-                    file:cursor-pointer"
+                    file:cursor-pointer 
+                    bg-transparent focus:outline-none focus:border-white focus:ring-white"
                 accept=".pdf, .jpg, .jpeg"
                 />
                 <span class=" text-sm float-right">* all four in one pdf document</span>

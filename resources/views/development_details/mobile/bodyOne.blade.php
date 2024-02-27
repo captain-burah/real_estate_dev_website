@@ -2,7 +2,7 @@
 
     <div class="row-span-2 grid gap-2 h-[100%] w-[100%]">
         
-        <div class="text-esnaad_text text-justify font-light w-full mb-2">
+        <div class=" text-justify font-light w-full mb-2">
             
             <div class="row-span-2 grid grid-cols-1 gap-0 w-[100%]">
                 <div class=" py-4 border-b border-gray-700">
@@ -37,7 +37,7 @@
                     {{$secOne_title}}
                 @endif
             </h2>
-            <p class="text-esnaad_text text-left font-base my-3 w-full leading-6">
+            <p class=" text-left font-base my-3 w-full leading-6">
                 @if($langSeg == 'ar')
                     {{$SecOne_description}}
                 @else

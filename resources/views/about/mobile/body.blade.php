@@ -16,9 +16,9 @@
         </div>
     </div>
 
-    <div class="row my-8 p-0">
+    {{-- <div class="row my-8 p-0">
             <img src="{{ asset('home/home-decor-1.jpg')}}">
-        </div>
+        </div> --}}
 </div>
 
 
@@ -29,7 +29,7 @@
 
         <div class="space-y-2">
             <div
-                class="group flex flex-col gap-2 rounded-0 text-black"
+                class="group flex flex-col gap-2 rounded-0 "
                 tabindex="3" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
@@ -49,7 +49,7 @@
             </div>
 
             <div
-                class="group flex flex-col gap-2 rounded-0 text-black"
+                class="group flex flex-col gap-2 rounded-0 "
                 tabindex="1" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
@@ -69,7 +69,7 @@
             </div>
 
             <div
-                class="group flex flex-col gap-2 rounded-0 text-black"
+                class="group flex flex-col gap-2 rounded-0 "
                 tabindex="2" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
@@ -93,7 +93,7 @@
     </div>
 </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 <script>

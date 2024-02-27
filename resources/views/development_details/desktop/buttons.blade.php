@@ -14,12 +14,12 @@
 <div class="sm:container sm:mx-auto mx-0 px-0 my-20 sm:my-4 mx-auto">
     <div class="flex justify-left ...">
         <div class="mr-4">
-            <button onclick="openModal('mymodalcentered-community-register')"  class="lg:w-75 text-xl text-white font-bold hover:text-black px-2 lg:py-4 bg-black hover:bg-transparent border border-black hover:border-black rounded-0" type="button">
+            <button onclick="openModal('mymodalcentered-community-register')"  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
                 Register Your Interest
             </button>
         </div>
         <div class="mr-4">
-            <button onclick="openModal('mymodalcentered-brochure-register')"  class="lg:w-75 text-xl text-white font-bold hover:text-black px-2 lg:py-4 bg-black hover:bg-transparent border border-black hover:border-black rounded-0" type="button">
+            <button onclick="openModal('mymodalcentered-brochure-register')"  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
                 Download Brochure
             </button>
         </div>
@@ -29,7 +29,7 @@
                     width="30.000000pt" height="30.000000pt" viewBox="0 0 512.000000 512.000000"
                     preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                    fill="#000000" stroke="none">
+                    fill="#fff" stroke="none">
                     <path d="M2495 4725 c-17 -9 -200 -185 -407 -393 -404 -405 -410 -412 -394
                     -496 8 -41 46 -90 87 -111 36 -19 102 -19 137 -1 15 8 128 116 252 240 124
                     124 228 226 232 226 5 0 8 -485 8 -1077 0 -1050 1 -1079 20 -1107 27 -41 87
@@ -62,14 +62,17 @@
                 <div class="p-7 flex items-stretch w-full">
                     <div class="font-semibold text-xl text-black">Share</div>
                     <svg onclick="modalClose('mymodalcentered-community-share')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                        <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
                 <div class="flex flex-col items-start w-full"  >
                     <div class="px-7  w-full" style="max-height: 40vh;">
-
                         <div class="mb-6">
-                            Living in 
+                            @if($langSeg == 'ar')
+                                {{$namear}}
+                            @else
+                                {{$name}}
+                            @endif
                         </div>
 
                         <div class="mb-6">
@@ -187,7 +190,7 @@
             <div class="flex flex-col items-start w-full hidden" id="form_submitted">
                 <div class="p-7 flex items-stretch w-full">
                     <svg onclick="modalClose('mymodalcentered-community-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                        <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
                 <div class="flex flex-col items-start w-full">
@@ -214,7 +217,7 @@
                 <div class="p-7 flex items-stretch w-full">
                     <div class="font-thin text-xl text-gray-900">Register Your Interest</div>
                     <svg onclick="modalClose('mymodalcentered-community-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                        <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
                 <form class="flex flex-col items-start w-full" id="new-project-details-desktop-form" method="post" action="en/project-detail-inquiry">
@@ -489,7 +492,7 @@
             <div class="flex flex-col items-start w-full hidden" id="form_submitted">
                 <div class="p-7 flex items-stretch w-full">
                     <svg onclick="modalClose('mymodalcentered-community-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                        <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
                 <div class="flex flex-col items-start w-full">
@@ -516,7 +519,7 @@
                 <div class="p-7 flex items-stretch w-full">
                     <div class="font-bold text-xl text-black " >{{ __('frontend.projectDownloadBrochure') }}</div>
                     <svg onclick="modalClose('mymodalcentered-brochure-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                        <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
                 <form id="new-project-details-desktop-brochure-form" class="flex flex-col items-start w-full" action="en/project-detail-inquiry" method="post" >
@@ -786,7 +789,7 @@
             <div class="flex flex-col items-start w-full hidden" id="form_submitted">
                 <div class="p-7 flex items-stretch w-full">
                     <svg onclick="modalClose('mymodalcentered-community-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                        <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
                 <div class="flex flex-col items-start w-full">
@@ -813,7 +816,7 @@
                 <div class="p-7 flex items-stretch w-full">
                     <div class="font-bold text-xl text-black" >{{ __('frontend.projectDownloadBrochure') }}</div>
                     <svg onclick="modalClose('mymodalcentered-brochure-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
+                        <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
                 <form id="verificationForm" class="flex flex-col items-start w-full p-6" action="en/project-detail-inquiry" method="post" >

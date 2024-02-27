@@ -22,7 +22,7 @@
 <div class="mx-0 px-0 mt-4 mb-0 mx-auto w-full ">
     <div class="row px-4 grid xl:grid-cols-2 gap-0 h-[100%] w-[100%]">
         <div class="">
-            <p class="text-esnaad_text text-justify font-sm xl:font-base my-4 xl:w-[90%]">
+            <p class=" text-justify font-sm xl:font-base my-4 xl:w-[90%]">
                 @if($langSeg == 'ar')
                     {{ \Illuminate\Support\Str::limit($SecThree_description_ar, $limit = 150, $end='') }}
                 @else

@@ -4,7 +4,7 @@
             
             <div class="icon bg-black text-white w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
                     
-            <p class="text-black text-center mb-4">
+            <p class="text-center mb-4">
                 {{__('frontend.careersP1')}}
             </p>
 
@@ -14,7 +14,7 @@
 
             @include('careers.desktop.authorizedPerson')
 
-            <button type="button" id="formViewSubmit"  class="w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Register Now</button>
+            <button type="button" id="formViewSubmit"  class="w-full mt-8 bg-white hover:bg-transparent border hover:border-white text-black hover:text-white font-semibold p-3">Register Now</button>
 
         </form>
 
@@ -45,8 +45,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button type="button"  id="verificationFormSubmit" class="w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Verify</button>
-                        <button type="button" id="ResendVerificationCode" class="w-full mt-4 text-black font-thin">Didn't get a code? <span class="font-bold">Click to resend</button>
+                        <button type="button"  id="verificationFormSubmit" class="w-full mt-8 bg-white hover:bg-transparent border hover:border-white text-black hover:text-white font-semibold p-3">Verify</button>
+                        {{-- <button type="button" id="ResendVerificationCode" class="w-full mt-4 text-white font-thin">Didn't get a code? <span class="font-bold">Click to resend</button> --}}
                     </form>
                 </p>
             </div>
@@ -61,7 +61,7 @@
         <div class="my-16">
             <p class="w-[100%] text-center font-normal text-gray-600">
                 <div class="icon bg-black text-white w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i>{{__('frontend.careersVerify')}}</button>
-                <h3 class="text-2xl text-gray-900 font-semibold text-center">{{__('frontend.careersVerifyAgain')}}</h3>
+                <h3 class="text-2xl font-semibold text-center">{{__('frontend.careersVerifyAgain')}}</h3>
                 <table class="w-full">
                     <tbody>
                         <caption class="my-4">

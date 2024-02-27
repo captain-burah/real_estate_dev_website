@@ -57,14 +57,14 @@
 
     <div class="row-span-2 grid sm:grid-cols-2 gap-4 h-[100%] w-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
         <div>
-            <h2 class="text-esnaad_text text-justify font-base my-8 text-2xl xl:text-2xl w-[90%]">
+            <h2 class=" text-justify font-base my-8 text-2xl xl:text-2xl w-[90%]">
                 @if($langSeg == 'ar')
                     {{$secTwo_title_ar}}
                 @else
                     {{$secTwo_title}}
                 @endif
             </h2>
-            <p class="text-esnaad_text text-justify font-base my-8 w-[90%] leading-8">
+            <p class=" text-justify font-base my-8 w-[90%] leading-8">
                 @if($langSeg == 'ar')
                     {{$SecTwo_description}}
                 @else
@@ -72,7 +72,7 @@
                 @endif
             </p>
         </div>
-        <div class="text-esnaad_text text-justify font-light m-8 w-full">
+        <div class=" text-justify font-light m-8 w-full">
             <div class="row w-[100%] h-[30%] mb-8">
                 @if($langSeg == 'ar')
                     {!! $SecTwo_amenities !!}
