@@ -6,7 +6,7 @@
     </h2> --}}
 
 
-    <div class="text-esnaad_text text-justify text-base my-4 w-full leading-8">
+    <div class="text-justify text-base my-4 w-full leading-8">
         @if($langSeg === 'ar')
             {!! $descriptionar !!}
         @else
