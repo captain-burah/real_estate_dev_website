@@ -34,8 +34,8 @@
     $SecTwo_amenities = $response['SecTwo_amenities'];
     $SecTwo_amenities_ar = $response['SecTwo_amenities_ar'];
 
-    $SecOne_description         =    $response['SecOne_description'];
-    $SecOne_description_ar      =    $response['SecOne_description_ar'];
+    $SecOnedescription         =    $response['SecOne_description'];
+    $SecOnedescription_ar      =    $response['SecOne_description_ar'];
     $SecTwo_description         =    $response['SecTwo_description'];
     $SecTwo_description_ar      =    $response['SecTwo_description_ar'];
     $SecThree_description       =    $response['SecThree_description'];

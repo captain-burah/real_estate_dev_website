@@ -11,9 +11,9 @@
             </h2>
             <p class="text-esnaad_text font-base my-8 w-[90%] leading-8 text-justify">
                 @if($langSeg == 'ar')
-                    {{$SecOne_description}}
+                    {{$SecOnedescription}}
                 @else
-                    {{$SecOne_description_ar}}
+                    {{$SecOnedescription_ar}}
                 @endif
             </p>
         </div>

@@ -113,17 +113,11 @@ return [
         'homeSectionTwoH' => "OUR LATEST PROJECTS",
         'homeSectionThreeH' => "OUR LATEST PROJECTS",
         'homeSectionThreeImage' => "Coming Soon",
-        'homeSectionThreeP' => "Embrace the Journey of Life and Investments: Building a Home, Nurturing Dreams, and Securing Futures - Where Every Brick Holds the Promise of a Lifetime",
-        // 'homeSectionThreeP' => "Ongoing Flagship Project: “The Spark by ESNAAD” by ESNAAD",
+        // 'homeSectionThreeP' => "Embrace the Journey of Life and Investments: Building a Home, Nurturing Dreams, and Securing Futures - Where Every Brick Holds the Promise of a Lifetime",
+        'homeSectionThreeP' => "Ongoing Flagship Project: “The Spark by ESNAAD” by ESNAAD",
         'homeSectionThreeP2' => "Welcome to ESNAAD's innovative world, where our ongoing flagship project,
-                'The Spark by ESNAAD,'in Meydan District 11, stands as a testament to our
-                commitment to innovation
-                and high-quality
-                developments. This
-                contemporary masterpiece features a B+G+5+R building, offering 1 and 2
-                Bedroom Apartments. We are dedicated to transforming this vision into a
-                reality that exceeds expectations, incorporating a design-led approach,
-                contemporary aesthetics, and a focus on delivering exceptional value for
+                'The Spark by ESNAAD,'in Meydan District 11, stands as a testament to our commitment to innovation and high-quality developments. This contemporary masterpiece features a B+G+5+R building, offering 1 and 2
+                Bedroom Apartments. We are dedicated to transforming this vision into a reality that exceeds expectations, incorporating a design-led approach, contemporary aesthetics, and a focus on delivering exceptional value for
                 money.",
 
         /**

@@ -13,11 +13,11 @@
             <div class="col-span-2 w-full bg-white sahdow-lg overflow-hidden flex flex-col justify-center items-center ">
                 <div class="relative overflow-hidden max-h-[24rem] ">
                     <div
-                        class="text-white text-2xl absolute inset-0  flex justify-center items-center shadow " style="background-color: #000; opacity: .9;">
-                        {{ __('frontend.homeSectionThreeImage') }}
+                        class="text-white text-2xl absolute inset-0  flex justify-center items-center shadow ">
+                        {{-- {{ __('frontend.homeSectionThreeImage') }} --}}
                     </div>
                     <img class="max-h-[24rem] w-full object-cover "
-                        src="{{ asset('home/COMING_SOON.webp')}}"                    
+                        src="{{ asset('home/project/2.webp')}}"                    
                         alt="esnaad-project-coming-soon"
                         title="COMING-SOON"
                         height="auto"
@@ -29,9 +29,13 @@
             <div class="col-span-3 my-auto">
                 <h2 class=" text-xl xl:text-4xl">
                 </h2>
-                <p class="text-xl mt-10 text-justify leading-8">
+                <h3 class="text-xl mt-10 text-justify leading-8">
                     {{ __('frontend.homeSectionThreeP') }}
-                </p>
+                </h3>
+
+                {{-- <p class="text-base mt-2 text-justify leading-8">
+                    {{ __('frontend.homeSectionThreeP2') }}
+                </p> --}}
             </div>
         </div>
     </div>
