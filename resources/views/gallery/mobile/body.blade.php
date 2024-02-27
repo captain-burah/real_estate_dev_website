@@ -12,8 +12,8 @@
                     $created_at = $data['created_at'];
                 ?>
                 <div class="">
-                    <div class="mx-auto px-0 mb-4  ">
-                        <div class="max-w-full cursor-pointer rounded-0 bg-white shadow ">
+                    <div class="mx-auto px-0 mb-4">
+                        <div class="max-w-full cursor-pointer rounded-0 shadow border">
                             <div class="row">
                                 <img class="w-full rounded-0 object-cover object-center" src="https://www.mis.esnaad.com/uploads/gallery/{{$id}}/thumbnail/{{$thumbnail}}"
                                     height="250px"
@@ -25,21 +25,21 @@
                             </div>
                             <div class="row">
                                 <div>
-                                    <p class="mt-4 pl-4 text-2xl text-center font-thin text-black">
+                                    <p class="mt-4 pl-4 text-2xl text-center font-thin">
                                         @if($langSeg == 'ar')
                                             {{$titlear}}
                                         @else
                                             {{$title}}
                                         @endif
                                     </p>
-                                    <p class="mb-4 ml-4 font-thin text-center text-black text-sm">
+                                    <p class="mb-4 ml-4 font-thin text-center text-sm">
                                         {{ date('jS F Y', strtotime($created_at)) }}
                                     </p>
                                 </div>
                             </div>
                             <div class="row text-center pb-5 pt-2">
                                 <a href="{{ URL($langSeg.'/media-gallery/'.$sluglink) }}" 
-                                    class="bg-black text-white px-15 py-3">
+                                    class="bg-white text-black px-15 py-3">
                                     Explore
                                 </a>
                             </div>

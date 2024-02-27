@@ -35,16 +35,16 @@
             <div class="flex items-center justify-center w-full">
                 <div x-data="{ openTab: 1 }" class="p-0 w-full">
                     <div class="">
-                        <div class="mb-4 w-[20vw] mx-auto flex space-x-4 p-0 bg-white rounded-lg ">
-                            <button x-on:click="openTab = 1" :class="{ 'bg-black text-white': openTab === 1 }" class="flex-1 py-2 px-4 rounded-md shadow transition-all duration-300">
+                        <div class="mb-4 w-[20vw] mx-auto flex space-x-4 p-0 rounded-lg ">
+                            <button x-on:click="openTab = 1" :class="{ 'bg-white text-black': openTab === 1 }" class="flex-1 py-2 px-4 rounded-md shadow transition-all duration-300">
                                 {{ __('frontend.galleryImages') }}
                             </button>
-                            <button x-on:click="openTab = 2" :class="{ 'bg-black text-white': openTab === 2 }" class="flex-1 py-2 px-4 rounded-md shadow transition-all duration-300">
+                            <button x-on:click="openTab = 2" :class="{ 'bg-white text-black': openTab === 2 }" class="flex-1 py-2 px-4 rounded-md shadow transition-all duration-300">
                                 {{ __('frontend.galleryVideos') }}
                             </button>
                         </div>
             
-                        <div x-show="openTab === 1" class="transition-all duration-300 bg-white p-4 rounded-lg ">
+                        <div x-show="openTab === 1" class="transition-all duration-300 p-4 rounded-lg ">
                             <div class="mx-auto  mt-8">
                                 <div class="container mx-auto flex flex-col items-start md:flex-">
                         
@@ -64,7 +64,7 @@
                             </div>
                         </div>
             
-                        <div x-show="openTab === 2" class="transition-all duration-300 bg-white p-4 rounded-lg ">
+                        <div x-show="openTab === 2" class="transition-all duration-300 p-4 rounded-lg ">
                             <div class="mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl mt-8">
                                 <div class="container mx-auto flex flex-col items-start md:flex-">
                         

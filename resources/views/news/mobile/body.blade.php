@@ -13,7 +13,7 @@
                 ?>
                 <div class="">
                     <div class="mx-auto px-0 ">
-                        <div class="max-w-full cursor-pointer rounded-0 bg-white p-2 shadow">
+                        <div class="max-w-full cursor-pointer rounded-0 p-2 shadow">
                             <div class="row">
                                 <img class="w-full rounded-0 object-cover object-center" src="{{ asset('developments/3.jpg')}}" alt="news-thumbnail"/>
                             </div>
@@ -30,7 +30,7 @@
                                     <div class="col-span-5">
                                         <p class="ml-4 text-lg font-thin text-black">{{$title}}</p>
                                         {{-- <p class="ml-4 mb-4 font-thin text-sm text-black">{{ Carbon\Carbon::parse($date)->format('j F Y') }}</p> --}}
-                                        <a href="{{ URL($langSeg.'/news/'.$sluglink) }}" class="ml-4 mb-4 bg-black text-white px-15 py-3">
+                                        <a href="{{ URL($langSeg.'/news/'.$sluglink) }}" class="ml-4 mb-4 bg-white text-black px-15 py-3">
                                             Explore
                                         </a>
                                     </div>
