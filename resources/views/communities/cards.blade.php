@@ -24,7 +24,7 @@
                     $slug = $data['slug_link'];
                     $thumbnail = $data['thumbnail'];
                 ?>
-                <div class="full bg-white rounded-0 sahdow-lg overflow-hidden flex flex-col justify-center items-center shadow">
+                <div class="full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center shadow">
                     <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[34rem]">
                         {{--
                         <p
@@ -43,22 +43,22 @@
                         >
                     </div>
                     <div class="text-center py-8 sm:py-6">
-                        <p class="text-xl text-gray-700 font-bold mb-2">
+                        <p class="text-xl  font-bold mb-2">
                             @if($langSeg === 'ar')
                                 {{$namear}}
                             @else
                                 {{$name}}
                             @endif
                         </p>
-                        <p class="text-base text-gray-400 font-normal">
+                        <p class="text-base  font-normal">
                             @if($langSeg === 'ar')
                                 {{$addressar}}
                             @else
                                 {{$address}}
                             @endif    
                         </p>
-                        <div class="text-center py-4 sm:py-4 w-full">
-                            <a href="{{ url('en/communities/'.$slug) }}" class="bg-black border-black text-base text-white font-thin py-3 px-10 rounded-0">
+                        <div class="text-center py-4 sm:py-4 w-full mt-2">
+                            <a href="{{ url('en/communities/'.$slug) }}" class="bg-white text-base text-black py-3 px-10 rounded-0">
                                 {{ __('frontend.exploreMore') }}
                             </a>
                         </div>

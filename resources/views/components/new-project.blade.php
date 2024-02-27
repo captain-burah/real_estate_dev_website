@@ -9,7 +9,7 @@
     }
 ?>
 <div class="max-w-6xl mx-auto p-0">
-    <div class="w-full rounded-0 sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+    <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
         <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[50rem] w-[100%] z-0">
             <div
                 class="text-white text-xl rounded-0 absolute inset-0 bg-opacity-80 flex justify-center items-center ">
@@ -42,8 +42,8 @@
                 <p class="text-base font-thin text-center">@if($langSeg == 'ar'){{$community}}@else {{$community}} @endif</p>
             </div>
         </div>
-        <div class="text-center py-4 sm:py-4 w-full">
-            <a href="{{ url('en/developments/'.$slug) }}" class="border-black text-sm text-white font-thin py-3 px-10 rounded-0">
+        <div class="text-center py-4 sm:py-4 w-full mt-2">
+            <a href="{{ url('en/developments/'.$slug) }}" class="bg-white text-base text-black py-3 px-10 rounded-0">
                 Explore More
             </a>
         </div>

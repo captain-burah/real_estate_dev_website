@@ -27,14 +27,19 @@
                                     />
                                 </div>
                                 <div class="col-span-5 mb-4">
-                                    <p class="mt-4 pl-4 text-xl font-thin text-black">The Gulf Villas & Residences</p>
-                                    <p class="mb-2 ml-4 font-thin text-black">Nad Al Sheba</p>
+                                    <p class="mt-4 pl-4 text-xl font-thin text-black">
+                                        @if($langSeg == 'ar')
+                                            {{$titlear}}
+                                        @else
+                                            {{$title}}
+                                        @endif
+                                    </p>
                                     <div class="mt-4 ml-4 mb-4 h-5 relative w-auto rounded-full overflow-hidden">
-                                        <div class=" w-full h-full bg-gray-200 absolute "></div>
-                                        <div class=" h-full bg-black sm:bg-black absolute" style="width:30%"><div class="h-full w-full mx-auto text-xs text-center text-white font-bold">30%</div></div>
+                                        <div class=" w-full h-full absolute "></div>
+                                        <div class=" h-full absolute" style="width:10%"><div class="h-full w-full mx-auto text-xs text-center  font-bold">10%</div></div>
                                     </div>
                                     <a href="{{ URL($langSeg.'/constructions/'.$sluglink) }}" 
-                                        class="mt-4 ml-4 mb-4 bg-black text-white px-15 py-3">
+                                        class="mt-4 ml-4 mb-4  px-15 py-3 bg-white text-base text-black">
                                         Explore
                                     </a>
                                 </div>

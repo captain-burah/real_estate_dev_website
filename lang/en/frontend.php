@@ -29,7 +29,7 @@ return [
         "mobile_home" => "Home",
         "mobile_developments" => "Our Developments",
         "mobile_constructions" => "Constructions",
-        "mobile_communities" => "Our Communities",
+        "mobile_communities" => "Communities",
         "mobile_contact_us" => "Contact Us",
         "mobile_language" => "Language",
         "mobile_invest_in_dubai" => "Why Invest in Dubai?",
@@ -403,7 +403,7 @@ return [
         /**
          * COMMUNITY PAGE
          */
-        "communityH" => "OUR COMMUNITIES",
+        "communityH" => "COMMUNITIES",
         "communityP" => "At ESNAAD, we're not just a real estate developer; we're a new player in the Dubai property market. Our focus goes beyond constructing homes to shaping vibrant communities.",
         
 

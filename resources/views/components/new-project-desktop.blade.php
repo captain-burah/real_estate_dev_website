@@ -9,10 +9,10 @@
     }
 ?>
 <div class="max-w-6xl mx-auto p-0">
-            <div class="w-full bg-white rounded-0 sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+            <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
                 <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[50rem] w-[100%] z-0">
                     <div
-                        class="text-white text-xl rounded-0 absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center ">
+                        class="text-white text-xl rounded-0 absolute inset-0 flex justify-center items-center ">
                     </div>
                     
                     <img class="h-[100%] w-[100%] object-cover     "
@@ -36,13 +36,13 @@
                             width="auto"
                         >
                     </div>
-                    <div class="col-span-3" >
-                        <h2 class="text-xl text-black font-bold text-left">@if($langSeg == 'ar'){{$namear}}@else {{$name}} @endif</h2>
-                        <p class="text-base text-black font-thin text-left">@if($langSeg == 'ar'){{$community}}@else {{$community}} @endif</p>
+                    <div class="col-span-3" style="color: #ccc !important; background-color: #1c1c1c !important;">
+                        <h2 class="text-xl font-bold text-left">@if($langSeg == 'ar'){{$namear}}@else {{$name}} @endif</h2>
+                        <p class="text-base font-thin text-left">@if($langSeg == 'ar'){{$community}}@else {{$community}} @endif</p>
                     </div>
                 </div>
                 <div class="text-center py-4 sm:py-4 w-full">
-                    <a href="{{ url('en/developments/'.$slug) }}" class="bg-black border-black text-sm text-white font-thin py-3 px-10 rounded-0">
+                    <a href="{{ url('en/developments/'.$slug) }}" class="bg-white text-sm text-black py-3 px-10 rounded-0">
                         Explore More
                     </a>
                 </div>
