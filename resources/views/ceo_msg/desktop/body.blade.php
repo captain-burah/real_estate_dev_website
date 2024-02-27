@@ -17,11 +17,11 @@
   
                     <div class="relative z-10">
 
-                            <p class="text-base font-thin text-justify leading-8 text-black">
+                            <p class="text-base font-thin text-justify leading-8">
                                 {{__('frontend.ceoMsg1')}}                        
                             </p>
                     
-                            <p class="text-base font-thin text-justify leading-8 mt-4 text-black">
+                            <p class="text-base font-thin text-justify leading-8 mt-4">
                                 {{__('frontend.ceoMsg2')}}                        
                             </p>
 
@@ -36,11 +36,11 @@
                             </em>
                             </p>
             
-                            <p class="text-base font-thin text-justify leading-8 mt-4 text-black">
+                            <p class="text-base font-thin text-justify leading-8 mt-4">
                                 {{__('frontend.ceoMsg3')}}                        
                             </p>
             
-                            <p class="text-base font-thin text-justify leading-8 mt-4 text-black">
+                            <p class="text-base font-thin text-justify leading-8 mt-4">
                                 {{__('frontend.ceoMsg4')}}                        
                             </p>
             
