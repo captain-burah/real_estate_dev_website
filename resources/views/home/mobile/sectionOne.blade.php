@@ -39,7 +39,7 @@
     </div>
 
     <div class="row mt-8 p-0">
-        <img src="{{ asset('home/13.webp')}}">
+        <img src="{{ asset('home/project/12-1.webp')}}">
     </div>
 </div>
 

@@ -14,11 +14,11 @@
 <div class="container mx-auto px-4 mx-0 px-0 sm:px-4 mb-5 sm:mt-5 sm:mb-2 mx-auto">
     <div class="relative overflow-hidden max-h-[24rem] ">
         <div
-            class="text-white text-2xl absolute inset-0 flex justify-center items-center" style="background-color: #000; opacity: .9">
+            class="text-white text-5xl absolute inset-0 flex justify-center items-center">
             {{ __('frontend.homeSectionThreeImage') }}
         </div>
         <img class="max-h-[24rem] w-full object-cover "
-        src="{{ asset('home/COMING_SOON.webp')}}"                    
+        src="{{ asset('home/project/2.webp')}}"                    
         alt="esnaad-project-card">
     </div>
 </div>

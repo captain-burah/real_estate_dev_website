@@ -45,7 +45,7 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="height:60vh; background-image: url({{ asset('home/contact_us.webp') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+    <div class="w-full bg-cover bg-center" style="height:60vh; background-image: url('{{ URL::asset('home/esnaad images/contact/2-1.jpg')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
         <div class="flex items-center justify-center h-full w-full  bg-black bg-opacity-40">
             <div class="container">
                     
@@ -55,15 +55,15 @@
 
                 <br>
                 
-                <p class="w-[75%] mx-auto text-white font-base leading-8 text-base text-center">
+                <p class="w-[75%] mx-auto text-white font-base leading-8 text-lg text-center">
                     {{__('frontend.contactAddress')}}
                 </p>
-                <p class="w-[75%] mx-auto text-white font-base leading-8 text-base text-center">
+                <p class="w-[75%] mx-auto text-white font-base leading-8 text-lg text-center">
                     <a href="tel:{{ env('COMPANY_PHONE') }}" >
                         {{__('frontend.contactPhone')}} 
                     </a>
                 </p>
-                <p class="w-[75%] mx-auto text-white font-base leading-8 text-base text-center">
+                <p class="w-[75%] mx-auto text-white font-base leading-8 text-lg text-center">
                     <a href="mailto:{{env('COMPANY_EMAIL')}}" class="inline-flex items-center">
                         {{__('frontend.contactEmail')}}
                         &nbsp;
