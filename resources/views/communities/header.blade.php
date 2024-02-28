@@ -50,9 +50,9 @@
 
 
     <header class="">
-        <div class="w-full bg-cover bg-center mb-4" style="height: 75vh; background-image: url('{{ URL::asset('home/COM.webp')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+        <div class="w-full bg-cover bg-top mb-4" style="height: 75vh; background-image: url('{{ URL::asset('home/community_header.webp')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
         {{-- <div class="w-full bg-cover bg-center" style="height: 40vh;"> --}}
-            <div class="flex items-center justify-center h-full w-full bg-black bg-opacity-60" style="padding-top: 10vh;">
+            <div class="flex items-center justify-center h-full w-full bg-black bg-opacity-50" style="padding-top: 10vh;">
                 <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto  text-white">
                     <h1 class="text-4xl font-thin text-center">
                         {{__('frontend.communityH')}}
@@ -116,8 +116,8 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center mb-4" style="margin-top: 60px; height: 40vh; background-image: url('{{ URL::asset('home/COM.webp')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
-        <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-60">
+    <div class="w-full bg-cover bg-center mb-4" style="margin-top: 60px; height: 40vh; background-image: url('{{ URL::asset('home/community_header.webp')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+        <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-40">
 
             <div class="container mx-0 px-0 mx-auto text-white">
                 <h1 class="text-xl font-light px-2">
