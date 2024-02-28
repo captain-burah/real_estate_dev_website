@@ -85,7 +85,7 @@
                         </p>
                     </div>
 
-                    <h1 class="text-2xl font-bold mb-0" @if($langSeg == 'ar')  dir="rtl" @endif>
+                    <h1 class="text-2xl mb-0" @if($langSeg == 'ar')  dir="rtl" @endif>
                         @if($langSeg == 'ar')
                             {{$titlear}}
                         @else
