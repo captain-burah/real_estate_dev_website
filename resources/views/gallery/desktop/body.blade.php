@@ -12,9 +12,9 @@
             </a>
         </div>
 
-        <div class="mb-4 w-[10vw] flex justify-center space-x-4 p-0 bg-white rounded-lg gap-6 mx-auto">
+        {{-- <div class="mb-4 w-[10vw] flex justify-center space-x-4 p-0 bg-white rounded-lg gap-6 mx-auto">
             <hr class="border-double border-gray-300 w-full" >
-        </div>
+        </div> --}}
     </div>
 </div>
 
