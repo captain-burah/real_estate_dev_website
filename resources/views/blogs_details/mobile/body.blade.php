@@ -9,19 +9,19 @@
                     <div class="space-y-10">
                         <div>
                             <div class="flex items-center overflow-x-auto whitespace-nowrap" @if($langSeg == 'ar')  dir="rtl" @endif>
-                                <a href="{{ url('/en/blogs') }}" class="text-sm text-black">
+                                <a href="{{ url('/en/blogs') }}" class="text-sm">
                                     {{__('frontend.mobile_media')}}   
                                 </a>
-                                <span class="mx-2 text-xs text-black">
+                                <span class="mx-2 text-xs">
                                     /
                                 </span> 
-                                <a href="{{ url('/en/blogs') }}" class="text-sm text-black">
+                                <a href="{{ url('/en/blogs') }}" class="text-sm">
                                     {{__('frontend.mobile_blogs')}}
                                 </a>
-                                <span class="mx-2 text-xs text-black">
+                                <span class="mx-2 text-xs">
                                     /
                                 </span> 
-                                <p class="text-xs text-black">
+                                <p class="text-xs">
                                     @if($langSeg == 'ar')
                                         {{$titlear}}
                                     @else
@@ -30,7 +30,7 @@
                                 </p>
                             </div>
 
-                            <h1 class="text-2xl font-bold mb-2 mt-4" @if($langSeg == 'ar') dir="rtl" @endif>
+                            <h1 class="text-2xl mb-2 mt-4" @if($langSeg == 'ar') dir="rtl" @endif>
                                 @if($langSeg == 'ar')
                                     {{$titlear}}
                                 @else
