@@ -33,13 +33,15 @@
                 tabindex="3" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
-                <h3 class="text-xl font-thin text-left leading-6 py-4">
-                    {{__('frontend.aboutH1')}}
-                </h3>
-                <img
-                    src="https://demo.esnaad.com/public/home/down-arrow.png"
-                    class="h-full w-6 transition-all duration-500 group-focus:-rotate-180"
-                />
+                    <img src="{{asset('front/icons/values.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px">
+
+                    <h3 class="text-xl font-thin text-left leading-6 py-4">
+                        {{__('frontend.aboutH1')}}
+                    </h3>
+                    <img
+                        src="https://demo.esnaad.com/public/home/down-arrow.png"
+                        class="h-full w-6 transition-all duration-500 group-focus:-rotate-180"
+                    />
                 </div>
                 <div
                 class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 leading-6 text-justify"
@@ -53,13 +55,15 @@
                 tabindex="1" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
-                <h3 class="text-xl font-thin text-left leading-6 py-4">
-                    {{__('frontend.aboutH2')}}
-                </h3>
-                <img
-                    src="https://demo.esnaad.com/public/home/down-arrow.png"
-                    class="h-full w-6 transition-all duration-500 group-focus:-rotate-180"
-                />
+                    <img src="{{asset('front/icons/mission.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px">
+
+                    <h3 class="text-xl font-thin text-left leading-6 py-4">
+                        {{__('frontend.aboutH2')}}
+                    </h3>
+                    <img
+                        src="https://demo.esnaad.com/public/home/down-arrow.png"
+                        class="h-full w-6 transition-all duration-500 group-focus:-rotate-180"
+                    />
                 </div>
                 <div
                 class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 leading-6 text-justify"
@@ -73,6 +77,8 @@
                 tabindex="2" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
+                    <img src="{{asset('front/icons/vision.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px">
+
                     <h3 class="text-xl font-thin text-left leading-6 py-4">
                         {{__('frontend.aboutH3')}}
                     </h3>
