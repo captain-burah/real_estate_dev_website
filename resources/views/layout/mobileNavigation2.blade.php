@@ -66,7 +66,7 @@
 
         <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 " href="{{ url($langSeg.'/contact') }}">{{ __('frontend.mobile_contact_us') }}</a></li>
         
-        <div @click.away="open = false" class="relative z-10" x-data="{ open: false }">
+        {{-- <div @click.away="open = false" class="relative z-10" x-data="{ open: false }">
           <button @click="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-smv font-base text-left bg-transparent rounded-lg  md:w-auto md:inline md:mt-0 md:ml-4 " style="background-color: #1C1C1C !important; color: #ccc !important;">
             <span class="mt-2 text-base font-base bg-transparent rounded-lg  md:mt-0 md:ml-4 " style="background-color: #1C1C1C !important; color: #ccc !important;">
               {{ __('frontend.mobile_language') }}
@@ -99,7 +99,7 @@
               </div>
             </div>
           </div>
-        </div>   
+        </div>    --}}
          
       </nav>
     </div>
