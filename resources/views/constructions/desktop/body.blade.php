@@ -46,10 +46,10 @@
                                     </div>
                                     <div class="h-25">
                                         <div class="row text-center pb-5 pt-2 mt-8 h-100">
-                                            <a href="javascript:void(0)" onclick="return false;" 
+                                            {{-- <a href="javascript:void(0)" onclick="return false;" 
                                                 class="bg-white text-black px-15 my-3 py-3">
                                                 Explore
-                                            </a>
+                                            </a> --}}
                                         </div>   
                                     </div>
                                 </div>
