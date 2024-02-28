@@ -19,17 +19,8 @@
                     <div class="mx-auto px-0 ">
                         <div class="max-w-full cursor-pointer rounded-0 border p-0 shadow">
                             <div class="row">
-                                <div class="grid xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5">
-                                    <div>
-                                        <img class="w-full rounded-0 object-cover object-center" src="{{ URL('https://mis.esnaad.com/uploads/construction/'.$id.'/thumbnail/'.$thumbnail) }}"
-                                            height="400px"
-                                            width="auto"
-                                            loading="lazy"
-                                            style="height: 400px !important;"
-                                            alt="ESNAAD Media Unit - Gallery - {{$title}}"
-                                        />
-                                    </div>
-                                    <div class="col-span-2">
+                                <div class="grid xl:grid-cols-7 lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5">
+                                    <div class="h-25">
                                         <p class="mt-4 pl-4 text-2xl text-center font-thin">
                                             @if($langSeg == 'ar')
                                                 {{$titlear}}
@@ -37,28 +28,30 @@
                                                 {{$title}}
                                             @endif
                                         </p>
+                                    </div>
+                                    <div class="col-span-5 h-25 my-auto">
     
-                                        <p class="mt-4 pl-4 text-base text-center font-thin">
-                                            Last Updated {{ date('jS F Y', strtotime($updated_at)) }}
-                                        </p>
-    
-    
-                                        <p class="mt-4 pl-4 text-base text-center font-thin">
-                                            Progress {{ $growth }} %
-                                        </p>
+                                        
     
                                        
-                                        <div class="mt-2 h-6 relative w-auto rounded-full overflow-hidden">
+                                        <div class="mt-8 h-6 relative w-auto rounded-full overflow-hidden my-auto">
                                             <div class=" w-full h-full bg-gray-200 absolute "></div>
                                             <div class=" h-full bg-yellow-400 sm:bg-green-500 absolute" style="width:{{$growth}}%"><div class="h-full w-full mx-auto text-sm text-center pt-1 text-white font-bold"> &nbsp; &nbsp;</div></div>
                                         </div>
 
-                                        <div class="row text-center pb-5 pt-2">
+                                        <p class="mt-4 pl-4 text-base text-center font-thin my-auto">
+                                            Progress {{ $growth }} %
+                                        </p>
+
+                                                                           
+                                    </div>
+                                    <div class="h-25">
+                                        <div class="row text-center pb-5 pt-2 mt-8 h-100">
                                             <a href="javascript:void(0)" onclick="return false;" 
                                                 class="bg-white text-black px-15 my-3 py-3">
                                                 Explore
                                             </a>
-                                        </div>                                      
+                                        </div>   
                                     </div>
                                 </div>
                                 
