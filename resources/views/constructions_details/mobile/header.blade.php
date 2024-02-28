@@ -52,7 +52,7 @@
     <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl">
         <div class=" flex flex-col items-start px-4">
             <div class="ml-0 md:mr-12 sticky">
-                <div class="container mx-auto w-full h-full mt-[12vh]">
+                <div class="container mx-auto w-full h-full mt-[8vh]">
                     <style>
                         ul {
                             padding-left: 30px;
@@ -62,20 +62,36 @@
                             padding-left: 10px;
                         }
                     </style>
-                    <h1 class="text-2xl font-bold mb-0">
-                        {{$title}}
-                    </h1>
-                    <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                        <a href="/constructions" class="text-sm">
-                            Constructions
+                    
+                    <div class="flex items-center overflow-x-auto whitespace-nowrap" @if($langSeg == 'ar')  dir="rtl" @endif>
+                        <a href="{{ url('/en/constructions') }}" class="text-sm">
+                            {{__('frontend.mobile_media')}}   
                         </a>
-                        <span class="mx-2 text-sm">
+                        <span class="mx-2 text-xs">
                             /
                         </span> 
-                        <p class="text-sm capitalize">
-                            {{ $title }}
+                        <a href="{{ url('/en/constructions') }}" class="text-sm">
+                            {{__('frontend.mobile_constructions')}}
+                        </a>
+                        <span class="mx-2 text-xs">
+                            /
+                        </span> 
+                        <p class="text-xs">
+                            @if($langSeg == 'ar')
+                                {{$titlear}}
+                            @else
+                                {{$title}}
+                            @endif
                         </p>
                     </div>
+
+                    <h1 class="text-2xl font-bold mb-0" @if($langSeg == 'ar')  dir="rtl" @endif>
+                        @if($langSeg == 'ar')
+                            {{$titlear}}
+                        @else
+                            {{$title}}
+                        @endif
+                    </h1>
                 </div>
             </div>            
         </div>

@@ -77,7 +77,7 @@
                         <a href="{{ url('/en/blogs') }}" class="text-base font-thin">
                             {{__('frontend.mobile_blogs')}}
                         </a>
-                        <p class="text-sm capitalize">
+                        <p class="text-sm">
                             @if($langSeg == 'ar') 
                                 {{ $titlear }}
                             @else

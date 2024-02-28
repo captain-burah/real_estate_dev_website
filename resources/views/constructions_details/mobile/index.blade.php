@@ -15,20 +15,30 @@
         }
     </style>
 @endsection
-
+<?php
+    $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri_segments = explode('/', $uri_path);
+    $seg1 = $uri_segments[1];
+    if($seg1 == 'en' || $seg1 == 'ar'){
+        $langSeg = $uri_segments[1];
+    }else{
+        $langSeg = 'en';
+    }
+?>
+<?php
+$id = $response['id'];
+$title = $response['title'];
+$titlear = $response['title_ar'];
+$sluglink = $response['slug_link'];
+$thumbnail = $response['thumbnail'];
+$description = $response['description'];
+$header_image = $response['header_image'];
+$images = $response['website_construction_images'];
+$created_at = $response['created_at'];
+?>
 @section('content')
 
-<?php
-    $id = $response['id'];
-    $title = $response['title'];
-    $titlear = $response['title_ar'];
-    $sluglink = $response['slug_link'];
-    $thumbnail = $response['thumbnail'];
-    $description = $response['description'];
-    $header_image = $response['header_image'];
-    $images = $response['website_construction_images'];
-    $created_at = $response['created_at'];
-?>
+
     
         <section>
              @include('constructions_details.mobile.header')
