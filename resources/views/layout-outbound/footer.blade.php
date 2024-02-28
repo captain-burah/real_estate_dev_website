@@ -207,7 +207,7 @@
                                         </svg>
                                         &nbsp;
                                         <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
-                                        &#105;&#110;&#102;&#111;&#064;&#101;&#115;&#110;&#097;&#097;&#100;&#046;&#099;&#111;&#109;
+                                        customercare@esnaad.com
                                     </div>
                                 </li>
                             </ul>
@@ -437,7 +437,7 @@
                                                 </g>
                                             </svg>
                                             &nbsp;
-                                            &#105;&#110;&#102;&#111;&#064;&#101;&#115;&#110;&#097;&#097;&#100;&#046;&#099;&#111;&#109;
+                                            customercare@esnaad.com
                                         </a>
                                     </div>
                                 </li>
@@ -642,7 +642,7 @@
                                     </svg>
                                     &nbsp;
                                     <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
-                                    &#105;&#110;&#102;&#111;&#064;&#101;&#115;&#110;&#097;&#097;&#100;&#046;&#099;&#111;&#109;
+                                    customercare@esnaad.com
                                 </div>
                             </li>
                             <li class="text-md text-black my-2">
