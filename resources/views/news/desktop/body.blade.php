@@ -1,6 +1,6 @@
 <div class="mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl mt-8 ">
     <div class="container mx-auto flex flex-col items-start md:flex- min-h-[7vh]">
-        <div class="mb-4 w-[20vw] flex justify-center space-x-4 p-0 rounded-lg gap-6 mx-auto">
+        <div class="mb-4 w-[30vw] flex justify-center space-x-4 p-0 rounded-lg gap-6 mx-auto">
             <a href="{{ url('/en/press-release')}}" class="text-xl font-light underline underline-offset-4">
                 {{ __('frontend.mediaH2') }}
             </a>
