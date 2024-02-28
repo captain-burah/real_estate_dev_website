@@ -506,11 +506,11 @@
                                 </li>
 
                                 <li class="text-md  my-3">
-                                    <a href="{{ URL($langSeg.'/careers')}}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
+                                    <a href="{{ URL($langSeg.'/careers')}}" aria-label="careers" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
 
                                 <li class="text-md  my-3">
-                                    <a href="{{ URL($langSeg.'/broker-registration') }}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
+                                    <a href="{{ URL($langSeg.'/agency-registration') }}" aria-label="agency-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
                                 </li>
                             </ul>
                         </div>
