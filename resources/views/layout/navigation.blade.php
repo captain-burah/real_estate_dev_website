@@ -173,7 +173,7 @@
                     </x-nav-link>
                 </div>
 
-                {{-- <div class="group relative cursor-pointer">
+                <div class="group relative cursor-pointer">
 
                     <div class="flex items-center justify-between space-x-5  px-4 mx-4">
                         <button onClick="" class="hidden space-x-8 sm:-my-px sm:flex inline-flex items-center px-3 py-2  leading-4 font-medium rounded-md text-gray-700 hover:text-gray-700 focus:outline-none transition ease-in-out duration-150" style="background-color: #1C1C1C !important; color: #ccc !important;">
@@ -202,7 +202,7 @@
                         </x-dropdown-link>
             
                     </div>
-                </div> --}}
+                </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex text-center 2xl:px-8 md:px-2">
                     <x-nav-link href="{{ url($langSeg.'/contact') }}"   aria-label="navbar-route" rel='canonical'>
