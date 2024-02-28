@@ -95,7 +95,7 @@ return [
          * HOME
          */
         'heroH' => "Welcome to ESNAAD - Shaping Dreams, Building Legacies",
-        'homeSectionOneH' => "Our Story",
+        'homeSectionOneH' => "OUR STORY",
         
         'homeSectionOneP1' => "Embark on an extraordinary journey shaped by over two decades of profound expertise in the dynamic realms of real estate and construction. ESNAAD, a name synonymous with innovation and excellence, is dedicated to elevating your living experiences through meticulously crafted spaces. Every detail within our creations serves as an eloquent testament to our unwavering commitment to sophistication and superior craftsmanship.",
         
