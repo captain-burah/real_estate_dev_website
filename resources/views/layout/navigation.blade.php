@@ -101,9 +101,9 @@
                         </button>
                     </div>
             
-                    <div class="invisible absolute z-50 flex w-full flex-col bg-white mx-8 pb-1 pt-4 text-gray-800 shadow-xl group-hover:visible" style="background-color: #1C1C1C !important; color: #ccc !important;">
+                    <div class="invisible absolute z-50 flex w-full flex-col bg-white mx-8 pb-1 pt-4 text-gray-800 shadow-xl group-hover:visible" style="background-color: #1C1C1C !important; color: #ccc !important;  width: 200px !important;">
             
-                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}"  class="font-thin text-xs my-4 md:text-[12px] xl:text-[16px] 2xl:text-lg text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
+                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}"  class="font-thin text-xs my-4 md:text-[12px] xl:text-[16px] 2xl:text-lg text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important; width: 200px !important;">
                             {{ __('frontend.desktop_ourCompany') }}
                         </x-dropdown-link>
                         
@@ -183,7 +183,7 @@
                         </button>
                     </div>
             
-                    <div class="invisible absolute z-50 flex w-full flex-col mx-8 pb-1 pt-4 text-gray-800 shadow-xl group-hover:visible" style="background-color: #1C1C1C !important; color: #ccc !important;">
+                    <div class="invisible absolute z-50 flex w-full flex-col mx-8 pb-1 pt-4 text-gray-800 shadow-xl group-hover:visible" style="background-color: #1C1C1C !important; color: #ccc !important;  width: 200px !important;">
             
                         <x-dropdown-link href="{{ url($langSeg.'/press-release') }}"  class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
                             {{ __('frontend.desktop_press_release') }} 

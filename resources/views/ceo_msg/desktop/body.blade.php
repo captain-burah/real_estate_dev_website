@@ -7,9 +7,9 @@
 
 <div class="w-full p-6">
 
-    <div class="sm:container px-8 my-5 sm:mx-auto mx-0 sm:mb-4 mx-auto border border-gray-200">
+    <div class="sm:container px-8 my-5 sm:mx-auto mx-0 sm:mb-4 mx-auto">
 
-        <div class="grid grid-cols-7 gap-0 my-5">
+        <div class="grid gap-0 my-5">
 
             <div class="row col-span-5 h-[100%] w-[100%] p-10 ">
                 
@@ -56,17 +56,17 @@
                     <img src="{{ asset('home/signature2.png') }}" class="float-right" style="height: 20vh !important;" title="ESNAAD-" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
                 </div> --}}
 
-                <p class="text-base font-thin text-right leading-8 mt-4 w-full">
+                <p class="text-base font-thin text-right leading-8 mt-4 w-full pt-4">
                     Ashraf Elbendari, CEO
                 </p>
             </div>
 
-            <div class="row col-span-2 h-[100%] w-[100%] p-10">
+            {{-- <div class="row col-span-2 h-[100%] w-[100%] p-10">
                 <div class="shadow-sm my-auto" >
                 <img src="{{ asset('home/ceo5.webp') }}" class="filter drop-shadow-lg my-auto" style="height: !important; object-fit: cover;" title="ESNAAD-ABOUT-INTRO-IMAGE" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
                 </div>
 
-            </div>
+            </div> --}}
         </div>
 
         
