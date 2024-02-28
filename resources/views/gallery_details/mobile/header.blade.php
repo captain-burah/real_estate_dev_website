@@ -68,13 +68,13 @@
                     </h1>
 
                     <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                        <a href="/news" class="text-sm text-black">
+                        <a href="/news" class="text-sm">
                             NEWS
                         </a>
-                        <span class="mx-2 text-sm text-black">
+                        <span class="mx-2 text-sm">
                             /
                         </span> 
-                        <p class="text-sm capitalize text-black">
+                        <p class="text-sm capitalize">
                             {{ $title }}
                         </p>
                     </div>

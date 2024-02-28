@@ -10,19 +10,19 @@
                         <div>                            
 
                             <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                                <a href="{{ url('/en/media-gallery') }}" class="text-sm text-black">
+                                <a href="{{ url('/en/media-gallery') }}" class="text-sm">
                                     Media   
                                 </a>
-                                <span class="mx-2 text-sm text-black">
+                                <span class="mx-2 text-sm">
                                     /
                                 </span> 
-                                <a href="{{ url('/en/media-gallery') }}" class="text-sm text-black">
+                                <a href="{{ url('/en/media-gallery') }}" class="text-sm">
                                     {{__('frontend.mediaH4')}}
                                 </a>
-                                <span class="mx-2 text-sm text-black">
+                                <span class="mx-2 text-sm">
                                     /
                                 </span> 
-                                <p class="text-sm text-black">
+                                <p class="text-sm">
                                     @if($langSeg == 'ar')
                                         {{$titlear}}
                                     @else
@@ -31,7 +31,7 @@
                                 </p>
                             </div>
 
-                            <h1 class="text-2xl font-bold mt-2">
+                            <h1 class="text-2xl mt-2">
                                 {{$title}}
                             </h1>
 
@@ -59,10 +59,10 @@
                 <div x-data="{ openTab: 1 }" class="p-0 w-full">
                     <div class="">
                         <div class="mb-4 mt-4 w-[100%] mx-auto flex space-x-4 px-4 rounded-lg ">
-                            <button x-on:click="openTab = 1" :class="{ 'bg-black text-white': openTab === 1 }" class="flex-1 py-2 px-4 rounded-md shadow transition-all duration-300">
+                            <button x-on:click="openTab = 1" :class="{ 'bg-white text-black': openTab === 1 }" class="flex-1 py-2 px-4 rounded-0 shadow transition-all duration-300">
                                 {{ __('frontend.galleryImages') }}
                             </button>
-                            <button x-on:click="openTab = 2" :class="{ 'bg-black text-white': openTab === 2 }" class="flex-1 py-2 px-4 rounded-md shadow transition-all duration-300">
+                            <button x-on:click="openTab = 2" :class="{ 'bg-white text-black': openTab === 2 }" class="flex-1 py-2 px-4 rounded-0 shadow transition-all duration-300">
                                 {{ __('frontend.galleryVideos') }}
                             </button>
                         </div>
@@ -76,7 +76,7 @@
                                             @foreach($images as $image)
                                                 @if($image['type'] == 'image')
                                                 <div>
-                                                    <img src="{{ URL("https://mis.esnaad.com/uploads/gallery/".$id."/images/".$image['name'])}}" alt="ESNAAD Media Unit - Gallery - Image - {{$image['name']}}" class="object-cover w-auto mb-2 mx-auto rounded-md shadow h-[40vh]"> 
+                                                    <img src="{{ URL("https://mis.esnaad.com/uploads/gallery/".$id."/images/".$image['name'])}}" alt="ESNAAD Media Unit - Gallery - Image - {{$image['name']}}" class="object-cover w-auto mb-2 mx-auto rounded-0 shadow h-[40vh]"> 
                                                 </div>
                                                 @endif
                                             @endforeach
