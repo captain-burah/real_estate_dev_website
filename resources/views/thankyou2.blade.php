@@ -16,7 +16,7 @@
                 </h1>
 
                 <p class="text-white text-md font-bold xl:text-lg mt-5 px-4">
-                    One of our representatives will contact you soon on your enquiry
+                    Thank you for considering ESNAAD, where we transform dreams into reality. Whether you're seeking a new home or an investment opportunity, ESNAAD is dedicated to crafting spaces that go beyond the ordinary. Explore the possibilities with "The Spark by ESNAAD," where life sparks with endless opportunities.
                 </p>
 
             </div>

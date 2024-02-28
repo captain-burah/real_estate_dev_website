@@ -16,7 +16,7 @@
                 </h1>
 
                 <p class="text-white text-md font-bold xl:text-lg mt-5 px-4">
-                    Thank you for joining us! <br>Check your inbox for confirmation on your subscription
+                    Thank you for considering ESNAAD, where we transform dreams into reality. Whether you're seeking a new home or an investment opportunity, ESNAAD is dedicated to crafting spaces that go beyond the ordinary. Explore the possibilities with "The Spark by ESNAAD," where life sparks with endless opportunities.
                 </p>
 
             </div>
