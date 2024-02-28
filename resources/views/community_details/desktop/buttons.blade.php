@@ -14,7 +14,7 @@
 <div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-8 mx-auto">
     <div class="flex justify-center ...">
         <div class="mx-4">
-            <button onclick="openModal('mymodalcentered-community-register')"   class=" w-100 bg-gray-900 hover:bg-gray-700 border-gray-900 hover:border-gray-700 text-sm xl:text-base border-4 text-white py-1 px-2 rounded-0" type="button">
+            <button onclick="openModal('mymodalcentered-community-register')"   class=" w-100 bg-white hover:bg-black hover:text-white text-sm xl:text-base text-black py-2 px-2 rounded-0" type="button">
                 Register Your Interest
             </button>
         </div>
@@ -25,7 +25,7 @@
                     preserveAspectRatio="xMidYMid meet">
 
                     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                    fill="#000000" stroke="none">
+                    fill="#fff" stroke="none">
                     <path d="M2495 4725 c-17 -9 -200 -185 -407 -393 -404 -405 -410 -412 -394
                     -496 8 -41 46 -90 87 -111 36 -19 102 -19 137 -1 15 8 128 116 252 240 124
                     124 228 226 232 226 5 0 8 -485 8 -1077 0 -1050 1 -1079 20 -1107 27 -41 87
