@@ -990,7 +990,11 @@ class FrontEndController extends Controller
             'authkey' => 'YOUR_SECRET_KEY'
         ])->get('www.mis.esnaad.com/api/v1/esnaad/gallery');
         $jsonData = $response->json();  
-        $date = $jsonData[0]['created_at'];
+
+        if($jsonData){
+            $date = $jsonData[0]['created_at'];
+
+        }
         // dd($date->format('dd/mm/yy'));
         // dd($jsonData[0]['created_at']);
 
