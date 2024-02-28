@@ -19,7 +19,7 @@
                     <div class="mx-auto px-0 ">
                         <div class="max-w-full cursor-pointer rounded-0 border p-0 shadow">
                             <div class="row">
-                                <div class="grid xl:grid-cols-7 lg:grid-cols-7 sm:grid-cols-7 gap-2 mb-5">
+                                <div class="grid xl:grid-cols-7 lg:grid-cols-7 sm:grid-cols-7 grid-cols-7 gap-2 mb-5">
                                     <div class="h-25">
                                         <p class="mt-4 pl-4 text-2xl text-center font-thin">
                                             @if($langSeg == 'ar')
@@ -32,8 +32,7 @@
                                     <div class="col-span-5 h-25 my-auto">
     
                                         
-    
-                                       
+
                                         <div class="mt-8 h-6 relative w-auto rounded-full overflow-hidden my-auto">
                                             <div class=" w-full h-full bg-gray-200 absolute "></div>
                                             <div class=" h-full bg-yellow-400 sm:bg-green-500 absolute" style="width:{{$growth}}%"><div class="h-full w-full mx-auto text-sm text-center pt-1 text-white font-bold"> &nbsp; &nbsp;</div></div>
