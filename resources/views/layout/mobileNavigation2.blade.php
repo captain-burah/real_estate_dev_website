@@ -6,7 +6,7 @@
     <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl">
 
       <div class="flex flex-row items-center justify-between p-4">
-        <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">
+        <a href="{{ url($langSeg.'/') }}" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">
           <img style="height: 30px !important;" class="px-2" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo-navbar">
         </a>
         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
