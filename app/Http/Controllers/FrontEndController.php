@@ -366,13 +366,13 @@ class FrontEndController extends Controller
     }
 
     public function ceo_msg($lang='') {
-        $jsonSEOData = $this->landingpageseos(8);
+        $jsonSEOData = $this->landingpageseos(7);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
         return view('ceo_msg', $this->data);
     }
 
     public function about($lang='') {
-        $jsonSEOData = $this->landingpageseos(9);
+        $jsonSEOData = $this->landingpageseos(8);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
         $this->data['long'] =  55.265547;
         $this->data['lat'] = 25.206984;
