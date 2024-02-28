@@ -214,7 +214,7 @@ class FrontEndController extends Controller
         // dd($jsonData);
 
 
-        $jsonSEOData = $this->landingpageseos(5);
+        $jsonSEOData = $this->landingpageseos(9);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
         return view('communities', $this->data);
     }
@@ -366,13 +366,13 @@ class FrontEndController extends Controller
     }
 
     public function ceo_msg($lang='') {
-        $jsonSEOData = $this->landingpageseos(3);
+        $jsonSEOData = $this->landingpageseos(8);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
         return view('ceo_msg', $this->data);
     }
 
     public function about($lang='') {
-        $jsonSEOData = $this->landingpageseos(3);
+        $jsonSEOData = $this->landingpageseos(9);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
         $this->data['long'] =  55.265547;
         $this->data['lat'] = 25.206984;
@@ -380,14 +380,14 @@ class FrontEndController extends Controller
     }
 
     public function contact($lang='') {
-        $jsonSEOData = $this->landingpageseos(4);
+        $jsonSEOData = $this->landingpageseos(6);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
         return view('contact', $this->data);
     }
 
 
     public function invest($lang='') {
-        $jsonSEOData = $this->landingpageseos(8);
+        $jsonSEOData = $this->landingpageseos(12);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         return view('invest_in_dubai', $this->data);
@@ -395,7 +395,7 @@ class FrontEndController extends Controller
 
 
     public function constructions($lang='') {
-        $jsonSEOData = $this->landingpageseos(6);
+        $jsonSEOData = $this->landingpageseos(4);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         // CALL API FROM MIS
@@ -419,7 +419,7 @@ class FrontEndController extends Controller
 
 
     public function news($lang='') {
-        $jsonSEOData = $this->landingpageseos(7);
+        $jsonSEOData = $this->landingpageseos(3);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         // CALL API FROM MIS
@@ -527,6 +527,10 @@ class FrontEndController extends Controller
 
 
     public function agency_registration() {
+        $jsonSEOData = $this->landingpageseos(13);
+        
+        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+
         return view('brokers');
     }
 
@@ -875,7 +879,7 @@ class FrontEndController extends Controller
 
 
     public function careers($lang='') {
-        $jsonSEOData = $this->landingpageseos(11);
+        $jsonSEOData = $this->landingpageseos(10);
         
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
@@ -981,7 +985,7 @@ class FrontEndController extends Controller
 
     public function media_gallery($lang = ''){
         
-        $jsonSEOData = $this->landingpageseos(3);
+        $jsonSEOData = $this->landingpageseos(5);
 
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
@@ -1011,7 +1015,7 @@ class FrontEndController extends Controller
 
     public function media_blogs($lang = ''){
         
-        $jsonSEOData = $this->landingpageseos(4);
+        $jsonSEOData = $this->landingpageseos(11);
 
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
