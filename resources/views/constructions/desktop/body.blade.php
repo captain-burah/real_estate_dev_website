@@ -19,7 +19,7 @@
                     <div class="mx-auto px-0 ">
                         <div class="max-w-full cursor-pointer rounded-0 border p-0 shadow">
                             <div class="row">
-                                <div class="grid xl:grid-cols-7 lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5">
+                                <div class="grid xl:grid-cols-7 lg:grid-cols-7 sm:grid-cols-7 gap-2 mb-5">
                                     <div class="h-25">
                                         <p class="mt-4 pl-4 text-2xl text-center font-thin">
                                             @if($langSeg == 'ar')
