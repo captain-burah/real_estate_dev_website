@@ -357,7 +357,7 @@ class FrontEndController extends Controller
                 'phone'     =>  $request->phone,
                 'country_code'   =>  $request->country_code
             ];
-            Mail::mailer('noreply')->to('leads@mis.esnaad.com')->send(new CommunityInquiry($data));
+            Mail::mailer('noreply')->to('customercare@esnaad.com')->send(new CommunityInquiry($data));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new CommunityInquiry($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -652,7 +652,7 @@ class FrontEndController extends Controller
             ];
 
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            Mail::mailer('noreply')->to('leads@mis.esnaad.com')->send(new SubscriptionInquiry($data));
+            Mail::mailer('noreply')->to('customercare@esnaad.com')->send(new SubscriptionInquiry($data));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
 
         } catch (\Exception $e) {
@@ -757,7 +757,7 @@ class FrontEndController extends Controller
             ];
 
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            Mail::mailer('noreply')->to('leads@mis.esnaad.com')->send(new SubscriptionInquiry($data));
+            Mail::mailer('noreply')->to('customercare@esnaad.com')->send(new SubscriptionInquiry($data));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -832,7 +832,7 @@ class FrontEndController extends Controller
                 'country_code'     =>  $request->country_code,
             ];
 
-            Mail::mailer('noreply')->to('leads@mis.esnaad.com')->send(new ProjectInquiry($data));
+            Mail::mailer('noreply')->to('customercare@esnaad.com')->send(new ProjectInquiry($data));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new ProjectInquiry($data));
 
         } catch (\Exception $e) {
@@ -862,8 +862,8 @@ class FrontEndController extends Controller
             ];
 
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            // Mail::mailer('noreply')->to('leads@mis.esnaad.com')->send(new SubscriptionInquiry($data));
-            Mail::mailer('noreply')->to('leads@mis.esnaad.com')->send(new ProjectBrochureDownload($data));
+            // Mail::mailer('noreply')->to('customercare@esnaad.com')->send(new SubscriptionInquiry($data));
+            Mail::mailer('noreply')->to('customercare@esnaad.com')->send(new ProjectBrochureDownload($data));
 
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -919,7 +919,7 @@ class FrontEndController extends Controller
 
             /**STAGE III */
             Mail::mailer('noreply')->send('emails.careerApplication', $data, function($message)use($data, $request) {
-                    $first_segment = $message->to(["admin@esnaad.com", "leads@mis.esnaad.com"])
+                    $first_segment = $message->to(["admin@esnaad.com", "customercare@esnaad.com"])
                         ->subject("Notification - Career Application");
                     
                     foreach($request->files as $file) {
