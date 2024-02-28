@@ -22,8 +22,8 @@
 
 <div class="mx-0 px-0 ">
     <div class="mx-0">
-        <button onclick="openModal('mymodalcentered-community-register')" class="w-full bg-white text-lg text-black py-4 px-2 rounded-0" type="button">
-            Register Your Interest
+        <button onclick="openModal('mymodalcentered-community-register')" class="w-full text-lg text-white border border-white py-4 px-2 rounded-0" type="button">
+            Register Your Interest!
         </button>
     </div>
 </div>

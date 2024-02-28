@@ -22,7 +22,7 @@
 
 <div class="mx-0 px-0 ">
     <div class="mx-0">
-        <button onclick="openModal('mymodalcentered-brochure-register')"   class="underline text-lg mx-auto w-full" type="button">
+        <button onclick="openModal('mymodalcentered-brochure-register')"   class="underline text-lg mx-auto w-full py-3 border border-white" type="button">
             {{ __('frontend.projectDownloadBrochure') }}
         </button>
 
