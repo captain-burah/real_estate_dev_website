@@ -309,7 +309,7 @@
 
 
 
-            <section class="" style="position: fixed; z-index: -10;  right: 0; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+            <section class="" style="position: fixed; z-index: -10;  right: 20px; margin-bottom: 20px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
                 <style>
                     .bounce2 {
                         display: inline-block;
@@ -353,7 +353,7 @@
 
                 <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
                     <a href="https://wa.link/pzf7z4"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Chat on WhatsApp">
-                        <img src="{{ asset('home/wa.png') }}" class="rounded-circle p-1" style="width: 60px; background-color: #000 !important; border-radius: 50% !important; float: right !important;" alt="Avatar" />
+                        <img src="{{ asset('sm/wa.png') }}" class="rounded-circle p-1" style="width: 70px; background-color: #000 !important; border-radius: 50% !important; float: right !important;" alt="Avatar" />
                     </a>		
                     
                 </div>

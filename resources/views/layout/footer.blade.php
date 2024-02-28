@@ -19,7 +19,7 @@
     @endnotmobile
 
     @tablet
-        <div class="block py-24 sm:py-8  text-gray-50 bg-footer" id="footer" style="visibility:hidden">
+        <div class="block py-24 sm:py-8  " id="footer" style="visibility:hidden">
             <div class="container mx-auto px-2 lg:px-8">
 
                 <!-- Footer Links -->
@@ -39,7 +39,7 @@
                                 <div class="flex my-8 w-full text-justify my-auto inline-block align-middle w-50">
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                                 <a href="{{ env('COMPANY_FB') }}" target="_blank" aria-label="esnaad-facebook" rel="canonical">
                                                     <img src="{{ asset('sm/fb.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                                 </a>
@@ -47,7 +47,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_IG') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
                                                 <img src="{{ asset('sm/ig.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -55,7 +55,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_TW') }}" target="_blank" aria-label="esnaad-x" rel="canonical">
                                                 <img src="{{ asset('sm/x.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -63,7 +63,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_IN') }}" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
                                                 <img src="{{ asset('sm/in.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -71,7 +71,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_WA')}}" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
                                                 <img src="{{ asset('sm/wa.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -215,7 +215,7 @@
     @endtablet
 
     @desktop
-        <div class="block py-12 sm:py-8  text-gray-50 bg-footer" id="footer" style="visibility:hidden">
+        <div class="block py-12 sm:py-8   " id="footer" style="visibility:hidden">
             <div class="container mx-auto px-2 lg:px-8">
 
                 <!-- Footer Links -->
@@ -235,7 +235,7 @@
                                 <div class="flex my-8 text-justify my-auto inline-block align-middle w-[50%]">
 
                                     <div class="flex-1">
-                                        <div class=" bg-footer rounded-3xl p-1">
+                                        <div class="  rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_FB') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
                                                 <img src="{{ asset('sm/fb.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -243,7 +243,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_IG') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
                                                 <img src="{{ asset('sm/ig.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -251,7 +251,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_TW') }}" target="_blank" aria-label="esnaad-x" rel="canonical">
                                                 <img src="{{ asset('sm/x.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -259,7 +259,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_IN') }}" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
                                                 <img src="{{ asset('sm/in.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -267,7 +267,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_WA')}}" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
                                                 <img src="{{ asset('sm/wa.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -414,7 +414,7 @@
     @enddesktop
 
     @mobile
-        <div class="block py-8 text-gray-50 bg-footer" id="footer" style="visibility:hidden">
+        <div class="block py-8 " id="footer" style="visibility:hidden">
             <div class="container mx-auto px-4"  @if($langSeg == 'ar') dir="RTL" @endif>
 
                 <!-- Footer Links -->
@@ -434,7 +434,7 @@
                                 <div class="flex justify-between my-8 text-justify my-auto inline-block align-middle ">
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_FB') }}" target="_blank" aria-label="esnaad-facebook" rel="canonical">
                                                 <img src="{{ asset('sm/fb.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -442,7 +442,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_IG') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
                                                 <img src="{{ asset('sm/ig.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -450,7 +450,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_TW') }}" target="_blank" aria-label="esnaad-x" rel="canonical">
                                                 <img src="{{ asset('sm/x.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -458,7 +458,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_IN') }}" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
                                                 <img src="{{ asset('sm/in.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
@@ -466,7 +466,7 @@
                                     </div>
 
                                     <div class="flex-1">
-                                        <div class="bg-footer rounded-3xl p-1">
+                                        <div class=" rounded-3xl p-1">
                                             <a href="{{ env('COMPANY_WA')}}" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
                                                 <img src="{{ asset('sm/wa.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>

@@ -43,8 +43,12 @@
             </div>
         </div>
         <div class="text-center py-4 sm:py-4 w-full mt-2">
-            <a href="{{ url('en/developments/'.$slug) }}" class="bg-white text-base text-black py-3 px-10 rounded-0">
+            {{-- <a href="{{ url('en/developments/'.$slug) }}" class="bg-white text-base text-black py-3 px-10 rounded-0">
                 Explore More
+            </a> --}}
+
+            <a href="javascript:void(0)" onclick="return false;" class="bg-white text-base text-black py-3 px-10 rounded-0">
+                Coming Soon
             </a>
         </div>
     </div>
