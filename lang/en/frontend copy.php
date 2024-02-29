@@ -195,7 +195,7 @@ return [
         /**
          * PROJECT PAGE
          */
-        "projectH" => "OUR DEVELOPMENTS",
+        "projectH" => "DEVELOPMENTS",
         "projectP" => "Our projects are a reflection of our commitment to excellence. From luxurious residential complexes to state-of-the-art commercial spaces, each project is designed with attention to detail and a focus on quality",
         
         

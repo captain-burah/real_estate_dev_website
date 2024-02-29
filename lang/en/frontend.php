@@ -27,7 +27,7 @@ return [
         "mobile_ourCompany" => "Our Company",
         "mobile_ceoMessageNav" => "CEO Message",
         "mobile_home" => "Home",
-        "mobile_developments" => "Our Developments",
+        "mobile_developments" => "Developments",
         "mobile_constructions" => "Constructions",
         "mobile_communities" => "Communities",
         "mobile_contact_us" => "Contact Us",
@@ -349,7 +349,7 @@ return [
         /**
          * PROJECT PAGE
          */
-        "projectH" => "OUR DEVELOPMENTS",
+        "projectH" => "DEVELOPMENTS",
         "projectP" => "ESNAAD boasts a diverse project portfolio, having successfully completed
                 numerous ventures. From boutique compounds to modern high-rises, each
                 project showcases our unwavering commitment to excellence.",
