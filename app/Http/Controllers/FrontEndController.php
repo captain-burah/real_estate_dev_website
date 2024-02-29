@@ -1025,12 +1025,12 @@ class FrontEndController extends Controller
         ])->get('www.mis.esnaad.com/api/v1/esnaad/blogs');
 
         $jsonData = $response->json();  
-        
-        $date = $jsonData[0]['created_at'];
+    
 
 
         if(count($jsonData) > 0){
             $this->data['available'] = '1';
+            $date = $jsonData[0]['created_at'];
         }
         
         // RETURN AS JSON
