@@ -2,7 +2,7 @@
 <div class=" md:container mx-auto md:px-4 my-8 ">
 
     @if( count($properties) > 1)
-        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5 ">
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5   ">
             @foreach($properties as $data)
                 <div>
                     <x-buy-card
