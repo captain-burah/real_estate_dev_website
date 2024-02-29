@@ -136,7 +136,7 @@
 
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex mx-auto no-underline 2xl:px-8 md:px-2">
-                    <x-nav-link href="{{ url($langSeg.'/projects') }}" aria-label="navbar-route" rel='canonical'>
+                    <x-nav-link href="{{ url($langSeg.'/developments') }}" aria-label="navbar-route" rel='canonical'>
                         {{ __('frontend.desktop_developments') }}
                     </x-nav-link>
                 </div>

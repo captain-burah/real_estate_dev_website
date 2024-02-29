@@ -38,7 +38,7 @@
           </div>
         </div>   
 
-        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 " style="background-color: #1C1C1C !important; color: #ccc !important;" href="{{ url($langSeg.'/projects') }}">{{ __('frontend.mobile_developments') }}</a>
+        <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 " style="background-color: #1C1C1C !important; color: #ccc !important;" href="{{ url($langSeg.'/developments') }}">{{ __('frontend.mobile_developments') }}</a>
         <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 " style="background-color: #1C1C1C !important; color: #ccc !important;" href="{{ url($langSeg.'/communities') }}">{{ __('frontend.mobile_communities') }}</a></li>
         <a class="px-4 py-2 mt-2 text-base font-base bg-transparent rounded-lg md:mt-0 md:ml-4 " style="background-color: #1C1C1C !important; color: #ccc !important;" href="{{ url($langSeg.'/invest-in-dubai') }}">{{ __('frontend.mobile_invest_in_dubai') }}</a>
         
