@@ -620,7 +620,7 @@ class FrontEndController extends Controller
 
             /**STAGE III */
             Mail::mailer('noreply')->send('emails.brokerReg', $data, function($message)use($data, $pdf, $request) {
-                    $first_segment = $message->to("registrations@broker.esnaad.com")
+                    $first_segment = $message->to("customercare@esnaad.onmicrosoft.com")
                         ->subject("ESNAAD Notification - Broker Registration")
                         ->attachData($pdf->output(), "Broker-registration-details.pdf");
                     
