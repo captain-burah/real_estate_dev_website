@@ -919,9 +919,6 @@ class FrontEndController extends Controller
 
 
         try{
-            /**STAGE II */
-            // $pdf = PDF::loadView('emails.pdf.brokerReg', $data);
-            // $pdf->getDomPDF()->getCanvas()->get_cpdf()->setEncryption("esnaad_12345", "admin_password");
 
             /**STAGE III */
             Mail::mailer('noreply')->send('emails.careerApplication', $data, function($message)use($data, $request) {

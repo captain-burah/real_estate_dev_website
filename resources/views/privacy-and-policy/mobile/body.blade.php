@@ -176,7 +176,7 @@
             <span style="background-color:transparent;color:#ccc;;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">For inquiries related to data access, correction, or information about our data protection policy and data types held, please address such inquiries to the Data Protection Officer for ESNAAD.</span></span>
         </p>
         <p style="line-height:1.7999999999999998;margin-bottom:0pt;margin-top:0pt;" dir="ltr">
-            <span style="background-color:transparent;color:#ccc;;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">For questions, comments, and requests related to this Privacy Policy Statement or complaints regarding how ESNAAD processes your Personal Data, please contact the Data Protection Officer at email: customercare@esnaad.onmicrosoft.com.</span></span>
+            <span style="background-color:transparent;color:#ccc;;"><span style="font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;">For questions, comments, and requests related to this Privacy Policy Statement or complaints regarding how ESNAAD processes your Personal Data, please contact the Data Protection Officer at email: customercare@esnaad.com.</span></span>
         </p>
         <p>
             &nbsp;

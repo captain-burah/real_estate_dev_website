@@ -186,7 +186,7 @@
                                         </svg>
                                         &nbsp;
                                         <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
-                                        customercare@esnaad.onmicrosoft.com
+                                        customercare@esnaad.com
                                     </div>
                                 </li>
                             </ul>
@@ -366,7 +366,7 @@
                                 <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
                                 <li class="text-md  my-2">
                                     <div class="inline-flex items-center" >
-                                        <a href="mailto:customercare@esnaad.onmicrosoft.com" class="inline-flex items-center">
+                                        <a href="mailto:customercare@esnaad.com" class="inline-flex items-center">
                                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                 width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
                                                 preserveAspectRatio="xMidYMid meet">
@@ -384,7 +384,7 @@
                                                 </g>
                                             </svg>
                                             &nbsp;
-                                            customercare@esnaad.onmicrosoft.com
+                                            customercare@esnaad.com
                                         </a>
                                     </div>
                                 </li>

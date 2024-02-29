@@ -67,7 +67,7 @@
                     <a href="mailto:{{env('COMPANY_EMAIL')}}" class="inline-flex items-center">
                         {{__('frontend.contactEmail')}}
                         &nbsp;
-                        customercare@esnaad.onmicrosoft.com
+                        customercare@esnaad.com
                     </a>
                 </p>
             </div>
