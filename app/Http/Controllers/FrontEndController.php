@@ -768,7 +768,7 @@ class FrontEndController extends Controller
         }
 
         // return redirect()->back()->with('success', 'Your inquiry has been submitted!');   
-        return redirect()->to('https://demo.esnaad.com/en/contact-us/thanks');
+        return redirect()->to('https://esnaad.com/en/contact-us/thanks');
 
         // try{           
 
