@@ -15,10 +15,10 @@
                     <h3 class="text-3xl font-thin">{{__('frontend.contactFormH')}}</h3>
                     <p class=" mb-4"> {{__('frontend.contactFormP')}}</p>
                     <input type="hidden" name="country_code" id="country_code">
-                    <input type="text" name="name" id="name" placeholder="{{__('frontend.formFullName')}}" class="border p-2  w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white">
-                    <input type="text" name="phone" id="phone" placeholder="{{__('frontend.formPhone')}}" class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white" style="text-indent: 40px;">
-                    <input type="email" name="email" id="email" placeholder="{{__('frontend.formEmail')}}" class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white mt-3">
-                    <textarea name="msg" id="" cols="10" rows="3" placeholder="{{__('frontend.formMsg')}}" class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white"></textarea>
+                    <input type="text" name="name" id="name" placeholder="{{__('frontend.formFullName')}}" required class="border p-2  w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white">
+                    <input type="text" name="phone" id="phone" placeholder="{{__('frontend.formPhone')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white" style="text-indent: 40px;">
+                    <input type="email" name="email" id="email" placeholder="{{__('frontend.formEmail')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white mt-3">
+                    <textarea name="msg" id="" cols="10" rows="3" placeholder="{{__('frontend.formMsg')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white"></textarea>
                     <button type="submit"  class="w-full mt-2 bg-white text-black p-3">{{__('frontend.formSubmit')}}</button>
                 </form>
             </div>

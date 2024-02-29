@@ -37,6 +37,7 @@ use Mail;
 use App\Mail\DemoEmail;
 use App\Mail\CommunityInquiry;
 use App\Mail\SubscriptionInquiry;
+use App\Mail\ContactUs;
 use App\Mail\verificationEmail;
 use App\Mail\ProjectInquiry;
 use App\Mail\BrokerRegistration;
@@ -760,8 +761,9 @@ class FrontEndController extends Controller
                 'country_code'     =>  $request->country_code,
             ];
 
+
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
+            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ContactUs($data));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
