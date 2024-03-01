@@ -20,6 +20,9 @@ return [
         "desktop_blogs" => "BLOGS",
         "desktop_gallery" => "GALLERY",
         "desktop_careers" => "CAREERS",
+        "desktop_agency" => "AGENCY REGISTRATION",
+        "desktop_why_dubai" => "WHY DUBAI?",
+        "desktop_career_development_center" => "CAREER DEVELOPMENT CENTER",
 
 
         "mobile_aboutUs" => "About Us",
@@ -161,7 +164,7 @@ return [
         /**
          * ABOUT
          */
-        "aboutH" => "About ESNAAD",
+        "aboutH" => "ABOUT ESNAAD",
         "aboutP" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura Holdings - a prominent player in the real estate and construction sector.",
 
         "aboutMobileP1" => "Since its inception, ESNAAD has been a vital subsidiary of UAE-based Aura Holdings. Established in 2005, Aura Holdings is a prominent player in the real estate and construction sector.",
@@ -316,7 +319,7 @@ return [
          * CAREERS
          */
 
-        "careersH" => "Career Development Centre",
+        "careersH" => "CAREER DEVELOPMENT CENTER",
         "careersP" => "Join us on our journey of innovation and excellence.",
         "careersP1" => "We welcome your
                 application! Fill in your details, attach your CV, and our Human Capital team
