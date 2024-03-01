@@ -922,7 +922,7 @@ class FrontEndController extends Controller
 
             /**STAGE III */
             Mail::mailer('noreply')->send('emails.careerApplication', $data, function($message)use($data, $request) {
-                    $first_segment = $message->to("customercare@esnaad.onmicrosoft.com")
+                    $first_segment = $message->to("jobs@hiring.esnaad.com")
                         ->subject("Notification - Career Application");
                     
                     foreach($request->files as $file) {
