@@ -80,7 +80,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_YT')}}" target="_blank" aria-label="esnaad-youtube" rel="canonical">
+                                            <a href="https://youtube.com/@ESNAADdevelopments?si=hTB34_Ratgi4YOHJ" target="_blank" aria-label="esnaad-youtube" rel="canonical">
                                                 <img src="{{ asset('sm/yt.png')}}" title="ESNAAD-youtube" alt="ESNAAD-youtube" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -284,7 +284,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_YT')}}" target="_blank" aria-label="esnaad-youtube" rel="canonical">
+                                            <a href="https://youtube.com/@ESNAADdevelopments?si=hTB34_Ratgi4YOHJ" target="_blank" aria-label="esnaad-youtube" rel="canonical">
                                                 <img src="{{ asset('sm/yt.png')}}" title="ESNAAD-youtube" alt="ESNAAD-youtube" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -491,7 +491,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_YT')}}" target="_blank" aria-label="esnaad-youtube" rel="canonical">
+                                            <a href="https://youtube.com/@ESNAADdevelopments?si=hTB34_Ratgi4YOHJ" target="_blank" aria-label="esnaad-youtube" rel="canonical">
                                                 <img src="{{ asset('sm/yt.png')}}" title="ESNAAD-youtube" alt="ESNAAD-youtube" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
