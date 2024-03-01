@@ -14,7 +14,9 @@
             file:text-sm file:font-semibold
             file:bg-black file:text-gray-50
             file:cursor-pointer
-            "/>
+            "
+            required
+            />
         </td>
     </div>
 
@@ -28,7 +30,9 @@
             file:text-sm file:font-semibold
             file:bg-black file:text-gray-50
             file:cursor-pointer
-            "/>
+            "
+            required
+            />
         </td>
     </div>
 
@@ -41,7 +45,9 @@
             file:text-sm file:font-semibold
             file:bg-black file:text-gray-50
             file:cursor-pointer
-            "/>
+            "
+            required
+            />
         </td>
     </div>
 
@@ -54,7 +60,9 @@
             file:text-sm file:font-semibold
             file:bg-black file:text-gray-50
             file:cursor-pointer
-            "/>
+            "
+            required
+            />
         </td>
     </div>
 
@@ -67,7 +75,9 @@
             file:text-sm file:font-semibold
             file:bg-black file:text-gray-50
             file:cursor-pointer
-            "/>
+            "
+            required
+            />
             <span class=" text-sm">(* all four in one document)</span>
         </td>
     </div>

@@ -5,13 +5,13 @@
         </caption>
         <tr>
             <td style="width: 235px">Authorized Person Name</td>
-            <td><input type="text" name="authorized_p_name" id="authorized_p_name" placeholder="eg: James Smith" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="authorized_p_name" id="authorized_p_name" placeholder="eg: James Smith" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td>Country of Origin</td>
             <td>
-                <select id="authorized_p_country" name="authorized_p_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" >
+                <select id="authorized_p_country" name="authorized_p_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required>
                     <option class="bg-black" value="">Choose a country</option>
                     <option class="bg-black" value="Afghanistan">Afghanistan</option>
                     <option class="bg-black" value="Åland Islands">Åland Islands</option>
@@ -264,17 +264,17 @@
 
         <tr>
             <td>Passport Numner</td>
-            <td><input type="text" name="authorized_p_passport" id="authorized_p_passport" placeholder="ex: 123456789" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="authorized_p_passport" id="authorized_p_passport" placeholder="ex: 123456789" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td>Designation / Position</td>
-            <td><input type="text" name="authorized_p_position" id="authorized_p_position" placeholder="ex: Managing Director" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="authorized_p_position" id="authorized_p_position" placeholder="ex: Managing Director" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td>Email</td>
-            <td><input type="text" name="authorized_p_email" id="authorized_p_email" placeholder="ex: company@domain.com" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="authorized_p_email" id="authorized_p_email" placeholder="ex: company@domain.com" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
@@ -499,18 +499,18 @@
                         <option class="bg-black" data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                     </optgroup>
                 </select>
-                <input type="text" name="authorized_p_contact" id="authorized_p_contact" placeholder="ex: 501234567" class="border  w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" >
+                <input type="text" name="authorized_p_contact" id="authorized_p_contact" placeholder="ex: 501234567" class="border  w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required>
             </td>
         </tr>
 
         <tr>
             <td>Address</td>
-            <td><input type="text" name="authorized_p_address" id="authorized_p_address" placeholder="ex: No. 580, Whiff Oaf Lane, Dubai, United Arab Emirates" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="authorized_p_address" id="authorized_p_address" placeholder="ex: No. 580, Whiff Oaf Lane, Dubai, United Arab Emirates" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td>City</td>
-            <td><input type="text" name="authorized_p_city" id="authorized_p_city" placeholder="ex: City" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="authorized_p_city" id="authorized_p_city" placeholder="ex: City" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
         
     </tbody>

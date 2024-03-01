@@ -6,18 +6,18 @@
 
         <tr>
             <td>Account / Beneficiary Name</td>
-            <td><input type="text" name="account_title" id="account_title" placeholder="ex: JASON SMITH" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="account_title" id="account_title" placeholder="ex: JASON SMITH" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td style="width: 235px !important">Bank Name</td>
-            <td><input type="text" name="bank_name" id="bank_name" placeholder="eg: ABC Financial Insitution." class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="bank_name" id="bank_name" placeholder="eg: ABC Financial Insitution." class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td>Bank Country</td>
             <td>
-                <select id="bank_country" name="bank_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" >
+                <select id="bank_country" name="bank_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required>
                     <option class="bg-black" value="">Choose a country</option>
                     <option class="bg-black" value="Afghanistan">Afghanistan</option>
                     <option class="bg-black" value="Åland Islands">Åland Islands</option>
@@ -270,22 +270,22 @@
 
         <tr>
             <td>Bank City</td>
-            <td><input type="text" name="bank_city" id="bank_city" placeholder="ex: Dubai" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="bank_city" id="bank_city" placeholder="ex: Dubai" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td>Account Number</td>
-            <td><input type="text" name="account_no" id="account_no" placeholder="ex: xxxx-xxxx-xxxx-xxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="account_no" id="account_no" placeholder="ex: xxxx-xxxx-xxxx-xxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td>IBAN Number</td>
-            <td><input type="text" name="iban" id="iban" placeholder="ex: xxxxxxxxxxxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="iban" id="iban" placeholder="ex: xxxxxxxxxxxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
             <td>SWIFT Code</td>
-            <td><input type="text" name="swift_code" id="swift_code" placeholder="ex: xxxxxxxxxxxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" ></td>
+            <td><input type="text" name="swift_code" id="swift_code" placeholder="ex: xxxxxxxxxxxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
     </tbody>
 </table>

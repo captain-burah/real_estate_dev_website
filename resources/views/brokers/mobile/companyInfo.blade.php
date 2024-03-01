@@ -5,13 +5,13 @@
 
     <div>
         <td>Company Name</td>
-        <td class="w-full"><input type="text" name="company_name" id="company_name" placeholder="Company Name" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td class="w-full"><input type="text" name="company_name" id="company_name" placeholder="Company Name" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
     
     <div>
         <td>Company Type</td>
         <td class="w-full">
-            <select id="countries" name="bank_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white">
+            <select id="countries" name="bank_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required>
                 <option class="bg-black" value="">Choose</option>
                 <option class="bg-black" value="Limited Liability Company (LLC)">Limited Liability Company (LLC)</option>
                 <option class="bg-black" value="Partnerships">Partnerships</option>
@@ -25,43 +25,43 @@
     
     <div>
         <td>Trade License Number</td>
-        <td><input type="text" name="trade_license" id="trade_license" placeholder="Trade License Number" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="text" name="trade_license" id="trade_license" placeholder="Trade License Number" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
         <td>Trade Licencse Expiry</td>
-        <td><input type="date" name="trade_license_expiry" id="trade_license_expiry" min="2024-01-01" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="date" name="trade_license_expiry" id="trade_license_expiry" min="2024-01-01" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
         <td>RERA Certificate Number</td>
-        <td><input type="text" name="rera_certificate" id="rera_certificate" placeholder="ex: 123456" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="text" name="rera_certificate" id="rera_certificate" placeholder="ex: 123456" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
         <td>RERA Certificate Expiry</td>
-        <td><input type="date" name="rera_certificate_expiry" id="rera_certificate_expiry" min="2024-01-01" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="date" name="rera_certificate_expiry" id="rera_certificate_expiry" min="2024-01-01" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
         <td>P.O. Box No.</td>
-        <td><input type="text" name="company_po_box" id="company_po_box" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: 12345" maxlength="100"></td>
+        <td><input type="text" name="company_po_box" id="company_po_box" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: 12345" maxlength="100" required></td>
     </div>
 
     <div>
         <td>Company Address</td>
-        <td><input type="text" name="company_address" id="company_address" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: No. 580, Whiff Oaf Lane, Dubai, United Arab Emirates" maxlength="255"></td>
+        <td><input type="text" name="company_address" id="company_address" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: No. 580, Whiff Oaf Lane, Dubai, United Arab Emirates" maxlength="255" required></td>
     </div>
 
     <div>
         <td>Company Email</td>
-        <td><input type="text" name="company_email" id="company_email" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: company@domain.com" maxlength="100"></td>
+        <td><input type="text" name="company_email" id="company_email" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: company@domain.com" maxlength="100" required></td>
     </div>
 
     <div>
         <td>Company Land Line Number</td>
         <td>
-            <select name="company_country_code"  class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" >
+            <select name="company_country_code"  class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"  required>
                 <option data-countryCode="AE" value="971" Selected>United Arab Emirates (+971)</option>
                 <optgroup label="Other countries">
                     <option class="bg-black" data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -281,11 +281,11 @@
                 </optgroup>
             </select>
         </td>
-        <td><input type="number" name="company_landline" id="company_landline" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: 4 123 4567"></td>
+        <td><input type="number" name="company_landline" id="company_landline" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: 4 123 4567" required></td>
     </div>
 
     <div>
         <td>Company Website</td>
-        <td><input type="text" name="company_website" id="company_website" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: company@domain.com" maxlength="100"></td>
+        <td><input type="text" name="company_website" id="company_website" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: company@domain.com" maxlength="100" required></td>
     </div>
 </div>

@@ -5,13 +5,13 @@
 
     <div>
         <td style="width: 235px">Person Name</td>
-        <td><input type="text" name="authorized_p_name" id="authorized_p_name" placeholder="eg: ABC Company L.L.C." class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="text" name="authorized_p_name" id="authorized_p_name" placeholder="eg: ABC Company L.L.C." class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
         <td>Country of Origin</td>
         <td>
-            <select id="countries" name="authorized_p_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white">
+            <select id="countries" name="authorized_p_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required>
                 <option class="bg-black" value="">Choose a country</option>
                 <option class="bg-black" value="Afghanistan">Afghanistan</option>
                 <option class="bg-black" value="Åland Islands">Åland Islands</option>
@@ -264,17 +264,17 @@
 
     <div>
         <td>Passport Numner</td>
-        <td><input type="text" name="authorized_p_passport" id="authorized_p_passport" placeholder="ex: 123456789" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="text" name="authorized_p_passport" id="authorized_p_passport" placeholder="ex: 123456789" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
         <td>Designation / Position</td>
-        <td><input type="text" name="authorized_p_position" id="authorized_p_position" placeholder="ex: Managing Director of ABC Company" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="text" name="authorized_p_position" id="authorized_p_position" placeholder="ex: Managing Director of ABC Company" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
         <td>Email</td>
-        <td><input type="text" name="authorized_p_email" id="authorized_p_email" placeholder="ex: someone@abc-company.com" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="text" name="authorized_p_email" id="authorized_p_email" placeholder="ex: someone@abc-company.com" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
@@ -500,17 +500,17 @@
                 </optgroup>
             </select>
         </td>
-        <td><input type="number" name="authorized_p_contact" id="authorized_p_contact" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: 4 123 4567"></td>
+        <td><input type="number" name="authorized_p_contact" id="authorized_p_contact" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="eg: 4 123 4567" required></td>
     </div>
     
     <div>
         <td>Address</td>
-        <td><input type="text" name="authorized_p_address" id="authorized_p_address" placeholder="ex: Aprt. 000, One Building, Two Street, Somewhere, UAE." class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="text" name="authorized_p_address" id="authorized_p_address" placeholder="ex: Aprt. 000, One Building, Two Street, Somewhere, UAE." class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 
     <div>
         <td>City</td>
-        <td><input type="text" name="authorized_p_city" id="authorized_p_city" placeholder="ex: some city" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"></td>
+        <td><input type="text" name="authorized_p_city" id="authorized_p_city" placeholder="ex: some city" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
     </div>
 </div>
 <input type="hidden" name="country_code" id="country_code">
