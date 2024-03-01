@@ -40,6 +40,7 @@ use App\Mail\SubscriptionInquiry;
 use App\Mail\ContactUs;
 use App\Mail\verificationEmail;
 use App\Mail\ProjectInquiry;
+use App\Mail\ThankYou;
 use App\Mail\BrokerRegistration;
 use App\Mail\ProjectBrochureDownload;
 use Validator;
@@ -358,8 +359,13 @@ class FrontEndController extends Controller
                 'phone'     =>  $request->phone,
                 'country_code'   =>  $request->country_code
             ];
+
+            $data2 = ['message' => '
+                Thank you for contacting ESNAAD Real Estate Development. We appreciate you reaching out and taking the time to register your interest. 
+                We have received your inquiry and a member of our team will be in touch with you shortly.'];
+
             Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new CommunityInquiry($data));
-            // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new CommunityInquiry($data));
+            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
@@ -406,7 +412,6 @@ class FrontEndController extends Controller
         $jsonData = $response->json();
         
         // RETURN AS JSON
-        // dd($jsonData);
         $this->data['response'] = $jsonData;
 
         if(count($jsonData) > 0){
@@ -612,7 +617,13 @@ class FrontEndController extends Controller
             'account_title'      =>  $request->account_title, 
         ];
 
+        $data2 = ['message' => '
+            Thank you for your interest in becoming a broker with ESNAAD Real Estate Development. We appreciate you choosing to submit your registration through our website.
+            We have received your application and are currently reviewing it. You will receive a follow-up email notifying you of the next steps in the registration process.
+        '];
 
+        Mail::mailer('noreply')->to($request->company_email)->send(new ThankYou($data2));
+        
         try{
             /**STAGE II */
             $pdf = PDF::loadView('emails.pdf.brokerReg', $data);
@@ -648,6 +659,11 @@ class FrontEndController extends Controller
 
 
     public function subscription_form($lang='', Request $request) {
+
+        $data2 = ['message' => "
+            Thanks for subscribing to our news letter! We're excited to welcome you to our community and share valuable content, updates, and special offers with you."
+        ];
+        Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data));
         
         try{
             $data = [
@@ -761,9 +777,13 @@ class FrontEndController extends Controller
                 'country_code'     =>  $request->country_code,
             ];
 
+            $data2 = ['message' => 'Thank you for contacting ESNAAD Real Estate Development. We appreciate you reaching out and taking the time to share your message. 
+            We have received your inquiry and a member of our team will be in touch with you shortly.'];
+
 
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
             Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ContactUs($data));
+            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -838,7 +858,11 @@ class FrontEndController extends Controller
                 'country_code'     =>  $request->country_code,
             ];
 
+            $data2 = ['message' => 'Thank you for contacting ESNAAD Real Estate Development. We appreciate you reaching out and taking the time to register your interest. 
+            We have received your inquiry and a member of our team will be in touch with you shortly.'];
+
             Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ProjectInquiry($data));
+            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new ProjectInquiry($data));
 
         } catch (\Exception $e) {
@@ -867,9 +891,13 @@ class FrontEndController extends Controller
                 'country_code'     =>  $request->country_code_brochure,
             ];
 
+            $data2 = ['message' => 'Thank you for contacting ESNAAD Real Estate Development. We appreciate you reaching out and taking the time to download our brochure. 
+            We have received your inquiry and a member of our team will be in touch with you shortly.'];
+
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
             // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
             Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ProjectBrochureDownload($data));
+            Mail::mailer('noreply')->to($request->email_brochure)->send(new ThankYou($data2));
 
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -917,6 +945,11 @@ class FrontEndController extends Controller
             'job'      =>  $request->applicant_job, 
         ];
 
+        $data2 = ['message' => '
+            Thank you for your interest in joining ESNAAD Real Estate Development! We appreciate you taking the time to submit your application.
+            We have received your application and resume, and it is currently under review by our recruiting team.'];
+
+        Mail::mailer('noreply')->to($request->applicant_email)->send(new ThankYou($data));
 
         try{
 
