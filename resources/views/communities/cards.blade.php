@@ -14,7 +14,7 @@
     <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-4 mb-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
-            @foreach($response as $data)            
+            {{-- @foreach($response as $data)             --}}
                 <?php
                     $id = $data['id'];
                     $name = $data['title'];
@@ -67,7 +67,7 @@
                     </div>
                     
                 </div>
-            @endforeach
+            {{-- @endforeach --}}
         </div>
     </section>
 </div>
