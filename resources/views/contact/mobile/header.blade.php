@@ -63,13 +63,13 @@
                         {{__('frontend.contactPhone')}} 
                     </a>
                 </p>
-                <p class="w-[75%] mx-auto text-white font-base leading-8 text-lg text-center">
+                {{-- <p class="w-[75%] mx-auto text-white font-base leading-8 text-lg text-center">
                     <a href="mailto:{{env('COMPANY_EMAIL')}}" class="inline-flex items-center">
                         {{__('frontend.contactEmail')}}
                         &nbsp;
                         customercare@esnaad.com
                     </a>
-                </p>
+                </p> --}}
             </div>
         </div>
     </div>
