@@ -1,4 +1,4 @@
-@if(isset($available))
+{{-- @if(isset($available)) --}}
     <div class="sm:container sm:mx-auto sm:px-4 my-4 sm:my-4 mx-auto">
         <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-2 mx-4 mb-5">
 
@@ -48,4 +48,4 @@
             {{-- @endforeach --}}
         </div>
     </div>
-@endif
+{{-- @endif --}}
