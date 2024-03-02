@@ -336,7 +336,7 @@ class FrontEndController extends Controller
         // RETURN AS JSON
         $this->data['response'] = $jsonData;
 
-        if(count($jsonData) > 0){
+        if(count($jsonData[0]) > 0){
             $this->data['available'] = '1';
         }
 
@@ -726,7 +726,7 @@ class FrontEndController extends Controller
             $url = 'https://mis.esnaad.com/api/email-subscription-v3';
 
             curl_setopt_array($curl, array(
-                CURLOPT_URL => $url,    
+                CURLOPT_URL => $url,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,
@@ -757,15 +757,15 @@ class FrontEndController extends Controller
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
-        
     }
 
 
 
 
     public function contact_form_post($lang='', Request $request) {
+        
         $tel = $request->country_code + $request->phone;
-        // dd($tel);
+
         try{
             
             $data = [
