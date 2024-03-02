@@ -30,9 +30,61 @@
         @if($route_name == "esnaad.home")
             <title>ESNAAD Real Estate Developments	</title>
             <meta name="description" content="Your premium real estate developer in Dubai. ESNAAD offers a diverse portfolio of prestige residential, commercial, hospitality, and retail spaces. Discover more." />
-        @elseif($route_name == "esnaad.home")
-            <title>ESNAAD Real Estate Developments	</title>
-            <meta name="description" content="Your premium real estate developer in Dubai. ESNAAD offers a diverse portfolio of prestige residential, commercial, hospitality, and retail spaces. Discover more." />
+        @elseif($route_name == "esnaad.about")
+            <title>ESNAAD Developments	</title>
+            <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
+
+        @elseif($route_name == "esnaad.ceo-msg")
+            <title>ESNAAD Developments Founder	</title>
+            <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
+
+        @elseif($route_name == "esnaad.about")
+            <title>ESNAAD Developments	</title>
+            <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
+
+        @elseif($route_name == "esnaad.communities.comingsoon")
+            <title>ESNAAD Developments	</title>
+            <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
+
+        @elseif($route_name == "esnaad.projects")
+            <title>Pioneering Innovation: Explore ESNAAD Real Estate Projects</title>
+            <meta name="description" content="Discover ESNAAD's transformative real estate projects, including the groundbreaking. Experience innovative design and find your dream property.	" />
+
+        @elseif($route_name == "esnaad.media_gallery")
+            <title>A Visual Journey: Experience the Beauty of ESNAAD Development</title>
+            <meta name="description" content="Immerse yourself in the captivating world of ESNAAD's developments through our gallery.	" />
+
+        @elseif($route_name == "esnaad.media_blogs")
+            <title>Media Center Blogs | ESNAAD Developer		</title>
+            <meta name="description" content="Gain valuable insights and explore the latest trends in the UAE real estate market through ESNAAD's informative blog.	" />
+
+        @elseif($route_name == "esnaad.invest_in_dubai")
+            <title>Unlock Investment Potential: Invest in Dubai Real Estate</title>
+            <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
+
+        @elseif($route_name == "esnaad.constructions")
+            <title>ESNAAD Developments	</title>
+            <meta name="description" content="Explore exceptional investment opportunities in Dubai with ESNAAD Real Estate Development. Discover a world of innovative projects and invest in the future of the UAE.	" />
+
+        @elseif($route_name == "esnaad.news")
+            <title>Media Center ESNAAD Developers</title>
+            <meta name="description" content="Stay informed about the latest developments and announcements from ESNAAD Real Estate Development	" />
+
+        @elseif($route_name == "website.terms-and-conditions")
+            <title>Terms & Conditions | ESNAAD Developments	</title>
+            <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
+        
+        @elseif($route_name == "website.privacy-and-policy")
+            <title>Privacy & Policy | ESNAAD Developments	</title>
+            <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
+        
+        @elseif($route_name == "agency.registration")
+            <title>Broker Registrations | ESNAAD Developments	</title>
+            <meta name="description" content="Partner with ESNAAD Real Estate Development by joining our broker program. Access exclusive opportunities, training, and support, shaping the future of UAE communities.	" />
+        
+            @elseif($route_name == "careers")
+            <title>ESNAAD Developers Careers		</title>
+            <meta name="description" content="Be part of shaping the future of UAE communities! Explore rewarding career opportunities at ESNAAD Real Estate Development	" />
         @endif
 
         <!-- Facebook -->
