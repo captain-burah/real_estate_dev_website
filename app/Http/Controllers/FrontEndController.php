@@ -200,19 +200,19 @@ class FrontEndController extends Controller
 
     public function communities($lang='') {
         
-        $response = Http::withHeaders([
-            'authkey' => 'YOUR_SECRET_KEY'
-        ])->get('www.mis.esnaad.com/api/v1/esnaad/communities-index');
-        $jsonData = $response->json();
+        // $response = Http::withHeaders([
+        //     'authkey' => 'YOUR_SECRET_KEY'
+        // ])->get('www.mis.esnaad.com/api/v1/esnaad/communities-index');
+        // $jsonData = $response->json();
 
         // dd($jsonData);
         
         // RETURN AS JSON
-        $this->data['response'] = $jsonData;
+        // $this->data['response'] = $jsonData;
 
-        if(count($jsonData) > 0){
-            $this->data['available'] = '1';
-        }
+        // if(count($jsonData) > 0){
+        //     $this->data['available'] = '1';
+        // }
 
         // dd($jsonData);
 
