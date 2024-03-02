@@ -1,5 +1,5 @@
 {{-- @if(isset($available)) --}}
-    <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto min-h-screen py-8">
+    <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto  py-8">
         <div class="grid xl:grid-cols-1 lg:grid-cols-1 sm:grid-cols-1 gap-2 mb-5">
 
             {{-- @foreach($response as $data)
