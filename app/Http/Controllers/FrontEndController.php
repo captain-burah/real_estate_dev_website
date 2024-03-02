@@ -676,7 +676,7 @@ class FrontEndController extends Controller
         $data2 = ['message' => "
             Thanks for subscribing to our news letter! We're excited to welcome you to our community and share valuable content, updates, and special offers with you."
         ];
-        Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data));
+        Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
         
         try{
             $data = [

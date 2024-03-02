@@ -87,13 +87,13 @@
         <div class="container mx-auto px-2 lg:px-8">
 
             <div class="row mb-5">
-                <h2 class="text-3xl font-base" >
+                <h2 class="text-4xl font-base">
                     {{__('frontend.footerFormH2')}}
                 </h2>
-                <p id="submitIncompleteMobile" class="leading-8 text-justify">
+                <p class="w-full" id="submitIncomplete">
                     {{__('frontend.footerFormP1')}}
                 </p>
-                <p class="my-5 leading-8 text-justify" id="submitCompleteMobile">
+                <p class="w-full my-10" id="submitComplete">
                     {{__('frontend.footerFormP2')}}
                 </p>
             </div>
@@ -107,11 +107,11 @@
                         <input type="hidden" name="ip_address" value="{{$ip_address}}">
 
                         <div class="border-b border-white my-2">
-                            <input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-white focus:ring-white" type="text" placeholder="{{__('frontend.formFullName')}}" name="name" aria-label="Full name">
+                            <input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-white focus:ring-white" type="text" placeholder="{{__('frontend.formFullName')}}" name="name" aria-label="Full name" required>
                         </div>
 
                         <div class="border-b border-white my-2">
-                            <input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-white focus:ring-white" type="email" placeholder="{{__('frontend.formEmail')}}" name="email" aria-label="Email">
+                            <input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none focus:border-white focus:ring-white" type="email" placeholder="{{__('frontend.formEmail')}}" name="email" aria-label="Email" required>
                         </div>
 
                         <div class=" my-2">
@@ -120,6 +120,10 @@
                             </button>
                             <button type="button" id="submitButtonMobileDone" class=" w-full text-sm text-black text-white px-2 py-2  border border-white rounded-0">
                                 {{__('frontend.footerFormSubmissionCompleted')}}
+                            </button>
+                            <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
+                                <div id="loading"></div>
+                                Verifying
                             </button>
                         </div>
                     </div>
@@ -261,9 +265,11 @@
     $('#subscriptionFormMobile').on('submit', function(e){
         e.preventDefault();
 
-        if (localStorage.getItem('subscriptionSubmitted')) {
-            // alert('You have already submitted the form');
-            
+        document.getElementById("submitButtonMobile").disabled = true;
+        document.getElementById('submitButtonMobile').style.display = 'none';
+        document.getElementById('submitVerifying').style.display = 'inline-block';
+
+        if (localStorage.getItem('subscriptionSubmitted')) {            
             return;
         }
 
@@ -271,7 +277,8 @@
 
         $.ajaxSetup({
             headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                'authkey': 'YOUR_SECRET_KEY',
             }
         });
 
@@ -286,27 +293,17 @@
             success:function(data)
             {
                 if($.isEmptyObject(data.error)){
-                    sessionStorage.removeItem("form_submission");
-                    sessionStorage.setItem("form_submission", "true");
-                    // modalClose('mymodalcentered');
-                    $('#submitCompleteMobile').show();
-                    $('#submitIncompleteMobile').hide();
+                    setCookie("_ivqLdoulWNJqMw", true, 1);
                     $('#submitButtonMobileDone').show();
                     $('#submitButtonMobile').hide();  
-                    $('#subscriptionFormMobile').hide();
                     document.location.href = 'en/subscription/thanks';
                 }else{
                     printErrorMsg(data.error);
                     alert(data.error);
-
                 }
             }
         });
 
-        // Simulate a successful submission
-        // alert('Subscription successful!');
-
-        // Disable the form to prevent further submissions
         disableFormMobile();
 
         // Store the submission status in local storage
