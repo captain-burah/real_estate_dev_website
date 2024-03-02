@@ -299,16 +299,16 @@
                             </p>
 
                             <ul class="list-none footer-li" style="padding-left: 0px !important;">
-                                <li class="text-md  my-2">
+                                <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/about-us') }}" aria-label="about-us" rel="canonical">{{ __('frontend.footerLinksAboutEsnaad') }}</a>
                                 </li>
-                                <li class="text-md  my-2">
+                                <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/invest-in-dubai') }}" aria-label="invest-in-dubai" rel="canonical">{{ __('frontend.footerLinksWhyInvest') }}</a>
                                 </li>
-                                <li class="text-md  my-2" aria-label="">
+                                <li class="text-md  my-3" aria-label="">
                                     <a href="{{ URL($langSeg.'/agency-registration') }}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
                                 </li>
-                                <li class="text-md  my-2" aria-label="">
+                                <li class="text-md  my-3" aria-label="">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="career-registration" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
                                 {{-- <li class="text-md  my-2">
@@ -405,9 +405,7 @@
                             </ul>
                         </div>
 
-
                     </div>
-
                 </div>
 
                 <div class="col-span-2 mx-auto">

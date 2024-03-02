@@ -15,7 +15,7 @@
             $nameBeforeSlug = $segments[count($segments) - 2];
         ?>
         
-        @if($nameBeforeSlug == 'developments')
+        {{-- @if($nameBeforeSlug == 'developments')
             <title>{{$jsonSEOData['title_en']}}</title>
             <meta name="description" content="{{$jsonSEOData['description_en']}}" />
             <meta name="keywords" content="{{$jsonSEOData['keywords_en']}}" />
@@ -25,6 +25,14 @@
                 <meta name="description" content="{{$jsonSEOData['description_en']}}" />
                 <meta name="keywords" content="{{$jsonSEOData['keywords_en']}}" />
             @endif
+        @endif --}}
+
+        @if($route_name == "esnaad.home")
+            <title>ESNAAD Real Estate Developments	</title>
+            <meta name="description" content="Your premium real estate developer in Dubai. ESNAAD offers a diverse portfolio of prestige residential, commercial, hospitality, and retail spaces. Discover more." />
+        @elseif($route_name == "esnaad.home")
+            <title>ESNAAD Real Estate Developments	</title>
+            <meta name="description" content="Your premium real estate developer in Dubai. ESNAAD offers a diverse portfolio of prestige residential, commercial, hospitality, and retail spaces. Discover more." />
         @endif
 
         <!-- Facebook -->
