@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="mt-5"  @if($langSeg == 'ar') dir="RTL" @endif>
-                            <p class="text-md font-bold text-gray-800">
+                            <p class="text-md  text-gray-800">
                                 {{ __('frontend.footerLinks') }}
                             </p>
 
@@ -118,7 +118,7 @@
                         </div>
 
                         <div class="mt-5"  @if($langSeg == 'ar') dir="RTL" @endif>
-                            <p class="text-md font-bold text-gray-800">
+                            <p class="text-md  text-gray-800">
                                 {{ __('frontend.footerContacts') }}
                             </p>
 
@@ -194,7 +194,7 @@
                                         </svg>
                                         &nbsp;
                                         <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
-                                        customercare@esnaad.com
+                                        Contact Us
                                     </div>
                                 </li>
                             </ul>
@@ -294,7 +294,7 @@
                         </div>
 
                         <div @if($langSeg == 'ar') dir="RTL" @endif>
-                            <p class="text-md font-bold ">
+                            <p class="text-md  ">
                                 {{ __('frontend.footerLinks') }}
                             </p>
 
@@ -319,7 +319,7 @@
                         </div>
 
                         <div @if($langSeg == 'ar') dir="RTL" @endif>
-                            <p class="text-md font-bold ">
+                            <p class="text-md  ">
                                 {{ __('frontend.footerContacts') }}
                             </p>
 
@@ -382,7 +382,7 @@
                                 <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
                                 <li class="text-md  my-2">
                                     <div class="inline-flex items-center" >
-                                        <a href="mailto:customercare@esnaad.com" class="inline-flex items-center">
+                                        <a href="https://esnaad.com/en/contact" class="inline-flex items-center">
                                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                 width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
                                                 preserveAspectRatio="xMidYMid meet">
@@ -400,7 +400,7 @@
                                                 </g>
                                             </svg>
                                             &nbsp;
-                                            customercare@esnaad.com
+                                            Contact Us
                                         </a>
                                     </div>
                                 </li>

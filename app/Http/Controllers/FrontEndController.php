@@ -341,10 +341,9 @@ class FrontEndController extends Controller
 
         $response = Http::withHeaders([
             'authkey' => 'YOUR_SECRET_KEY'
-        ])->get('www.mis.esnaad.com/api/v1/esnaad/developments');
+        ])->get('http://www.mis.esnaad.com/api/v1/esnaad/developments');
 
         sleep(5);
-
 
         $jsonData = $response->json();
         
@@ -356,8 +355,6 @@ class FrontEndController extends Controller
         } else {
             $this->data['available'] = '0';
         }
-
-        // dd($this->data);
 
         $jsonSEOData = $this->landingpageseos(2);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
