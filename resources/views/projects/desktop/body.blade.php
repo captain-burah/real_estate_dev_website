@@ -87,7 +87,7 @@
                                                 width="160px" height="auto"
                                                 src="{{asset('front/project/the-spark-by-esnaad-logo.png')}}"
                                                 alt="esnaad-project-card"
-                                                title="the-spark-by-esnaad-thumbnail}"
+                                                title="the-spark-by-esnaad-thumbnail"
                                                 loading="lazy"
                                                 height="auto"
                                                 width="auto"

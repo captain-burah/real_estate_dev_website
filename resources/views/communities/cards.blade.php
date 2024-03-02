@@ -34,9 +34,10 @@
                         --}}
 
                         <img class="h-full w-full object-cover "
-                            src="https://mis.esnaad.com/uploads/communities/{{$id}}/thumbnail/{{$thumbnail}}"
-                            alt="esnaad-community-{{$name}}"
-                            title="esnaad-community-{{$name}}"
+                            {{-- src="https://mis.esnaad.com/uploads/communities/{{$id}}/thumbnail/{{$thumbnail}}" --}}
+                            src="{{asset('front/communities/1.png')}}"
+                            alt="esnaad-community"
+                            title="esnaad-community"
                             height="auto"
                             width="100%"
                             loading="lazy"
@@ -57,8 +58,9 @@
                                 {{$address}}
                             @endif    
                         </p> --}}
+                        
                         <div class="text-center py-4 sm:py-4 w-full mt-2">
-                            <a href="{{ url('en/communities/'.$slug) }}" class="bg-white text-base text-black py-3 px-10 rounded-0">
+                            <a href="https://www.esnaad.com/en/communities/mohammed-bin-rashid-city" class="bg-white text-base text-black py-3 px-10 rounded-0">
                                 {{ __('frontend.exploreMore') }}
                             </a>
                         </div>
