@@ -110,9 +110,9 @@
                                 <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="broker-registration" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
-                                <li class="text-md  my-2">
+                                {{-- <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/contact') }}" aria-label="contact-us" rel="canonical">{{ __('frontend.footerLinksContact') }}</a>
-                                </li>
+                                </li> --}}
 
                             </ul>
                         </div>
@@ -194,7 +194,7 @@
                                         </svg>
                                         &nbsp;
                                         <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
-                                        Contact Us
+                                        Email Us
                                     </div>
                                 </li>
                             </ul>
@@ -311,10 +311,9 @@
                                 <li class="text-md  my-2" aria-label="">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="career-registration" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
-                                <li class="text-md  my-2">
+                                {{-- <li class="text-md  my-2">
                                     <a href="{{ URL($langSeg.'/contact') }}" aria-label="contact-us" rel="canonical">{{ __('frontend.footerLinksContact') }}</a>
-                                </li>
-
+                                </li> --}}
                             </ul>
                         </div>
 
@@ -322,7 +321,6 @@
                             <p class="text-md  ">
                                 {{ __('frontend.footerContacts') }}
                             </p>
-
                             <ul class="list-none footer-li leading-10" style="padding-left: 0px !important;">
                                 <li class="text-md  my-2">
                                     <div  class="inline-flex items-center">
@@ -400,7 +398,7 @@
                                                 </g>
                                             </svg>
                                             &nbsp;
-                                            Contact Us
+                                            Email Us
                                         </a>
                                     </div>
                                 </li>
@@ -525,9 +523,9 @@
                                 </li>
                                 
                                 
-                                <li class="text-md  my-3">
+                                {{-- <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/contact') }}" aria-label="contact-us" rel="canonical">{{ __('frontend.footerLinksContact') }}</a>
-                                </li>
+                                </li> --}}
 
                                 <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="careers" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
