@@ -353,6 +353,8 @@ class FrontEndController extends Controller
         if($jsonData){
             $this->data['available'] = '1';
             $this->data['response'] = $jsonData;
+        } else {
+            $this->data['available'] = '0';
         }
 
         // dd($this->data);
