@@ -15,7 +15,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
             {{-- @foreach($response as $data)             --}}
-                <?php
+                {{-- <?php
                     $id = $data['id'];
                     $name = $data['title'];
                     $namear = $data['title_ar'];
@@ -23,7 +23,7 @@
                     $addressar = $data['address_ar'];
                     $slug = $data['slug_link'];
                     $thumbnail = $data['thumbnail'];
-                ?>
+                ?> --}}
                 <div class="full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center shadow">
                     <div class="relative overflow-hidden rounded-0 ">
                         {{--
