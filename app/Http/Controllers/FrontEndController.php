@@ -51,6 +51,7 @@ use Illuminate\Support\Facades\Http;
 
 use Illuminate\Http\Client\RequestException;
 use GuzzleHttp\Client;
+use App\Jobs\DevelopmentApi;
 
 use Response;
 
@@ -327,23 +328,34 @@ class FrontEndController extends Controller
 
     public function projects($lang='') {
 
+        // DevelopmentApi::dispatch();
+
+        // Rest of your code here, doesn't depend on the API data
+
+        // return response()->json([
+        //     'message' => 'API call initiated, data will be processed in the background.'
+        // ]);
+
+
+
 
         $response = Http::withHeaders([
             'authkey' => 'YOUR_SECRET_KEY'
         ])->get('www.mis.esnaad.com/api/v1/esnaad/developments');
+
+        sleep(5);
+
+
         $jsonData = $response->json();
         
-        // RETURN AS JSON
         $this->data['response'] = $jsonData;
-
-        // dd($jsonData);
 
         if($jsonData){
             $this->data['available'] = '1';
+            $this->data['response'] = $jsonData;
         }
 
-        // dd($jsonData);
-
+        // dd($this->data);
 
         $jsonSEOData = $this->landingpageseos(2);
         $this->data['jsonSEOData'] =  $jsonSEOData->json();

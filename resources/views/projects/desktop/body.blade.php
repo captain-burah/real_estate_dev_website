@@ -55,6 +55,7 @@
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6" @if($langSeg == 'ar') dir="rtl" @endif>
                         <div>
+                            @if($available == '1')
                             @foreach($response as $data)
                                 <?php
                                     $id = $data['id'];
@@ -79,6 +80,7 @@
                                     :header="$header"
                                 ></x-new-project-desktop>
                             @endforeach
+                            @endif
                         </div>
                     </div>
                 </section>
