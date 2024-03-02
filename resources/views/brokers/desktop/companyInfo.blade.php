@@ -31,7 +31,17 @@
 
         <tr>
             <td>Trade Licencse Expiry</td>
-            <td><input type="date" name="trade_license_expiry" id="trade_license_expiry" min="2024-01-01" class=" w-full bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
+            <td>
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </div>
+                    <input datepicker type="text" name="trade_license_expiry" id="trade_license_expiry" min="2024-01-01" class="w-full bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="dd/mm/yyy" style="text-indent: 40px">
+                </div>
+            </td>
+            {{-- <td><input type="date" placeholder="dd/mm/yyyy"   oninput="this.value = DDMMYYYY(this.value, event)"  name="trade_license_expiry" id="trade_license_expiry" min="2024-01-01" class=" w-full bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td> --}}
         </tr>
 
         <tr>
@@ -41,7 +51,17 @@
 
         <tr>
             <td>RERA Certificate Expiry</td>
-            <td><input type="date" name="rera_certificate_expiry" id="rera_certificate_expiry" min="2024-01-01" class=" w-full bg-transparent focus:outline-none focus:border-white focus:ring-white"  required></td>
+            <td>
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </div>
+                    <input datepicker type="text" name="rera_certificate_expiry" id="rera_certificate_expiry" min="2024-01-01" class="w-full bg-transparent focus:outline-none focus:border-white focus:ring-white" placeholder="dd/mm/yyy" style="text-indent: 40px">
+                </div>
+            </td>
+            {{-- <td><input type="date" name="rera_certificate_expiry" id="rera_certificate_expiry" min="2024-01-01" class=" w-full bg-transparent focus:outline-none focus:border-white focus:ring-white"  required></td> --}}
         </tr>
 
         <tr>
@@ -290,3 +310,20 @@
         </tr>
     </tbody>
 </table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+
+<script>
+    function DDMMYYYY(value, event) {
+      let newValue = value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+    
+      const dayOrMonth = (index) => index % 2 === 1 && index < 4;
+    
+      // on delete key.  
+      if (!event.data) {
+        return value;
+      }
+    
+      return newValue.split('').map((v, i) => dayOrMonth(i) ? v + '/' : v).join('');;
+    }
+</script>
