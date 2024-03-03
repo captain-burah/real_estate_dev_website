@@ -66,9 +66,9 @@
             @include('community_details.desktop.body')
         </section>
 
-        <section class="my-4">
+        {{-- <section class="my-4">
             @include('community_details.desktop.buttons')
-        </section>
+        </section> --}}
 
         <section class="my-0" id="project_detail_map_section">
             @include('community_details.desktop.map')
