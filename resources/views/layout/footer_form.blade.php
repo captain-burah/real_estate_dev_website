@@ -239,7 +239,7 @@
                     $('#submitButtonDone').show();
                     $('#submitButton').hide();  
                     $('#subscriptionForm').hide();
-                    document.location.href = 'en/subscription/thanks';
+                    document.location.href = '/en/subscription/thanks';
 
                 }else{
                     printErrorMsg(data.error);
@@ -247,15 +247,6 @@
                 }
             }
         });
-
-        // Simulate a successful submission
-        // alert('Subscription successful!');
-
-        // Disable the form to prevent further submissions
-        // disableForm();
-
-        // Store the submission status in local storage
-        // localStorage.setItem('subscriptionSubmitted', 'true');
     });
 
 
@@ -268,10 +259,6 @@
         document.getElementById("submitButtonMobile").disabled = true;
         document.getElementById('submitButtonMobile').style.display = 'none';
         document.getElementById('submitVerifying').style.display = 'inline-block';
-
-        if (localStorage.getItem('subscriptionSubmitted')) {            
-            return;
-        }
 
         var formData = new FormData(this);
 
@@ -296,7 +283,7 @@
                     setCookie("_ivqLdoulWNJqMw", true, 1);
                     $('#submitButtonMobileDone').show();
                     $('#submitButtonMobile').hide();  
-                    document.location.href = 'en/subscription/thanks';
+                    document.location.href = '/en/subscription/thanks';
                 }else{
                     printErrorMsg(data.error);
                     alert(data.error);

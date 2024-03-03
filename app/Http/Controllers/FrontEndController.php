@@ -673,10 +673,7 @@ class FrontEndController extends Controller
 
     public function subscription_form($lang='', Request $request) {
 
-        $data2 = ['message' => "
-            Thanks for subscribing to our news letter! We're excited to welcome you to our community and share valuable content, updates, and special offers with you."
-        ];
-        Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
+        
         
         try{
             $data = [
@@ -684,9 +681,13 @@ class FrontEndController extends Controller
                 'email'     =>  $request->email,
                 'ip'     =>  $request->ip_address
             ];
+            $data2 = ['message' => "
+                Thanks for subscribing to our news letter! We're excited to welcome you to our community and share valuable content, updates, and special offers with you."
+            ];
+            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
 
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
+            Mail::mailer('noreply')->to('web@edgerealty.ae')->send(new SubscriptionInquiry($data));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
 
         } catch (\Exception $e) {
@@ -794,10 +795,8 @@ class FrontEndController extends Controller
             We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
 
-            // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
             Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ContactUs($data));
             Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
-            // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
