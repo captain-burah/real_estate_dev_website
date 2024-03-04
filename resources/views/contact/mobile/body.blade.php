@@ -244,7 +244,7 @@
                 {{__('frontend.footerFormSubmissionCompleted')}}
             </button>
             
-            <button type="submit" id="contact_submit_verifying" hidden disabled class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
+            <button type="button" id="contact_submit_verifying" hidden disabled class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
                 Verifying
             </button>
 
@@ -289,19 +289,17 @@
                     return null; // Return null if the cookie is not found
                 };
                 if (getCookie('_oCddWSYLEGqG')) {
-                    $('#contact_submit_done').show();
-                    $('#contact_submit').hide(); 
-                } else {
-                    $('#contact_submit_done').hide();
-                    $('#contact_submit').show();
 
+                    document.getElementById("contact_submit").disabled = true;
+                    document.getElementById('contact_submit').style.display = 'none';
+                    document.getElementById('contact_submit_done').style.display = 'inline-block';
+                    document.getElementById("contact_submit_done").disabled = false;
+                    } else {
+                    document.getElementById("contact_submit_done").disabled = true;
+                    document.getElementById('contact_submit_done').style.display = 'none';
+                    document.getElementById('contact_submit').style.display = 'inline-block';
+                    document.getElementById("contact_submit").disabled = false;
                 };
-
-            // Check if the form has been submitted before
-            // if (localStorage.getItem('subscriptionSubmitted')) {
-            //     disableForm();
-            // }
-
             
 
             $('#contact-desktop-form').on('submit', function(e){

@@ -11,11 +11,16 @@
                 @endif
                 <form id="contact-desktop-form">
                     @csrf
-                    <div class="icon w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
+                    {{-- <div class="icon w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div> --}}
+                    
                     <h3 class="text-3xl font-thin">{{__('frontend.contactFormH')}}</h3>
+
                     <p class=" mb-4"> {{__('frontend.contactFormP')}}</p>
+                    
                     <input type="hidden" name="country_code" id="country_code">
+                    
                     <input type="text" name="name" id="name" placeholder="{{__('frontend.formFullName')}}" required class="border p-2  w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white">
+                    
                     <select name="country_code"  class="w-full border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white" >
                         <option data-countryCode="AE" value="971" Selected>United Arab Emirates (+971)</option>
                         <optgroup label="Other countries">
@@ -235,8 +240,11 @@
                             <option class="bg-black text-white" data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                         </optgroup>
                     </select>
+
                     <input type="tel" name="phone" placeholder="{{__('frontend.formPhone')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white">
+                    
                     <input type="email" name="email" id="email" placeholder="{{__('frontend.formEmail')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white mt-3">
+                    
                     <textarea name="msg" id="" cols="10" rows="3" placeholder="{{__('frontend.formMsg')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white"></textarea>
                     
                     <button type="submit" id="contact_submit"  class="w-full mt-2 bg-white text-black p-3">{{__('frontend.formSubmit')}}</button>
@@ -245,7 +253,7 @@
                         {{__('frontend.footerFormSubmissionCompleted')}}
                     </button>
                     
-                    <button type="submit" id="contact_submit_verifying" hidden disabled class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
+                    <button type="button" id="contact_submit_verifying" hidden disabled class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
                         Verifying
                     </button>
 
@@ -263,98 +271,99 @@
     <script>
 
         function setCookie(name, value, daysToExpire) {
-                    var expires = "";
-                    
-                    if (daysToExpire) {
-                        var date = new Date();
-                        date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
-                        expires = "; expires=" + date.toUTCString();
-                    }
-                    
-                    document.cookie = name + "=" + value + expires + "; path=/";
-                };
-
-                // Function to get a specific cookie by name
-                function getCookie(cookieName) {
-                    var name = cookieName + "=";
-                    var decodedCookie = decodeURIComponent(document.cookie);
-                    var cookieArray = decodedCookie.split(';');
-
-                    for (var i = 0; i < cookieArray.length; i++) {
-                        var cookie = cookieArray[i].trim();
-                        if (cookie.indexOf(name) === 0) {
-                            return cookie.substring(name.length, cookie.length);
-                        }
-                    }
-
-                    return null; // Return null if the cookie is not found
-                };
-                if (getCookie('_oCddWSYLEGqG')) {
-                    $('#contact_submit_done').show();
-                    $('#contact_submit').hide(); 
-                } else {
-                    $('#contact_submit_done').hide();
-                    $('#contact_submit').show();
-
-                };
-
-            // Check if the form has been submitted before
-            // if (localStorage.getItem('subscriptionSubmitted')) {
-            //     disableForm();
-            // }
-
+            var expires = "";
             
+            if (daysToExpire) {
+                var date = new Date();
+                date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            
+            document.cookie = name + "=" + value + expires + "; path=/";
+        };
 
-            $('#contact-desktop-form').on('submit', function(e){
-                e.preventDefault();
+        // Function to get a specific cookie by name
+        function getCookie(cookieName) {
+            var name = cookieName + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
 
-                document.getElementById("contact_submit").disabled = true;
-                document.getElementById('contact_submit').style.display = 'none';
-                document.getElementById('contact_submit_verifying').style.display = 'inline-block';
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i].trim();
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
 
-                var formData = new FormData(this);
+            return null; // Return null if the cookie is not found
+        };
 
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                        'authkey': 'YOUR_SECRET_KEY',
-                    }
-                });
+        if (getCookie('_oCddWSYLEGqG')) {
 
-                $.ajax({
-                    type:'POST',
-                    headers: //---set the headers for cross-origin policies between domains
-                    {
-                        'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
-                        'Access-Control-Allow-Origin': 'https://esnaad.com/en/contact-form-post'
-                    },
-                    url: "/en/contact-form-post",
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success:function(data) 
-                    {
-                        if($.isEmptyObject(data.error)){ //---if success
-                            setCookie("_oCddWSYLEGqG", true, 1);
-                            $('#contact_submit_done').show();
-                            $('#contact_submit').hide();
-                            $('#contact_submit_verifying').show();
-                            document.location.href = 'en/subscription/thanks';
-                        }else{
-                            printErrorMsg(data.error);//---show error
-                        }
-                    }
-                });
+            document.getElementById("contact_submit").disabled = true;
+            document.getElementById('contact_submit').style.display = 'none';
+            document.getElementById('contact_submit_done').style.display = 'inline-block';
+            document.getElementById("contact_submit_done").disabled = false;
+        } else {
+            document.getElementById("contact_submit_done").disabled = true;
+            document.getElementById('contact_submit_done').style.display = 'none';
+            document.getElementById('contact_submit').style.display = 'inline-block';
+            document.getElementById("contact_submit").disabled = false;
+        };
+        
 
-                // Simulate a successful submission
-                // alert('Subscription successful!');
+        $('#contact-desktop-form').on('submit', function(e){
+            e.preventDefault();
 
-                // Disable the form to prevent further submissions
-                // disableForm();
+            document.getElementById("contact_submit").disabled = true;
+            document.getElementById('contact_submit').style.display = 'none';
+            document.getElementById('contact_submit_verifying').style.display = 'inline-block';
 
-                // Store the submission status in local storage
-                // localStorage.setItem('subscriptionSubmitted', 'true');
+            var formData = new FormData(this);
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                    'authkey': 'YOUR_SECRET_KEY',
+                }
             });
+
+            $.ajax({
+                type:'POST',
+                headers: //---set the headers for cross-origin policies between domains
+                {
+                    'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
+                    'Access-Control-Allow-Origin': 'https://esnaad.com/en/contact-form-post'
+                },
+                url: "/en/contact-form-post",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success:function(data) 
+                {
+                    if($.isEmptyObject(data.error)){ //---if success
+                        setCookie("_oCddWSYLEGqG", true, 1);
+                        document.getElementById("contact_submit").disabled = true;
+                        document.getElementById('contact_submit').style.display = 'none';
+                        document.getElementById('contact_submit_done').style.display = 'inline-block';
+                        document.getElementById("contact_submit_done").disabled = false;
+                        $('#contact_submit_verifying').show();
+                        document.location.href = '/en/subscription/thanks';
+                    }else{
+                        printErrorMsg(data.error);//---show error
+                    }
+                }
+            });
+
+            // Simulate a successful submission
+            // alert('Subscription successful!');
+
+            // Disable the form to prevent further submissions
+            // disableForm();
+
+            // Store the submission status in local storage
+            // localStorage.setItem('subscriptionSubmitted', 'true');
+        });
 
     </script>
 @endsection

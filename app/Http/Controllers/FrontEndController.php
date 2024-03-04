@@ -795,13 +795,14 @@ class FrontEndController extends Controller
             We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
 
-            // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ContactUs($data));
-            // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
+            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ContactUs($data));
+            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
 
-        return redirect()->back()->with('success', 'Your inquiry has been submitted!');   
+        // return redirect()->back()->with('success', 'Your inquiry has been submitted!');  
+        return Response::json(['success' => 'verification sent'], 200);  
         // return redirect()->to('https://esnaad.com/en/contact-us/thanks');
 
         // try{           
