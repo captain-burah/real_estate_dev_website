@@ -27,6 +27,9 @@
             @endif
         @endif --}}
 
+        @yield('title_segment')
+        
+
         @if($route_name == "esnaad.home")
             <title>ESNAAD Real Estate Developments	</title>
             <meta name="description" content="Your premium real estate developer in Dubai. ESNAAD offers a diverse portfolio of prestige residential, commercial, hospitality, and retail spaces. Discover more." />

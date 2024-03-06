@@ -35,6 +35,13 @@
 
 ?>
 @section('luxe_asset_css')
+
+    <title>
+        Mohammed Bin Rashid City District 11 | ESNAAD Developments
+    </title>
+    <meta name="description" content="Immerse yourself in a metropolis like no other: Mohammed bin Rashid City (MBR City), Dubai, beckons you with its captivating blend of luxury living, world-class attractions, and futuristic innovation." />
+
+
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
