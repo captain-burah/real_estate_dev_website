@@ -263,7 +263,7 @@
 
 
         <tr>
-            <td>Passport Numner</td>
+            <td>Passport Number</td>
             <td><input type="text" name="authorized_p_passport" id="authorized_p_passport" placeholder="ex: 123456789" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
