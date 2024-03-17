@@ -80,7 +80,7 @@
                     @endif    
                 </p>
                 <a href="#projectSectionOne"  id="scrollToSection" class="component-header__arrow-down absolute top-[90vh] text-white z-[3]" data-v-6d98d5bc=""  style="cursor:pointer !important">
-                    <img src="{{asset('down-arrow.png')}}" id="component_header_arrow_down" height="auto" width="auto" style="height:50px !important; width: auto;" alt="esnaad-view-more" title="View More" loading="eager"/>
+                    <img src="{{asset('arrow-down.png')}}" id="component_header_arrow_down" height="auto" width="auto" style="height:50px !important; width: auto;" alt="esnaad-view-more" title="View More" loading="eager"/>
                 </a>  
             </div>
         </div>

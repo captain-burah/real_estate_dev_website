@@ -15,7 +15,7 @@
     <div class="relative overflow-hidden max-h-[24rem] ">
         <div
             class="text-white text-5xl absolute inset-0 flex justify-center items-center">
-            {{ __('frontend.homeSectionThreeImage') }}
+            {{-- {{ __('frontend.homeSectionThreeImage') }} --}}
         </div>
         <img class="max-h-[24rem] w-full object-cover "
         src="{{ asset('home/project/2.webp')}}"                    

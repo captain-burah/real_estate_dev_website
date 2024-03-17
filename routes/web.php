@@ -40,7 +40,7 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
 
     Route::get('/communities/{slug}', [FrontEndController::class, 'community_details'])->name('esnaad.communities');
 
-    // Route::get('/developments/{slug}', [FrontEndController::class, 'developments_details'])->name('esnaad.developments');
+    Route::get('/developments/{slug}', [FrontEndController::class, 'developments_details'])->name('esnaad.developments.slug');
 
     Route::get('/developments', [FrontEndController::class, 'projects'])->name('esnaad.projects');
 

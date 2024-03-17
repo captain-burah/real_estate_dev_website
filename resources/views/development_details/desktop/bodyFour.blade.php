@@ -30,9 +30,9 @@
 
 <section id="main-carousel" class="splide" aria-label="The Spark by ESNAAD Gallery">
     <div class="splide__track">
-        <ul class="splide__list">
+        <ul class="splide__list gap-2">
             @foreach($images as $image)
-                <li class="splide__slide">
+                <li class="splide__slide ">
                     <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" style="height: auto !important;" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="lazy" >
                 </li>
             @endforeach

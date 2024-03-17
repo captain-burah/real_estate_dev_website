@@ -15,7 +15,7 @@
                     <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD - COMING SOON" alt="THE SPARK BY ESNAAD - COMING SOON" height="auto" width="auto" loading="lazy">
                     <div
                         class="text-white text-7xl absolute inset-0  flex justify-center items-center shadow ">
-                        <span class="drop-shadow">{{ __('frontend.homeSectionThreeImage') }}</span>
+                        {{-- <span class="drop-shadow">{{ __('frontend.homeSectionThreeImage') }}</span> --}}
                     </div>
                     <img class=" w-full object-cover "
                         src="{{ asset('home/project/2.webp')}}"                    
