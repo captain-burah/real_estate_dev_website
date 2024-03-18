@@ -90,8 +90,8 @@
             </div>
         </div>
         <div class="text-center py-4 sm:py-4 w-full mt-2">
-            <a href="javascript:void(0)" onclick="return false;" class="bg-white text-base text-black py-3 px-10 rounded-0">
-                Coming Soon
+            <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0">
+                Explore More
             </a>
         </div>
     </div>

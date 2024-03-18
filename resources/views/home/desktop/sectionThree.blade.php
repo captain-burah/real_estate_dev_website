@@ -12,7 +12,7 @@
             
             <div class="col-span-2 w-full overflow-hidden flex flex-col justify-center items-center ">
                 <div class="relative overflow-hidden max-h-[24rem] ">
-                    <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD - COMING SOON" alt="THE SPARK BY ESNAAD - COMING SOON" height="auto" width="auto" loading="lazy">
+                    <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" height="auto" width="auto" loading="lazy">
                     <div
                         class="text-white text-7xl absolute inset-0  flex justify-center items-center shadow ">
                         {{-- <span class="drop-shadow">{{ __('frontend.homeSectionThreeImage') }}</span> --}}
@@ -35,6 +35,11 @@
                 <h3 class="text-xl mt-10 text-justify leading-8">
                     {{ __('frontend.homeSectionThreeP') }}
                 </h3>
+                <div class="text-left py-4 sm:py-4 w-full">
+                    <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3">
+                        Explore More
+                    </a>
+                </div>  
 
                 {{-- <p class="text-base mt-2 text-justify leading-8">
                     {{ __('frontend.homeSectionThreeP2') }}

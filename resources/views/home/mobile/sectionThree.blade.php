@@ -26,12 +26,18 @@
 
 <div class="container mx-auto px-4 mx-0 px-0 mt-5  mx-auto">
     <div class="row mb-4">
-        <div class="grid md:grid-cols-2 gap-12 mx-auto">
+        <div class="grid md:grid-cols-2 gap-2 mx-auto">
             <div>
                 <p class="text-base text-left leading-relax leading-6">
                     {{ __('frontend.homeSectionThreeP') }}  
                 </p>
 
+            </div>
+
+            <div class="text-center py-4 sm:py-4 w-full mt-2">
+                <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0">
+                    Explore More
+                </a>
             </div>
         </div>
     </div>
