@@ -63,19 +63,19 @@
                         }
                     </style>
                     <div class="flex items-center overflow-x-auto whitespace-nowrap" >
-                        <a href="{{ url('/en/blogs') }}" class="text-base font-thin text-black">
+                        <a href="{{ url('/en/blogs') }}" class="text-base font-thin">
                             {{__('frontend.mobile_media')}}
                         </a>
                         <span class="mx-2 text-base text-black">
                             /
                         </span> 
-                        <a href="{{ url('/en/blogs') }}" class="text-base font-thin text-black">
+                        <a href="{{ url('/en/blogs') }}" class="text-base font-thin">
                             {{__('frontend.mobile_gallery')}}
                         </a>
-                        <span class="mx-2 text-base text-black">
+                        <span class="mx-2 text-base">
                             /
                         </span> 
-                        <p class="text-base font-thin text-black">
+                        <p class="text-base font-thin">
                             {{ $title }}
                         </p>
                     </div>                    
