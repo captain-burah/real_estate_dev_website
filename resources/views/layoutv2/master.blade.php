@@ -97,6 +97,10 @@
         @elseif($route_name == "esnaad.developments.slug")
             <title>The Spark by ESNAAD Developments</title>
             <meta name="description" content="Be part of shaping the future of UAE communities! Explore rewarding career opportunities at ESNAAD Real Estate Development	" />
+
+        @elseif($route_name == "esnaad.gallery.detail")
+            <title>The Spark by ESNAAD - Gallery</title>
+            <meta name="description" content="Partner with ESNAAD Real Estate Development by joining our broker program. Access exclusive opportunities, training, and support, shaping the future of UAE communities.	" />
         @endif
 
         <!-- Facebook -->

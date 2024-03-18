@@ -44,15 +44,12 @@
     </style>
 @endsection
 
-
-
 <header>
-
-   
     <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl" @if($langSeg == 'ar') dir="rtl" @endif>
         <div class=" flex flex-col items-start md:flex-">
             <div class=" @if($langSeg == 'ar') mr-0 md:ml-12" @else  @endif sticky" >
                 <div class="container mx-auto w-full h-full xl:mt-[15vh]">
+                    
                     <style>
                         ul {
                             padding-left: 30px;
@@ -62,6 +59,7 @@
                             padding-left: 10px;
                         }
                     </style>
+
                     <div class="flex items-center overflow-x-auto whitespace-nowrap" >
                         <a href="{{ url('/en/blogs') }}" class="text-base font-thin">
                             {{__('frontend.mobile_media')}}
@@ -80,14 +78,9 @@
                         </p>
                     </div>                    
                 </div>
-            </div>
-            
+            </div>  
         </div>
     </div>
-
-
-    
-
 </header>
 
 
