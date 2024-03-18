@@ -66,7 +66,7 @@
                         <a href="{{ url('/en/blogs') }}" class="text-base font-thin">
                             {{__('frontend.mobile_media')}}
                         </a>
-                        <span class="mx-2 text-base text-black">
+                        <span class="mx-2 text-base">
                             /
                         </span> 
                         <a href="{{ url('/en/blogs') }}" class="text-base font-thin">
