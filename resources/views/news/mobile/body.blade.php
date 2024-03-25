@@ -1,45 +1,35 @@
-@if(isset($available))
-    <div class="sm:container sm:mx-auto sm:px-4 my-4 sm:my-4 mx-auto">
-        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-2 mx-4 mb-5">
 
-            @foreach($response as $data)
-                <?php
-                    $id = $data['id'];
-                    $title = $data['title'];
-                    $titlear = $data['title_ar'];
-                    $sluglink = $data['slug_link'];
-                    $date = $data['created_at'];
-                    $thumbnail = $data['thumbnail'];
-                ?>
-                <div class="">
-                    <div class="mx-auto px-0 ">
-                        <div class="max-w-full cursor-pointer rounded-0 p-2 shadow">
-                            <div class="row">
-                                <img class="w-full rounded-0 object-cover object-center" src="{{ asset('developments/3.jpg')}}" alt="news-thumbnail"/>
+<div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto" >
+    <div class="grid xl:grid-cols-3- lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5" >
+
+            <div class="">
+                <div class="mx-auto px-0 ">
+                    <div class="max-w-full cursor-pointer rounded-0 border shadow">
+                        <div class="row">
+                            <img class="w-full rounded-0 object-cover object-center" src="{{ asset('developments/12.webp')}}"
+                                height="400px"
+                                width="auto"
+                                loading="lazy"
+                                style="height: 400px !important;"
+                                alt="ESNAAD Press Release - The Spark by ESNAAD"
+                            />
+                        </div>
+                        <div class="row">
+                            <div>
+                                <p class="mt-4 pl-4 text-2xl text-center font-thin">
+                                    ESNAAD Unveils "The Spark by ESNAAD": A Beacon of Innovation	
+                                </p>
                             </div>
-                            <div class="row pt-4">
-                                <div class="grid grid-cols-7">
-                                    <div class="col-span-2 text-center">
-                                        <img class="w-full h-[20vw] w-[20vw]  rounded-0 object-cover object-center" 
-                                            src="{{ asset('developments/1.jpg')}}" 
-                                            height="3vw"
-                                            width="3vw"
-                                            alt="project-logo" 
-                                        />
-                                    </div>
-                                    <div class="col-span-5">
-                                        <p class="ml-4 text-lg font-thin text-black">{{$title}}</p>
-                                        {{-- <p class="ml-4 mb-4 font-thin text-sm text-black">{{ Carbon\Carbon::parse($date)->format('j F Y') }}</p> --}}
-                                        <a href="{{ URL($langSeg.'/news/'.$sluglink) }}" class="ml-4 mb-4 bg-white text-black px-15 py-3">
-                                            Explore
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="row text-center pb-5 pt-2 mt-3">
+                            <a href="https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation" 
+                                class="bg-white text-black px-15 py-3">
+                                Explore
+                            </a>
                         </div>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
-    </div>
-@endif
+</div>
+
