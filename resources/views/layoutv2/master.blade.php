@@ -103,7 +103,7 @@
             <meta name="description" content="Partner with ESNAAD Real Estate Development by joining our broker program. Access exclusive opportunities, training, and support, shaping the future of UAE communities.	" />
         @endif
 
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        {{-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> --}}
         {{-- <script>
             function onSubmit(token) {
               document.getElementById("demo-form").submit();
