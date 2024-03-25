@@ -474,6 +474,8 @@ class FrontEndController extends Controller
 
         $jsonData = $response->json();  
 
+        dd($jsonData);
+
         if(count($jsonData) > 0){
             $this->data['available'] = '1';
         }

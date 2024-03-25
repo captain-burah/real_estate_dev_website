@@ -49,6 +49,7 @@
 
             <div class="row">
                 <form id="subscriptionForm" >
+                {{-- <form action="http://httpbin.org/post" method="POST" id="demo-form"> --}}
                     <div class="grid xl:grid-cols-3 grid-cols-2 gap-2 xl:gap-4 text-dark ">
 
                         <input type="hidden" name="ip_address" value="{{$ip_address}}">
@@ -65,7 +66,7 @@
                             <button type="button" id="submitButtonDone" class=" w-full text-sm text-white px-2 py-2 bg-transparent border border-gray-50 rounded-0">
                                 {{__('frontend.footerFormSubmissionCompleted')}}
                             </button>
-                            <button type="submit" id="submitButton" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0">
+                            <button type="submit"  data-sitekey="6Lezn6MpAAAAADODB9ZhhyjOp9r92YIGfwYmD-gP" data-callback="recaptcha" class="g-recaptcha w-full text-sm text-white px-2 py-2 border border-white rounded-0">
                                 {{__('frontend.footerFormSubscribe')}}
                             </button>
                             <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
@@ -200,54 +201,57 @@
     // if (localStorage.getItem('subscriptionSubmitted')) {
     //     disableForm();
     // }
+    
+    function onSubmit(token){
+        $('#subscriptionForm').on('submit', function(e){
+            e.preventDefault();
 
-    $('#subscriptionForm').on('submit', function(e){
-        e.preventDefault();
+            document.getElementById("submitButton").disabled = true;
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('submitVerifying').style.display = 'inline-block';
 
-        document.getElementById("submitButton").disabled = true;
-        document.getElementById('submitButton').style.display = 'none';
-        document.getElementById('submitVerifying').style.display = 'inline-block';
+            // if (localStorage.getItem('subscriptionSubmitted')) {
+            //     // alert('You have already submitted the form');
+                
+            //     return;
+            // }
 
-        // if (localStorage.getItem('subscriptionSubmitted')) {
-        //     // alert('You have already submitted the form');
-            
-        //     return;
-        // }
+            var formData = new FormData(this);
 
-        var formData = new FormData(this);
-
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                'authkey': 'YOUR_SECRET_KEY',
-            }
-        });
-
-        $.ajax({
-            type:'POST',
-            url: "{{ URL('en/subscription-form') }}",
-            data: formData,
-            processData: false,
-            contentType: false,
-            success:function(data)
-            {
-                if($.isEmptyObject(data.error)){
-                    setCookie("_ivqLdoulWNJqMw", true, 1);
-                    // modalClose('mymodalcentered');
-                    $('#submitComplete').show();
-                    $('#submitIncomplete').hide();
-                    $('#submitButtonDone').show();
-                    $('#submitButton').hide();  
-                    $('#subscriptionForm').hide();
-                    document.location.href = '/en/subscription/thanks';
-
-                }else{
-                    printErrorMsg(data.error);
-                    alert(data.error);
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                    'authkey': 'YOUR_SECRET_KEY',
                 }
-            }
+            });
+
+            $.ajax({
+                type:'POST',
+                url: "{{ URL('en/subscription-form') }}",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success:function(data)
+                {
+                    if($.isEmptyObject(data.error)){
+                        setCookie("_ivqLdoulWNJqMw", true, 1);
+                        // modalClose('mymodalcentered');
+                        $('#submitComplete').show();
+                        $('#submitIncomplete').hide();
+                        $('#submitButtonDone').show();
+                        $('#submitButton').hide();  
+                        $('#subscriptionForm').hide();
+                        document.location.href = '/en/subscription/thanks';
+
+                    }else{
+                        printErrorMsg(data.error);
+                        alert(data.error);
+                    }
+                }
+            });
         });
-    });
+    }
+    
 
 
 
