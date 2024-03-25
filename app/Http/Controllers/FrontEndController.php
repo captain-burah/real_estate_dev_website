@@ -474,16 +474,16 @@ class FrontEndController extends Controller
 
         $jsonData = $response->json();  
 
-        dd($jsonData);
+        // dd($jsonData);
 
         if(count($jsonData) > 0){
             $this->data['available'] = '1';
         }
 
         // dd($jsonData);
-        // if(count($jsonData[0]['website_news_images']) > 0){
-        //     $this->data['available'] = '1';
-        // }
+        if(count($jsonData[0]['website_news_images']) > 0){
+            $this->data['available'] = '1';
+        }
 
         
         // RETURN AS JSON
