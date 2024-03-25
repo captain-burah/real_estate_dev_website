@@ -442,18 +442,18 @@ class FrontEndController extends Controller
         $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         // CALL API FROM MIS
-        $response = Http::withHeaders([
-            'authkey' => 'YOUR_SECRET_KEY'
-        ])->get('www.mis.esnaad.com/api/v1/esnaad/news');
-        $jsonData = $response->json();  
+        // $response = Http::withHeaders([
+        //     'authkey' => 'YOUR_SECRET_KEY'
+        // ])->get('www.mis.esnaad.com/api/v1/esnaad/news');
+        // $jsonData = $response->json();  
 
 
-        if(count($jsonData) > 0){
-            $this->data['available'] = '1';
-        }
+        // if(count($jsonData) > 0){
+        //     $this->data['available'] = '1';
+        // }
         
         // RETURN AS JSON
-        $this->data['response'] = $jsonData;
+        // $this->data['response'] = $jsonData;
 
         return view('news', $this->data);
         // return view('news');
