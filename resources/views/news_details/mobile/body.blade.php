@@ -2,28 +2,30 @@
 <?php $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
     
     <div class="mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl">
-        <div class="container mx-auto flex flex-col items-start mt-[10vh]">
+        <div class="container mx-auto flex flex-col items-start mt-[8vh]">
             
             <div class="mt-8 px-4 lg:flex lg:gap-x-28 xl:gap-x-full w-full">
                 <div class="w-full">
                     <div class="space-y-10">
                         <div>
 
-                            <h1 class="text-2xl font-bold mb-2">
-                                {{$title}}
-                            </h1>
+                            
 
                             <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                                <a href="/news" class="text-sm text-black">
+                                <a href="/news" class="text-sm ">
                                     News
                                 </a>
-                                <span class="mx-2 text-sm text-black">
+                                <span class="mx-2 text-sm ">
                                     /
                                 </span> 
-                                <p class="text-sm capitalize text-black">
+                                <p class="text-sm capitalize ">
                                     {{ $title }}
                                 </p>
                             </div>
+
+                            <h1 class="text-2xl font-bold mt-2">
+                                {{$title}}
+                            </h1>
 
                             <div class="grid grid-cols-2 mt-2 gap-4 place-content-between">
                                 <div class="">
