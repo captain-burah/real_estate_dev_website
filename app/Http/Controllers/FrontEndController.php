@@ -479,9 +479,9 @@ class FrontEndController extends Controller
         }
 
         // dd($jsonData);
-        if(count($jsonData[0]['website_news_images']) > 0){
-            $this->data['available'] = '1';
-        }
+        // if(count($jsonData[0]['website_news_images']) > 0){
+        //     $this->data['available'] = '1';
+        // }
 
         
         // RETURN AS JSON
@@ -684,10 +684,10 @@ class FrontEndController extends Controller
             $data2 = ['message' => "
                 Thanks for subscribing to our news letter! We're excited to welcome you to our community and share valuable content, updates, and special offers with you."
             ];
-            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
+            // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
 
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
+            // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
 
         } catch (\Exception $e) {
