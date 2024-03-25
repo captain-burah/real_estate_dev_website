@@ -49,7 +49,7 @@
 
             <div class="row">
                 {{-- <form id="subscriptionForm" > --}}
-                <form action="http://esnaad.com/en/subscription-form" method="POST" id="subscriptionForm">
+                <form action="https://esnaad.com/en/subscription-form" method="POST" id="subscriptionForm">
                     @csrf
                     <div class="grid xl:grid-cols-3 grid-cols-2 gap-2 xl:gap-4 text-dark ">
 
