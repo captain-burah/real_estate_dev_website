@@ -81,6 +81,7 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
     Route::post('/agency-registration-post', [FrontEndController::class, 'agency_registration_post'])->name('agency.registration.post');
 
     Route::post('/subscription-form', [FrontEndController::class, 'subscription_form'])->name('subscription.form');
+    
     Route::post('/subscription-form1', [FrontEndController::class, 'subscription_form1'])->name('subscription.form1');
 
     Route::post('/contact-form-post', [FrontEndController::class, 'contact_form_post'])->name('contact.form.post');

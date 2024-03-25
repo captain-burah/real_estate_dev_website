@@ -108,12 +108,17 @@
         @endif
 
 
-        {{-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> --}}
-        {{-- <script>
+        <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+        <script>
             function onSubmit(token) {
-              document.getElementById("demo-form").submit();
+                document.getElementById("subscriptionForm").submit();
             }
-          </script> --}}
+            grecaptcha.render('submitComplete', {
+                'sitekey': '6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY',
+                'callback': onSubmit
+            });
+
+        </script>
 
         <!-- Facebook -->
         <meta property="og:url" content="URL to your website">

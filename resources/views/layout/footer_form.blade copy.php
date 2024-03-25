@@ -48,9 +48,8 @@
             </div>
 
             <div class="row">
-                {{-- <form id="subscriptionForm" > --}}
-                <form action="http://esnaad.com/en/subscription-form" method="POST" id="subscriptionForm">
-                    @csrf
+                <form id="subscriptionForm" >
+                {{-- <form action="http://httpbin.org/post" method="POST" id="demo-form"> --}}
                     <div class="grid xl:grid-cols-3 grid-cols-2 gap-2 xl:gap-4 text-dark ">
 
                         <input type="hidden" name="ip_address" value="{{$ip_address}}">
@@ -64,9 +63,15 @@
                         </div>
 
                         <div id="submitComplete">
-                            <button data-sitekey="6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY" 
-                            data-callback='onSubmit' class="g-recaptcha w-full text-sm text-white px-2 py-2 border border-white rounded-0">
+                            <button type="button" id="submitButtonDone" class=" w-full text-sm text-white px-2 py-2 bg-transparent border border-gray-50 rounded-0">
+                                {{__('frontend.footerFormSubmissionCompleted')}}
+                            </button>
+                            <button type="submit" id="submitButton" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0">
                                 {{__('frontend.footerFormSubscribe')}}
+                            </button>
+                            <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
+                                <div id="loading"></div>
+                                Verifying
                             </button>
                         </div>
                     </div>
