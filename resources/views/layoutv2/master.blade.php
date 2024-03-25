@@ -101,7 +101,12 @@
         @elseif($route_name == "esnaad.gallery.detail")
             <title>The Spark by ESNAAD - Gallery</title>
             <meta name="description" content="Partner with ESNAAD Real Estate Development by joining our broker program. Access exclusive opportunities, training, and support, shaping the future of UAE communities.	" />
+        
+        @elseif($route_name == "esnaad.news.detail")
+            <title>Press Release - "The Spark by ESNAAD": A Beacon of Innovation</title>
+            <meta name="description" content="ESNAAD Real Estate Development L.L.C, known as 'ESNAAD', proudly announced the launch of its ground-breaking project, 'The Spark by ESNAAD'" />
         @endif
+
 
         {{-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> --}}
         {{-- <script>
