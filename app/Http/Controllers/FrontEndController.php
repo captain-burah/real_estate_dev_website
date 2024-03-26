@@ -675,30 +675,53 @@ class FrontEndController extends Controller
 
     public function subscription_form($lang='', Request $request) {
 
-        
-        
-        try{
-            $data = [
-                'name'      =>  $request->name, 
-                'email'     =>  $request->email,
-                'ip'     =>  $request->ip_address
-            ];
-            $data2 = ['message' => "
-                Thanks for subscribing to our news letter! We're excited to welcome you to our community and share valuable content, updates, and special offers with you."
-            ];
-            // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
+        $RECAPTCHA_SECRET_KEY = "6Lc-16MpAAAAAOQL7wMUQmaBxmAZPhwvIujFDTqz";
 
-            // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
-            Mail::mailer('noreply')->to('edgerealtydeveloper@gmail.com')->send(new SubscriptionInquiry($data));
-            // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
+        $json_response = function($data = []) {
+            header('Content-Type: application/json; charset=utf-8');
+            exit(json_encode($data));
+        };
 
-            return redirect()->to('https://esnaad.com/en/subscription/thanks');
+         // call recaptcha site verify
+        $response = file_get_contents(
+            'https://www.google.com/recaptcha/api/siteverify?'.http_build_query([
+                'secret'   => $RECAPTCHA_SECRET_KEY,
+                'response' => $request['g-recaptcha-response'],
+                'remoteip' => $_SERVER['REMOTE_ADDR'],
+            ])
+        );
+        $response = json_decode($response, true);
 
 
-        } catch (\Exception $e) {
-            dd($e->getMessage());
+        // handle status and respond with json
+        if (intval($response["success"]) !== 1) {
+            $json_response(['errors' => ['recaptcha' => 'Captcha failed.']]);
+        } else {
+            try{
+                $data = [
+                    'name'      =>  $request->name, 
+                    'email'     =>  $request->email,
+                    'ip'     =>  $request->ip_address
+                ];
+                $data2 = ['message' => "
+                    Thanks for subscribing to our news letter! We're excited to welcome you to our community and share valuable content, updates, and special offers with you."
+                ];
+                // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
+
+                // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
+                // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
+                Mail::mailer('noreply')->to('edgerealtydeveloper@gmail.com')->send(new SubscriptionInquiry($data));
+                // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
+
+                return redirect()->to('https://esnaad.com/en/subscription/thanks');
+
+            } catch (\Exception $e) {
+                dd($e->getMessage());
+            }
+            $json_response(['success' => true]);
         }
+        
+        
 
         
 

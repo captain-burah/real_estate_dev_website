@@ -109,16 +109,7 @@
 
 
         <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
-        <script>
-            function onSubmit(token) {
-                document.getElementById("subscriptionForm").submit();
-            }
-            grecaptcha.render('submitComplete', {
-                'sitekey': '6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY',
-                'callback': onSubmit
-            });
-
-        </script>
+        
 
         <!-- Facebook -->
         <meta property="og:url" content="URL to your website">

@@ -48,9 +48,9 @@
             </div>
 
             <div class="row">
-                {{-- <form id="subscriptionForm" > --}}
-                <form action="https://esnaad.com/en/subscription-form" method="POST" id="subscriptionForm">
-                    @csrf
+                <form id="myForm" >
+                {{-- <form action="https://esnaad.com/en/subscription-form" method="POST" id="subscriptionForm"> --}}
+                    {{-- @csrf --}}
                     <div class="grid xl:grid-cols-3 grid-cols-2 gap-2 xl:gap-4 text-dark ">
 
                         <input type="hidden" name="ip_address" value="{{$ip_address}}">
@@ -64,13 +64,21 @@
                         </div>
 
                         <div id="submitComplete">
-                            <button data-sitekey="6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY" 
-                            data-callback='onSubmit' class="g-recaptcha w-full text-sm text-white px-2 py-2 border border-white rounded-0">
+                            <button id="submitButton" data-sitekey="6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY" data-callback='onSubmit' class="g-recaptcha w-full text-sm text-white px-2 py-2 border border-white rounded-0">
                                 {{__('frontend.footerFormSubscribe')}}
+                            </button>
+
+                            <button id="submitButtonDone" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0" disabled hidden>
+                                Submitted
+                            </button>
+
+                            <button id="submitVerifying" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0" disabled hidden>
+                                Verifying
                             </button>
                         </div>
                     </div>
                 </form>
+                <div id="status"></div>
             </div>
 
         </div>
@@ -132,8 +140,138 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer>
+    function setCookie(name, value, daysToExpire) {
+        var expires = "";
+        
+        if (daysToExpire) {
+            var date = new Date();
+            date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        
+        document.cookie = name + "=" + value + expires + "; path=/";
+    };
 
-<script>
+    // Function to get a specific cookie by name
+    function getCookie(cookieName) {
+        var name = cookieName + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var cookieArray = decodedCookie.split(';');
+
+        for (var i = 0; i < cookieArray.length; i++) {
+            var cookie = cookieArray[i].trim();
+            if (cookie.indexOf(name) === 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+
+        return null; // Return null if the cookie is not found
+    };
+    if (getCookie('_ivqLdoulWNJqMw')) {
+        $('#submitButtonDone').show();
+        $('#submitButton').hide(); 
+        $('#submitButtonMobileDone').show();
+        $('#submitButtonMobile').hide();  
+
+        $('#submitCompleteMobile').show();
+        $('#submitIncompleteMobile').hide();
+
+        $('#submitComplete').show();
+        $('#submitIncomplete').hide();
+        
+        $('#subscriptionForm').hide();
+        $('#subscriptionFormMobile').hide();
+    } else {
+        $('#submitButtonDone').hide();
+        $('#submitButton').show();
+
+        $('#submitButtonMobileDone').hide();
+        $('#submitButtonMobile').show();
+
+        $('#submitCompleteMobile').hide();
+        $('#submitIncompleteMobile').show();
+
+        $('#submitComplete').hide();
+        $('#submitIncomplete').show();     
+
+        $('#subscriptionForm').show();
+        $('#subscriptionFormMobile').show();
+    };
+
+    function onSubmit(token) {
+
+        var formData = new FormData(document.getElementById("myForm"));
+
+        console.log(formData);
+
+        document.getElementById("submitButton").disabled = true;
+        document.getElementById('submitButton').style.display = 'none';
+        document.getElementById('submitVerifying').style.display = 'inline-block';
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                'authkey': 'YOUR_SECRET_KEY',
+            }
+        });
+
+        $.ajax({
+            type:'POST',
+            headers: //---set the headers for cross-origin policies between domains
+            {
+                'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
+                'Access-Control-Allow-Origin': 'https://esnaad.com/en/subscription-form'
+            },
+            url: "{{ URL('en/subscription-form') }}",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success:function(response)
+            {
+                if (response.errors) {
+                    if (response.errors.first_name) {
+                        $('#first_name').parent().next().show();
+                    }
+
+                    if (response.errors.last_name) {
+                        $('#last_name').parent().next().show();
+                    }
+
+                    if (response.errors.recaptcha) {
+                        $('#status').html(response.errors.recaptcha);
+                    } else {
+                        $("#status").html("Please complete form.");
+                    }
+                } else if (response.success) {
+                    setCookie("_ivqLdoulWNJqMw", true, 1);
+                    // modalClose('mymodalcentered');
+                    $('#submitComplete').show();
+                    $('#submitIncomplete').hide();
+                    $('#submitButtonDone').show();
+                    $('#submitButton').hide();  
+                    $('#subscriptionForm').hide();
+                    document.location.href = '/en/subscription/thanks';
+
+                } else {
+                    document.location.href = '/en/subscription/thanks';
+                    // $("#status").html("Captcha failed.");
+                }
+            }
+        });
+    }
+</script>
+{{-- <script>
+    function onSubmit(token) {
+        document.getElementById("subscriptionForm").submit();
+    }
+    grecaptcha.render('submitComplete', {
+        'sitekey': '6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY',
+        'callback': onSubmit
+    });
+</script> --}}
+
+{{-- <script>
     function setCookie(name, value, daysToExpire) {
         var expires = "";
         
@@ -310,4 +448,4 @@
     function disableFormMobile() {
         document.getElementById('submitButtonMobile').disabled = true;
     }
-</script>
+</script> --}}
