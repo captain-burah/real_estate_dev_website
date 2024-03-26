@@ -105,6 +105,9 @@
         @elseif($route_name == "esnaad.news.detail")
             <title>Press Release - "The Spark by ESNAAD": A Beacon of Innovation</title>
             <meta name="description" content="ESNAAD Real Estate Development L.L.C, known as 'ESNAAD', proudly announced the launch of its ground-breaking project, 'The Spark by ESNAAD'" />
+        @elseif($route_name == "subscription-thanks")
+            <title>Thank You - You're a Member | ESNAAD</title>
+            <meta name="description" content="Thank You for registering as a member at ESNAAD Real Estate Developments." />
         @endif
 
 
