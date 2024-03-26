@@ -168,42 +168,47 @@
 
         return null; // Return null if the cookie is not found
     };
-    if (getCookie('_ivqLdoulWNJqMw')) {
-        $('#submitButtonDone').show();
-        $('#submitButton').hide(); 
-        $('#submitButtonMobileDone').show();
-        $('#submitButtonMobile').hide();  
 
-        $('#submitCompleteMobile').show();
-        $('#submitIncompleteMobile').hide();
+    $(document).ready(function () {
+        if (getCookie('_ivqLdoulWNJqMw')) {
+            $('#submitButtonDone').show();
+            $('#submitButton').hide(); 
+            $('#submitButtonMobileDone').show();
+            $('#submitButtonMobile').hide();  
 
-        $('#submitComplete').show();
-        $('#submitIncomplete').hide();
-        
-        $('#subscriptionForm').hide();
-        $('#subscriptionFormMobile').hide();
-    } else {
-        $('#submitButtonDone').hide();
-        $('#submitButton').show();
+            $('#submitCompleteMobile').show();
+            $('#submitIncompleteMobile').hide();
 
-        $('#submitButtonMobileDone').hide();
-        $('#submitButtonMobile').show();
+            $('#submitComplete').show();
+            $('#submitIncomplete').hide();
+            
+            $('#subscriptionForm').hide();
+            $('#subscriptionFormMobile').hide();
+        } else {
+            $('#submitButtonDone').hide();
+            $('#submitButton').show();
 
-        $('#submitCompleteMobile').hide();
-        $('#submitIncompleteMobile').show();
+            $('#submitButtonMobileDone').hide();
+            $('#submitButtonMobile').show();
 
-        $('#submitComplete').hide();
-        $('#submitIncomplete').show();     
+            $('#submitCompleteMobile').hide();
+            $('#submitIncompleteMobile').show();
 
-        $('#subscriptionForm').show();
-        $('#subscriptionFormMobile').show();
-    };
+            $('#submitComplete').hide();
+            $('#submitIncomplete').show();     
+
+            $('#subscriptionForm').show();
+            $('#subscriptionFormMobile').show();
+        };
+    });
+    
 
     function onSubmit(token) {
 
-        var formData = new FormData(document.getElementById("myForm"));
+        
+        setCookie("_ivqLdoulWNJqMw", true, 1);
 
-        console.log(formData);
+        var formData = new FormData(document.getElementById("myForm"));
 
         document.getElementById("submitButton").disabled = true;
         document.getElementById('submitButton').style.display = 'none';
@@ -244,7 +249,6 @@
                         $("#status").html("Please complete form.");
                     }
                 } else if (response.success) {
-                    setCookie("_ivqLdoulWNJqMw", true, 1);
                     // modalClose('mymodalcentered');
                     $('#submitComplete').show();
                     $('#submitIncomplete').hide();
