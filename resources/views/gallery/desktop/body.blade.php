@@ -35,7 +35,7 @@
                             </div>
                             <div class="row">
                                 <div>
-                                    <p class="mt-4 pl-4 text-2xl text-center font-thin">
+                                    <p class="mt-4 pl-4 text-xl text-center font-thin">
                                         The Spark By ESNAAD
                                     </p>
                                 </div>

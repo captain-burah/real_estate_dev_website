@@ -22,9 +22,14 @@
 
 <div class="mx-0 px-0 ">
     <div class="mx-0">
-        <button onclick="openModal('mymodalcentered-brochure-register')"   class="underline text-lg mx-auto w-full py-3 border border-white" type="button">
+        <a href="/home/The_Spark_by_ESNAAD_Brochure.pdf" target="_blank">
+            <button  class="underline text-lg mx-auto w-full py-3 border border-white" type="button" type="button">
+                Download Brochure
+            </button>
+        </a>
+        {{-- <button onclick="openModal('mymodalcentered-brochure-register')"   class="underline text-lg mx-auto w-full py-3 border border-white" type="button">
             {{ __('frontend.projectDownloadBrochure') }}
-        </button>
+        </button> --}}
 
         <dialog id="mymodalcentered-brochure-register" class="bg-transparent relative w-screen h-screen">
             <div class="p-2 flex justify-center items-center fixed left-0 top-0 w-full h-full bg-black bg-opacity-80 transition-opacity duration-300 opacity-0">

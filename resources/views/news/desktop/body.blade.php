@@ -28,16 +28,16 @@
                     <div class="max-w-full cursor-pointer rounded-0 border shadow">
                         <div class="row">
                             <img class="w-full rounded-0 object-cover object-center" src="{{ asset('developments/12.webp')}}"
-                                height="400px"
+                                height="300"
                                 width="auto"
                                 loading="lazy"
-                                style="height: 400px !important;"
+                                style="height: 300px !important;"
                                 alt="ESNAAD Press Release - The Spark by ESNAAD"
                             />
                         </div>
-                        <div class="row">
+                        <div class="row ">
                             <div>
-                                <p class="mt-4 pl-4 text-2xl text-center font-thin">
+                                <p class="mt-4 px-4 text-xl text-center font-thin">
                                     ESNAAD Unveils "The Spark by ESNAAD": A Beacon of Innovation	
                                 </p>
                             </div>
