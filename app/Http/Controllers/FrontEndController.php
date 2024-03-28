@@ -30,7 +30,7 @@ use App\Models\Project_document;
 use App\Models\Project_image;
 use App\Models\ProjectLocation;
 use App\Models\Landingpageseos;
-
+use App\Models\BrochureDownload;
   
 use PDF;
 use Mail;
@@ -928,6 +928,7 @@ class FrontEndController extends Controller
                 'email'     =>  $request->email_brochure,
                 'ip'     =>  $request->getClientIp(),
                 'project'     =>  $request->project_brochure,
+                'url'     =>  $request->url_brochure,
                 'phone'     =>  $request->phone_brochure,
                 'tel'     =>  $tel,
                 'country_code'     =>  $request->country_code_brochure,
@@ -936,10 +937,21 @@ class FrontEndController extends Controller
             $data2 = ['message' => 'Thank you for contacting ESNAAD Real Estate Development. We appreciate you reaching out and taking the time to download our brochure. 
             We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
+            $brochure_db = new BrochureDownload();
+            $brochure_db->name = $request->name_brochure;
+            $brochure_db->email = $request->email_brochure;
+            $brochure_db->contact = $request->phone_brochure;
+            $brochure_db->country_code = $request->country_code_brochure;
+            $brochure_db->ip_address = $request->getClientIp();
+            $brochure_db->project = $request->project_brochure;
+            $brochure_db->url = $request->url_brochure;
+            $brochure_db->save();
+
+
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
             // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
-            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ProjectBrochureDownload($data));
-            Mail::mailer('noreply')->to($request->email_brochure)->send(new ThankYou($data2));
+            // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ProjectBrochureDownload($data));
+            // Mail::mailer('noreply')->to($request->email_brochure)->send(new ThankYou($data2));
 
         } catch (\Exception $e) {
             dd($e->getMessage());

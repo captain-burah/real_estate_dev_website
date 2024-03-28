@@ -19,14 +19,14 @@
             </button>
         </div>
         <div class="mr-4">
-            <a href="/home/The_Spark_by_ESNAAD_Brochure.pdf" target="_blank">
+            {{-- <a href="/home/The_Spark_by_ESNAAD_Brochure.pdf" target="_blank">
                 <button  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
                     Download Brochure
                 </button>
-            </a>
-            {{-- <button onclick="openModal('mymodalcentered-brochure-register')"  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
+            </a> --}}
+            <button onclick="openModal('mymodalcentered-brochure-register')"  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
                 Download Brochure
-            </button> --}}
+            </button>
         </div>
         <div class="mx-4">
             <button onclick="openModal('mymodalcentered-community-share')"  class="text-center align-middle rounded-0 cursor-pointer">
