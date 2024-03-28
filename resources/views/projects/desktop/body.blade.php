@@ -67,7 +67,7 @@
                         ?>
                         <div class="max-w-6xl mx-auto p-0">
                                 <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
-                                    <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[50rem] w-[100%] z-0">
+                                    <div class="relative overflow-hidden rounded-0 lg:h-[25rem] max-h-[50rem] w-[100%] z-0">
                                         <div
                                             class="text-white text-xl rounded-0 absolute inset-0 flex justify-center items-center ">
                                         </div>
@@ -84,7 +84,7 @@
                                     <div class="row w-full grid grid-cols-5 mt-4 z-20">
                                         <div class="col-span-2 mt-[-70px] w-full mx-auto">
                                             <img class="object-cover m-0 p-0  z-90 text-center mx-auto border border-gray-200"
-                                                width="160px" height="auto"
+                                                width="180px" height="auto"
                                                 src="{{asset('front/project/the-spark-by-esnaad-logo.png')}}"
                                                 alt="esnaad-project-card"
                                                 title="the-spark-by-esnaad-thumbnail"
@@ -93,14 +93,14 @@
                                                 width="auto"
                                             >
                                         </div>
-                                        <div class="col-span-3" style="color: #ccc !important; background-color: #1c1c1c !important;">
+                                        <div class="col-span-3 my-4" style="color: #ccc !important; background-color: #1c1c1c !important;">
                                             <h2 class="text-xl font-bold text-left">The Spark By ESNAAD</h2>
                                             <p class="text-base font-thin text-left">Mohammed Bin Rashid City</p>
                                             {{-- <h2 class="text-xl font-bold text-left">@if($langSeg == 'ar'){{$namear}}@else {{$name}} @endif</h2>
                                             <p class="text-base font-thin text-left">@if($langSeg == 'ar'){{$community}}@else {{$community}} @endif</p> --}}
                                         </div>
                                     </div>
-                                    <div class="text-center py-4 sm:py-4 w-full">
+                                    <div class="text-center py-4 sm:py-4 w-full mb-4">
                                         <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3">
                                             Explore More
                                         </a>
