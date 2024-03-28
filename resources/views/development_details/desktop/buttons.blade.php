@@ -527,7 +527,7 @@
                         <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
-                <form id="new-project-details-desktop-brochure-form" class="flex flex-col items-start w-full" action="en/project-detail-inquiry" method="post" >
+                <form id="new-project-details-desktop-brochure-form" class="flex flex-col items-start w-full">
                     @csrf
                     <div class="px-4 w-full" style="max-height: 40vh;">
                         <input type="hidden" id="project_brochure" name="project_brochure" value="{{$name}}">
@@ -767,7 +767,7 @@
                         </div>
 
                         <div class="mb-6">
-                            <input type="tel" id="phone2" name="phone_brochure" class="w-max px-4 py-2 border rounded-0 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Ex: 050 123 4567" style="width: 100% !important" required>
+                            <input type="number" id="phone2" name="phone_brochure" class="w-max px-4 py-2 border rounded-0 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Ex: 050 123 4567" style="width: 100% !important" required>
                         </div>
                     </div>
 
