@@ -67,7 +67,7 @@
                         ?>
                         <div class="max-w-6xl mx-auto p-0">
                                 <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
-                                    <div class="relative overflow-hidden rounded-0 lg:h-[25rem] max-h-[50rem] w-[100%] z-0">
+                                    <div class="relative overflow-hidden rounded-0 lg:h-[22rem] max-h-[50rem] w-[100%] z-0">
                                         <div
                                             class="text-white text-xl rounded-0 absolute inset-0 flex justify-center items-center ">
                                         </div>
