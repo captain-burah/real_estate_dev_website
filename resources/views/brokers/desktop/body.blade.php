@@ -39,7 +39,7 @@
 
             @include('brokers.desktop.documents')
 
-            <button type="submit" id="submitForm" class="w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Register Now</button>
+            <button id="submitForm" data-sitekey="6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY" data-callback='brokerRegOnSubmit'  class="g-recaptcha w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Register Now</button>
             <button type="button" id="submitVerifying" hidden disabled class="w-full mt-8 bg-transparent border text-black font-semibold p-3"><div id="loading"></div> Verifying</button>
         </form>
     </div>
@@ -167,12 +167,134 @@
 
     </script> --}}
     
+    <script defer>
+        function setCookie(name, value, daysToExpire) {
+            var expires = "";
+            
+            if (daysToExpire) {
+                var date = new Date();
+                date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            
+            document.cookie = name + "=" + value + expires + "; path=/";
+        };
 
+        // Function to get a specific cookie by name
+        function getCookie(cookieName) {
+            var name = cookieName + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i].trim();
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+
+            return null; // Return null if the cookie is not found
+        };
+
+        $(document).ready(function () {
+            if (getCookie('_ivqLdoulWNJqMw')) {
+                $('#submitButtonDone').show();
+                $('#submitButton').hide(); 
+                $('#submitButtonMobileDone').show();
+                $('#submitButtonMobile').hide();  
+
+                $('#submitCompleteMobile').show();
+                $('#submitIncompleteMobile').hide();
+
+                $('#submitComplete').show();
+                $('#submitIncomplete').hide();
+                
+                $('#subscriptionForm').hide();
+                $('#subscriptionFormMobile').hide();
+            } else {
+                $('#submitButtonDone').hide();
+                $('#submitButton').show();
+
+                $('#submitButtonMobileDone').hide();
+                $('#submitButtonMobile').show();
+
+                $('#submitCompleteMobile').hide();
+                $('#submitIncompleteMobile').show();
+
+                $('#submitComplete').hide();
+                $('#submitIncomplete').show();     
+
+                $('#subscriptionForm').show();
+                $('#subscriptionFormMobile').show();
+            };
+        });
+        
+
+        function onSubmit(token) {
+
+            
+            setCookie("_ivqLdoulWNJqMw", true, 1);
+
+            var formData = new FormData(document.getElementById("myForm"));
+
+            document.getElementById("submitButton").disabled = true;
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('submitVerifying').style.display = 'inline-block';
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                    'authkey': 'YOUR_SECRET_KEY',
+                }
+            });
+
+            $.ajax({
+                type:'POST',
+                headers: //---set the headers for cross-origin policies between domains
+                {
+                    'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
+                    'Access-Control-Allow-Origin': 'https://esnaad.com/en/subscription-form'
+                },
+                url: "{{ URL('en/subscription-form') }}",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success:function(response)
+                {
+                    if (response.errors) {
+                        if (response.errors.first_name) {
+                            $('#first_name').parent().next().show();
+                        }
+
+                        if (response.errors.last_name) {
+                            $('#last_name').parent().next().show();
+                        }
+
+                        if (response.errors.recaptcha) {
+                            $('#status').html(response.errors.recaptcha);
+                        } else {
+                            $("#status").html("Please complete form.");
+                        }
+                    } else if (response.success) {
+                        // modalClose('mymodalcentered');
+                        $('#submitComplete').show();
+                        $('#submitIncomplete').hide();
+                        $('#submitButtonDone').show();
+                        $('#submitButton').hide();  
+                        $('#subscriptionForm').hide();
+                        document.location.href = '/en/subscription/thanks';
+
+                    } else {
+                        document.location.href = '/en/subscription/thanks';
+                        // $("#status").html("Captcha failed.");
+                    }
+                }
+            });
+        }
+    </script>
 
     {{-- FORM SUBMIT --}}
     <script>
-
-        
         $(document).ready(function () {
             // Function to set a cookie
             function setCookie(name, value, daysToExpire) {
@@ -182,8 +304,7 @@
                     var date = new Date();
                     date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
                     expires = "; expires=" + date.toUTCString();
-                }
-                
+                }                
                 document.cookie = name + "=" + value + expires + "; path=/";
             };
             

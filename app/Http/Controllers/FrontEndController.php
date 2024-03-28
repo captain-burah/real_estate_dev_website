@@ -529,28 +529,28 @@ class FrontEndController extends Controller
 
     public function privacy_and_policy($lang='', ) {
 
-        $jsonSEOData = $this->landingpageseos(9);
+        // $jsonSEOData = $this->landingpageseos(9);
         
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
-        return view('privacy-and-policy', $this->data);        
+        return view('privacy-and-policy');        
     }
 
     public function terms_and_conditions($lang='', ) {
         
-        $jsonSEOData = $this->landingpageseos(10);
+        // $jsonSEOData = $this->landingpageseos(10);
         
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
-        return view('terms-and-conditions', $this->data);        
+        return view('terms-and-conditions');        
     }
 
 
 
     public function agency_registration() {
-        $jsonSEOData = $this->landingpageseos(13);
+        // $jsonSEOData = $this->landingpageseos(13);
         
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         return view('brokers');
     }
