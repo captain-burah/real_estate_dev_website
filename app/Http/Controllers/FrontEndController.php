@@ -148,11 +148,11 @@ class FrontEndController extends Controller
 
     public function home($lang='') {
 
-        $jsonSEOData = $this->landingpageseos(1);
+        // $jsonSEOData = $this->landingpageseos(1);
 
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
-        return view('welcome3', $this->data);
+        return view('welcome3');
     }
 
 
@@ -392,31 +392,31 @@ class FrontEndController extends Controller
     }
 
     public function about($lang='') {
-        $jsonSEOData = $this->landingpageseos(8);
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $jsonSEOData = $this->landingpageseos(8);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
         $this->data['long'] =  55.265547;
         $this->data['lat'] = 25.206984;
         return view('about', $this->data);
     }
 
     public function contact($lang='') {
-        $jsonSEOData = $this->landingpageseos(6);
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
-        return view('contact', $this->data);
+        // $jsonSEOData = $this->landingpageseos(6);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        return view('contact');
     }
 
 
     public function invest($lang='') {
-        $jsonSEOData = $this->landingpageseos(12);
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $jsonSEOData = $this->landingpageseos(12);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
-        return view('invest_in_dubai', $this->data);
+        return view('invest_in_dubai');
     }
 
 
     public function constructions($lang='') {
-        $jsonSEOData = $this->landingpageseos(4);
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $jsonSEOData = $this->landingpageseos(4);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         // CALL API FROM MIS
         // $response = Http::withHeaders([
@@ -431,15 +431,15 @@ class FrontEndController extends Controller
         //     $this->data['available'] = '1';
         // }
 
-        return view('constructions', $this->data);
+        return view('constructions');
         // return view('constructions');
 
     }
 
 
     public function news($lang='') {
-        $jsonSEOData = $this->landingpageseos(3);
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $jsonSEOData = $this->landingpageseos(3);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         // CALL API FROM MIS
         // $response = Http::withHeaders([
@@ -455,7 +455,7 @@ class FrontEndController extends Controller
         // RETURN AS JSON
         // $this->data['response'] = $jsonData;
 
-        return view('news', $this->data);
+        return view('news');
         // return view('news');
 
     }
@@ -463,9 +463,8 @@ class FrontEndController extends Controller
 
     public function news_details($lang='', $slug) {
 
-        $jsonSEOData = $this->landingpageseos(3);
-
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $jsonSEOData = $this->landingpageseos(3);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         // CALL API FROM MIS
         $response = Http::withHeaders([
@@ -495,9 +494,9 @@ class FrontEndController extends Controller
 
     public function constructions_details($lang='', $slug) {
 
-        $jsonSEOData = $this->landingpageseos(3);
+        // $jsonSEOData = $this->landingpageseos(3);
 
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         // CALL API FROM MIS
         $response = Http::withHeaders([
