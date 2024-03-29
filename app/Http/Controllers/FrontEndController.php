@@ -1095,6 +1095,7 @@ class FrontEndController extends Controller
         // RETURN AS JSON
         $this->data['response'] = $jsonData;
 
+
         return view('gallery', $this->data);
     }
 
@@ -1127,28 +1128,28 @@ class FrontEndController extends Controller
     public function media_gallery_details($lang='', $slug) {
 
         // CALL API FROM MIS
-        // $response = Http::withHeaders([
-        //     'authkey' => 'YOUR_SECRET_KEY'
-        // ])->get('www.mis.esnaad.com/api/v1/esnaad/gallery/'.$slug);
+        $response = Http::withHeaders([
+            'authkey' => 'YOUR_SECRET_KEY'
+        ])->get('www.mis.esnaad.com/api/v1/esnaad/gallery/'.$slug);
 
-        // $jsonData = $response->json();  
-
-        // dd($jsonData);
-
-        // if(count($jsonData) > 0){
-        //     $this->data['available'] = '1';
-        // }
+        $jsonData = $response->json();  
 
         // dd($jsonData);
-        // if(count($jsonData[0]['website_gallery_medias']) > 0){
-        //     $this->data['available'] = '1';
-        // }
+
+        if(count($jsonData) > 0){
+            $this->data['available'] = '1';
+        }
+
+        // dd($jsonData);
+        if(count($jsonData[0]['website_gallery_medias']) > 0){
+            $this->data['available'] = '1';
+        }
 
         
         // RETURN AS JSON
-        // $this->data['response'] = $jsonData[0];
-
-        return view('gallery_details');
+        $this->data['response'] = $jsonData[0];
+        // dd($this->data);
+        return view('gallery_details', $this->data);
     }
 
 
