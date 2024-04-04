@@ -29,7 +29,6 @@
 
         @yield('title_segment')
         
-
         @if($route_name == "esnaad.home")
             <title>ESNAAD Real Estate Developments	</title>
             <meta name="description" content="Your premium real estate developer in Dubai. ESNAAD offers a diverse portfolio of prestige residential, commercial, hospitality, and retail spaces. Discover more." />
@@ -51,7 +50,7 @@
             <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
 
         @elseif($route_name == "esnaad.projects")
-            <title>Pioneering Innovation: Explore ESNAAD Real Estate Projects</title>
+            <title>ESNAAD Projects</title>
             <meta name="description" content="Discover ESNAAD's transformative real estate projects, including the groundbreaking. Experience innovative design and find your dream property.	" />
 
         @elseif($route_name == "esnaad.media_gallery")
@@ -63,15 +62,15 @@
             <meta name="description" content="Gain valuable insights and explore the latest trends in the UAE real estate market through ESNAAD's informative blog.	" />
 
         @elseif($route_name == "esnaad.invest_in_dubai")
-            <title>Unlock Investment Potential: Invest in Dubai Real Estate</title>
+            <title>Invest in Dubai Real Estate</title>
             <meta name="description" content="With over 2,000 global customers, the majority hailing from the GCC region and Europe with Arab origins, ESNAAD strategically focuses its expansion plans on Dubai for the next five years." />
 
         @elseif($route_name == "esnaad.constructions")
-            <title>ESNAAD Developments Projects Update</title>
+            <title>ESNAAD Projects Construction Updates	</title>
             <meta name="description" content="Explore exceptional investment opportunities in Dubai with ESNAAD Real Estate Development. Discover a world of innovative projects and invest in the future of the UAE.	" />
 
         @elseif($route_name == "esnaad.news")
-            <title>Media Center ESNAAD Developers</title>
+            <title>Media ESNAAD Developers	</title>
             <meta name="description" content="Stay informed about the latest developments and announcements from ESNAAD Real Estate Development	" />
 
         @elseif($route_name == "website.terms-and-conditions")
@@ -87,7 +86,7 @@
             <meta name="description" content="Partner with ESNAAD Real Estate Development by joining our broker program. Access exclusive opportunities, training, and support, shaping the future of UAE communities.	" />
         
         @elseif($route_name == "careers")
-            <title>ESNAAD Developers Careers</title>
+            <title>ESNAAD Careers</title>
             <meta name="description" content="Be part of shaping the future of UAE communities! Explore rewarding career opportunities at ESNAAD Real Estate Development	" />
         
         @elseif($route_name == "esnaad.contact")
@@ -103,7 +102,7 @@
             <meta name="description" content="Partner with ESNAAD Real Estate Development by joining our broker program. Access exclusive opportunities, training, and support, shaping the future of UAE communities.	" />
         
         @elseif($route_name == "esnaad.news.detail")
-            <title>Press Release - "The Spark by ESNAAD": A Beacon of Innovation</title>
+            <title>The Spark by ESNAAD - Press Release</title>
             <meta name="description" content="ESNAAD Real Estate Development L.L.C, known as 'ESNAAD', proudly announced the launch of its ground-breaking project, 'The Spark by ESNAAD'" />
         @elseif($route_name == "subscription-thanks")
             <title>Thank You - You're a Member | ESNAAD</title>
@@ -455,7 +454,7 @@
 
         </div>
 
-        <script>
+        {{-- <script>
             function initNewsletterModal() {
                 if (!localStorage.getItem('newsletter-modal')) {
                     setTimeout(() => {
@@ -465,5 +464,5 @@
             }    
             initNewsletterModal();
     
-        </script>
+        </script> --}}
 </html>
