@@ -539,7 +539,7 @@
 
                 <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
                     <a href="https://wa.link/pzf7z4"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Chat on WhatsApp">
-                        <img src="{{ asset('home/wa.png') }}" class="rounded-circle p-2 border border-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="WhatsApp" />
+                        <img src="{{ asset('home/wa.png') }}" class="rounded-circle p-2 border border-50 bg-black bg-opacity-75" style="border-radius: 50%; width: 60px;float: right !important;" alt="WhatsApp" />
                     </a>		
                 </div>
             </section>
@@ -587,7 +587,7 @@
                 </style>
                 <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
                     <a href="tel:+971-4-287-9506"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Call Us on +971 4 287 9506">
-                        <img src="{{ asset('/developments/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
+                        <img src="{{ asset('/developments/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-75" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
                     </a>		
                 </div>
             </section>
