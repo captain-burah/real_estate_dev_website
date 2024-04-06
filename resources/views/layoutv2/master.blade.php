@@ -487,7 +487,7 @@
                 </style>
                 <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
                     <a href="tel:+971-4-287-9506"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Call Us on +971 4 287 9506">
-                        <img src="{{ asset('/home/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
+                        <img src="{{ asset('/developments/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
                     </a>		
                 </div>
             </section>
@@ -587,7 +587,7 @@
                 </style>
                 <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
                     <a href="tel:+971-4-287-9506"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Call Us on +971 4 287 9506">
-                        <img src="{{ asset('/home/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
+                        <img src="{{ asset('/developments/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
                     </a>		
                 </div>
             </section>
