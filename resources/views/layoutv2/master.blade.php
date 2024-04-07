@@ -187,7 +187,23 @@
         <link rel="{{$rel_type}}" href="<?php echo $canonicalUrl;?>" hreflang="{{$langhref}}">
 
         <script type="application/ld+json" >
-			[{"@context":"https://schema.org","@type":"Organization","@id":"https://esnaad.com","name":"ESNAAD Real Estate Development","url":"https://esnaad.com","sameAs":[],"logo":{"@type":"ImageObject","url":"https://www.esnaad.com/public/logo-dark-2.png","width":"184","height":"35"}}]</script>
+			[
+                {
+                    "@context":"https://schema.org",
+                    "@type":"Organization",
+                    "@id":"https://esnaad.com",
+                    "name":"ESNAAD Real Estate Development",
+                    "url":"https://esnaad.com",
+                    "sameAs":[],
+                    "logo":{
+                        "@type":"ImageObject",
+                        "url":"https://www.esnaad.com/public/logo-dark-2.png",
+                        "width":"184",
+                        "height":"35"
+                    }
+                }
+            ]
+        </script>
 
 
 
@@ -196,10 +212,10 @@
 			"@type": "SiteNavigationElement",
 			"name": [
 				"Home",
-				"Our Developments",
+				"Developments",
 				"Why Invest In Dubai?",
 				"Construction Updates",
-				"Our Communities",
+				"Communities",
 				"NEWS Updates",
 				"Careers",  
 				"About ESNAAD",
@@ -207,15 +223,15 @@
 			],
 			"url": [
 				"https://esnaad.com",
-				"https://www.esnaad.com/en/projects",
+				"https://www.esnaad.com/en/developments",
 				"https://www.esnaad.com/en/invest-in-dubai",
 				"https://www.esnaad.com/en/constructions",
-				"https://www.esnaad.com/en/communities
+				"https://www.esnaad.com/en/communities,
 				"https://www.esnaad.com/en/news",
 				"https://www.esnaad.com/en/careers",
 				"https://www.esnaad.com/en/about-us",
-				"https://www.esnaad.com/en/contact"
-			]
+				"https://www.esnaad.com/en/contact",
+			],
 		}</script>
 
 
