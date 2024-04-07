@@ -219,6 +219,7 @@
 				"Press Release",
 				"Careers",  
 				"About ESNAAD",
+				"CEO's Message",
 				"Contact Us"
 			],
 			"url": [
@@ -230,6 +231,7 @@
 				"https://www.esnaad.com/en/press-release",
 				"https://www.esnaad.com/en/careers",
 				"https://www.esnaad.com/en/about-us",
+				"https://www.esnaad.com/en/ceo-msg",
 				"https://www.esnaad.com/en/contact",
 			],
 		}</script>
