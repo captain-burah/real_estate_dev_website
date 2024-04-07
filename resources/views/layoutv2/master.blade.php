@@ -216,7 +216,7 @@
 				"Why Invest In Dubai?",
 				"Construction Updates",
 				"Communities",
-				"NEWS Updates",
+				"Press Release",
 				"Careers",  
 				"About ESNAAD",
 				"Contact Us"
@@ -227,7 +227,7 @@
 				"https://www.esnaad.com/en/invest-in-dubai",
 				"https://www.esnaad.com/en/constructions",
 				"https://www.esnaad.com/en/communities,
-				"https://www.esnaad.com/en/news",
+				"https://www.esnaad.com/en/press-release",
 				"https://www.esnaad.com/en/careers",
 				"https://www.esnaad.com/en/about-us",
 				"https://www.esnaad.com/en/contact",
