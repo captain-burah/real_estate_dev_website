@@ -220,7 +220,7 @@
 				"Careers",  
 				"About ESNAAD",
 				"CEO's Message",
-				"Contact Us"
+				"Contact Us",
 			],
 			"url": [
 				"https://esnaad.com",

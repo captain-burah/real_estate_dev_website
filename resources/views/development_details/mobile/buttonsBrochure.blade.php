@@ -22,14 +22,14 @@
 
 <div class="mx-0 px-0 ">
     <div class="mx-0">
-        <a href="/home/The_Spark_by_ESNAAD_Brochure.pdf" target="_blank">
+        {{-- <a href="https://esnaad.com/home/the-spark-by-esnaad.pdf" target="_blank">
             <button  class="underline text-lg mx-auto w-full py-3 border border-white" type="button" type="button">
                 Download Brochure
             </button>
-        </a>
-        {{-- <button onclick="openModal('mymodalcentered-brochure-register')"   class="underline text-lg mx-auto w-full py-3 border border-white" type="button">
+        </a> --}}
+        <button onclick="openModal('mymodalcentered-brochure-register')"   class="underline text-lg mx-auto w-full py-3 border border-white" type="button">
             {{ __('frontend.projectDownloadBrochure') }}
-        </button> --}}
+        </button>
 
         <dialog id="mymodalcentered-brochure-register" class="bg-transparent relative w-screen h-screen">
             <div class="p-2 flex justify-center items-center fixed left-0 top-0 w-full h-full bg-black bg-opacity-80 transition-opacity duration-300 opacity-0">
@@ -412,8 +412,12 @@
                             if($.isEmptyObject(data.error)){ //---if success
                                 setCookie("_Ws3YktbxvVzS", true, 1); //---set a cookie
                                 // document.location.href = '/en/project-brochure/thanks'; //---redirect to thank you page for seo
-                                var brochure_link = $("#brochurelink").val();
-                                document.location.href = brochure_link; //---redirect to thank you page for seo
+                                // var brochure_link = $("#brochurelink").val();
+                                modalClose('mymodalcentered-brochure-register');
+
+                                // document.location.href = brochure_link; //---redirect to thank you page for seo
+                                var redirectWindow = window.open('https://esnaad.com/home/the-spark-by-esnaad.pdf', '_blank');
+                                redirectWindow.location;
                             }else{
                                 printErrorMsg(data.error);//---show error
                             }

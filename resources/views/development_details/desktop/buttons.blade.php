@@ -527,7 +527,7 @@
                         <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
-                <form id="new-project-details-desktop-brochure-form" class="flex flex-col items-start w-full">
+                <form id="new-project-details-desktop-brochure-form" action="/something" method="post" class="flex flex-col items-start w-full">
                     @csrf
                     <div class="px-4 w-full" style="max-height: 40vh;">
                         <input type="hidden" id="project_brochure" name="project_brochure" value="{{$name}}">
