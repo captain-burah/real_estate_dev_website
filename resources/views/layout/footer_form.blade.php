@@ -72,9 +72,9 @@
                                 Submitted
                             </button>
 
-                            <button id="submitVerifying" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0" disabled hidden>
+                            {{-- <button id="submitVerifying" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0" disabled hidden>
                                 Verifying
-                            </button>
+                            </button> --}}
                         </div>
                     </div>
                 </form>
@@ -125,10 +125,10 @@
                             <button type="button" id="submitButtonMobileDone" class=" w-full text-sm text-black text-white px-2 py-2  border border-white rounded-0">
                                 {{__('frontend.footerFormSubmissionCompleted')}}
                             </button>
-                            <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
+                            {{-- <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
                                 <div id="loading"></div>
                                 Verifying
-                            </button>
+                            </button> --}}
                         </div>
                     </div>
                 </form>
@@ -211,7 +211,7 @@
 
         document.getElementById("submitButton").disabled = true;
         document.getElementById('submitButton').style.display = 'none';
-        document.getElementById('submitVerifying').style.display = 'inline-block';
+        // document.getElementById('submitVerifying').style.display = 'inline-block';
 
         $.ajaxSetup({
             headers: {
