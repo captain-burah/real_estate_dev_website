@@ -205,7 +205,6 @@
 
     function onSubmit(token) {
 
-        
         setCookie("_ivqLdoulWNJqMw", true, 1);
 
         var formData = new FormData(document.getElementById("myForm"));
@@ -226,7 +225,7 @@
             headers: //---set the headers for cross-origin policies between domains
             {
                 'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
-                'Access-Control-Allow-Origin': 'https://esnaad.com/en/subscription-form'
+                'Access-Control-Allow-Origin': 'https://esnaad.com/en'
             },
             url: "{{ URL('en/subscription-form') }}",
             data: formData,
@@ -238,11 +237,9 @@
                     if (response.errors.first_name) {
                         $('#first_name').parent().next().show();
                     }
-
                     if (response.errors.last_name) {
                         $('#last_name').parent().next().show();
                     }
-
                     if (response.errors.recaptcha) {
                         $('#status').html(response.errors.recaptcha);
                     } else {
