@@ -317,7 +317,7 @@ class FrontEndController extends Controller
                 'verification_code' =>  $verification_code, 
             ];
 
-            Mail::mailer('noreply')->to($request->email_brochure)->send(new verificationEmail($data));
+            // Mail::mailer('noreply')->to($request->email_brochure)->send(new verificationEmail($data));
 
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -364,7 +364,6 @@ class FrontEndController extends Controller
 
     public function communities_registration($lang='', Request $request)
     {
-        // dd($request);
         try{
             $data = [
                 'name'      =>  $request->name, 
@@ -377,8 +376,8 @@ class FrontEndController extends Controller
                 Thank you for contacting ESNAAD Real Estate Development. We appreciate you reaching out and taking the time to register your interest. 
                 We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
-            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new CommunityInquiry($data));
-            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data));
+            Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new CommunityInquiry($data));
+            // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
@@ -596,78 +595,98 @@ class FrontEndController extends Controller
          */
 
 
-        /** STAGE I */
-        $data = [
-            'company_name'      =>  $request->company_name, 
-            'company_type'      =>  $request->company_type, 
-            'trade_license'      =>  $request->trade_license, 
-            'trade_license_expiry'      =>  $request->trade_license_expiry, 
-            'rera_certificate'      =>  $request->rera_certificate, 
-            'rera_certificate_expiry'      =>  $request->rera_certificate_expiry, 
-            'company_po_box'      =>  $request->company_po_box, 
-            'company_address'      =>  $request->company_address, 
-            'company_email'      =>  $request->company_email, 
-            'company_po_box'      =>  $request->company_po_box, 
-            'company_country_code'      =>  $request->company_country_code, 
-            'company_landline'      =>  $request->company_landline, 
-            'company_website'      =>  $request->company_website, 
+        $RECAPTCHA_SECRET_KEY = "6Lc-16MpAAAAAOQL7wMUQmaBxmAZPhwvIujFDTqz";
+
+        $json_response = function($data = []) {
+            header('Content-Type: application/json; charset=utf-8');
+            exit(json_encode($data));
+        };
+
+        // call recaptcha site verify
+        $response = file_get_contents(
+            'https://www.google.com/recaptcha/api/siteverify?'.http_build_query([
+                'secret'   => $RECAPTCHA_SECRET_KEY,
+                'response' => $request['g-recaptcha-response'],
+                'remoteip' => $_SERVER['REMOTE_ADDR'],
+            ])
+        );
+        $response = json_decode($response, true);
+
+        // handle status and respond with json
+        if (intval($response["success"]) !== 1) {
+            $json_response(['errors' => ['recaptcha' => 'Captcha failed.']]);
+        } else {
+            /** STAGE I */
+            $data = [
+                'company_name'      =>  $request->company_name, 
+                'company_type'      =>  $request->company_type, 
+                'trade_license'      =>  $request->trade_license, 
+                'trade_license_expiry'      =>  $request->trade_license_expiry, 
+                'rera_certificate'      =>  $request->rera_certificate, 
+                'rera_certificate_expiry'      =>  $request->rera_certificate_expiry, 
+                'company_po_box'      =>  $request->company_po_box, 
+                'company_address'      =>  $request->company_address, 
+                'company_email'      =>  $request->company_email, 
+                'company_po_box'      =>  $request->company_po_box, 
+                'company_country_code'      =>  $request->company_country_code, 
+                'company_landline'      =>  $request->company_landline, 
+                'company_website'      =>  $request->company_website, 
+
+                'authorized_p_name'      =>  $request->authorized_p_name, 
+                'authorized_p_country'      =>  $request->authorized_p_country, 
+                'authorized_p_passport'      =>  $request->authorized_p_passport, 
+                'authorized_p_position'      =>  $request->authorized_p_position, 
+                'authorized_p_email'      =>  $request->authorized_p_email, 
+                'authorized_p_country_code'      =>  $request->authorized_p_country_code, 
+                'authorized_p_contact'      =>  $request->authorized_p_contact, 
+                'authorized_p_address'      =>  $request->authorized_p_address, 
+                'authorized_p_city'      =>  $request->authorized_p_city, 
+
+                'bank_name'      =>  $request->bank_name, 
+                'bank_country'      =>  $request->bank_country, 
+                'bank_city'      =>  $request->bank_city, 
+                'account_no'      =>  $request->account_no, 
+                'iban'      =>  $request->iban, 
+                'swift_code'      =>  $request->swift_code, 
+                'account_title'      =>  $request->account_title, 
+            ];
+
+            $data2 = ['message' => '
+                Thank you for your interest in becoming a broker with ESNAAD Real Estate Development. We appreciate you choosing to submit your registration through our website.
+                We have received your application and are currently reviewing it. You will receive a follow-up email notifying you of the next steps in the registration process.
+            '];
+
+            // Mail::mailer('noreply')->to($request->company_email)->send(new ThankYou($data2));
             
-            'authorized_p_name'      =>  $request->authorized_p_name, 
-            'authorized_p_country'      =>  $request->authorized_p_country, 
-            'authorized_p_passport'      =>  $request->authorized_p_passport, 
-            'authorized_p_position'      =>  $request->authorized_p_position, 
-            'authorized_p_email'      =>  $request->authorized_p_email, 
-            'authorized_p_country_code'      =>  $request->authorized_p_country_code, 
-            'authorized_p_contact'      =>  $request->authorized_p_contact, 
-            'authorized_p_address'      =>  $request->authorized_p_address, 
-            'authorized_p_city'      =>  $request->authorized_p_city, 
+            try{
+                /**STAGE II */
+                $pdf = PDF::loadView('emails.pdf.brokerReg', $data);
+                // $pdf->getDomPDF()->getCanvas()->get_cpdf()->setEncryption("esnaad_12345", "admin_password");
+                $pdf->getDomPDF()->getCanvas()->get_cpdf();
 
-            'bank_name'      =>  $request->bank_name, 
-            'bank_country'      =>  $request->bank_country, 
-            'bank_city'      =>  $request->bank_city, 
-            'account_no'      =>  $request->account_no, 
-            'iban'      =>  $request->iban, 
-            'swift_code'      =>  $request->swift_code, 
-            'account_title'      =>  $request->account_title, 
-        ];
-
-        $data2 = ['message' => '
-            Thank you for your interest in becoming a broker with ESNAAD Real Estate Development. We appreciate you choosing to submit your registration through our website.
-            We have received your application and are currently reviewing it. You will receive a follow-up email notifying you of the next steps in the registration process.
-        '];
-
-        Mail::mailer('noreply')->to($request->company_email)->send(new ThankYou($data2));
-        
-        try{
-            /**STAGE II */
-            $pdf = PDF::loadView('emails.pdf.brokerReg', $data);
-            // $pdf->getDomPDF()->getCanvas()->get_cpdf()->setEncryption("esnaad_12345", "admin_password");
-            $pdf->getDomPDF()->getCanvas()->get_cpdf();
-
-            /**STAGE III */
-            Mail::mailer('noreply')->send('emails.brokerReg', $data, function($message)use($data, $pdf, $request) {
-                    $first_segment = $message->to("registrations@broker.esnaad.com")
-                        ->subject("ESNAAD Notification - Broker Registration")
-                        ->attachData($pdf->output(), "Broker-registration-details.pdf");
-                    
-                    foreach($request->files as $file) {
-                        $first_segment->attach($file->getRealPath(), [
-                            'as' => $file->getClientOriginalName(),
-                            'mime' => $file->getMimeType(),
-                        ]);
+                /**STAGE III */
+                Mail::mailer('noreply_two')->send('emails.brokerReg', $data, function($message)use($data, $pdf, $request) {
+                        $first_segment = $message->to("registrations@broker.esnaad.com")
+                            ->subject("ESNAAD Notification - Broker Registration")
+                            ->attachData($pdf->output(), "Broker-registration-details.pdf");
+                        
+                        foreach($request->files as $file) {
+                            $first_segment->attach($file->getRealPath(), [
+                                'as' => $file->getClientOriginalName(),
+                                'mime' => $file->getMimeType(),
+                            ]);
+                        }
+                        
                     }
-                    
-                }
-            );
+                );
 
-        } catch (\Exception $e) {   
-            // dd($e->getMessage());
-            return Response::json(['error' => $e->getMessage()], 500);
+            } catch (\Exception $e) {   
+                // dd($e->getMessage());
+                return Response::json(['error' => $e->getMessage()], 500);
 
+            }
+            return Response::json(['success' => 'success'], 200);
         }
-
-        return Response::json(['success' => 'success'], 200);
-
     }
 
 
@@ -709,7 +728,7 @@ class FrontEndController extends Controller
 
                 // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
                 // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
-                Mail::mailer('noreply')->to('edgerealtydeveloper@gmail.com')->send(new SubscriptionInquiry($data));
+                Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new SubscriptionInquiry($data));
                 // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new SubscriptionInquiry($data));
 
                 return redirect()->to('https://esnaad.com/en/subscription/thanks');
@@ -823,8 +842,8 @@ class FrontEndController extends Controller
             We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
 
-            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ContactUs($data));
-            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
+            Mail::mailer('noreply_two')->to('leads@notifications.esnaad.com')->send(new ContactUs($data));
+            // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
@@ -902,8 +921,8 @@ class FrontEndController extends Controller
             $data2 = ['message' => 'Thank you for contacting ESNAAD Real Estate Development. We appreciate you reaching out and taking the time to register your interest. 
             We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
-            Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ProjectInquiry($data));
-            Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
+            Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new ProjectInquiry($data));
+            // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new ProjectInquiry($data));
 
         } catch (\Exception $e) {
@@ -948,7 +967,7 @@ class FrontEndController extends Controller
 
 
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
-            // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new SubscriptionInquiry($data));
+            // Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new SubscriptionInquiry($data));
             // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ProjectBrochureDownload($data));
             // Mail::mailer('noreply')->to($request->email_brochure)->send(new ThankYou($data2));
 
@@ -979,7 +998,7 @@ class FrontEndController extends Controller
                 'verification_code' =>  $verification_code, 
             ];
 
-            Mail::mailer('noreply')->to($request->applicant_email)->send(new verificationEmail($data));
+            // Mail::mailer('noreply')->to($request->applicant_email)->send(new verificationEmail($data));
 
         } catch (\Exception $e) {
             dd($e->getMessage());
@@ -1002,7 +1021,7 @@ class FrontEndController extends Controller
             Thank you for your interest in joining ESNAAD Real Estate Development! We appreciate you taking the time to submit your application.
             We have received your application and resume, and it is currently under review by our recruiting team.'];
 
-        Mail::mailer('noreply')->to($request->applicant_email)->send(new ThankYou($data));
+        // Mail::mailer('noreply')->to($request->applicant_email)->send(new ThankYou($data));
 
         try{
 
