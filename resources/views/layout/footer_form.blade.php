@@ -209,8 +209,11 @@
 
         var formData = new FormData(document.getElementById("myForm"));
 
-        document.getElementById("submitButton").disabled = true;
-        document.getElementById('submitButton').style.display = 'none';
+        document.location.href = '/en/subscription/thanks';
+
+
+        // document.getElementById("submitButton").disabled = true;
+        // document.getElementById('submitButton').style.display = 'none';
         // document.getElementById('submitVerifying').style.display = 'inline-block';
 
         $.ajaxSetup({
