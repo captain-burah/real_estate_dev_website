@@ -253,9 +253,9 @@
                         {{__('frontend.footerFormSubmissionCompleted')}}
                     </button>
                     
-                    <button type="button" id="contact_submit_verifying" hidden disabled class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
+                    {{-- <button type="button" id="contact_submit_verifying" hidden disabled class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
                         Verifying
-                    </button>
+                    </button> --}}
 
                 </form>
             </div>
@@ -315,9 +315,9 @@
         $('#contact-desktop-form').on('submit', function(e){
             e.preventDefault();
 
-            document.getElementById("contact_submit").disabled = true;
-            document.getElementById('contact_submit').style.display = 'none';
-            document.getElementById('contact_submit_verifying').style.display = 'inline-block';
+            // document.getElementById("contact_submit").disabled = true;
+            // document.getElementById('contact_submit').style.display = 'none';
+            // document.getElementById('contact_submit_verifying').style.display = 'inline-block';
 
             var formData = new FormData(this);
 
