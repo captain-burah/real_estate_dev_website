@@ -665,7 +665,7 @@ class FrontEndController extends Controller
                 $pdf->getDomPDF()->getCanvas()->get_cpdf();
 
                 /**STAGE III */
-                Mail::mailer('noreply_two')->send('emails.brokerReg', $data, function($message)use($data, $pdf, $request) {
+                Mail::mailer('noreply')->send('emails.brokerReg', $data, function($message)use($data, $pdf, $request) {
                         $first_segment = $message->to("registrations@broker.esnaad.com")
                             ->subject("ESNAAD Notification - Broker Registration")
                             ->attachData($pdf->output(), "Broker-registration-details.pdf");
@@ -842,7 +842,7 @@ class FrontEndController extends Controller
             We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
 
-            Mail::mailer('noreply_two')->to('leads@notifications.esnaad.com')->send(new ContactUs($data));
+            Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new ContactUs($data));
             // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
         } catch (\Exception $e) {
             dd($e->getMessage());
