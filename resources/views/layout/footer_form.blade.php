@@ -140,7 +140,7 @@
 
 
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script> --}}
 <script defer>
     function setCookie(name, value, daysToExpire) {
         var expires = "";
@@ -229,9 +229,9 @@
             headers: //---set the headers for cross-origin policies between domains
             {
                 'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
-                'Access-Control-Allow-Origin': 'https://esnaad.com/en'
+                'Access-Control-Allow-Origin': 'https://www.esnaad.com/en/'
             },
-            url: "{{ URL('en/subscription-form') }}",
+            url: "/en/subscription-form",
             data: formData,
             processData: false,
             contentType: false,
@@ -266,191 +266,3 @@
         });
     }
 </script>
-{{-- <script>
-    function onSubmit(token) {
-        document.getElementById("subscriptionForm").submit();
-    }
-    grecaptcha.render('submitComplete', {
-        'sitekey': '6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY',
-        'callback': onSubmit
-    });
-</script> --}}
-
-{{-- <script>
-    function setCookie(name, value, daysToExpire) {
-        var expires = "";
-        
-        if (daysToExpire) {
-            var date = new Date();
-            date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        
-        document.cookie = name + "=" + value + expires + "; path=/";
-    };
-
-    // Function to get a specific cookie by name
-    function getCookie(cookieName) {
-        var name = cookieName + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var cookieArray = decodedCookie.split(';');
-
-        for (var i = 0; i < cookieArray.length; i++) {
-            var cookie = cookieArray[i].trim();
-            if (cookie.indexOf(name) === 0) {
-                return cookie.substring(name.length, cookie.length);
-            }
-        }
-
-        return null; // Return null if the cookie is not found
-    };
-    if (getCookie('_ivqLdoulWNJqMw')) {
-        $('#submitButtonDone').show();
-        $('#submitButton').hide(); 
-        $('#submitButtonMobileDone').show();
-        $('#submitButtonMobile').hide();  
-
-        $('#submitCompleteMobile').show();
-        $('#submitIncompleteMobile').hide();
-
-        $('#submitComplete').show();
-        $('#submitIncomplete').hide();
-        
-        $('#subscriptionForm').hide();
-        $('#subscriptionFormMobile').hide();
-    } else {
-        $('#submitButtonDone').hide();
-        $('#submitButton').show();
-
-        $('#submitButtonMobileDone').hide();
-        $('#submitButtonMobile').show();
-
-        $('#submitCompleteMobile').hide();
-        $('#submitIncompleteMobile').show();
-
-        $('#submitComplete').hide();
-        $('#submitIncomplete').show();     
-
-        $('#subscriptionForm').show();
-        $('#subscriptionFormMobile').show();
-    };
-
-    // Check if the form has been submitted before
-    // if (localStorage.getItem('subscriptionSubmitted')) {
-    //     disableForm();
-    // }
-    
-    $('#subscriptionForm').on('submit', function(e){
-        e.preventDefault();
-
-        grecaptcha.ready(function() {
-          grecaptcha.execute('6Lemn6MpAAAAAESP2aVvYJ5dEukLgbC5Or_BG6tj', {action: 'submit'}).then(function(token) {
-            document.getElementById("submitButton").disabled = true;
-            document.getElementById('submitButton').style.display = 'none';
-            document.getElementById('submitVerifying').style.display = 'inline-block';
-
-            var formData = new FormData(document.getElementById("subscriptionForm"));
-
-            console.log(formData);
-
-            // $.ajaxSetup({
-            //     headers: {
-            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-            //         'authkey': 'YOUR_SECRET_KEY',
-            //     }
-            // });
-
-            // $.ajax({
-            //     type:'POST',
-            //     url: "{{ URL('en/subscription-form') }}",
-            //     data: formData,
-            //     processData: false,
-            //     contentType: false,
-            //     success:function(data)
-            //     {
-            //         if($.isEmptyObject(data.error)){
-            //             setCookie("_ivqLdoulWNJqMw", true, 1);
-            //             // modalClose('mymodalcentered');
-            //             $('#submitComplete').show();
-            //             $('#submitIncomplete').hide();
-            //             $('#submitButtonDone').show();
-            //             $('#submitButton').hide();  
-            //             $('#subscriptionForm').hide();
-            //             document.location.href = '/en/subscription/thanks';
-
-            //         }else{
-            //             printErrorMsg(data.error);
-            //             alert(data.error);
-            //         }
-            //     }
-            // });
-          });
-        });
-
-
-        // grecaptcha.enterprise.ready(async () => {
-        //     const token = await grecaptcha.enterprise.execute('6Lemn6MpAAAAAESP2aVvYJ5dEukLgbC5Or_BG6tj', {action: 'LOGIN'}).then(function(token) {
-                
-        //     });
-        // });
-
-        
-    });
-    
-
-
-
-
-
-    $('#subscriptionFormMobile').on('submit', function(e){
-        e.preventDefault();
-
-        document.getElementById("submitButtonMobile").disabled = true;
-        document.getElementById('submitButtonMobile').style.display = 'none';
-        document.getElementById('submitVerifying').style.display = 'inline-block';
-
-        var formData = new FormData(this);
-
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                'authkey': 'YOUR_SECRET_KEY',
-            }
-        });
-
-        $.ajax({
-            type:'POST',
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content')},
-            url: "{{ URL('en/subscription-form') }}",
-            data: formData,
-            processData: false,
-            contentType: false,
-            success:function(data)
-            {
-                if($.isEmptyObject(data.error)){
-                    setCookie("_ivqLdoulWNJqMw", true, 1);
-                    $('#submitButtonMobileDone').show();
-                    $('#submitButtonMobile').hide();  
-                    document.location.href = '/en/subscription/thanks';
-                }else{
-                    printErrorMsg(data.error);
-                    alert(data.error);
-                }
-            }
-        });
-
-        disableFormMobile();
-
-        // Store the submission status in local storage
-        localStorage.setItem('subscriptionSubmitted', 'true');
-    });
-
-    function disableForm() {
-        document.getElementById('submitButton').disabled = true;
-    }
-
-    function disableFormMobile() {
-        document.getElementById('submitButtonMobile').disabled = true;
-    }
-</script> --}}
