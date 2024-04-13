@@ -93,7 +93,7 @@
 
 
 @section('luxe_asset_js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></scrip>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></scrip>
     <script src="{{ asset('splide/dist/js/splide.min.js')}}"></script>
     <script src="{{ asset('js/development_details/H9U71GVy27r2KLA3fG150xO.min.js')}}"></script>
 
