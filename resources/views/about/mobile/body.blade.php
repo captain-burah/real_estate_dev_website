@@ -3,6 +3,7 @@
 @endphp
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
 
 
 
@@ -33,7 +34,7 @@
                 tabindex="3" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
-                    <img src="{{asset('front/icons/values.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px">
+                    {{-- <img src="{{asset('front/icons/values.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px"> --}}
 
                     <h3 class="text-xl font-thin text-left leading-6 py-4">
                         {{__('frontend.aboutH1')}}
@@ -55,7 +56,7 @@
                 tabindex="1" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
-                    <img src="{{asset('front/icons/mission.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px">
+                    {{-- <img src="{{asset('front/icons/mission.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px"> --}}
 
                     <h3 class="text-xl font-thin text-left leading-6 py-4">
                         {{__('frontend.aboutH2')}}
@@ -77,7 +78,7 @@
                 tabindex="2" @if($langSeg == 'ar') dir="rtl" @endif
             >
                 <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
-                    <img src="{{asset('front/icons/vision.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px">
+                    {{-- <img src="{{asset('front/icons/vision.png')}}" title="ESNAAD CORE VALUES" alt="ESNAAD CORE VALUES" height="auto" width="auto" loading="eager" style="height: 32px"> --}}
 
                     <h3 class="text-xl font-thin text-left leading-6 py-4">
                         {{__('frontend.aboutH3')}}
@@ -99,7 +100,6 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
 
 
 <script>
