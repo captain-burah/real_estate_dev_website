@@ -58,7 +58,7 @@ Route::prefix('{lang?}')->middleware('LocaleRoute')->group(function() {
 
     Route::get('/blogs/{slug}', [FrontEndController::class, 'media_blogs_details'])->name('esnaad.blogs.detail');
 
-    Route::get('/contact', [FrontEndController::class, 'contact'])->name('esnaad.contact');
+    Route::get('/contact-us', [FrontEndController::class, 'contact'])->name('esnaad.contact');
 
     Route::get('/invest-in-dubai', [FrontEndController::class, 'invest'])->name('esnaad.invest_in_dubai');
 
