@@ -9,10 +9,8 @@
                         </ul>
                     </div>
                 @endif
-                <form id="contact-desktop-form">
-                    @csrf
-                    {{-- <div class="icon w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div> --}}
-                    
+                <form id="contact-desktop-form" action="/en/contact-form-post" method="post">
+                    @csrf                    
                     <h3 class="text-3xl font-thin">{{__('frontend.contactFormH')}}</h3>
 
                     <p class=" mb-4"> {{__('frontend.contactFormP')}}</p>
@@ -249,7 +247,7 @@
                     
                     <button type="submit" id="contact_submit"  class="w-full mt-2 bg-white text-black p-3">{{__('frontend.formSubmit')}}</button>
 
-                    <button type="button" id="contact_submit_done" class="w-full mt-2 bg-black text-white p-3" hidden disabled>
+                    <button id="contact_submit_done" class="w-full mt-2 bg-black text-white p-3" hidden disabled>
                         {{__('frontend.footerFormSubmissionCompleted')}}
                     </button>
                     
@@ -320,13 +318,6 @@
             // document.getElementById('contact_submit_verifying').style.display = 'inline-block';
 
             var formData = new FormData(this);
-
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                    'authkey': 'YOUR_SECRET_KEY',
-                }
-            });
 
             $.ajax({
                 type:'POST',

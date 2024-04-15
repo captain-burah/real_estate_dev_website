@@ -8,8 +8,8 @@
             </div>
         @endif
         
-        <form id="contact-desktop-form">
-            @csrf
+        <form id="contact-desktop-form" action="/en/contact-form-post" method="post">
+            @csrf                    
             <div class="icon w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
             <h3 class="text-3xl font-thin">{{__('frontend.contactFormH')}}</h3>
             <p class=" mb-4"> {{__('frontend.contactFormP')}}</p>

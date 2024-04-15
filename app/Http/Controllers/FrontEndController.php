@@ -31,6 +31,7 @@ use App\Models\Project_image;
 use App\Models\ProjectLocation;
 use App\Models\Landingpageseos;
 use App\Models\BrochureDownload;
+use App\Models\ContactLeads;
   
 use PDF;
 use Mail;
@@ -827,6 +828,15 @@ class FrontEndController extends Controller
         
         $tel = $request->country_code + $request->phone;
 
+        $lead_db = new ContactLeads();
+        $lead_db->name = $request->name;
+        $lead_db->email = $request->email;
+        $lead_db->contact = $tel;
+        $lead_db->country_code = $request->country_code;
+        $lead_db->ip_address = $request->getClientIp();
+        $lead_db->msg = $request->msg;
+        $lead_db->save();
+
         try{
             
             $data = [
@@ -845,12 +855,12 @@ class FrontEndController extends Controller
             Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new ContactUs($data));
             // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
         } catch (\Exception $e) {
-            dd($e->getMessage());
+            
         }
 
         // return redirect()->back()->with('success', 'Your inquiry has been submitted!');  
-        return Response::json(['success' => 'verification sent'], 200);  
-        // return redirect()->to('https://esnaad.com/en/contact-us/thanks');
+        // return Response::json(['success' => 'verification sent'], 200);  
+        return redirect()->to('https://esnaad.com/en/contact-us/thanks');
 
         // try{           
 
