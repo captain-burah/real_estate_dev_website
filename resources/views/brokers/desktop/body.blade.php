@@ -20,8 +20,7 @@
 
 <div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-4 mx-auto" id="agency-registration-form">
     <div class="md:w-[80%] xl:w-[50%] mx-auto my-8">
-        <form id="uploadForm" action="/en/agency-registration-post" method="post">
-            @csrf
+        <form id="uploadForm">
             <div class="icon bg-black text-white w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
             <h3 class="text-2xl text-gray-900 font-semibold"> </h3>
             <p class=" mb-4">
@@ -39,8 +38,8 @@
 
             @include('brokers.desktop.documents')
 
-            <button type="submit" id="submitForm" class="w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Register Now</button>
-            <button type="button" id="submitVerifying" hidden disabled class="w-full mt-8 bg-transparent border text-black font-semibold p-3"><div id="loading"></div> Verifying</button>
+            <button id="submitForm" data-sitekey="6Lc-16MpAAAAAHrw0hWYB9OrhlQ4q2xjLZkyqgHY" data-callback='brokerRegOnSubmit'  class="g-recaptcha w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Register Now</button>
+            <button id="submitVerifying" hidden disabled class="w-full mt-8 bg-transparent border text-black font-semibold p-3"><div id="loading"></div> Verifying</button>
         </form>
     </div>
 </div>
@@ -166,42 +165,40 @@
         }
 
     </script> --}}
-    
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
 
     {{-- FORM SUBMIT --}}
-    <script>
+    <script defer>
+        // Function to set a cookie
+        function setCookie(name, value, daysToExpire) {
+            var expires = "";
+            
+            if (daysToExpire) {
+                var date = new Date();
+                date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }                
+            document.cookie = name + "=" + value + expires + "; path=/";
+        };
+        
+        // Function to get a cookie
+        function getCookie(cookieName) {
+            var name = cookieName + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
 
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i].trim();
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+
+            return null; // Return null if the cookie is not found
+        };
         
         $(document).ready(function () {
-            // Function to set a cookie
-            function setCookie(name, value, daysToExpire) {
-                var expires = "";
-                
-                if (daysToExpire) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                
-                document.cookie = name + "=" + value + expires + "; path=/";
-            };
-            
-            // Function to get a cookie
-            function getCookie(cookieName) {
-                var name = cookieName + "=";
-                var decodedCookie = decodeURIComponent(document.cookie);
-                var cookieArray = decodedCookie.split(';');
-
-                for (var i = 0; i < cookieArray.length; i++) {
-                    var cookie = cookieArray[i].trim();
-                    if (cookie.indexOf(name) === 0) {
-                        return cookie.substring(name.length, cookie.length);
-                    }
-                }
-
-                return null; // Return null if the cookie is not found
-            };
             
             //---check if coookies are available
             if (getCookie('_LTfRrpKDnj9SMp')) {
@@ -210,44 +207,46 @@
 
                 var formView = document.getElementById("agency-registration-form-submitted");
                 formView.classList.remove("hidden");
-            } else {
-                /**
-                 * INITIATE HEADERS WITH CSRF TOKENIZATION
-                 * FOR FORM SUBMISSION
-                 */
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content')
-                    }
-                });
-                $('#uploadForm').on('submit', function(e){
-                    e.preventDefault(); //---cancel default form submissions
-                    document.getElementById('submitForm').style.display = 'none';
-                    document.getElementById('submitVerifying').style.display = 'inline-block';
-                    var formData = new FormData(this); //---get alll the form data here
-                    $.ajax({
-                        type:'POST',
-                        headers: //---set the headers for cross-origin policies between domains
-                        {
-                            'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
-                            'Access-Control-Allow-Origin': 'https://esnaad.com/en/agency-registration-post'
-                        },
-                        url: "/en/agency-registration-post",
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success:function(data) 
-                        {
-                            if($.isEmptyObject(data.error)){ //---if success
-                                setCookie("_LTfRrpKDnj9SMp", true, 1); //---set a cookie
-                                document.location.href = '/en/broker-registration/thanks'; //---redirect to thank you page for seo
-                            }else{
-                                printErrorMsg(data.error);//---show error
-                            }
-                        }
-                    });
-                });
             }
         });
+        
+
+        function brokerRegOnSubmit(token) {
+            var formData = new FormData(document.getElementById("uploadForm"));
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                    'authkey': 'YOUR_SECRET_KEY',
+                }
+            });
+            document.getElementById('submitForm').style.display = 'none';
+            document.getElementById('submitVerifying').style.display = 'inline-block';
+            $.ajax({
+                type:'POST',
+                headers: //---set the headers for cross-origin policies between domains
+                {
+                    'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
+                    'Access-Control-Allow-Origin': 'https://esnaad.com/en/agency-registration-post'
+                },
+                url: "/en/agency-registration-post",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success:function(response)
+                {
+                    if (response.errors) {
+                        printErrorMsg('something');//---show error
+                    } else if (response.success) {
+                        setCookie("_LTfRrpKDnj9SMp", true, 1); //---set a cookie
+                        document.location.href = '/en/broker-registration/thanks'; //---redirect to thank you page for seo
+
+                    } else {
+                        document.location.href = '/en/subscription/thanks';
+                        // $("#status").html("Captcha failed.");
+                    }
+                }
+                
+            });
+        };
     </script>
 @endsection

@@ -124,7 +124,7 @@
                                     <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
                                         <div class="relative overflow-hidden rounded-0 lg:h-[22rem] max-h-[50rem] w-[100%] z-0 bg-black bg-opacity-60">
                                             <div
-                                                class="text-white text-xl rounded-0 absolute inset-0 flex justify-center items-center bg-black bg-opacity-90">
+                                                class="text-white text-xl rounded-0 absolute inset-0 flex justify-center items-center bg-black bg-opacity-80">
                                             </div>
                                             
                                             <img class="h-[100%] w-[100%] object-cover  bg-black bg-opacity-60   "
