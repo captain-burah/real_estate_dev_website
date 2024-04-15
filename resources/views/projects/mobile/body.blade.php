@@ -105,7 +105,7 @@
                 class="text-white text-xl rounded-0 absolute inset-0 bg-opacity-80 flex justify-center items-center bg-black bg-opacity-70">
             </div>                    
             <img class="h-[100%] w-[100%] object-cover     "
-            src="{{asset('home/COMING_SOON.webp')}}"
+            src="{{asset('front/project/proj2.jpeg')}}"
                 alt="esnaad-project-card"
                 title="the-spark-by-esnaad-thumbnail"
                 height="300px"

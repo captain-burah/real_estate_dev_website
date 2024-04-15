@@ -128,7 +128,7 @@
                                             </div>
                                             
                                             <img class="h-[100%] w-[100%] object-cover  bg-black bg-opacity-60   "
-                                                src="{{asset('home/COMING_SOON.webp')}}"
+                                                src="{{asset('front/project/proj2.jpeg')}}"
                                                 alt="esnaad-project-card"
                                                 title="the-spark-by-esnaad-thumbnail"
                                                 height="300px"
