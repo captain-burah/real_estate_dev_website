@@ -114,7 +114,7 @@
 
 
                 <div class="hidden space-x-10 sm:flex text-center">
-                    <x-nav-link-tablet href="{{ url($langSeg.'/contact') }}" :active="request()->routeIs('home')" rel="canonical">
+                    <x-nav-link-tablet href="{{ url($langSeg.'/contact-us') }}" :active="request()->routeIs('home')" rel="canonical">
                         {{ __('CONTACT') }}
                     </x-nav-link-tablet>
                 </div>

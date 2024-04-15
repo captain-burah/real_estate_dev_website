@@ -47,7 +47,7 @@
                     <li ><a href="{{ url($langSeg.'/our-developments') }}" class="block px-2 py-1 text-gray-800 rounded hover:bg-gray-200">Developments</a></li>
                     <li ><a href="{{ url($langSeg.'/invest-in-dubai') }}" class="block px-2 py-1 text-gray-800 rounded hover:bg-gray-200">Invest in Dubai</a></li>
                     <li ><a href="{{ url($langSeg.'/media-center') }}" class="block px-2 py-1 text-gray-800 rounded hover:bg-gray-200">Media Center</a></li>
-                    <li ><a href="{{ url($langSeg.'/contact') }}" class="block px-2 py-1 text-gray-800 rounded hover:bg-gray-200">Contact</a></li>
+                    <li ><a href="{{ url($langSeg.'/contact-us') }}" class="block px-2 py-1 text-gray-800 rounded hover:bg-gray-200">Contact</a></li>
                 </ul>
             </div>
         </div>

@@ -60,8 +60,8 @@
                     <img src="{{ asset('home/signature2.png') }}" class="float-right" style="height: 20vh !important;" title="ESNAAD-" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
                 </div> --}}
 
-                <p class="text-base font-thin text-right leading-8 mt-4 w-full pt-4">
-                    Ashraf Elbendari, CEO
+                <p class="text-base font-thin text-left leading-8 mt-4 w-full pt-4">
+                    - Ashraf Elbendari, CEO
                 </p>
             </div>
 

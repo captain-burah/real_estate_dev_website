@@ -55,7 +55,7 @@
         $langSeg = 'en';
     }
 ?>
-<div class="max-w-6xl mx-auto p-0">
+<div class="max-w-6xl mx-auto p-0 mt-4">
     <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
         <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[50rem] w-[100%] z-0">
             <div
@@ -95,8 +95,38 @@
             </a>
         </div>
     </div>
-{{-- </div>
-@foreach($response as $data)
+</div>
+
+
+<div class="max-w-6xl mx-auto p-0 mt-8">
+    <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
+        <div class="relative overflow-hidden rounded-0 lg:h-[20rem] max-h-[50rem] w-[100%] z-0">
+            <div
+                class="text-white text-xl rounded-0 absolute inset-0 bg-opacity-80 flex justify-center items-center bg-black bg-opacity-70">
+            </div>                    
+            <img class="h-[100%] w-[100%] object-cover     "
+            src="{{asset('home/COMING_SOON.webp')}}"
+                alt="esnaad-project-card"
+                title="the-spark-by-esnaad-thumbnail"
+                height="300px"
+                width="auto"
+                loading="lazy"
+            >
+        </div>
+        <div class="row w-full mx-auto mt-4 z-20">
+            <div>
+                <h2 class="text-xl font-bold text-center">Coming Soon</h2>
+                <p class="text-base font-thin text-center">&nbsp;</p>
+            </div>
+        </div>
+        <div class="text-center py-4 sm:py-4 w-full mt-2">
+            <a title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0">
+                Explore More
+            </a>
+        </div>
+    </div>
+</div>
+{{-- @foreach($response as $data)
     <?php
         $id = $data['id'];
         $name = $data['name'];

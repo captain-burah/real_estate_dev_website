@@ -144,7 +144,7 @@
                 </div> --}}
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-center pl-8">
-                    <x-nav-link href="{{ url($langSeg.'/contact') }}"   aria-label="navbar-route">
+                    <x-nav-link href="{{ url($langSeg.'/contact-us') }}"   aria-label="navbar-route">
                         {{ __('CONTACT') }}
                     </x-nav-link>
                 </div>
@@ -209,7 +209,7 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-center pl-4">
-                    <x-nav-link href="{{ url($langSeg.'/contact') }}"   aria-label="navbar-route">
+                    <x-nav-link href="{{ url($langSeg.'/contact-us') }}"   aria-label="navbar-route">
                         {{ __('CONTACT') }}
                     </x-nav-link>
                 </div>

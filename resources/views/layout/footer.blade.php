@@ -380,7 +380,7 @@
                                 <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
                                 <li class="text-md  my-2">
                                     <div class="inline-flex items-center" >
-                                        <a href="https://esnaad.com/en/contact" class="inline-flex items-center">
+                                        <a href="https://esnaad.com/en/contact-us" class="inline-flex items-center">
                                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                 width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
                                                 preserveAspectRatio="xMidYMid meet">
@@ -505,7 +505,7 @@
                                         <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
                                         <li class="text-md  my-2">
                                             <div class="inline-flex items-center" >
-                                                <a href="https://esnaad.com/en/contact" class="inline-flex items-center">
+                                                <a href="https://esnaad.com/en/contact-us" class="inline-flex items-center">
                                                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                         width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
                                                         preserveAspectRatio="xMidYMid meet">

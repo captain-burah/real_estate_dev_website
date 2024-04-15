@@ -10,7 +10,7 @@
 
             <blockquote class="relative">
                 <div class="relative z-10">
-                    <em>
+                    
                         <p class="text-base font-thin text-justify leading-6">
                             {{__('frontend.ceoMsg1')}}                        
                         </p>
@@ -34,7 +34,7 @@
                         </em>
                         </p> --}}
         
-                        <p class="text-base font-thin text-justify leading-6 mt-8 pt-8">
+                        <p class="text-base font-thin text-justify leading-6 mt-4">
                             {{__('frontend.ceoMsg3')}}                        
                         </p>
         
@@ -42,7 +42,7 @@
                             {{__('frontend.ceoMsg4')}}                        
                         </p>
         
-                    </em>
+                    
                 </div>
                 </blockquote>
     
@@ -52,8 +52,8 @@
                 <img src="{{ asset('home/signature2.png') }}" class="float-right" style="height: 15vh !important;" title="ESNAAD-" alt="ESNAAD Our Story" loading="lazy" width="auto" height="auto">
             </div> --}}
 
-            <p class="text-base font-thin text-right leading-8 mt-4 w-full">
-                Ashraf Elbendari, CEO                      
+            <p class="text-base font-thin text-left leading-8 mt-4 w-full">
+                - Ashraf Elbendari, CEO                      
             </p>
         </div>
 
