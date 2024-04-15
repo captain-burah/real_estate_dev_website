@@ -58,8 +58,8 @@
                     </div>
                 </div>
                 </div>
-                <h3 class="my-4 text-center text-3xl font-semibold text-gray-700">Successful!</h3>
-                <p class="w-[100%] text-center font-normal text-gray-600">
+                <h3 class="my-4 text-center text-3xl font-semibold ">Successful!</h3>
+                <p class="w-[100%] text-center font-normal ">
                     Thank you for submitting your information. Your registration has been recorded and is currently awaiting verification by our customer support team. You will receive a notification via email once the process is complete
                 </p>
             </div>
