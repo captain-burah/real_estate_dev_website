@@ -45,7 +45,7 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="height:40vh; background-image: url({{ asset('home/yatch2-2.jpg') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+    <div class="w-full bg-cover bg-center" style="height:40vh; background-image: url('{{ URL::asset('developments/banners/12.webp')}}'), url('{{ URL::asset('developments/banners/12.webp')}}');">
         <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-50">
             <div class="container mx-6 my-auto">
                     

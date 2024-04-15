@@ -45,7 +45,7 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="margin-top: 60px; height: 40vh; background-image: url('{{ URL::asset('home/invest-in-dubai.webp')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+    <div class="w-full bg-cover bg-center" style="margin-top: 60px; height: 40vh; background-image: url('{{ URL::asset('developments/banners/11.webp')}}'), url('{{ URL::asset('developments/banners/11.webp')}}');">
         <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-60">
 
             <div class="container mx-0 px-0 mx-auto text-white">

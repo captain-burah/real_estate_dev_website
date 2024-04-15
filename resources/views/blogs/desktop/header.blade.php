@@ -47,7 +47,7 @@
 
 
 <header class="">
-    <div class="w-full bg-cover bg-center" style="height: 75vh; background-image: url('{{ URL::asset('home/esnaad images/blogs/1-2.webp')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+    <div class="w-full bg-cover bg-center" style="height: 75vh; background-image: url('{{ URL::asset('developments/banners/2.webp')}}'), url('{{ URL::asset('developments/banners/2.webp')}}');">
     {{-- <div class="w-full bg-cover bg-center" style="height: 40vh;"> --}}
         <div class="flex items-center justify-center h-full w-full bg-black bg-opacity-40" style="padding-top: 10vh;">
             <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto  text-white">

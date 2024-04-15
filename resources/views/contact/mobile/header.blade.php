@@ -45,7 +45,7 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="height:60vh; background-image: url('{{ URL::asset('home/esnaad images/contact/2-1.jpg')}}'), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
+    <div class="w-full bg-cover bg-center" style="height:60vh; background-image: url('{{ URL::asset('developments/banners/4.webp')}}'), url('{{ URL::asset('developments/banners/4.webp')}}');">
         <div class="flex items-center justify-center h-full w-full  bg-black bg-opacity-40">
             <div class="container">
                     
