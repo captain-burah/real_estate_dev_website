@@ -614,9 +614,9 @@ class FrontEndController extends Controller
         $response = json_decode($response, true);
 
         // handle status and respond with json
-        if (intval($response["success"]) !== 1) {
-            $json_response(['errors' => ['recaptcha' => 'Captcha failed.']]);
-        } else {
+        // if (intval($response["success"]) !== 1) {
+        //     $json_response(['errors' => ['recaptcha' => 'Captcha failed.']]);
+        // } else {
             /** STAGE I */
             $data = [
                 'company_name'      =>  $request->company_name, 
@@ -687,7 +687,7 @@ class FrontEndController extends Controller
 
             }
             return Response::json(['success' => 'success'], 200);
-        }
+        // }
     }
 
 
