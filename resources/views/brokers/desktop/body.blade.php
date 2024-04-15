@@ -210,7 +210,6 @@
             }
         });
         
-
         function brokerRegOnSubmit(token) {
             var formData = new FormData(document.getElementById("uploadForm"));
             $.ajaxSetup({

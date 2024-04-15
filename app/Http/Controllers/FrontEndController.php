@@ -686,7 +686,8 @@ class FrontEndController extends Controller
                 return Response::json(['error' => $e->getMessage()], 500);
 
             }
-            return Response::json(['success' => 'success'], 200);
+            // return Response::json(['success' => 'success'], 200);
+            return redirect()->to('https://esnaad.com/en/thankyou');
         // }
     }
 
