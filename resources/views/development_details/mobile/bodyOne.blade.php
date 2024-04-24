@@ -9,7 +9,7 @@
                     <h2 class="text-xl text-center font-thin textbasel w-full">
                         Prices From 
                         <span class="font-bold">
-                            AED {{ number_format($starting_price)}}
+                            AED 1,050,000
                         </span>
                     </h2>
                 </div>

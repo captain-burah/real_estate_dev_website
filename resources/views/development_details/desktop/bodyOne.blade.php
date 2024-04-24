@@ -24,7 +24,7 @@
                         Prices From
                     </h3>
                     <p class="text-xl xl:text-3xl text-justify font-light w-[90%] tracking-wider" >
-                        AED {{ number_format($starting_price)}}
+                        AED 1,050,000
                     </p>
                 </div>
 
