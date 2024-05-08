@@ -14,7 +14,7 @@
 <div class="sm:container sm:mx-auto mx-0 px-0 my-20 sm:my-4 mx-auto">
     <div class="flex justify-left ...">
         <div class="mr-4">
-            <button onclick="openModal('mymodalcentered-community-register')"  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
+            <button onclick="openModal('mymodalcentered-community-register')"  class="lg:w-75 text-xl text-black bg-white hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
                 @if($langSeg=='ar')
                 سجل اهتمامك
                 @else
@@ -24,11 +24,11 @@
         </div>
         <div class="mr-4">
             {{-- <a href="/home/The_Spark_by_ESNAAD_Brochure.pdf" target="_blank">
-                <button  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
+                <button  class="lg:w-75 text-xl text-black bg-white   hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
                     Download Brochure
                 </button>
             </a> --}}
-            <button onclick="openModal('mymodalcentered-brochure-register')"  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
+            <button onclick="openModal('mymodalcentered-brochure-register')"  class="lg:w-75 text-xl text-black bg-white   hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
                 {{ __('frontend.projectRegisterInterest') }}
             </button>
         </div>
@@ -230,7 +230,13 @@
             
             <div class="flex flex-col items-start w-full" id="form_ready">
                 <div class="p-7 flex items-stretch w-full">
-                    <div class="font-thin text-xl text-gray-900">Register Your Interest</div>
+                    <div class="font-thin text-xl text-gray-900">
+                        @if($langSeg=='ar')
+                        سجل اهتمامك
+                        @else
+                        Register Your Interest
+                        @endif
+                    </div>
                     <svg onclick="modalClose('mymodalcentered-community-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                         <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
@@ -482,7 +488,7 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="bg-black w-[100%] hover:bg-white border border-black text-white hover:text-black font-bold py-2 rounded-0">
+                            <button type="submit" class="bg-black w-[100%] hover:bg-white border border-black text-white hover:text-black   py-2 rounded-0">
                                 
                                 {{ __('frontend.projectRegisterInterest') }}
                             </button>
@@ -533,7 +539,7 @@
             
             <div class="flex flex-col items-start w-full" id="form_ready_brochure" dir="ltr">
                 <div class="p-7 flex items-stretch w-full">
-                    <div class="font-bold text-xl text-black " >{{ __('frontend.projectDownloadBrochure') }}</div>
+                    <div class="  text-xl text-black " >{{ __('frontend.projectDownloadBrochure') }}</div>
                     <svg onclick="modalClose('mymodalcentered-brochure-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                         <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
@@ -794,10 +800,10 @@
                         <button type="button" onclick="modalClose('mymodalcentered-brochure-register')" class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded-0"   >
                             {{ __('frontend.buttonClose') }}
                         </button>
-                        <button type="submit" id="submitFormBrochure" class="bg-black hover:bg-white border border-black text-white hover:text-black font-bold py-2 px-4 rounded-0 ml-3">
+                        <button type="submit" id="submitFormBrochure" class="bg-black hover:bg-white border border-black text-white hover:text-black   py-2 px-4 rounded-0 ml-3">
                             {{ __('frontend.projectDownloadBrochure') }}
                         </button>      
-                        <button type="button" id="submitVerifyingBrochure" hidden disabled class="bg-transparent border border-black text-black font-bold py-2 px-4 rounded-0 ml-3"><div id="loading"></div> Verifying</button>                  
+                        <button type="button" id="submitVerifyingBrochure" hidden disabled class="bg-transparent border border-black text-black   py-2 px-4 rounded-0 ml-3"><div id="loading"></div> Verifying</button>                  
                     </div>
                 </form>
             </div>
@@ -838,7 +844,7 @@
             
             <div class="flex flex-col items-start w-full" id="form_ready_brochure">
                 <div class="p-7 flex items-stretch w-full">
-                    <div class="font-bold text-xl text-black" >{{ __('frontend.projectDownloadBrochure') }}</div>
+                    <div class="  text-xl text-black" >{{ __('frontend.projectDownloadBrochure') }}</div>
                     <svg onclick="modalClose('mymodalcentered-brochure-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                         <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
@@ -859,7 +865,7 @@
                             </tbody>
                         </table>
                         <button type="button"  id="verificationFormSubmit" class="w-full mt-8 bg-black hover:bg-white border hover:border-gray-500 text-white hover:text-black font-semibold p-3">Verify</button>
-                        {{-- <button type="button" id="ResendVerificationCode" class="w-full mt-4 text-black font-thin">Didn't get a code? <span class="font-bold">Click to resend</button> --}}
+                        {{-- <button type="button" id="ResendVerificationCode" class="w-full mt-4 text-black font-thin">Didn't get a code? <span class=" ">Click to resend</button> --}}
                     </form>
             </div>
 

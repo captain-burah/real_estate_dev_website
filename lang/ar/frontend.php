@@ -267,7 +267,7 @@ return [
 
 
         "projectRegisterInterest" => "سجل اهتمامك",
-        "projectDownloadBrochure" => "Download Brochure",
+        "projectDownloadBrochure" => "تحميل الكتيب",
         "buttonClose" => "Close",
 
 
