@@ -1,15 +1,17 @@
 <table class="w-full mt-8">
     <tbody>
         <caption class="my-4 underline">
-            Authorized Person information
+                {{__('frontend.brokerAuthPH1')}}
         </caption>
         <tr>
-            <td style="width: 235px">Authorized Person Name</td>
+            <td style="width: 235px">{{__('frontend.brokerAuthPname')}}</td>
             <td><input type="text" name="authorized_p_name" id="authorized_p_name" placeholder="eg: James Smith" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>Country of Origin</td>
+            <td>
+                {{__('frontend.brokerAuthPcountry')}}
+            </td>
             <td>
                 <select id="authorized_p_country" name="authorized_p_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required>
                     <option class="bg-black" value="">Choose a country</option>
@@ -263,22 +265,22 @@
 
 
         <tr>
-            <td>Passport Number</td>
+            <td>{{__('frontend.brokerAuthPpassport')}}</td>
             <td><input type="text" name="authorized_p_passport" id="authorized_p_passport" placeholder="ex: 123456789" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>Designation / Position</td>
+            <td>{{__('frontend.brokerAuthPdesignation')}}</td>
             <td><input type="text" name="authorized_p_position" id="authorized_p_position" placeholder="ex: Managing Director" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>Email</td>
+            <td>{{__('frontend.brokerAuthPemail')}}</td>
             <td><input type="text" name="authorized_p_email" id="authorized_p_email" placeholder="ex: company@domain.com" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>Contact Number</td>
+            <td>{{__('frontend.brokerAuthPphone')}}</td>
             <td class="flex">
                 <select name="authorized_p_country_code"  class="border w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" >
                     <option class="bg-black" data-countryCode="AE" value="971" Selected>United Arab Emirates (+971)</option>
@@ -504,12 +506,12 @@
         </tr>
 
         <tr>
-            <td>Address</td>
+            <td>{{__('frontend.brokerAuthPaddress')}}</td>
             <td><input type="text" name="authorized_p_address" id="authorized_p_address" placeholder="ex: No. 580, Whiff Oaf Lane, Dubai, United Arab Emirates" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>City</td>
+            <td>{{__('frontend.brokerAuthPCity')}}</td>
             <td><input type="text" name="authorized_p_city" id="authorized_p_city" placeholder="ex: City" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
         

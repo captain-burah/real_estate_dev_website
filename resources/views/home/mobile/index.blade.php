@@ -1,4 +1,14 @@
 @extends('layoutv2.master')
+<?php
+    $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri_segments = explode('/', $uri_path);
+    $seg1 = $uri_segments[1];
+    if($seg1 == 'en' || $seg1 == 'ar'){
+        $langSeg = $uri_segments[1];
+    }else{
+        $langSeg = 'en';
+    }
+?>
 
 @section('luxe_asset_css')
 
@@ -41,7 +51,8 @@
 
 
 @section('luxe_asset_js')
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+    <script src="{{ asset('js.jquery.min.js') }}" async></script>
 
     <script src="{{ asset('owl/jquery.min.js') }}"></script>
 

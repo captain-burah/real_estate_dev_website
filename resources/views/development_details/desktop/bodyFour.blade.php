@@ -69,8 +69,15 @@
                 @endif
             </p>
         </div>
+        <style>
+            #amenities_desktop, ul, li, p, span{
+                font-family: 'Readex Pro', sans-serif !important;
+                line-height: 1.7 !important;
+                color: #ccc !important;
+            }
+        </style>
         <div class=" text-justify font-light m-8 w-full">
-            <div class="row w-[100%] h-[30%] mb-8">
+            <div class="row w-[100%] h-[30%] mb-8" id="amenities_desktop">
                 @if($langSeg == 'ar')
                     {!! $SecTwo_amenities_ar !!}
                 @else

@@ -85,13 +85,32 @@
         </div>
         <div class="row w-full mx-auto mt-4 z-20">
             <div>
-                <h2 class="text-xl font-bold text-center">The Spark By ESNAAD</h2>
-                <p class="text-base font-thin text-center">Mohammed Bin Rashid City</p>
+                <h2 class="text-xl font-thin text-center">
+                    @if($langSeg=="ar")
+                    ذا سبارك من إسناد
+                    @else
+                    The Spark By ESNAAD
+                    @endif
+                </h2>
+                <p class="text-base font-thin text-center">
+                    @if($langSeg=="ar")
+                    مدينة محمد بن راشد
+                    @else
+                    Mohammed Bin Rashid City
+                    @endif
+                </p>
             </div>
         </div>
         <div class="text-center py-4 sm:py-4 w-full mt-2">
-            <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0">
-                Explore More
+            <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white font-thin text-base text-black py-3 px-10 rounded-0" onclick="showLoader()">
+                <span id="buttonText">
+                    @if($langSeg=="ar")
+                    اكتشف المزيد
+                    @else
+                    Explore More
+                    @endif
+                </span>
+                <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
             </a>
         </div>
     </div>
@@ -115,13 +134,23 @@
         </div>
         <div class="row w-full mx-auto mt-4 z-20">
             <div>
-                <h2 class="text-xl font-bold text-center">Coming Soon</h2>
+                <h2 class="text-xl font-thin text-center">
+                    @if($langSeg=="ar")
+                    يأتي قريباً
+                    @else
+                    Coming Soon
+                    @endif
+                </h2>
                 <p class="text-base font-thin text-center">&nbsp;</p>
             </div>
         </div>
         <div class="text-center py-4 sm:py-4 w-full mt-2">
-            <a title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0">
+            <a title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base font-thin text-black py-3 px-10 rounded-0">
+                @if($langSeg=="ar")
+                اكتشف المزيد
+                @else
                 Explore More
+                @endif
             </a>
         </div>
     </div>
@@ -152,3 +181,16 @@
     ></x-new-project>
 @endforeach --}}
 </section>
+<script>
+    function showLoader() {
+        // Hide the button text
+        document.getElementById('buttonText').style.display = 'none';
+        // Show the loader image
+        document.getElementById('loaderImg').style.display = 'inline';
+
+        // Wait for 2 seconds and then navigate to the next page
+        setTimeout(function() {
+            window.location.href = 'http://esnaad.com/en/developments/the-spark-by-esnaad'; // URL of the next page
+        }, 500);
+    }
+</script>

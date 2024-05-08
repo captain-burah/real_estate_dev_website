@@ -56,14 +56,14 @@
 
     <div class="row-span-2 grid sm:grid-cols-2 gap-4 h-[100%] w-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
         <div>
-            <h2 class=" text-left font-base my-2 text-lg xl:text-2xl w-[100%]">
+            <h2 class=" font-base my-2 text-lg xl:text-2xl w-[100%]">
                 @if($langSeg == 'ar')
                     {{$secTwo_title_ar}}
                 @else
                     {{$secTwo_title}}
                 @endif
             </h2>
-            <p class=" text-left font-base mb-4 mt-3 w-[100%] leading-6">
+            <p class=" font-base mb-4 mt-3 w-[100%] leading-6" @if($langSeg=='ar') dir=rtl @endif>
                 @if($langSeg == 'ar')
                     {{$SecTwo_description_ar}}
                 @else

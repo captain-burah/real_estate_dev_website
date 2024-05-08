@@ -56,7 +56,11 @@
                 </h1>
                 <div class="w-[600px] text-center mx-auto">
                     <h2 class="text-base w-200 text-center font-thin mt-2">
+                        @if($langSeg=='ar')
+                        مرحبا بكم في بوابة تسجيل الوساطة العقارية
+                        @else
                         Welcome to the Real Estate brokerage Registration portal
+                        @endif
                     </h2>
                 </div>
             </div>

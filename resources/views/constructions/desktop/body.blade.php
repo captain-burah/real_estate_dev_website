@@ -23,7 +23,7 @@
                                     <div class="h-25">
                                         <p class="mt-4 pl-4 text-2xl text-center font-thin">
                                             @if($langSeg == 'ar')
-                                                The Spark by ESNAAD
+                                            ذا سبارك من إسناد
                                             @else
                                                 The Spark by ESNAAD
                                             @endif
@@ -39,7 +39,12 @@
                                         </div>
 
                                         <p class="mt-4 pl-4 text-base text-center font-thin my-auto">
-                                            Progress 1 %
+                                            @if($langSeg == 'ar')
+                                            1% تقدم 
+                                            @else
+                                            Progress 1%
+                                            @endif
+                                                                                       
                                         </p>
 
                                                                            

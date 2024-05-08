@@ -184,6 +184,17 @@
             }                
         @endphp
 
+        <?php
+        $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $uri_segments = explode('/', $uri_path);
+        $seg1 = $uri_segments[1];
+        if($seg1 == 'en' || $seg1 == 'ar'){
+            $langSeg = $uri_segments[1];
+        }else{
+            $langSeg = 'en';
+        }
+        ?>
+
         <link rel="{{$rel_type}}" href="<?php echo $canonicalUrl;?>" hreflang="{{$langhref}}">
 
         <script type="application/ld+json" >
@@ -237,86 +248,134 @@
 		}</script>
 
 
-        <style>
+        @if($langSeg == 'ar')
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+            <style>
 
-            html {
-            
-            }
-            html,body{
-                @apply text-gray-800;
-                background-color: #000 !important;
-                max-width: 100%;
-                overflow-x: hidden;
-            }
-
-            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-            
-            @font-face {
-                font-family: 'OptimaNew';
-                font-style: normal;
-                font-weight: lighter;
-                src: local('OptimaNew'), url('front/fonts/Optima/OptimaLTPro-Roman.otf') format('otf');
-            }
-
-            @font-face {
-                font-family: 'Optima';
-                font-style: lighter;
-                font-weight: normal;
-                src: local('Optima'), url('front/fonts/OPTIMA.woff') format('woff');
-            }
-
-            @font-face {
-                font-family: 'Optima Italic';
-                font-style: normal;
-                font-weight: normal;
-                src: local('Optima Italic'), url('front/fonts/Optima_Italic.woff') format('woff');
-            }
-
-
-            @font-face {
-                font-family: 'Optima Medium';
-                font-style: normal;
-                font-weight: normal;
-                src: local('Optima Medium'), url('front/fonts/Optima Medium.woff') format('woff');
-            }
-
-
-            @font-face {
-                font-family: 'Optima Bold';
-                font-style: normal;
-                font-weight: normal;
-                src: local('Optima Bold'), url('front/fonts/OPTIMA_B.woff') format('woff');
-            }
-            
-            @font-face {
-                font-family: 'Optima LT W02 Roman';
-                font-style: normal;
-                font-weight: normal;
-                src: url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.eot");
-                src: url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.eot?#iefix")format("embedded-opentype"),
-                url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.woff2")format("woff2"),
-                url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.woff")format("woff"),
-                url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.ttf")format("truetype"),
-                url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.svg#Optima LT W02 Roman")format("svg");
-            }
-
-            @media screen and (max-width : 1920px){
-                .large_screens{
-                    display:block;
+                html {
+                
                 }
-                .microsoft_screens{
-                    display:none;
+                html,body{
+                    @apply text-gray-800;
+                    background-color: #000 !important;
+                    max-width: 100%;
+                    font-family: "Readex Pro", sans-serif;
+                    overflow-x: hidden;
                 }
-            }
-            @media screen and (max-width : 1368){
-                .large_screens{
-                    display:none;
+
+                h1,h2,h3,h4,h5,p,span{
+                    font-family: "Readex Pro";
                 }
-                .microsoft_screens{
-                    display:block;
+    
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+                    
+    
+                @media screen and (max-width : 1920px){
+                    .large_screens{
+                        display:block;
+                    }
+                    .microsoft_screens{
+                        display:none;
+                    }
                 }
-            }
-        </style>
+                @media screen and (max-width : 1368){
+                    .large_screens{
+                        display:none;
+                    }
+                    .microsoft_screens{
+                        display:block;
+                    }
+                }
+            </style>
+        @else
+            <style>
+
+                html {
+                
+                }
+                html,body{
+                    @apply text-gray-800;
+                    background-color: #000 !important;
+                    max-width: 100%;
+                    overflow-x: hidden;
+                }
+
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+                    
+                
+                @font-face {
+                    font-family: 'OptimaNew';
+                    font-style: normal;
+                    font-weight: lighter;
+                    src: local('OptimaNew'), url('front/fonts/Optima/OptimaLTPro-Roman.otf') format('otf');
+                }
+
+                @font-face {
+                    font-family: 'Optima';
+                    font-style: lighter;
+                    font-weight: normal;
+                    src: local('Optima'), url('front/fonts/OPTIMA.woff') format('woff');
+                }
+
+                @font-face {
+                    font-family: 'Optima Italic';
+                    font-style: normal;
+                    font-weight: normal;
+                    src: local('Optima Italic'), url('front/fonts/Optima_Italic.woff') format('woff');
+                }
+
+
+                @font-face {
+                    font-family: 'Optima Medium';
+                    font-style: normal;
+                    font-weight: normal;
+                    src: local('Optima Medium'), url('front/fonts/Optima Medium.woff') format('woff');
+                }
+
+
+                @font-face {
+                    font-family: 'Optima Bold';
+                    font-style: normal;
+                    font-weight: normal;
+                    src: local('Optima Bold'), url('front/fonts/OPTIMA_B.woff') format('woff');
+                }
+                
+                @font-face {
+                    font-family: 'Optima LT W02 Roman';
+                    font-style: normal;
+                    font-weight: normal;
+                    src: url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.eot");
+                    src: url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.eot?#iefix")format("embedded-opentype"),
+                    url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.woff2")format("woff2"),
+                    url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.woff")format("woff"),
+                    url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.ttf")format("truetype"),
+                    url("https://db.onlinewebfonts.com/t/c78d5ac2e0567f3d7abc24629e42741f.svg#Optima LT W02 Roman")format("svg");
+                }
+
+                @media screen and (max-width : 1920px){
+                    .large_screens{
+                        display:block;
+                    }
+                    .microsoft_screens{
+                        display:none;
+                    }
+                }
+                @media screen and (max-width : 1368){
+                    .large_screens{
+                        display:none;
+                    }
+                    .microsoft_screens{
+                        display:block;
+                    }
+                }
+            </style>
+        @endif
+
+        
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -342,6 +401,21 @@
                 a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         </script>
+
+
+        <style>
+            #loading-image {
+                position: absolute;
+                top: 50vh;
+                left: 50vw;
+                height: 100;
+                width: 100;
+                z-index: 250;
+            }
+            body{
+                overflow: hidden;
+            }
+        </style>
 
 
     </head>
@@ -408,6 +482,9 @@
         <!-- End Google Tag Manager (noscript) -->
 
         <div class="min-h-screen ">
+            <div id="loader" style="background-color: #000 !important; position: fixed; height: 100vh; width: 100vw; z-index: 200 !important; opacity: .9; display: block">
+                <img id="loading-image" src="{{ asset('loader5.gif')}}" alt="Loading..." style="height: 40px; width: 40px;"/>
+            </div>
 
             @notmobile       
                 <nav x-data="{ open: false }" class="bg-white p-0 m-0 z-50 shadow "  id="sample" style="position: fixed; width: 100vw !important; background-color: #1C1C1C !important; color: #ccc !important;">
@@ -426,212 +503,207 @@
 
 
             @notmobile
-            <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 90px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
-                <style>
-                    .bounce2 {
-                        display: inline-block;
-                        position: relative;
-                        -moz-animation: bounce 1.5s infinite linear;
-                        -o-animation: bounce 1.5s infinite linear;
-                        -webkit-animation: bounce 1.5s infinite linear;
-                        animation: bounce 1.5s infinite linear;
-                        }
-                        @-webkit-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-moz-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-o-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-ms-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                </style>
+                <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 90px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+                    <style>
+                        .bounce2 {
+                            display: inline-block;
+                            position: relative;
+                            -moz-animation: bounce 1.5s infinite linear;
+                            -o-animation: bounce 1.5s infinite linear;
+                            -webkit-animation: bounce 1.5s infinite linear;
+                            animation: bounce 1.5s infinite linear;
+                            }
+                            @-webkit-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-moz-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-o-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-ms-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                    </style>
 
-                <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
-                    <a href="https://wa.link/pzf7z4"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Chat on WhatsApp">
-                        <img src="{{ asset('home/wa.png') }}" class="rounded-circle p-2 border border-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="WhatsApp" />
-                    </a>		
-                </div>
-            </section>
+                    <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
+                        <a href="https://wa.link/pzf7z4"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Chat on WhatsApp">
+                            <img src="{{ asset('home/wa.png') }}" class="rounded-circle p-2 border border-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="WhatsApp" />
+                        </a>		
+                    </div>
+                </section>
 
-            <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 160px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
-                <style>
-                    .bounce2 {
-                        display: inline-block;
-                        position: relative;
-                        -moz-animation: bounce 1.5s infinite linear;
-                        -o-animation: bounce 1.5s infinite linear;
-                        -webkit-animation: bounce 1.5s infinite linear;
-                        animation: bounce 1.5s infinite linear;
-                        }
-                        @-webkit-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-moz-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-o-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-ms-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                </style>
-                <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
-                    <a href="tel:+971-4-287-9506"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Call Us on +971 4 287 9506">
-                        <img src="{{ asset('/developments/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
-                    </a>		
-                </div>
-            </section>
+                <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 160px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+                    <style>
+                        .bounce2 {
+                            display: inline-block;
+                            position: relative;
+                            -moz-animation: bounce 1.5s infinite linear;
+                            -o-animation: bounce 1.5s infinite linear;
+                            -webkit-animation: bounce 1.5s infinite linear;
+                            animation: bounce 1.5s infinite linear;
+                            }
+                            @-webkit-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-moz-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-o-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-ms-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                    </style>
+                    <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
+                        <a href="tel:+971-4-287-9506"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Call Us on +971 4 287 9506">
+                            <img src="{{ asset('/developments/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-50" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
+                        </a>		
+                    </div>
+                </section>
             @endnotmobile
 
 
             @mobile
-            <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 30px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
-                <style>
-                    .bounce2 {
-                        display: inline-block;
-                        position: relative;
-                        -moz-animation: bounce 1.5s infinite linear;
-                        -o-animation: bounce 1.5s infinite linear;
-                        -webkit-animation: bounce 1.5s infinite linear;
-                        animation: bounce 1.5s infinite linear;
-                        }
-                        @-webkit-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-moz-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-o-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-ms-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                </style>
+                <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 30px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+                    <style>
+                        .bounce2 {
+                            display: inline-block;
+                            position: relative;
+                            -moz-animation: bounce 1.5s infinite linear;
+                            -o-animation: bounce 1.5s infinite linear;
+                            -webkit-animation: bounce 1.5s infinite linear;
+                            animation: bounce 1.5s infinite linear;
+                            }
+                            @-webkit-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-moz-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-o-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-ms-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                    </style>
 
-                <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
-                    <a href="https://wa.link/pzf7z4"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Chat on WhatsApp">
-                        <img src="{{ asset('home/wa.png') }}" class="rounded-circle p-2 border border-50 bg-black bg-opacity-75" style="border-radius: 50%; width: 60px;float: right !important;" alt="WhatsApp" />
-                    </a>		
-                </div>
-            </section>
+                    <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
+                        <a href="https://wa.link/pzf7z4"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Chat on WhatsApp">
+                            <img src="{{ asset('home/wa.png') }}" class="rounded-circle p-2 border border-50 bg-black bg-opacity-75" style="border-radius: 50%; width: 60px;float: right !important;" alt="WhatsApp" />
+                        </a>		
+                    </div>
+                </section>
 
-            <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 100px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
-                <style>
-                    .bounce2 {
-                        display: inline-block;
-                        position: relative;
-                        -moz-animation: bounce 1.5s infinite linear;
-                        -o-animation: bounce 1.5s infinite linear;
-                        -webkit-animation: bounce 1.5s infinite linear;
-                        animation: bounce 1.5s infinite linear;
-                        }
-                        @-webkit-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-moz-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-o-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @-ms-keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                        @keyframes bounce2 {
-                            0% { top: 0; }
-                            50% { top: -0.3em; }
-                            70% { top: -0.4em; }
-                            100% { top: 0; }
-                        }
-                </style>
-                <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
-                    <a href="tel:+971-4-287-9506"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Call Us on +971 4 287 9506">
-                        <img src="{{ asset('/developments/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-75" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
-                    </a>		
-                </div>
-            </section>
+                <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 100px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+                    <style>
+                        .bounce2 {
+                            display: inline-block;
+                            position: relative;
+                            -moz-animation: bounce 1.5s infinite linear;
+                            -o-animation: bounce 1.5s infinite linear;
+                            -webkit-animation: bounce 1.5s infinite linear;
+                            animation: bounce 1.5s infinite linear;
+                            }
+                            @-webkit-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-moz-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-o-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @-ms-keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                            @keyframes bounce2 {
+                                0% { top: 0; }
+                                50% { top: -0.3em; }
+                                70% { top: -0.4em; }
+                                100% { top: 0; }
+                            }
+                    </style>
+                    <div class="h-fit min-h-full flex ml-2 justify-end bounce2">
+                        <a href="tel:+971-4-287-9506"  class="col-6 py-2 text-white mx-1" data-mdb-toggle="tooltip" title="Call Us on +971 4 287 9506">
+                            <img src="{{ asset('/developments/phone.png') }}" class="rounded-circle p-3 border rounded-50 bg-black bg-opacity-75" style="border-radius: 50%; width: 60px;float: right !important;" alt="Call" />
+                        </a>		
+                    </div>
+                </section>
             @endmobile
-            
             
             <section style="z-index: 20;">
                 @include('layout.footer')
             </section>
-
-
-            
-
         </div>
 
         {{-- <script>

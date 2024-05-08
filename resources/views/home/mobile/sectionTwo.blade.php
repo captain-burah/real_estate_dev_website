@@ -31,7 +31,7 @@
 <div class="mt-15 bg-footer ">
 
     <div class="pt-5 mb-5 px-6 w-full">
-        <h3 class="text-xl font-thin text-left w-[100%]">
+        <h3 class="text-xl font-thin w-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
             {{__('frontend.homeSectionTwoH1')}} <br> {{__('frontend.homeSectionTwoH2')}}
         </h3>
     </div>
@@ -61,7 +61,7 @@
     </div>   
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script>
     $(document).ready(function(){  

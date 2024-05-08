@@ -82,31 +82,31 @@
     
     <input hidden id="pid" value="{{$pid}}">
 
-    <section class="my-0">
+    <section class="my-0" @if($langSeg=='ar') dir="rtl" @endif>
         @include('development_details.mobile.header')
     </section>
 
-    <section class="my-2 px-4">
+    <section class="my-2 px-4" @if($langSeg=='ar') dir="rtl" @endif>
         @include('development_details.mobile.bodyOne')
     </section>
 
-    <section class="my-0">
+    <section class="my-0" @if($langSeg=='ar') dir="rtl" @endif>
         @include('development_details.mobile.bodyTwo')
     </section>
 
-    <section class="my-0">
+    <section class="my-0" @if($langSeg=='ar') dir="rtl" @endif>
         @include('development_details.mobile.bodyThree')
     </section>
 
-    <section class="my-0">
+    <section class="my-0" @if($langSeg=='ar') dir="rtl" @endif>
         @include('development_details.mobile.bodyFour')
     </section>
 
-    <section class="my-0  px-4">
+    <section class="my-0  px-4" @if($langSeg=='ar') dir="rtl" @endif>
         @include('development_details.mobile.bodyFive')
     </section>
 
-    <section class="my-0">
+    <section class="my-0" @if($langSeg=='ar') dir="rtl" @endif>
         @include('development_details.mobile.bodySix')
     </section>
 

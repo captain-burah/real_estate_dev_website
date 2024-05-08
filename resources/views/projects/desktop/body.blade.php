@@ -65,7 +65,7 @@
                                     $langSeg = 'en';
                                 }
                             ?>
-                            <div class="max-w-6xl mx-auto p-0">
+                            <div class="max-w-6xl mx-auto p-0" @if($langSeg == 'ar') dir="ltr" @endif>
                                     <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
                                         <div class="relative overflow-hidden rounded-0 lg:h-[22rem] max-h-[50rem] w-[100%] z-0">
                                             <div
@@ -94,15 +94,34 @@
                                                 >
                                             </div>
                                             <div class="col-span-3 my-4" style="color: #ccc !important; background-color: #1c1c1c !important;">
-                                                <h2 class="text-xl font-bold text-left">The Spark By ESNAAD</h2>
-                                                <p class="text-base font-thin text-left">Mohammed Bin Rashid City</p>
+                                                <h2 class="text-xl  text-left">
+                                                    @if($langSeg=="ar")
+                                                    ذا سبارك من إسناد
+                                                    @else
+                                                    The Spark By ESNAAD
+                                                    @endif
+                                                </h2>
+                                                <p class="text-base font-thin text-left">
+                                                    @if($langSeg=="ar")
+                                                    مدينة محمد بن راشد
+                                                    @else
+                                                    Mohammed Bin Rashid City
+                                                    @endif
+                                                </p>
                                                 {{-- <h2 class="text-xl font-bold text-left">@if($langSeg == 'ar'){{$namear}}@else {{$name}} @endif</h2>
                                                 <p class="text-base font-thin text-left">@if($langSeg == 'ar'){{$community}}@else {{$community}} @endif</p> --}}
                                             </div>
                                         </div>
                                         <div class="text-center py-4 sm:py-4 w-full mb-4">
-                                            <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3">
-                                                Explore More
+                                            <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3" onclick="showLoader()">
+                                                <span id="buttonText">
+                                                    @if($langSeg=="ar")
+                                                    اكتشف المزيد
+                                                    @else
+                                                    Explore More
+                                                    @endif
+                                                </span>
+                                                <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
                                             </a>
                                         </div>
                                     </div>
@@ -120,7 +139,7 @@
                                     $langSeg = 'en';
                                 }
                             ?>
-                            <div class="max-w-6xl mx-auto p-0">
+                            <div class="max-w-6xl mx-auto p-0" @if($langSeg == 'ar') dir="ltr" @endif>
                                     <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
                                         <div class="relative overflow-hidden rounded-0 lg:h-[22rem] max-h-[50rem] w-[100%] z-0 bg-black bg-opacity-60">
                                             <div
@@ -149,15 +168,25 @@
                                                 > --}}
                                             </div>
                                             <div class="col-span-3 my-4" style="color: #ccc !important; background-color: #1c1c1c !important;">
-                                                <h2 class="text-xl font-bold text-left">Coming Soon</h2>
+                                                <h2 class="text-xl text-left">
+                                                    @if($langSeg=="ar")
+                                                    يأتي قريباً
+                                                    @else
+                                                    Coming Soon
+                                                    @endif
+                                                </h2>
                                                 <p class="text-base font-thin text-left">&nbsp;</p>
                                                 {{-- <h2 class="text-xl font-bold text-left">@if($langSeg == 'ar'){{$namear}}@else {{$name}} @endif</h2>
                                                 <p class="text-base font-thin text-left">@if($langSeg == 'ar'){{$community}}@else {{$community}} @endif</p> --}}
                                             </div>
                                         </div>
                                         <div class="text-center py-4 sm:py-4 w-full mb-4">
-                                            <a title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3">
+                                            <a title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white     text-black py-3 px-10 rounded-0 mb-3">
+                                                @if($langSeg=="ar")
+                                                اكتشف المزيد
+                                                @else
                                                 Explore More
+                                                @endif
                                             </a>
                                         </div>
                                     </div>
@@ -199,3 +228,16 @@
         </div>
     </div>
 </header>
+<script>
+    function showLoader() {
+        // Hide the button text
+        document.getElementById('buttonText').style.display = 'none';
+        // Show the loader image
+        document.getElementById('loaderImg').style.display = 'inline';
+
+        // Wait for 2 seconds and then navigate to the next page
+        setTimeout(function() {
+            window.location.href = 'http://esnaad.com/en/developments/the-spark-by-esnaad'; // URL of the next page
+        }, 500);
+    }
+</script>

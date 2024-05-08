@@ -50,10 +50,14 @@
 
             <div class="container mx-0 px-0 mx-auto text-white">
                 <h1 class="text-xl font-light px-2">
-                    AGENCY REGISTRATION
+                    {{__('frontend.desktop_agency')}}
                 </h1>
                 <p class="text-base font-thin leading-6 px-2 pt-2">
-                    Welcome to the Real Estate Brokerage Registration portal
+                    @if($langSeg=='ar')
+                    مرحبا بكم في بوابة تسجيل الوساطة العقارية
+                    @else
+                    Welcome to the Real Estate brokerage Registration portal
+                    @endif
                 </p>
             </div>
         </div>

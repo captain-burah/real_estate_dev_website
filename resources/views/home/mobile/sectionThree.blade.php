@@ -3,7 +3,7 @@
     <div class="row">
         <div class="grid md:grid-cols-2 gap-12 mx-auto">
             <div>
-                <h2 class="text-left text-xl">
+                <h2 class="text-xl" @if($langSeg == 'ar') dir="rtl" @endif>
                     {{ __('frontend.homeSectionThreeH') }}
                 </h2>
             </div>
@@ -28,18 +28,39 @@
     <div class="row mb-4">
         <div class="grid md:grid-cols-2 gap-2 mx-auto">
             <div>
-                <p class="text-base text-left leading-relax leading-6">
+                <p class="text-base leading-relax leading-6" @if($langSeg == 'ar') dir="rtl" @endif>
                     {{ __('frontend.homeSectionThreeP') }}  
                 </p>
 
             </div>
 
             <div class="text-center py-4 sm:py-4 w-full mt-2">
-                <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0">
-                    Explore More
+                <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0" onclick="showLoader()">
+                    <span id="buttonText">
+                        @if ($langSeg=='ar')
+                            اكتشف المزيد
+                        @else
+                            Explore More
+                        @endif
+                    </span>
+                    <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
                 </a>
             </div>
         </div>
     </div>
 </div>
+<script>
+    function showLoader() {
+        // Hide the button text
+        document.getElementById('buttonText').style.display = 'none';
+        // Show the loader image
+        document.getElementById('loaderImg').style.display = 'inline';
+
+        // Wait for 2 seconds and then navigate to the next page
+        setTimeout(function() {
+            window.location.href = 'http://esnaad.com/en/developments/the-spark-by-esnaad'; // URL of the next page
+        }, 500);
+    }
+</script>
+
 

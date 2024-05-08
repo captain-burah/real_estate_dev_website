@@ -51,8 +51,12 @@
         <div class="flex items-center justify-center h-full w-full bg-black" style="padding-top: 10vh">
             <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto  text-white">
                 
-                <h1 class="text-4xl font-thin mt-2">
+                <h1 class="text-4xl font-thin mt-2" @if($langSeg=='ar') dir="rtl" @endif>
+                    @if($langSeg=='ar')                    
+                    بيان سياسة الخصوصية
+                    @else
                     PRIVACY AND POLICY
+                    @endif
                 </h1>
             </div>
         </div>

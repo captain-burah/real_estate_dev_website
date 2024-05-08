@@ -7,7 +7,11 @@
             <div class="row-span-2 grid grid-cols-1 gap-0 w-[100%]">
                 <div class=" py-4 border-b border-gray-700">
                     <h2 class="text-xl text-center font-thin textbasel w-full">
-                        Prices From 
+                        @if($langSeg=='ar')
+                        السعر يبدأ من
+                        @else
+                        Prices From
+                        @endif 
                         <span class="font-bold">
                             AED 1,050,000
                         </span>
@@ -16,12 +20,16 @@
 
                 <div class=" py-4">
                     <h2 class="text-xl text-center font-thin textbasel w-full">
-                        Apartments  
+                        @if($langSeg=='ar')
+                        شقق سكنية
+                        @else
+                        Apartments
+                        @endif  
                         <span class="font-bold">
                             @if($langSeg == 'ar')
-                                {{$bedrooms}}
+                                {{$bedrooms}} غرف نوم
                             @else
-                                {{$bedrooms}}
+                                {{$bedrooms}} Bedrooms
                             @endif
                         </span>
                     </h2>
@@ -29,15 +37,15 @@
             </div>
 
         </div>
-        <div>
-            <h2 class=" text-left text-lg ">
+        <div @if($langSeg=='ar') dir=rtl @endif>
+            <h2 class="text-lg ">
                 @if($langSeg == 'ar')
                     {{$secOne_title_ar}}
                 @else
                     {{$secOne_title}}
                 @endif
             </h2>
-            <p class=" text-left font-base my-3 w-full leading-6">
+            <p class="font-base my-3 w-full leading-6" @if($langSeg=='ar') dir=rtl @endif>
                 @if($langSeg == 'ar')
                     {{$SecOne_description_ar}}
                 @else

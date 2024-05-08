@@ -17,7 +17,7 @@
     </li>
 </ul>
 <p><br></p>
-<h5><u><span style="font-size:11pt;">Usage Data</span></u></h5>
+<h5><u><span style="font-size:11pt;">Usage Data</span></u></h5> 
 <p><span style="font-size:11pt;">We automatically collect information about your interactions with the Website, including:</span></p>
 <ul>
     <li style="list-style-type:square;font-size:11pt;">

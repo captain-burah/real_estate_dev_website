@@ -50,10 +50,16 @@
     <div class="w-full bg-cover bg-center" style="height: 40vh;">
         <div class="flex items-center justify-center h-full w-full bg-black" style="padding-top: 10vh">
             <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto  text-white">
-                
+                @if($langSeg=='ar')
+                <h1 class="text-4xl font-thin mt-2"  dir="rtl" style="text-align: right !important;">
+                    الشروط والأحكام
+                </h1>
+                @else
                 <h1 class="text-4xl font-thin mt-2">
                     TERMS AND CONDITIONS
                 </h1>
+                @endif
+
             </div>
         </div>
     </div>

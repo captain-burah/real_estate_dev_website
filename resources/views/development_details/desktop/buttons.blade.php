@@ -15,7 +15,11 @@
     <div class="flex justify-left ...">
         <div class="mr-4">
             <button onclick="openModal('mymodalcentered-community-register')"  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
+                @if($langSeg=='ar')
+                سجل اهتمامك
+                @else
                 Register Your Interest
+                @endif
             </button>
         </div>
         <div class="mr-4">
@@ -25,7 +29,7 @@
                 </button>
             </a> --}}
             <button onclick="openModal('mymodalcentered-brochure-register')"  class="lg:w-75 text-xl text-black bg-white font-bold hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
-                Download Brochure
+                {{ __('frontend.projectRegisterInterest') }}
             </button>
         </div>
         <div class="mx-4">
@@ -60,12 +64,18 @@
 
 
 
-<dialog id="mymodalcentered-community-share" class="bg-transparent  relative w-screen h-screen">
+<dialog id="mymodalcentered-community-share" class="bg-transparent  relative w-screen h-screen" dir="ltr">
     <div class="p-7 flex justify-center items-center fixed left-0 top-0 w-full h-full bg-black bg-opacity-80 transition-opacity duration-300 opacity-0">
         <div class="bg-white flex rounded-0 w-full sm:w-1/4 relative">
             <div class="flex flex-col items-start w-full">
                 <div class="p-7 flex items-stretch w-full">
-                    <div class="font-semibold text-xl text-black">Share</div>
+                    <div class="font-semibold text-xl text-black">
+                        @if($langSeg=='ar')
+                        سجل اهتمامك
+                        @else
+                        Share
+                        @endif
+                    </div>
                     <svg onclick="modalClose('mymodalcentered-community-share')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                         <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
@@ -188,7 +198,7 @@
 
 
 
-<dialog id="mymodalcentered-community-register" class="bg-transparent relative w-screen h-screen">
+<dialog id="mymodalcentered-community-register" class="bg-transparent relative w-screen h-screen" dir="ltr">
     <div class="p-7 flex justify-center items-center fixed left-0 top-0 w-full h-full bg-black bg-opacity-80 transition-opacity duration-300 opacity-0">
         <div class="bg-white flex rounded-0 w-1/4 relative">
 
@@ -244,7 +254,7 @@
 
                             <table class="w-full">
                                 <tr>
-                                    <td>
+                                    <td style="width: 40%;">
                                         <select name="country_code"  class="w-full" >
                                             <option data-countryCode="AE" value="971" Selected>United Arab Emirates (+971)</option>
                                             <optgroup label="Other countries">
@@ -465,7 +475,7 @@
                                             </optgroup>
                                         </select>
                                     </td>
-                                <td><input type="text" name="phone" id="phone" placeholder="ex: 501234567" class="border w-full" required></td>
+                                <td style="width: 60%"><input type="text" name="phone" id="phone" placeholder="ex: 501234567" class="border w-full" required></td>
                                     
                                 </tr>
                             </table>
@@ -473,6 +483,7 @@
 
                         <div>
                             <button type="submit" class="bg-black w-[100%] hover:bg-white border border-black text-white hover:text-black font-bold py-2 rounded-0">
+                                
                                 {{ __('frontend.projectRegisterInterest') }}
                             </button>
                         </div>
@@ -490,7 +501,7 @@
 
 
 
-<dialog id="mymodalcentered-brochure-register" class="bg-transparent relative w-screen h-screen">
+<dialog id="mymodalcentered-brochure-register" class="bg-transparent relative w-screen h-screen" dir="ltr">
     <div class="p-7 flex justify-center items-center fixed left-0 top-0 w-full h-full bg-black bg-opacity-80 transition-opacity duration-300 opacity-0">
         <div class="bg-white flex rounded-0 w-1/4 relative">
 
@@ -520,7 +531,7 @@
             </div>
 
             
-            <div class="flex flex-col items-start w-full" id="form_ready_brochure">
+            <div class="flex flex-col items-start w-full" id="form_ready_brochure" dir="ltr">
                 <div class="p-7 flex items-stretch w-full">
                     <div class="font-bold text-xl text-black " >{{ __('frontend.projectDownloadBrochure') }}</div>
                     <svg onclick="modalClose('mymodalcentered-brochure-register')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
@@ -543,7 +554,10 @@
                             <input type="email" id="email2" name="email_brochure" class="w-full px-4 py-2 border rounded-0 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="{{__('frontend.formEmail')}}" required>
                         </div>
 
-                        <div class="mb-6">
+                        <table class="w-full">
+                            <tr>
+                        <td style="width: 40%;">
+                           <div class="mb-6">
                             <select name="country_code_brochure"  class="w-full" required >
                                 <option value="" Selected>Country Code</option>
                                 <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
@@ -765,10 +779,15 @@
                                 </optgroup>
                             </select>
                         </div>
+                            </td style="width: 60%;">
+                            <td>
+                                <div class="mb-6">
+                                    <input type="number" id="phone2" name="phone_brochure" class="w-max px-4 py-2 border rounded-0 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Ex: 050 123 4567" style="width: 100% !important" required>
+                                </div>
+                            </td>
+                            </tr>
+                        </table>
 
-                        <div class="mb-6">
-                            <input type="number" id="phone2" name="phone_brochure" class="w-max px-4 py-2 border rounded-0 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Ex: 050 123 4567" style="width: 100% !important" required>
-                        </div>
                     </div>
 
                     <div class="p-4 flex justify-end items-center w-full">
@@ -788,7 +807,7 @@
 </dialog>
 
 
-<dialog id="mymodalcentered-brochure-verify" class="bg-transparent relative w-screen h-screen">
+<dialog id="mymodalcentered-brochure-verify" class="bg-transparent relative w-screen h-screen" dir="ltr">
     <div class="p-7 flex justify-center items-center fixed left-0 top-0 w-full h-full bg-black bg-opacity-80 transition-opacity duration-300 opacity-0">
         <div class="bg-white flex rounded-0 w-1/4 relative"> 
             <div class="flex flex-col items-start w-full hidden" id="form_submitted">

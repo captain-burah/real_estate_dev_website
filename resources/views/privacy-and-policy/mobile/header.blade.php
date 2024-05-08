@@ -48,8 +48,12 @@
     <div class="w-full bg-cover bg-center" style="height: 30vh;">
         <div class="flex items-center justify-center h-full w-full bg-black">
             <div class="container mx-0 px-0 mx-auto text-white mt-10">
-                <h2 class="text-2xl font-light mt-2 px-2">
-                    Privacy & Policy
+                <h2 class="text-2xl font-light mt-2 px-2" @if($langSeg=='ar') dir="rtl" @endif>
+                    @if($langSeg=='ar')                    
+                    بيان سياسة الخصوصية
+                    @else
+                    PRIVACY AND POLICY
+                    @endif
                 </h2>
             </div>
         </div>

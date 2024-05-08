@@ -19,9 +19,9 @@
             </h2>
             <p class=" text-justify font-sm xl:font-base my-8 xl:w-[90%] leading-8">
                 @if($langSeg == 'ar')
-                    {{$SecThree_description}}
+                    {{$SecThree_description_ar}}
                 @else
-                    {{$SecThree_description_ar }}
+                    {{$SecThree_description }}
                 @endif
             </p>
         </div>

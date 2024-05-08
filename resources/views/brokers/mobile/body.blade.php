@@ -24,8 +24,13 @@
                
             <div class="icon bg-black text-white w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
             
-            <p class="   mb-4">We are excited to establish partnerships with esteemed real estate agencies or broker 
-                companies. Please complete the following form to initiate the registration process.
+            <p class="   mb-4">
+                @if($langSeg=='ar')
+                متحمسون لإقامة شراكات مع الوكالات العقارية المرموقة أو شركات الوساطة. برجاء استيفاء النموذج التالي لبدء عملية التسجيل
+                @else
+                We are excited to establish partnerships 
+                with esteemed real estate agencies or broker companies. Please complete the following form to initiate the registration process.
+                @endif
             </p>
             
             @include('brokers.mobile.companyInfo')

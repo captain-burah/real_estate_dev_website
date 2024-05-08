@@ -8,7 +8,7 @@
             </div>
         @endif
         
-        <form id="contact-desktop-form" action="/en/contact-form-post" method="post">
+        <form id="contact-desktop-form" action="/en/contact-form-post" method="post" @if($langSeg=="ar") dir="rtl"@endif>
             @csrf                    
             <div class="icon w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
             <h3 class="text-3xl font-thin">{{__('frontend.contactFormH')}}</h3>
@@ -234,7 +234,7 @@
                     <option class="bg-black text-white" data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                 </optgroup>
             </select>
-            <input type="tel" name="phone" placeholder="{{__('frontend.formPhone')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white">
+            <input type="tel" name="phone" placeholder="{{__('frontend.formPhone')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white" @if($langSeg=="ar") dir="rtl"@endif>
             <input type="email" name="email" id="email" placeholder="{{__('frontend.formEmail')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white mt-3">
             <textarea name="msg" id="" cols="10" rows="3" placeholder="{{__('frontend.formMsg')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white"></textarea>
             

@@ -152,14 +152,21 @@
                 <div class="shrink-0 flex items-center hidden md:hidden lg:block text-2xl font-thin">
                     @tablet
                         <a href="{{ url($langSeg.'/') }}" aria-label="home-route" rel='canonical'>
+                            @if($langSeg=='ar')
+                            <img style="height: 30px !important;" src="{{ asset('logo-ar-white.png') }}" alt="esnaad-logo-navbar">
+                            @else
                             <img style="height: 30px !important;" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo-navbar">
+                            @endif
                         </a>
                     @endtablet
 
                     @desktop
                         <a href="{{ url($langSeg.'/') }}" aria-label="home-route hidden 3xl:visible" rel='canonical'>
+                            @if($langSeg=='ar')
+                            <img style="height: 30px !important;" src="{{ asset('logo-ar-white.png') }}" alt="esnaad-logo-navbar">
+                            @else
                             <img style="height: 30px !important;" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo-navbar">
-                            
+                            @endif
                         </a>
                     @enddesktop
                 </div>
@@ -211,7 +218,7 @@
                 </div>
                 
 
-                {{-- <div class="hidden absolute  space-x-8 sm:-my-px sm:flex text-center float-right" style="right: 30px;">
+                <div class="hidden absolute  space-x-8 sm:-my-px sm:flex text-center float-right" style="right: 30px;">
                     @if($langSeg === 'ar')
                         <x-nav-link href="{{$finalUrlen}}" aria-label="navbar-route" rel='canonical'>
                             <div class="flex">
@@ -253,7 +260,7 @@
                             </div>
                         </x-nav-link>
                     @endif
-                </div> --}}
+                </div>
             </div>
             
             <!-- Hamburger -->

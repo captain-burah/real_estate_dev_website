@@ -1,14 +1,16 @@
 <table class="w-full mt-8">
     <tbody>
         <caption class="my-4 underline">
-            Documents
+            {{__('frontend.brokerFileH1')}}
         </caption>
         <tr>
-            <td colspan="2" class="text-center pb-2 text-base">All documents must be uploaded in the format PDF / JPG</td>
+            <td colspan="2" class="text-center pb-2 text-base">
+                {{__('frontend.brokerFileP')}}
+            </td>
         </tr>
 
         <tr>
-            <td>Valid Trade License</td>
+            <td>{{__('frontend.brokerFileTradeLicense')}}</td>
             <td>
                 <input type="file" name="valid_trade_license_id"
                 class="block w-full text-sm text-slate-500
@@ -27,7 +29,7 @@
         </tr>
 
         <tr>
-            <td>RERA Certificate</td>
+            <td>{{__('frontend.brokerFileRera')}}</td>
             <td><input type="file" name="rera_certificate_id"
                 class="block w-full text-sm text-slate-500
                 border border-gray-600
@@ -45,7 +47,7 @@
         </tr>
 
         <tr>
-            <td style="width: 235px">Power of Atty / MOA</td>
+            <td style="width: 235px">{{__('frontend.brokerFileMOA')}}</td>
             <td><input type="file" name="power_of_atty_or_moa_id"
                 class="block w-full text-sm text-slate-500 
                 border border-gray-600
@@ -63,7 +65,7 @@
         </tr>
 
         <tr>
-            <td>Valid VAT Certificate / VAT NOC</td>
+            <td>{{__('frontend.brokerFileVat')}}</td>
             <td><input type="file" name="valid_vat_certificate_or_noc_id"
                 class="block w-full text-sm text-slate-500
                 border border-gray-600
@@ -81,7 +83,7 @@
         </tr>
 
         <tr>
-            <td>Authorized Person's <br> Passport, VISA, Emirates ID and Broker Card</td>
+            <td>{{__('frontend.brokerFileAuthP')}}</td>
             <td><input type="file" name="authorized_p_docx"
                 class="block w-full text-sm text-slate-500
                     border border-gray-600

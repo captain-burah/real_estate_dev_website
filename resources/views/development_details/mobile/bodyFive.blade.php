@@ -11,7 +11,15 @@
 
                 </h3>
             </div>
-            <div class="text-left">
+            <style>
+                #amenities_desktop, ul, li, p, span{
+                    font-family: 'Readex Pro', sans-serif !important;
+                    line-height: 1.5 !important;
+                    color: #ccc !important;
+                    font-size: 16px
+                }
+            </style>
+            <div class="text-left" id="amenities_mobile">
                 @if($langSeg == 'ar')
                     {!! $SecTwo_amenities_ar !!}
                 @else

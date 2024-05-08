@@ -42,9 +42,9 @@
                 <p class="w-[75%]" id="submitIncomplete">
                     {{__('frontend.footerFormP1')}}
                 </p>
-                <p class="w-[75%] my-10" id="submitComplete">
+                {{-- <p class="w-[75%] my-10" id="submitComplete">
                     {{__('frontend.footerFormP2')}}
-                </p>
+                </p> --}}
             </div>
 
             <div class="row">
@@ -69,7 +69,7 @@
                             </button>
 
                             <button id="submitButtonDone" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0" disabled hidden>
-                                Submitted
+                                {{__('frontend.footerFormSubscribed')}}
                             </button>
 
                             {{-- <button id="submitVerifying" class="w-full text-sm text-white px-2 py-2 border border-white rounded-0" disabled hidden>
@@ -88,7 +88,7 @@
 
 @mobile
     <div class="block py-24 sm:py-12 bg-footer_form" id="footer_form" style="visibility:hidden">
-        <div class="container mx-auto px-2 lg:px-8">
+        <div class="container mx-auto px-2 lg:px-8" @if($langSeg=="ar") dir="rtl" @endif>
 
             <div class="row mb-5">
                 <h2 class="text-4xl font-base">
@@ -97,16 +97,16 @@
                 <p class="w-full" id="submitIncomplete">
                     {{__('frontend.footerFormP1')}}
                 </p>
-                <p class="w-full my-10" id="submitComplete">
+                {{-- <p class="w-full my-10" id="submitComplete">
                     {{__('frontend.footerFormP2')}}
-                </p>
+                </p> --}}
             </div>
 
             
 
             <div class="row">
                 <form id="subscriptionFormMobile" >
-                    <div class="grid grid-cols-1 gap-2 xl:gap-4 text-dark ">
+                    <div class="grid grid-cols-1 gap-2 xl:gap-4 text-dark " >
 
                         <input type="hidden" name="ip_address" value="{{$ip_address}}">
 
@@ -123,7 +123,7 @@
                                 {{__('frontend.footerFormSubscribe')}}
                             </button>
                             <button type="button" id="submitButtonMobileDone" class=" w-full text-sm text-black text-white px-2 py-2  border border-white rounded-0">
-                                {{__('frontend.footerFormSubmissionCompleted')}}
+                                {{__('frontend.footerFormSubscribed')}}
                             </button>
                             {{-- <button type="submit" id="submitVerifying" hidden disabled  id="submitButton"  class="bg-transparent w-full text-sm px-2 py-2 border border-white rounded-0">
                                 <div id="loading"></div>
@@ -141,6 +141,7 @@
 
 {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script> --}}
 {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script> --}}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script defer>
     function setCookie(name, value, daysToExpire) {
         var expires = "";
@@ -177,14 +178,14 @@
             $('#submitButtonMobileDone').show();
             $('#submitButtonMobile').hide();  
 
-            $('#submitCompleteMobile').show();
-            $('#submitIncompleteMobile').hide();
+            // $('#submitCompleteMobile').show();
+            // $('#submitIncompleteMobile').hide();
 
-            $('#submitComplete').show();
-            $('#submitIncomplete').hide();
+            // $('#submitComplete').show();
+            // $('#submitIncomplete').hide();
             
-            $('#subscriptionForm').hide();
-            $('#subscriptionFormMobile').hide();
+            // $('#subscriptionForm').hide();
+            // $('#subscriptionFormMobile').hide();
         } else {
             $('#submitButtonDone').hide();
             $('#submitButton').show();
@@ -192,14 +193,14 @@
             $('#submitButtonMobileDone').hide();
             $('#submitButtonMobile').show();
 
-            $('#submitCompleteMobile').hide();
-            $('#submitIncompleteMobile').show();
+            // $('#submitCompleteMobile').hide();
+            // $('#submitIncompleteMobile').show();
 
-            $('#submitComplete').hide();
-            $('#submitIncomplete').show();     
+            // $('#submitComplete').hide();
+            // $('#submitIncomplete').show();     
 
-            $('#subscriptionForm').show();
-            $('#subscriptionFormMobile').show();
+            // $('#subscriptionForm').show();
+            // $('#subscriptionFormMobile').show();
         };
     });
     

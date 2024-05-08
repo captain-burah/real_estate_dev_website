@@ -49,7 +49,11 @@
     <div class="absolute top-0 right-0 bottom-0 left-0 bg-backdrop z-[2] bg-black bg-opacity-60" data-v-6d98d5bc=""></div>
     <div class="absolute flex flex-col items-center z-[3] mobile:px-4" data-v-6d98d5bc="">
         <div class="info flex justify-center items-center flex-col text-white mt-[60px] p-0 mobile:p-2" data-v-6d98d5bc="">
+            @if($langSeg == 'en')
             <h1 class="text-3xl title-font-thin mobile:text-60p ltr:leading-none" data-v-6d98d5bc="">{{__('frontend.heroH')}}</h1>
+            @else 
+            <h1 class="text-3xl title-font-thin mobile:text-60p ltr:leading-none" data-v-6d98d5bc="">{{__('frontend.heroH')}}</h1>
+            @endif
         </div>
     </div>
 
@@ -59,7 +63,8 @@
 </section>  
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script> --}}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 <script>
     $(document).ready(function() {

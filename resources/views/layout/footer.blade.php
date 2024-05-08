@@ -30,7 +30,11 @@
                         <div class="col-span-2">
                             <div class="mx-auto">
                                 <span class="text-3xl text-gray-900 text-center mx-auto py-5" >
+                                    @if($langSeg=='ar')
+                                    <img style="height: 60px !important;" src="{{ asset('logo-ar-white.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                    @else
                                     <img style="height: 60px !important;" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                    @endif
                                 </span>
 
                                 <p class="text-md  w-full text-justify mb-6">
@@ -234,7 +238,11 @@
                         <div class="col-span-2" @if($langSeg == 'ar') dir="RTL" @endif>
                             <div class="mx-auto">
                                 <span class="text-3xl text-white text-center mx-auto py-5" >
+                                    @if($langSeg=='ar')
+                                    <img style="height: 60px !important;" src="{{ asset('logo-ar-white.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                    @else
                                     <img style="height: 60px !important;" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                    @endif
                                 </span>
 
                                 <p class="text-md text-justify mb-6 w-[80%]">
@@ -398,7 +406,7 @@
                                                 </g>
                                             </svg>
                                             &nbsp;
-                                            Email Us
+                                                {{ __('frontend.footerLinksEmailUs') }}
                                         </a>
                                     </div>
                                 </li>
@@ -437,7 +445,11 @@
                         <div class="py-4">
                             <div class="mx-auto">
                                 <span class="text-3xl text-gray-900 text-center mx-auto py-5" >
+                                    @if($langSeg=='ar')
+                                    <img style="height: 60px !important;" src="{{ asset('logo-ar-white.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                    @else
                                     <img style="height: 60px !important;" src="{{ asset('logo-light-3.png') }}" alt="esnaad-logo" title="ESNAAD" loading="lazy" height="auto" width="auto" class="mb-5">
+                                    @endif
                                 </span>
 
                                 <p class="text-md  text-justify mb-6 w-full leading-6" >
@@ -599,21 +611,20 @@
                                 <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/about-us') }}" aria-label="about-us" rel="canonical">{{ __('frontend.footerLinksAboutEsnaad') }}</a>
                                 </li>
-                                
-                                <li class="text-md  my-3">
-                                    <a href="{{ URL($langSeg.'/ceo-message')}}" aria-label="broker-registration" rel="canonical">{{ __('frontend.mobile_ceoMessageNav') }}</a>
-                                </li>
+
                                 <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/invest-in-dubai') }}" aria-label="invest-in-dubai" rel="canonical">{{ __('frontend.footerLinksWhyInvest') }}</a>
+                                </li>
+
+                                <li class="text-md  my-3">
+                                    <a href="{{ URL($langSeg.'/agency-registration') }}" aria-label="agency-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
                                 </li>
 
                                 <li class="text-md  my-3">
                                     <a href="{{ URL($langSeg.'/careers')}}" aria-label="careers" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
                                 </li>
 
-                                <li class="text-md  my-3">
-                                    <a href="{{ URL($langSeg.'/agency-registration') }}" aria-label="agency-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -635,8 +646,11 @@
             </div>
         </div>
     @endmobile
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  
     <script>
+        // Footer Timeout Function to avoid API error
         setTimeout(function(){
             if(document.getElementById('footer')) {
                 document.getElementById('footer').style.visibility = "visible";
@@ -645,9 +659,16 @@
                 document.getElementById('footer_form').style.visibility = "visible";
             }
         },1000);
+
+
+        // Page Loader Function
+        $(document).ready(function() {
+            setTimeout(function() { 
+                document.getElementById( 'loader' ).style.display = 'none';
+            }, 1000);
+        });
     </script>
     
-
     @yield('luxe_asset_js')
 
     @yield('footer_js')

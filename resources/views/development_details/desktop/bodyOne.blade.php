@@ -21,7 +21,11 @@
             <div class="row-span-2 grid sm:grid-cols-2 gap-4 w-[100%] mb-8" >
                 <div>
                     <h3 class="text-esnaad_ text text-justify font-thin text-lg xl:text-lg w-[90%] tracking-wider">
+                        @if($langSeg=='ar')
+                        السعر يبدأ من
+                        @else
                         Prices From
+                        @endif
                     </h3>
                     <p class="text-xl xl:text-3xl text-justify font-light w-[90%] tracking-wider" >
                         AED 1,050,000
@@ -30,13 +34,17 @@
 
                 <div>
                     <h3 class=" text-justify font-thin text-lg xl:text-lg w-[90%] tracking-wider">
+                        @if($langSeg=='ar')
+                        شقق سكنية
+                        @else
                         Apartments
+                        @endif
                     </h3>
                     <p class="text-xl xl:text-3xl font-light w-[100%] tracking-wider rtl:text-right " dir="ltr">
                         @if($langSeg == 'ar')
-                            {{$bedrooms}}
+                            {{$bedrooms}} غرف نوم
                         @else
-                            {{$bedrooms}}
+                            {{$bedrooms}} Bedrooms
                         @endif
                     </p>
                 </div>

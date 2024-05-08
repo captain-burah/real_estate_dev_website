@@ -1,21 +1,21 @@
 <table class="w-full mt-8">
     <tbody>
         <caption class="my-4 underline">
-            Banking Information
+            {{__('frontend.brokerBankH1')}}
         </caption>
 
         <tr>
-            <td>Account / Beneficiary Name</td>
+            <td>{{__('frontend.brokerBankAccName')}}</td>
             <td><input type="text" name="account_title" id="account_title" placeholder="ex: JASON SMITH" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td style="width: 235px !important">Bank Name</td>
+            <td style="width: 235px !important">{{__('frontend.brokerBankName')}}</td>
             <td><input type="text" name="bank_name" id="bank_name" placeholder="eg: ABC Financial Insitution." class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>Bank Country</td>
+            <td>{{__('frontend.brokerBankCountry')}}</td>
             <td>
                 <select id="bank_country" name="bank_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required>
                     <option class="bg-black" value="">Choose a country</option>
@@ -269,22 +269,22 @@
 
 
         <tr>
-            <td>Bank City</td>
+            <td>{{__('frontend.brokerBankCity')}}</td>
             <td><input type="text" name="bank_city" id="bank_city" placeholder="ex: Dubai" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>Account Number</td>
+            <td>{{__('frontend.brokerBankAcc')}}</td>
             <td><input type="text" name="account_no" id="account_no" placeholder="ex: xxxx-xxxx-xxxx-xxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>IBAN Number</td>
+            <td>{{__('frontend.brokerBankIban')}}</td>
             <td><input type="text" name="iban" id="iban" placeholder="ex: xxxxxxxxxxxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
 
         <tr>
-            <td>SWIFT Code</td>
+            <td>{{__('frontend.brokerBankSwift')}}</td>
             <td><input type="text" name="swift_code" id="swift_code" placeholder="ex: xxxxxxxxxxxxx" class=" w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white" required></td>
         </tr>
     </tbody>

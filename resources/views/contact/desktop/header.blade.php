@@ -62,7 +62,7 @@
                 </p>
                 <p class="w-[75%] mx-auto text-white font-thin leading-8 text-base text-center">
                     <a href="tel:{{ env('COMPANY_PHONE') }}" >
-                    {{__('frontend.contactPhone')}} 
+                    {{__('frontend.contactPhone')}} @if($langSeg=="ar")<span dir="ltr">+971 4 287 9506</span>@endif
                     </a>
                 </p>
                 {{-- <p class="w-[75%] mx-auto text-white font-thin leading-8 text-base text-center">

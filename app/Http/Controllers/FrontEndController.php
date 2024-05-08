@@ -218,9 +218,9 @@ class FrontEndController extends Controller
         // dd($jsonData);
 
 
-        $jsonSEOData = $this->landingpageseos(9);
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
-        return view('communities', $this->data);
+        // $jsonSEOData = $this->landingpageseos(9);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        return view('communities');
     }
 
     public function community_details($lang='', $slug ) {
@@ -357,9 +357,9 @@ class FrontEndController extends Controller
         //     $this->data['available'] = '0';
         // }
 
-        $jsonSEOData = $this->landingpageseos(2);
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
-        return view('projects', $this->data);
+        // $jsonSEOData = $this->landingpageseos(2);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        return view('projects');
     }
 
 
@@ -1131,9 +1131,9 @@ class FrontEndController extends Controller
 
     public function media_blogs($lang = ''){
         
-        $jsonSEOData = $this->landingpageseos(11);
+        // $jsonSEOData = $this->landingpageseos(11);
 
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
         // CALL API FROM MIS
         $response = Http::withHeaders([

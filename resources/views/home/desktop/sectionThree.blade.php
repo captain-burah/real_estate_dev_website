@@ -32,12 +32,19 @@
             <div class="col-span-3 my-auto">
                 <h2 class=" text-xl xl:text-4xl">
                 </h2>
-                <h3 class="text-xl mt-10 text-justify leading-8">
+                <p class="text-xl mt-10 text-justify leading-8">
                     {{ __('frontend.homeSectionThreeP') }}
-                </h3>
-                <div class="text-left py-4 sm:py-4 w-full">
-                    <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3">
-                        Explore More
+                </p>
+                <div class=" py-4 sm:py-4 w-full mt-4">
+                    <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3 w-25" onclick="showLoader()">
+                        <span id="buttonText">
+                            @if ($langSeg=='ar')
+                                اكتشف المزيد
+                            @else
+                                Explore More
+                            @endif
+                        </span>
+                        <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
                     </a>
                 </div>  
 
@@ -49,3 +56,16 @@
     </div>
 
 </div>
+<script>
+    function showLoader() {
+        // Hide the button text
+        document.getElementById('buttonText').style.display = 'none';
+        // Show the loader image
+        document.getElementById('loaderImg').style.display = 'inline';
+
+        // Wait for 2 seconds and then navigate to the next page
+        setTimeout(function() {
+            window.location.href = 'http://esnaad.com/en/developments/the-spark-by-esnaad'; // URL of the next page
+        }, 500);
+    }
+</script>

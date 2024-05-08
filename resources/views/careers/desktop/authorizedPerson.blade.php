@@ -1,7 +1,7 @@
 <table class="w-full mt-8" @if($langSeg == 'ar') dir="rtl" @endif>
     <tbody>
         <caption class="my-4 underline">
-            {{__('frontend.careerFormH')}}
+            {{-- {{__('frontend.careerFormH')}} --}}
         </caption>
         <tr class="hidden" id="requiredNotice">
             <td colspan="2" class="text-red-900 text-center font-bold py-4">{{__('frontend.careerFormError')}}</td>
@@ -20,7 +20,13 @@
             <td>{{__('frontend.careerFormCountry')}}</td>
             <td>
                 <select id="applicant_country" name="applicant_country" class="w-full  bg-transparent focus:outline-none focus:border-white focus:ring-white"required>
-                    <option class="bg-black" value="">Country of Origin</option>
+                    <option class="bg-black" value="">
+                        @if($langSeg=='ar') 
+                        بلد المتقدم
+                        @else
+                        Country of Origin
+                        @endif
+                    </option>
                     <option class="bg-black" value="Afghanistan">Afghanistan</option>
                     <option class="bg-black" value="Åland Islands">Åland Islands</option>
                     <option class="bg-black" value="Albania">Albania</option>

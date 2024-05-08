@@ -64,6 +64,7 @@ return [
         'footerFormP2' => "Thank You! Your Email subscription has been recorded. Feel free to check your emails regularly for important news on our latest trends.",
         
         'footerFormSubscribe' => "Subscribe",
+        'footerFormSubscribed' => "Subscribed",
         'footerFormSubmissionCompleted' => "Submission Completed",
                 
                 // Description
@@ -76,6 +77,7 @@ return [
         'footerLinksBrokerReg' => "Broker Registration",
         'footerLinksCareers' => "Careers",
         'footerLinksContact' => "Contact Us",
+        'footerLinksEmailUs' => "Email Us",
                 
                 // Contacts
         'footerContacts' => "Contacts",
@@ -424,9 +426,50 @@ return [
         For those seeking the embrace of nature, the Miracle Garden blooms like a canvas of colors, a floral tapestry that whispers secrets of life in the heart of the desert. Amidst petals and fragrant breezes, find solace and renewal in this oasis of serenity.",
         
 
+        /**
+         * BROKER REGISTRATION FORM
+         */
+        "brokerCompanyH1" => "Company Information",
+        "brokerCompanyName" => "Company Name",
+        "brokerCompanyType" => "Company Type",
+        "brokerTradeLicense" => "Trade License Number",
+        "brokerTradeLicenseExp" => "Trade Licencse Expiry",
+        "brokerRera" => "RERA Certificate Number",
+        "brokerReraExp" => "RERA Certificate Expiry",
+        "brokerPOBox" => "P.O. Box No.	",
+        "brokerCompanyEmail" => "Company Email",
+        "brokerCompanyAddress" => "Company Address",
+        "brokerLandline" => "Company Land Line Number",
+        "brokerWebsite" => "Company Website",
+        
+        "brokerAuthPH1" => "Authorized Person Information",
+        "brokerAuthPname" => "Authorized Person Name",
+        "brokerAuthPcountry" => "Country of Origin",
+        "brokerAuthPpassport" => "Passport Number",
+        "brokerAuthPdesignation" => "Designation / Position",
+        "brokerAuthPemail" => "Email",
+        "brokerAuthPphone" => "Contact Number",
+        "brokerAuthPaddress" => "Address",
+        "brokerAuthPCity" => "City",
+        
+        "brokerBankH1" => "Banking Information",
+        "brokerBankAccName" => "Account / Beneficiary Name",
+        "brokerBankName" => "Bank Name",
+        "brokerBankCountry" => "Bank Country",
+        "brokerBankCity" => "Bank City",
+        "brokerBankAcc" => "Account Number",
+        "brokerBankIban" => "IBAN Number",
+        "brokerBankSwift" => "SWIFT Code",
 
-
-
+        "brokerFileH1" => "Documents",
+        "brokerFileP" => "All documents must be uploaded in the format PDF / JPG",   
+        "brokerFileTradeLicense" => "Valid Trade License",
+        "brokerFileRera" => "RERA Certificate",
+        "brokerFileMOA" => "Power of Atty / MOA	",
+        "brokerFileVat" => "Valid VAT Certificate / VAT NOC",
+        "brokerFileAuthP" => "
+                Authorized Person's
+                Passport, VISA, Emirates ID and Broker Card",
 
 
 

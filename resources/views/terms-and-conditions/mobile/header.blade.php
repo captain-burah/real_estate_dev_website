@@ -48,9 +48,15 @@
     <div class="w-full bg-cover bg-center" style="height: 30vh;">
         <div class="flex items-center justify-center h-full w-full bg-black">
             <div class="container mx-0 px-0 mx-auto text-white mt-10">
-                <h2 class="text-2xl font-light mt-2 px-2">
-                    Terms & Conditions
-                </h2>
+                @if($langSeg=='ar')
+                <h1 class="text-2xl font-thin mt-2"  dir="rtl" style="text-align: right !important;">
+                    الشروط والأحكام
+                </h1>
+                @else
+                <h1 class="text-2xl font-thin mt-2">
+                    TERMS AND CONDITIONS
+                </h1>
+                @endif
             </div>
         </div>
     </div>

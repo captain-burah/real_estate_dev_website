@@ -60,8 +60,15 @@
                         </p> --}}
                         
                         <div class="text-center py-4 sm:py-4 w-full mt-2">
-                            <a href="https://www.esnaad.com/en/communities/mohammed-bin-rashid-city" class="bg-white text-base text-black py-3 px-10 rounded-0">
-                                {{ __('frontend.exploreMore') }}
+                            <a href="https://www.esnaad.com/en/communities/mohammed-bin-rashid-city" class="bg-white text-base text-black py-3 px-10 rounded-0"  onclick="showLoader()">
+                                <span id="buttonText">
+                                    @if($langSeg=="ar")
+                                    اكتشف المزيد
+                                    @else
+                                    {{ __('frontend.exploreMore')}}
+                                    @endif
+                                </span>
+                                <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
                             </a>
                         </div>
                     </div>
@@ -71,3 +78,16 @@
         </div>
     </section>
 </div>
+<script>
+    function showLoader() {
+        // Hide the button text
+        document.getElementById('buttonText').style.display = 'none';
+        // Show the loader image
+        document.getElementById('loaderImg').style.display = 'inline';
+
+        // Wait for 2 seconds and then navigate to the next page
+        setTimeout(function() {
+            window.location.href = 'https://www.esnaad.com/en/communities/mohammed-bin-rashid-city'; // URL of the next page
+        }, 500);
+    }
+</script>

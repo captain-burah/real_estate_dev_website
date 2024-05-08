@@ -1,13 +1,13 @@
 <div class="mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl mt-8 ">
     <div class="container mx-auto flex flex-col items-start md:flex- min-h-[7vh]">
         <div class="mb-4 w-[30vw] flex justify-center space-x-4 p-0 rounded-lg gap-6 mx-auto">
-            <a href="{{ url('/en/press-release')}}" class="text-xl font-light underline underline-offset-4">
+            <a href="{{ url('/'.$langSeg.'/press-release')}}" class="text-xl font-light underline underline-offset-4">
                 {{ __('frontend.mediaH2') }}
             </a>
-            <a href="{{ url('/en/blogs')}}" class=" text-xl font-light  transition duration-150 ease-out hover:ease-in">
+            <a href="{{ url('/'.$langSeg.'/blogs')}}" class=" text-xl font-light  transition duration-150 ease-out hover:ease-in">
                 {{ __('frontend.mediaH3') }}
             </a>
-            <a href="{{ url('/en/media-gallery')}}" class="text-xl font-light   transition duration-150 ease-out hover:ease-in ">
+            <a href="{{ url('/'.$langSeg.'/media-gallery')}}" class="text-xl font-light   transition duration-150 ease-out hover:ease-in ">
                 {{ __('frontend.mediaH4') }}
             </a>
             
@@ -38,14 +38,21 @@
                         <div class="row ">
                             <div>
                                 <p class="mt-4 px-4 text-xl text-center font-thin">
-                                    ESNAAD Unveils "The Spark by ESNAAD": A Beacon of Innovation	
+                                    ESNAAD Unveils "The Spark by ESNAAD": A Beacon of Innovation
                                 </p>
                             </div>
                         </div>
                         <div class="row text-center pb-5 pt-2 mt-3">
-                            <a href="https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation" 
-                                class="bg-white text-black px-15 py-3">
-                                Explore
+                            <a href="https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation"
+                                class="bg-white text-black px-15 py-3"  onclick="showLoader()">
+                                <span id="buttonText">
+                                    @if($langSeg=="ar")
+                                    اكتشف المزيد
+                                    @else
+                                    Explore More
+                                    @endif
+                                </span>
+                                <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
                             </a>
                         </div>
                     </div>
@@ -54,3 +61,16 @@
         </div>
 </div>
 
+<script>
+    function showLoader() {
+        // Hide the button text
+        document.getElementById('buttonText').style.display = 'none';
+        // Show the loader image
+        document.getElementById('loaderImg').style.display = 'inline';
+
+        // Wait for 2 seconds and then navigate to the next page
+        setTimeout(function() {
+            window.location.href = 'https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation'; // URL of the next page
+        }, 500);
+    }
+</script>
