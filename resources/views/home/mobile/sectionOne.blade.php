@@ -21,7 +21,7 @@
 
 <div class="container mx-auto  px-0 m-0 mt-4 mb-0">
     <div class="row mt-8 p-0">
-        <img src="{{ asset('home/project/12-1.webp')}}">
+        <img src="{{ asset('developments/Home.webp')}}">
     </div>
 </div>
 

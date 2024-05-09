@@ -24,55 +24,59 @@
                     $slug = $data['slug_link'];
                     $thumbnail = $data['thumbnail'];
                 ?> --}}
-                <div class="full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center shadow">
-                    <div class="relative overflow-hidden rounded-0 ">
-                        {{--
-                        <p
-                            class="text-white text-xl rounded-0 absolute inset-0  bg-gray-950/80 flex justify-center items-center">
-                            COMING SOON
-                        </p>
-                        --}}
-
-                        <img class="h-full w-full object-cover "
-                            {{-- src="https://mis.esnaad.com/uploads/communities/{{$id}}/thumbnail/{{$thumbnail}}" --}}
-                            src="{{asset('front/communities/1.png')}}"
-                            alt="esnaad-community"
-                            title="esnaad-community"
-                            height="auto"
-                            width="100%"
-                            loading="lazy"
-                        >
+                <div>
+                    <?php
+                        $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+                        $uri_segments = explode('/', $uri_path);
+                        $seg1 = $uri_segments[1];
+                        if($seg1 == 'en' || $seg1 == 'ar'){
+                            $langSeg = $uri_segments[1];
+                        }else{
+                            $langSeg = 'en';
+                        }
+                    ?>
+                    <div class="max-w-6xl mx-auto p-0" @if($langSeg == 'ar') dir="ltr" @endif>
+                            <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
+                                <div class="relative overflow-hidden rounded-0 lg:h-[22rem] max-h-[50rem] w-[100%] z-0">
+                                    <div
+                                        class="text-white text-xl rounded-0 absolute inset-0 flex justify-center items-center ">
+                                    </div>
+                                    
+                                    <img class="h-[100%] w-[100%] object-cover"
+                                        src="{{asset('developments/Map2.webp')}}"
+                                        alt="esnaad-project-card"
+                                        title="the-spark-by-esnaad-thumbnail"
+                                        height="300px"
+                                        width="auto"
+                                        loading="lazy"
+                                    >
+                                </div>
+                                <div class=" mt-4 z-20">
+                                    
+                                    <div class="col-span-3 my-4" style="color: #ccc !important; background-color: #1c1c1c !important;">
+                                        <h2 class="text-xl  text-left">
+                                            @if($langSeg=="ar")
+                                            مدينة محمد بن راشد
+                                            @else
+                                            Mohammed Bin Rashid City
+                                            @endif
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="text-center py-4 sm:py-4 w-full mb-4">
+                                    <a href="https://www.esnaad.com/en/communities/mohammed-bin-rashid-city" title="Mohammed Bin Rashid City" alt="Mohammed Bin Rashid City" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3" onclick="showLoader()">
+                                        <span id="buttonText">
+                                            @if($langSeg=="ar")
+                                            اكتشف المزيد
+                                            @else
+                                            Explore More
+                                            @endif
+                                        </span>
+                                        <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
+                                    </a>
+                                </div>
+                            </div>
                     </div>
-                    <div class="text-center py-8 sm:py-6">
-                        {{-- <p class="text-xl  font-bold mb-2">
-                            @if($langSeg === 'ar')
-                                {{$namear}}
-                            @else
-                                {{$name}}
-                            @endif
-                        </p>
-                        <p class="text-base  font-normal">
-                            @if($langSeg === 'ar')
-                                {{$addressar}}
-                            @else
-                                {{$address}}
-                            @endif    
-                        </p> --}}
-                        
-                        <div class="text-center py-4 sm:py-4 w-full mt-2">
-                            <a href="https://www.esnaad.com/en/communities/mohammed-bin-rashid-city" class="bg-white text-base text-black py-3 px-10 rounded-0"  onclick="showLoader()">
-                                <span id="buttonText">
-                                    @if($langSeg=="ar")
-                                    اكتشف المزيد
-                                    @else
-                                    {{ __('frontend.exploreMore')}}
-                                    @endif
-                                </span>
-                                <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
-                            </a>
-                        </div>
-                    </div>
-                    
                 </div>
             {{-- @endforeach --}}
         </div>

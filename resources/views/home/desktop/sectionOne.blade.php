@@ -21,15 +21,7 @@
                 </p>
             </div>
             <div class="my-auto pt-2">
-                <img src="{{ asset('home/project/12-1.webp') }}"  title="ESNAAD-Our-Story" alt="ESNAAD OUR STORY" loading="lazy" width="auto" height="auto">
-
-                <!-- <div class="placeholder">
-
-                    <div class="bg-image-blur"></div>
-
-                    <div class="bg-image"></div>
-
-                </div> -->
+                <img src="{{ asset('developments/Home.webp') }}"  title="ESNAAD-Our-Story" alt="ESNAAD OUR STORY" loading="lazy" width="auto" height="auto">
             </div>
         </div>
     </div>

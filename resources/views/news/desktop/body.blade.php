@@ -27,7 +27,7 @@
                 <div class="mx-auto px-0 ">
                     <div class="max-w-full cursor-pointer rounded-0 border shadow">
                         <div class="row">
-                            <img class="w-full rounded-0 object-cover object-center" src="{{ asset('developments/12.webp')}}"
+                            <img class="w-full rounded-0 object-cover object-center" src="{{ asset('developments/press_release.webp')}}"
                                 height="300"
                                 width="auto"
                                 loading="lazy"

@@ -73,7 +73,7 @@
                                             </div>
                                             
                                             <img class="h-[100%] w-[100%] object-cover     "
-                                                src="{{asset('front/project/the-spark-by-esnaad-thumbnail.jpg')}}"
+                                                src="{{asset('developments/developments.webp')}}"
                                                 alt="esnaad-project-card"
                                                 title="the-spark-by-esnaad-thumbnail"
                                                 height="300px"

@@ -44,7 +44,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                                <a href="{{ env('COMPANY_FB') }}" target="_blank" aria-label="esnaad-facebook" rel="canonical">
+                                                <a href="https://www.facebook.com/people/Esnaad-Developments/61557655342025/" target="_blank" aria-label="esnaad-facebook" rel="canonical">
                                                     <img src="{{ asset('sm/fb.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                                 </a>
                                         </div>
@@ -52,7 +52,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_IG') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
+                                            <a href="https://www.instagram.com/esnaaddevelopments" target="_blank" aria-label="esnaad-instagram" rel="canonical">
                                                 <img src="{{ asset('sm/ig.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -60,7 +60,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_TW') }}" target="_blank" aria-label="esnaad-x" rel="canonical">
+                                            <a href="https://twitter.com/EsnaadD" target="_blank" aria-label="esnaad-x" rel="canonical">
                                                 <img src="{{ asset('sm/x.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -68,7 +68,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_IN') }}" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
+                                            <a href="https://www.linkedin.com/company/esnaad-developments" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
                                                 <img src="{{ asset('sm/in.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -76,7 +76,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_WA')}}" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
+                                            <a href="https://wa.link/a6yo5i" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
                                                 <img src="{{ asset('sm/wa.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -252,7 +252,7 @@
 
                                     <div class="flex-1">
                                         <div class="  rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_FB') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
+                                            <a href="https://www.facebook.com/people/Esnaad-Developments/61557655342025/" target="_blank" aria-label="esnaad-instagram" rel="canonical">
                                                 <img src="{{ asset('sm/fb.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -260,7 +260,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_IG') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
+                                            <a href="https://www.instagram.com/esnaaddevelopments" target="_blank" aria-label="esnaad-instagram" rel="canonical">
                                                 <img src="{{ asset('sm/ig.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -268,7 +268,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_TW') }}" target="_blank" aria-label="esnaad-x" rel="canonical">
+                                            <a href="https://twitter.com/EsnaadD" target="_blank" aria-label="esnaad-x" rel="canonical">
                                                 <img src="{{ asset('sm/x.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -276,7 +276,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_IN') }}" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
+                                            <a href="https://www.linkedin.com/company/esnaad-developments" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
                                                 <img src="{{ asset('sm/in.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -284,7 +284,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_WA')}}" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
+                                            <a href="https://wa.link/a6yo5i" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
                                                 <img src="{{ asset('sm/wa.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -546,7 +546,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_FB') }}" target="_blank" aria-label="esnaad-facebook" rel="canonical">
+                                            <a href="https://www.facebook.com/people/Esnaad-Developments/61557655342025/" target="_blank" aria-label="esnaad-facebook" rel="canonical">
                                                 <img src="{{ asset('sm/fb.png')}}" title="ESNAAD-facebook" alt="ESNAAD-facebook" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -554,7 +554,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_IG') }}" target="_blank" aria-label="esnaad-instagram" rel="canonical">
+                                            <a href="https://www.instagram.com/esnaaddevelopments" target="_blank" aria-label="esnaad-instagram" rel="canonical">
                                                 <img src="{{ asset('sm/ig.png')}}" title="ESNAAD-instagram" alt="ESNAAD-instagram" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -562,7 +562,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_TW') }}" target="_blank" aria-label="esnaad-x" rel="canonical">
+                                            <a href="https://twitter.com/EsnaadD" target="_blank" aria-label="esnaad-x" rel="canonical">
                                                 <img src="{{ asset('sm/x.png')}}" title="ESNAAD-X" alt="ESNAAD-X" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -570,7 +570,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_IN') }}" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
+                                            <a href="https://www.linkedin.com/company/esnaad-developments" target="_blank" aria-label="esnaad-linkedin" rel="canonical">
                                                 <img src="{{ asset('sm/in.png')}}" title="ESNAAD-linkedin" alt="ESNAAD-linkedin" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
@@ -578,7 +578,7 @@
 
                                     <div class="flex-1">
                                         <div class=" rounded-3xl p-1">
-                                            <a href="{{ env('COMPANY_WA')}}" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
+                                            <a href="https://wa.link/a6yo5i" target="_blank" aria-label="esnaad-whatsapp" rel="canonical">
                                                 <img src="{{ asset('sm/wa.png')}}" title="ESNAAD-whatsapp" alt="ESNAAD-whatsapp" height="auto" width="auto" loading="lazy" style="height: 32px;">
                                             </a>
                                         </div>
