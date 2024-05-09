@@ -37,10 +37,10 @@
                     ?>
                     <div class="max-w-6xl mx-auto p-0" @if($langSeg == 'ar') dir="ltr" @endif>
                             <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
-                                <div class="relative overflow-hidden rounded-0 lg:h-[22rem] max-h-[50rem] w-[100%] z-0">
-                                    <div
-                                        class="text-white text-xl rounded-0 absolute inset-0 flex justify-center items-center ">
-                                    </div>
+                                <div class="relative overflow-hidden rounded-0 lg:h-[26rem] max-h-[50rem] w-[100%] z-0">
+                                        {{-- <div
+                                            class="text-white text-xl rounded-0 absolute inset-0 flex justify-center items-center ">
+                                        </div> --}}
                                     
                                     <img class="h-[100%] w-[100%] object-cover"
                                         src="{{asset('developments/Map2.webp')}}"
