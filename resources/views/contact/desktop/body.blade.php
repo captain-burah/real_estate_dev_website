@@ -9,11 +9,18 @@
                         </ul>
                     </div>
                 @endif
-                <form id="contact-desktop-form" action="/en/contact-form-post" method="post">
+                
+                <form id="" action="/en/contact-form-post" method="post">
                     @csrf                    
                     <h3 class="text-3xl font-thin">{{__('frontend.contactFormH')}}</h3>
 
                     <p class=" mb-4"> {{__('frontend.contactFormP')}}</p>
+
+                    @if(session()->has('message'))
+                        <div class="w-[100%] py-2 text-black px-2 bg-white mb-4">
+                            <p class="text-black">{{ session()->get('message') }}</p>
+                        </div>
+                    @endif
                     
                     <input type="hidden" name="country_code" id="country_code">
                     
@@ -242,14 +249,22 @@
                             </select>
                         </div>
                         <div>
-                            <input type="tel" name="phone" placeholder="{{__('frontend.formPhone')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white">
+                            <input type="number" name="phone" placeholder="{{__('frontend.formPhone')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white">
                         </div>
                     </div>
 
                     <input type="email" name="email" id="email" placeholder="{{__('frontend.formEmail')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white mt-3">
                     
                     <textarea name="msg" id="" cols="10" rows="3" placeholder="{{__('frontend.formMsg')}}" required class="border p-2 mt-3 w-full bg-transparent border border-white focus:outline-none focus:border-white focus:ring-white"></textarea>
-                    
+                    <p>Please answer the captcha question</p>
+                    <div class="flex">
+                        <div class="flex-none w-30 ...">
+                            <img src="{{ asset('check.webp')}}">
+                        </div>
+                        <div class="flex-initial w-64 h-auto">
+                            <input type="text"  placeholder="1234x" name="expression_check" class="h-[100%] text-black" required>
+                        </div>
+                      </div>
                     <button type="submit" id="contact_submit"  class="w-full mt-2 bg-white text-black p-3">{{__('frontend.formSubmit')}}</button>
 
                     <button id="contact_submit_done" class="w-full mt-2 bg-black text-white p-3" hidden disabled>
