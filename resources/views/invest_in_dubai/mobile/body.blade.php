@@ -1,4 +1,4 @@
-<div class="sm:container sm:mx-auto mx-0 px-4 sm:px-4 my-5 sm:my-4 mx-auto">
+<div class="sm:container sm:mx-auto mx-0 px-4 sm:px-4 my-5 sm:my-4 mx-auto" @if($langSeg=='ar') dir="rtl" @endif>
 
     <h1 class="text-xl font-thin text-center">
         {{__('frontend.investH2')}}
