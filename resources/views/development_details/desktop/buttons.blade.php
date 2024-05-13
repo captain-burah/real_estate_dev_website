@@ -25,11 +25,6 @@
             </button>
         </div>
         <div class="mr-4">
-            {{-- <a href="/home/The_Spark_by_ESNAAD_Brochure.pdf" target="_blank">
-                <button  class="lg:w-75 text-xl text-black bg-white   hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
-                    Download Brochure
-                </button>
-            </a> --}}
             <button onclick="openModal('mymodalcentered-brochure-register')"  class="lg:w-75 text-xl text-black bg-white hover:text-white px-2 lg:py-4 bg-black hover:bg-transparent rounded-0" type="button">
                 {{ __('frontend.projectDownloadBrochure') }}
             </button>
@@ -73,12 +68,12 @@
                 <div class="p-7 flex items-stretch w-full">
                     <div class="font-semibold text-xl text-black">
                         @if($langSeg=='ar')
-                        سجل اهتمامك
+                            سجل اهتمامك
                         @else
-                        Share
+                            Share
                         @endif
                     </div>
-                    <svg onclick="modalClose('mymodalcentered-community-share')" class="@if($langSeg=='ar') mr-auto @else ml-auto @endif  fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                    <svg onclick="modalClose('mymodalcentered-community-share')" class="@if($langSeg=='ar') mr-auto @else ml-auto @endif fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                         <path fill="#000" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z" />
                     </svg>
                 </div>
@@ -1056,7 +1051,7 @@
                             <tr>
                                 <td style="width: 40%;">
                                     <div class="mb-6">
-                                        <select class="w-full" name="country_code">
+                                        <select class="w-full" name="country_code_brochure">
                 
                                             <option value="Afghanistan	-	+93">Afghanistan	-	+93</option>
                         
@@ -1540,7 +1535,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <p>Please answer the captcha question</p>
+                        {{-- <p>Please answer the captcha question</p>
                         <div class="flex" dir="ltr">
                             <div class="flex-none w-30 ...">
                                 <img src="{{ asset('check.webp')}}">
@@ -1548,7 +1543,7 @@
                             <div class="flex-initial w-100 h-auto">
                                 <input type="text"  placeholder="1234x" name="expression_check" class="h-[100%] w-[100%] text-black" id="brochure_expression_check" required>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="p-4 items-center w-full">

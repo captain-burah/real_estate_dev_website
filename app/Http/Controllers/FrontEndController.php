@@ -925,7 +925,7 @@ class FrontEndController extends Controller
             return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
         }
         
-        $tel = $request->country_code + $request->phone;     
+        // $tel = $request->country_code + $request->phone;     
         
         $apiUrl = 'https://mis.esnaad.com/api/leads';
 
@@ -956,7 +956,7 @@ class FrontEndController extends Controller
                 'enquiry_type'     =>  $request->project,
                 'project'     =>  $request->project,
                 'phone'     =>  $request->phone,
-                'tel'     =>  $tel,
+                'tel'     =>  "-",
                 'country_code'     =>  $request->country_code,
             ];
 
@@ -978,11 +978,25 @@ class FrontEndController extends Controller
 
     
     public function project_detail_brochure_download($lang='', Request $request) {
-        if($request->expression_check != "12x" ){
-            return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
-        }
         
-        $tel = $request->country_code_brochure + $request->phone_brochure;
+        // $tel = $request->country_code_brochure + $request->phone_brochure;
+
+        $apiUrl = 'https://mis.esnaad.com/api/leads';
+
+        $response = Http::asForm()
+        ->post($apiUrl, [
+            'name' => $request->name_brochure,
+            'email' => $request->email_brochure,
+            'phone' => $request->phone_brochure,
+            'country_code' => $request->country_code_brochure,
+            'ip' => $request->getClientIp(),
+            'url' => $request->url_brochure,
+            'auth_key' => '$2y$10$nHZPrLt2gQMU0orcQfT3x.rwfIHuHAvgtuLs8O8BShK2WyPYFQcIe',
+        ]);
+
+        $responseData = json_decode($response, true);
+
+        
 
         try{
             $data = [
@@ -990,9 +1004,9 @@ class FrontEndController extends Controller
                 'email'     =>  $request->email_brochure,
                 'ip'     =>  $request->getClientIp(),
                 'project'     =>  $request->project_brochure,
-                'url'     =>  $request->url_brochure,
+                'url'     =>  $request->getClientIp(),
                 'phone'     =>  $request->phone_brochure,
-                'tel'     =>  $tel,
+                'tel'     =>  "-",
                 'country_code'     =>  $request->country_code_brochure,
             ];
 
@@ -1016,6 +1030,8 @@ class FrontEndController extends Controller
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
+
+        
         $this->data['source'] = $source = "project_brochure";
         return view('thankyou2', $this->data);
         // return Response::json(['message' => 'verification sent'], 200);
