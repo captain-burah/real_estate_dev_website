@@ -264,7 +264,7 @@
                         <div class="flex-initial w-64 h-auto">
                             <input type="text"  placeholder="1234x" name="expression_check" class="h-[100%] text-black" required>
                         </div>
-                      </div>
+                    </div>
                     <button type="submit" id="contact_submit"  class="w-full mt-2 bg-white text-black p-3">{{__('frontend.formSubmit')}}</button>
 
                     <button id="contact_submit_done" class="w-full mt-2 bg-black text-white p-3" hidden disabled>

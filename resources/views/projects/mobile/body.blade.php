@@ -74,7 +74,7 @@
             <div class="mt-[-80px] w-full mx-auto">
                 <img class="object-cover m-0 p-0  z-90 text-center mx-auto border border-gray-200"
                     width="140px" height="auto"
-                    src="{{asset('front/project/the-spark-by-esnaad-logo.png')}}"
+                    src="{{asset('thespark-logo.png')}}"
                     alt="esnaad-project-card"
                     title="the-spark-by-esnaad-thumbnail}"
                     loading="lazy"
@@ -102,7 +102,7 @@
             </div>
         </div>
         <div class="text-center py-4 sm:py-4 w-full mt-2">
-            <a href="http://esnaad.com/en/developments/the-spark-by-esnaad" title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white font-thin text-base text-black py-3 px-10 rounded-0" onclick="showLoader()">
+            <a @if($langSeg=='ar') href="http://esnaad.com/ar/developments/the-spark-by-esnaad" @else href="http://esnaad.com/en/developments/the-spark-by-esnaad" @endif title="THE SPARK BY ESNAAD" alt="THE SPARK BY ESNAAD" class="bg-white font-thin text-base text-black py-3 px-10 rounded-0" onclick="showLoader()">
                 <span id="buttonText">
                     @if($langSeg=="ar")
                     اكتشف المزيد

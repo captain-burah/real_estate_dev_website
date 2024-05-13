@@ -45,16 +45,16 @@
 @endsection
 
 <header>
-    <div class="w-full bg-cover bg-center" style="height:40vh; background-image: url('{{ URL::asset('developments/banners/1.webp')}}'), url('{{ URL::asset('developments/banners/1.webp')}}');">
+    <div class="w-full bg-cover bg-center" style="height:40vh; background-image: url('{{ URL::asset('developments/banners/1.webp')}}'), url('{{ URL::asset('developments/banners/1.webp')}}');" @if($langSeg=='ar') dir="rtl" @endif>
         <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-75   ">
-            <div class="container mx-6 my-auto">
+            <div class="container mx-6 my-auto" @if($langSeg=='ar') dir="rtl" @endif>
                     
-                <h1 class="text-xl text-white font-bold uppercase mx-auto text-left mb-2 mt-15">
+                <h1 class="text-xl text-white font-bold uppercase mx-auto  mb-2 mt-15">
                     {{__('frontend.aboutH')}}
                 </h1>
                 
-                <p class="text-white font-thin leading-relax text-base text-left">
-                    {{__('frontend.aboutMobileP1')}}
+                <p class="text-white font-thin leading-relax text-base ">
+                    {{__('frontend.aboutP')}}
                 </p>
             </div>
         </div>

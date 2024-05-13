@@ -46,7 +46,7 @@
 
 <header>
     <div class="w-full bg-cover bg-center" style="height:60vh; background-image: url('{{ URL::asset('developments/banners/4.webp')}}'), url('{{ URL::asset('developments/banners/4.webp')}}');">
-        <div class="flex items-center justify-center h-full w-full  bg-black bg-opacity-40">
+        <div class="flex items-center justify-center h-full w-full  bg-black bg-opacity-40" @if($langSeg=='ar') dir="rtl" @endif> 
             <div class="container">
                     
                 <h1 class="text-3xl text-white font-light uppercase mx-auto text-center">

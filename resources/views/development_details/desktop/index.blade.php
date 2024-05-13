@@ -114,39 +114,39 @@
     </script>
 
 
-    {{-- MAP --}}
-    <script>
+        {{-- MAP --}}
+        <script>
 
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZWRnZXJlYWx0eSIsImEiOiJjbGNvcnE3eDgwYzBvM3JsYTB4dXpxa3I3In0.prc7SeJwtNYofG3O-fv61w';
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZWRnZXJlYWx0eSIsImEiOiJjbGNvcnE3eDgwYzBvM3JsYTB4dXpxa3I3In0.prc7SeJwtNYofG3O-fv61w';
 
-        var long = {!! json_encode($long) !!};
+            var long = {!! json_encode($long) !!};
 
-        var lat = {!! json_encode($lat) !!};
-
-
-        var map = new mapboxgl.Map({
-            container: 'map',
-            // style: 'mapbox://styles/edgerealty/clde93eip003001nm4dkn4izw',
-            style: 'mapbox://styles/edgerealty/cldfzjqvo003r01lkn5msoiyu',
-            // center: [55.220108, 25.111407], // starting position [lng, lat],
-            // zoom: 11,
-            center: [long,lat],
-            // center: [-103.5917, 40.6699],
-            zoom: 10,
-            // bearing:,
-            pitch: 0.00,
-            projection: 'mercator'
-        });
+            var lat = {!! json_encode($lat) !!};
 
 
-        const marker1 = new mapboxgl.Marker()
-            .setLngLat([long, lat])
-            .addTo(map);
+            var map = new mapboxgl.Map({
+                container: 'map',
+                // style: 'mapbox://styles/edgerealty/clde93eip003001nm4dkn4izw',
+                style: 'mapbox://styles/edgerealty/cldfzjqvo003r01lkn5msoiyu',
+                // center: [55.220108, 25.111407], // starting position [lng, lat],
+                // zoom: 11,
+                center: [long,lat],
+                // center: [-103.5917, 40.6699],
+                zoom: 10,
+                // bearing:,
+                pitch: 0.00,
+                projection: 'mercator'
+            });
 
 
-        map.addControl(new mapboxgl.NavigationControl());
+            const marker1 = new mapboxgl.Marker()
+                .setLngLat([long, lat])
+                .addTo(map);
 
-    </script>
+
+            map.addControl(new mapboxgl.NavigationControl());
+
+        </script>
 
 
 

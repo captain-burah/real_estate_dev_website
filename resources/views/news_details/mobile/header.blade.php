@@ -49,7 +49,7 @@
 <header>
 
    
-    <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl">
+    <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl" @if($langSeg=='ar') dir="rtl" @endif>
         <div class=" flex flex-col items-start px-4">
             <div class="ml-0 md:mr-12 sticky">
                 <div class="container mx-auto w-full mt-[15vh]">

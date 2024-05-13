@@ -67,7 +67,8 @@
             <div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-20 sm:my-4 mx-auto text-white @if($langSeg == 'ar') text-right @else text-left @endif">
                 <h1 class="text-4xl">
                     @if($langSeg == 'ar')
-                        {{$namear}}
+                        
+ذا سبارك من إسناد
                     @else
                         {{$name}}
                     @endif

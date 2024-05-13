@@ -1,5 +1,5 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-<div class="fixed top-0 z-50 w-full z-50 m-0 p-0" style="background-color: #1C1C1C !important; color: #ccc !important;">
+<div class="fixed top-0 z-50 w-full z-50 m-0 p-0" style="background-color: #1C1C1C !important; color: #ccc !important;" @if($langSeg=='ar') dir="rtl" @endif>
   
   <div class="w-full  shadow-md">
 

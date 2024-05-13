@@ -50,6 +50,8 @@
                 </div>
             </div>
 
+            
+
             <div class="row-span-2  w-[100%] mb-8">
                 @include('development_details.desktop.buttons')
             </div>

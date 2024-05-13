@@ -46,7 +46,7 @@
 
 <header>
     <div class="w-full bg-cover bg-center grayscale" style="margin-top: 60px; height: 40vh; background-image: url('{{ URL::asset('developments/banners/7.webp')}}'), url('{{ URL::asset('developments/banners/7.webp')}}');">
-        <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-40">
+        <div class="flex items-center justify-left h-full w-full bg-black bg-opacity-40" @if($langSeg=='ar') dir="rtl" @endif>
             <div class="container mx-0 px-0 mx-auto text-white">
                 <h1 class="text-xl font-light px-2">
                     {{(__('frontend.careersH'))}}

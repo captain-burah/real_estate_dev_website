@@ -10,8 +10,8 @@ return [
         "desktop_ourCompany" => "شركتنا",
         "desktop_ceoMessageNav" => "رسالة الرئيس التنفيذي",
         "desktop_home" => "الصفحة الرئيسية",
-        "desktop_developments" => "مشروعات التطوير العقاري",
-        "desktop_communities" => "المجتمعات",
+        "desktop_developments" => "مشروعتنا",
+        "desktop_communities" => "المناطق",
         "desktop_construction" => "الإنشاءات",
         "desktop_contact_us" => "اتصل بنا",
         "desktop_news" => "البيانات الصحفية",
@@ -30,9 +30,9 @@ return [
         "mobile_ourCompany" => "شركتنا",
         "mobile_ceoMessageNav" => "رسالة الرئيس التنفيذي",
         "mobile_home" => "الصفحة الرئيسية",
-        "mobile_developments" => "مشروعات التطوير العقاري",
+        "mobile_developments" => "مشروعتنا",
         "mobile_constructions" => "الإنشاءات",
-        "mobile_communities" => "المجتمعات",
+        "mobile_communities" => "المناطق",
         "mobile_contact_us" => "اتصل بنا",
         "mobile_language" => "لغة",
         "mobile_invest_in_dubai" => "لماذا دبي؟",
@@ -62,7 +62,7 @@ return [
 
         'footerFormP2' => "Thank You! Your Email subscription has been recorded. Feel free to check your emails regularly for important news on our latest trends.",
 
-        'footerFormSubscribe' => "يشترك",
+        'footerFormSubscribe' => "مشاركة",
         'footerFormSubscribed' => "مشترك",
         'footerFormSubmissionCompleted' => "Submission Completed",
 

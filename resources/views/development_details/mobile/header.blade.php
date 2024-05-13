@@ -51,7 +51,7 @@
             <div class="container mx-0 px-0 mx-auto text-white">
                 <h1 class="text-2xl font-semibold px-2">
                     @if($langSeg == 'ar')
-                        {{$namear}}
+                    ذا سبارك من إسناد
                     @else
                         {{$name}}
                     @endif

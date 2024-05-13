@@ -9,7 +9,7 @@
 
     </div> --}}
 
-    <div class="mx-auto mt-10">
+    <div class="mx-auto mt-10" @if($langSeg=='ar') dir="rtl" @endif>
         <h2 class="text-3xl font-thin text-center">
             {{__('frontend.investH2')}}
         </h2>

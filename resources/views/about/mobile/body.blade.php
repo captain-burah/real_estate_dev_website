@@ -7,7 +7,7 @@
 
 
 
-<div class="container mx-auto  px-4 m-0 mt-8 mb-0">
+<div class="container mx-auto  px-4 m-0 mt-8 mb-0" @if($langSeg=='ar') dir="rtl" @endif>
     <div class="row">
         <div class="grid md:grid-cols-1 mx-auto">
             <div class="paragraph-container">
@@ -26,7 +26,7 @@
 
 
 <div class="w-full px-4 mx-auto">
-    <div class="sm:container pt-0 sm:mx-auto mx-0 mt-4 sm:mb-4 mx-auto">
+    <div class="sm:container pt-0 sm:mx-auto mx-0 mt-4 sm:mb-4 mx-auto" @if($langSeg=='ar') dir="rtl" @endif>
 
         <div class="space-y-2">
             <div

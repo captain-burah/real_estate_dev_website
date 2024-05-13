@@ -1,5 +1,5 @@
 
-<div class="w-full p-6">
+<div class="w-full p-6" @if($langSeg=='ar') dir="rtl" @endif>
     <div class="sm:container px-8 mt-6 sm:mx-auto mx-0 mx-auto">
 
         <p class="text-base font-thin text-justify leading-8">
@@ -11,7 +11,7 @@
 
 
 <div class="w-full p-6">
-    <div class="sm:container px-8 pt-0 sm:mx-auto mx-0 mx-auto">
+    <div class="sm:container px-8 pt-0 sm:mx-auto mx-0 mx-auto" @if($langSeg=='ar') dir="rtl" @endif>
 
         <div class="grid grid-cols-3 gap-8">
             <div class="w-full flex-1 mt-8 p-8 order-2  shadow-sm hover:shadow rounded-0 sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none border">

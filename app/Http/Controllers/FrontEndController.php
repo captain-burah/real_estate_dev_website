@@ -826,6 +826,10 @@ class FrontEndController extends Controller
 
 
     public function contact_form_post($lang='', Request $request) {
+
+        if($request->expression_check != "12x" ){
+            return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
+        }
         
         $tel = $request->country_code + $request->phone;
 
@@ -914,6 +918,11 @@ class FrontEndController extends Controller
 
 
     public function project_detail_inquiry($lang='', Request $request) {
+
+        if($request->expression_check != "12x" ){
+            return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
+        }
+        
         $tel = $request->country_code + $request->phone;        
 
         try{
@@ -947,13 +956,15 @@ class FrontEndController extends Controller
 
     
     public function project_detail_brochure_download($lang='', Request $request) {
+        if($request->expression_check != "12x" ){
+            return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
+        }
         
         $tel = $request->country_code_brochure + $request->phone_brochure;
 
         try{
-            
             $data = [
-                'name'      =>  $request->name_brochure, 
+                'name'      =>  $request->name_brochure,
                 'email'     =>  $request->email_brochure,
                 'ip'     =>  $request->getClientIp(),
                 'project'     =>  $request->project_brochure,
@@ -976,17 +987,17 @@ class FrontEndController extends Controller
             $brochure_db->url = $request->url_brochure;
             $brochure_db->save();
 
-
             // Mail::to('lead@edgerealty.ae')->send(new DemoEmail($mailData));
             // Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new SubscriptionInquiry($data));
             // Mail::mailer('noreply')->to('customercare@esnaad.onmicrosoft.com')->send(new ProjectBrochureDownload($data));
             // Mail::mailer('noreply')->to($request->email_brochure)->send(new ThankYou($data2));
-
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
-
-        return Response::json(['message' => 'verification sent'], 200);   
+        $this->data['source'] = $source = "project_brochure";
+        $this->data['url'] = $url = "https://esnaad.com/home/the-spark-by-esnaad.pdf";
+        return view('thankyou2', $this->data);
+        // return Response::json(['message' => 'verification sent'], 200);
     }
 
 
