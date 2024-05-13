@@ -53,6 +53,8 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\RequestException;
 use GuzzleHttp\Client;
 use App\Jobs\DevelopmentApi;
+use Illuminate\Support\Facades\URL;
+
 
 use Response;
 
@@ -923,7 +925,27 @@ class FrontEndController extends Controller
             return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
         }
         
-        $tel = $request->country_code + $request->phone;        
+        $tel = $request->country_code + $request->phone;     
+        
+        $apiUrl = 'https://mis.esnaad.com/api/leads';
+
+        $response = Http::asForm()
+        ->post($apiUrl, [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'country_code' => $request->country_code,
+            'ip' => $request->getClientIp(),
+            'url' => URL::current(),
+            'auth_key' => '$2y$10$nHZPrLt2gQMU0orcQfT3x.rwfIHuHAvgtuLs8O8BShK2WyPYFQcIe',
+        ]);
+
+        $responseData = json_decode($response, true);
+
+        if($responseData == "success"){
+            $this->data['source'] = $source = "project_details";
+            return view('thankyou2', $this->data);          
+        }
 
         try{
             
@@ -941,7 +963,7 @@ class FrontEndController extends Controller
             $data2 = ['message' => 'Thank you for contacting ESNAAD Real Estate Development. We appreciate you reaching out and taking the time to register your interest. 
             We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
-            Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new ProjectInquiry($data));
+            // Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new ProjectInquiry($data));
             // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
             // Mail::mailer('noreply')->to('webmaster@esnaad.com')->send(new ProjectInquiry($data));
 
@@ -995,7 +1017,6 @@ class FrontEndController extends Controller
             dd($e->getMessage());
         }
         $this->data['source'] = $source = "project_brochure";
-        $this->data['url'] = $url = "https://esnaad.com/home/the-spark-by-esnaad.pdf";
         return view('thankyou2', $this->data);
         // return Response::json(['message' => 'verification sent'], 200);
     }

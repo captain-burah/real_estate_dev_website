@@ -106,7 +106,7 @@
     <script>
         function copyText() {
             navigator.clipboard.writeText(document.getElementById("linksys").innerHTML);
-            document.querySelector('#linksysbutton').textContent = 'Copied';
+            // document.querySelector('#linksysbutton').textContent = 'Copied';
             document.getElementById('linksysbutton').classList.remove('bg-black');
             document.getElementById('linksysbutton').classList.add('bg-gray-300');
             document.getElementById('linksysbutton').classList.add('text-black');

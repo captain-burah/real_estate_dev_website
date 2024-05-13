@@ -22,10 +22,5 @@
         </div>
     </div>
 </header>
-    {{-- @isset($url) --}}
-        <script>
-            window.open('{{ $url }}', '_blank');
-        </script>
-    {{-- @endisset --}}
 @endsection
 
