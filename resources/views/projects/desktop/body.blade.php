@@ -85,7 +85,11 @@
                                             <div class="col-span-2 mt-[-70px] w-full mx-auto">
                                                 <img class="object-cover m-0 p-0  z-90 text-center mx-auto border border-gray-200"
                                                     width="180px" height="auto"
+                                                    @if($langSeg=='ar')
                                                     src="{{asset('thespark-logo2.png')}}"
+                                                    @else
+                                                    src="{{asset('thespark-logo-en.png')}}"
+                                                    @endif
                                                     alt="esnaad-project-card"
                                                     title="the-spark-by-esnaad-thumbnail"
                                                     loading="lazy"
