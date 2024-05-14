@@ -20,9 +20,8 @@
 </div>
 
 
-<div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto" >
+<div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto" @if($langSeg=='ar') dir="rtl" @endif>
     <div class="grid xl:grid-cols-3- lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5" >
-
             <div class="">
                 <div class="mx-auto px-0 ">
                     <div class="max-w-full cursor-pointer rounded-0 border shadow">
@@ -43,7 +42,7 @@
                             </div>
                         </div>
                         <div class="row text-center pb-5 pt-2 mt-3">
-                            <a href="https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation"
+                            <a href="{{ URL('https://esnaad.com/'.$langSeg.'/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation')}}"
                                 class="bg-white text-black px-15 py-3"  onclick="showLoader()">
                                 <span id="buttonText">
                                     @if($langSeg=="ar")
@@ -70,7 +69,7 @@
 
         // Wait for 2 seconds and then navigate to the next page
         setTimeout(function() {
-            window.location.href = 'https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation'; // URL of the next page
+            // window.location.href = 'https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation'; // URL of the next page
         }, 500);
     }
 </script>

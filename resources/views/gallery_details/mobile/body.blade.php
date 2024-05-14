@@ -9,20 +9,20 @@
                     <div class="space-y-10">
                         <div>                            
 
-                            <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                                <a href="{{ url('/en/media-gallery') }}" class="text-sm">
-                                    Media   
+                            <div class="flex items-center overflow-x-auto whitespace-nowrap" @if($langSeg=='ar') dir="rtl" @endif>
+                                <a href="{{ url('/'.$langSeg.'/media-gallery') }}" class="text-sm">
+                                    {{__('frontend.mobile_media')}}   
                                 </a>
                                 <span class="mx-2 text-sm">
                                     /
                                 </span> 
-                                <a href="{{ url('/en/media-gallery') }}" class="text-sm">
-                                    {{__('frontend.mediaH4')}}
+                                <a href="{{ url('/'.$langSeg.'/media-gallery') }}" class="text-sm">
+                                    {{__('frontend.mobile_gallery')}}
                                 </a>
                                 <span class="mx-2 text-sm">
                                     /
                                 </span> 
-                                <p class="text-sm">
+                                <p class="text-sm" @if($langSeg=='ar') dir="rtl" @endif>
                                     @if($langSeg == 'ar')
                                         {{$titlear}}
                                     @else
@@ -31,11 +31,11 @@
                                 </p>
                             </div>
 
-                            <h1 class="text-2xl mt-2">
+                            <h1 class="text-2xl mt-2"  @if($langSeg=='ar') dir="rtl" @endif>
                                 {{$title}}
                             </h1>
 
-                            <div class="grid grid-cols-2 gap-4 place-content-between">
+                            <div class="grid grid-cols-2 gap-4 place-content-between mb-4"  @if($langSeg=='ar') dir="rtl" @endif>
                                 <div class="">
                                     <p class="text-sm mb-2">Published {{\Carbon\Carbon::parse($created_at)->format('j F, Y')}}</p>
                                 </div>

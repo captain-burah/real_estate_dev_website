@@ -51,7 +51,7 @@
 
 
 
-<div class="sm:container sm:mx-auto mx-0 px-4 xl:my-20 sm:my-4 mx-auto">
+<div class="sm:container sm:mx-auto mx-0 px-4 xl:my-10 sm:my-4 mx-auto">
     <div class="row-span-2 grid sm:grid-cols-2 gap-4 h-[100%] w-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
         <div>
             <h2 class=" text-justify font-base my-8 text-2xl xl:text-2xl w-[90%]">

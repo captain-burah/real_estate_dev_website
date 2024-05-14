@@ -20,7 +20,7 @@
 </div>
 
     <div class="sm:container sm:mx-auto sm:px-4 sm:my-4 mx-auto" >
-        <div class="grid xl:grid-cols-3- lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5" >
+        <div class="grid xl:grid-cols-3- lg:grid-cols-3 sm:grid-cols-2 gap-2 mb-5" @if($langSeg=='ar') dir="rtl" @endif>
 
                 <div class="">
                     <div class="mx-auto px-0 ">
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="row text-center pb-5 pt-2 mt-3">
-                                <a href="https://esnaad.com/en/media-gallery/the-spark-by-esnaad"
+                                <a href="{{URL('https://esnaad.com/'.$langSeg.'/media-gallery/the-spark-by-esnaad')}}"
                                     class="bg-white text-black px-15 py-3"   onclick="showLoader()">
                                     <span id="buttonText">
                                         @if($langSeg=="ar")

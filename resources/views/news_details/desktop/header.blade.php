@@ -49,7 +49,7 @@
 <header>
 
    
-    <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl">
+    <div class="container mx-auto max-w-7xl lg:max-w-8xl xl:max-w-8xl 2xl:px-w-8xl" @if($langSeg=='ar') dir="rtl" @endif>
         <div class=" flex flex-col items-start md:flex-">
             <div class="ml-0 md:mr-12 sticky">
                 <div class="container mx-auto w-full h-full xl:mt-[15vh]">
@@ -64,7 +64,11 @@
                     </style>
                     <div class="flex items-center overflow-x-auto whitespace-nowrap">
                         <a href="/news" class="text-sm font-thin">
-                            Press Release
+                            @if($langSeg=='ar')
+                                risalat 'iikhbaria
+                            @else
+                                Press Release
+                            @endif
                         </a>
                         <span class="mx-2 text-sm">
                             /

@@ -404,7 +404,6 @@ return [
         "blogPublish" => "Published",
 
         
-        
         /**
          * COMMUNITY PAGE
          */
@@ -429,6 +428,7 @@ return [
         /**
          * BROKER REGISTRATION FORM
          */
+        "brokerH1" => "Company Information",
         "brokerCompanyH1" => "Company Information",
         "brokerCompanyName" => "Company Name",
         "brokerCompanyType" => "Company Type",

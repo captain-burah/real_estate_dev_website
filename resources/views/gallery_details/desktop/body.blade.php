@@ -8,7 +8,7 @@
                 <div class="w-full">
                     <div class="space-y-10">
                         <div>
-                            <h1 class="text-2xl font-bold mb-4 text-center">
+                            <h1 class="text-2xl font-thin mb-4 text-center">
                                 @if($langSeg == 'ar')
                                     {{$titlear}}
                                 @else
@@ -16,11 +16,13 @@
                                 @endif
                             </h1>
                             
-                            @if($langSeg == 'ar')
-                                {!! $descriptionar !!}
-                            @else
-                                {!! $description !!}
-                            @endif
+                            <p @if($langSeg=='ar') dir="rtl" @endif>
+                                @if($langSeg == 'ar')
+                                    {!! $descriptionar !!}
+                                @else
+                                    {!! $description !!}
+                                @endif
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -46,8 +48,7 @@
             
                         <div x-show="openTab === 1" class="transition-all duration-300 p-4 rounded-lg ">
                             <div class="mx-auto  mt-8">
-                                <div class="container mx-auto flex flex-col items-start md:flex-">
-                        
+                                <div class="container mx-auto flex flex-col items-start md:flex-">                        
                                     @if(isset($available))
                                         <div class="grid md:grid-cols-2 gap-3 mb-5 mx-auto" >
                                             @foreach($images as $image)
@@ -58,8 +59,7 @@
                                                 @endif
                                             @endforeach
                                         </div>
-                                    @endif
-                        
+                                    @endif                        
                                 </div>
                             </div>
                         </div>

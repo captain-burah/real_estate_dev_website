@@ -103,36 +103,16 @@
             
                     <div class="invisible absolute z-50 flex w-full flex-col bg-white mx-8 pb-1 pt-4 text-gray-800 shadow-xl group-hover:visible" style="background-color: #1C1C1C !important; color: #ccc !important;  width: 200px !important;" @if($langSeg=='ar') dir="rtl" @endif>
             
-                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}"  class="font-thin text-xs my-4 md:text-[12px] xl:text-[16px] 2xl:text-lg @if($langSeg=='ar') text-right @endif leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important; width: 200px !important;" >
+                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}"  class="font-thin text-center text-xs my-4 md:text-[12px] xl:text-[16px] 2xl:text-lg leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important; width: 200px !important;">
                             {{ __('frontend.desktop_ourCompany') }}
                         </x-dropdown-link>
                         
-                        <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}" class="font-thin text-xs my-4 md:text-[12px] xl:text-[16px] 2xl:text-lg @if($langSeg=='ar') text-right @endif  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;" >
+                        <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}" class="font-thin text-center text-xs my-4 md:text-[12px] xl:text-[16px] 2xl:text-lg  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;" >
                             {{ __('frontend.desktop_ceoMessageNav') }}
                         </x-dropdown-link>
             
                     </div>
                 </div>
-
-                {{-- <x-dropdown align="left">
-                    <x-slot name="trigger">
-                        <button class="hidden space-x-8 sm:-my-px sm:flex inline-flex items-center px-3 py-2  leading-4 font-medium rounded-md text-gray-700 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div class="inline-flex items-center px-0 space-x-8 pt-1 border-indigo-400 font-thin text-xs md:text-[12px] xl:text-lg text-center  leading-5 text-black transition duration-150 ease-in-out">
-                                {{ __('frontend.desktop_aboutUs') }}
-                            </div>
-                        </button>
-                    </x-slot>
-
-                    <x-slot name="content" class="bg-white border-0 space-y-6" >
-                        <x-dropdown-link href="{{ url($langSeg.'/about-us') }}"  class="font-thin text-xs my-4 md:text-[12px] xl:text-base text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
-                            {{ __('frontend.desktop_ourCompany') }}
-                        </x-dropdown-link>
-                        
-                        <x-dropdown-link href="{{ url($langSeg.'/ceo-message') }}" class="font-thin text-xs my-4 md:text-[12px] xl:text-base text-left  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical'>
-                            {{ __('frontend.desktop_ceoMessageNav') }}
-                        </x-dropdown-link>
-                    </x-slot>
-                </x-dropdown> --}}
 
 
                 <div class="hidden space-x-8 sm:-my-px sm:flex mx-auto no-underline 2xl:px-8 md:px-2">
@@ -192,19 +172,19 @@
             
                     <div class="invisible absolute z-50 flex w-full flex-col mx-8 pb-1 pt-4 text-gray-800 shadow-xl group-hover:visible" style="background-color: #1C1C1C !important; color: #ccc !important;  width: 200px !important;">
             
-                        <x-dropdown-link href="{{ url($langSeg.'/press-release') }}"  class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  @if($langSeg=='ar') text-right @endif  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
+                        <x-dropdown-link href="{{ url($langSeg.'/press-release') }}"  class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  text-center  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
                             {{ __('frontend.desktop_press_release') }} 
                         </x-dropdown-link>
             
-                        <x-dropdown-link href="{{ url($langSeg.'/blogs') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  @if($langSeg=='ar') text-right @endif  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
+                        <x-dropdown-link href="{{ url($langSeg.'/blogs') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  text-center  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
                             {{ __('frontend.desktop_blogs') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link href="{{ url($langSeg.'/media-gallery') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  @if($langSeg=='ar') text-right @endif  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
+                        <x-dropdown-link href="{{ url($langSeg.'/media-gallery') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  text-center  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
                             {{ __('frontend.desktop_gallery') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link href="{{ url($langSeg.'/careers') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  @if($langSeg=='ar') text-right @endif  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
+                        <x-dropdown-link href="{{ url($langSeg.'/careers') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  text-center  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
                             {{ __('frontend.desktop_careers') }}
                         </x-dropdown-link>
             
