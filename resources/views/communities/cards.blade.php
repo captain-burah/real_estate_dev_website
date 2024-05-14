@@ -10,7 +10,7 @@
 ?>
 
 {{-- Desktop View --}}
-<div class="container mx-auto md:px-4 ">
+<div class="container mx-auto md:px-4 " @if($langSeg == 'ar') dir="rtl" @endif>
     <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-4 mb-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
@@ -35,7 +35,7 @@
                             $langSeg = 'en';
                         }
                     ?>
-                    <div class="max-w-6xl mx-auto p-0" @if($langSeg == 'ar') dir="ltr" @endif>
+                    <div class="max-w-6xl mx-auto p-0" @if($langSeg == 'ar') dir="rtl" @endif>
                             <div class="w-full rounded-0 border shadow-lg overflow-hidden flex flex-col justify-center items-center">
                                 <div class="relative overflow-hidden rounded-0 lg:h-[26rem] max-h-[50rem] w-[100%] z-0">
                                         {{-- <div
@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="text-center py-4 sm:py-4 w-full mb-4">
-                                    <a href="https://www.esnaad.com/en/communities/mohammed-bin-rashid-city" title="Mohammed Bin Rashid City" alt="Mohammed Bin Rashid City" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3" onclick="showLoader()">
+                                    <a href="{{ URL('https://www.esnaad.com/'.$langSeg.'/communities/mohammed-bin-rashid-city')}}" title="Mohammed Bin Rashid City" alt="Mohammed Bin Rashid City" class="bg-white text-base text-black py-3 px-10 rounded-0 mb-3" onclick="showLoader()">
                                         <span id="buttonText">
                                             @if($langSeg=="ar")
                                             اكتشف المزيد

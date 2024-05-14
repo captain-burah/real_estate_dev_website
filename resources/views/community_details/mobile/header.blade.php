@@ -46,7 +46,7 @@
 
 <header>
     <div class="w-full bg-cover bg-center" style="height: 70vh; background-image: url({{ asset('front/communities/2.png') }}), url('{{ URL::asset('assets/img/img-error2.webp')}}');">
-        <div class="flex items-center justify-center h-full w-full bg-black bg-opacity-50">
+        <div class="flex items-center justify-center h-full w-full bg-black bg-opacity-20">
             <div class="container mx-0 px-0 mx-auto text-white">
                 <h1 class="text-2xl font-semibold px-2">
                     @if($langSeg === 'ar')
@@ -57,7 +57,7 @@
                 </h1>
                 <h2 class="text-lg font-light mt-2 px-2 leading-8">
                     @if($langSeg === 'ar')
-                        {{$headingar}}
+                            {{$headingar}}
                     @else
                         {{$heading}}
                     @endif
