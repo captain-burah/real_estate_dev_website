@@ -37,7 +37,11 @@
                         <div class="row ">
                             <div>
                                 <p class="mt-4 px-4 text-xl text-center font-thin">
+                                    @if($langSeg=="ar")
+                                    إسناد تزيح الستار عن مشروعها "ذا سبارك من إسناد": منارة الابتكار
+                                    @else
                                     ESNAAD Unveils "The Spark by ESNAAD": A Beacon of Innovation
+                                    @endif
                                 </p>
                             </div>
                         </div>

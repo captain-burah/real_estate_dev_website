@@ -37,7 +37,11 @@
                             <div class="row">
                                 <div>
                                     <p class="mt-4 pl-4 text-xl text-center font-thin">
+                                        @if($langSeg=='ar')
+                                        ذا سبارك من إسناد
+                                        @else
                                         The Spark By ESNAAD
+                                        @endif
                                     </p>
                                 </div>
                             </div>

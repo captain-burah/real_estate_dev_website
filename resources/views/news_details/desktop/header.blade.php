@@ -63,9 +63,9 @@
                         }
                     </style>
                     <div class="flex items-center overflow-x-auto whitespace-nowrap">
-                        <a href="/news" class="text-sm font-thin">
+                        <a href="{{ URL('/'.$langSeg.'/press-release')}}" class="text-sm font-thin">
                             @if($langSeg=='ar')
-                                risalat 'iikhbaria
+                                رسالة إخبارية   
                             @else
                                 Press Release
                             @endif
@@ -74,7 +74,11 @@
                             /
                         </span> 
                         <p class="text-sm font-thin">
-                            {{ $title }}
+                            @if($langSeg=='ar')
+                                {{$titlear}}
+                                @else
+                                {{$title}}
+                                @endif
                         </p>
                     </div>
 

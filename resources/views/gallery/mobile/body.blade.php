@@ -16,7 +16,11 @@
                         <div class="row">
                             <div>
                                 <p class="mt-4 pl-4 text-2xl text-center font-thin">
+                                    @if($langSeg=='ar')
                                     The Spark By ESNAAD
+                                    @else
+                                    ذا سبارك من إسناد
+                                    @endif
                                 </p>
                             </div>
                         </div>

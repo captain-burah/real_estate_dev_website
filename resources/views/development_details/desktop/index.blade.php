@@ -60,6 +60,12 @@
         .iti__flag-container{
             overflow: visible;
         }
+        p{
+            color: #ccc !important;
+        }
+        span{
+            color: #ccc !important;
+        }
     </style>
 @endsection
 

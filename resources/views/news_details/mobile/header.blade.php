@@ -64,13 +64,21 @@
                     </style>
                     <div class="flex items-center overflow-x-auto whitespace-nowrap">
                         <a href="/news" class="text-sm ">
-                            NEWS
+                            @if($langSeg=='ar')
+                            رسالة إخبارية 
+                            @else
+                                Press Release
+                            @endif
                         </a>
                         <span class="mx-2 text-sm ">
                             /s
                         </span> 
                         <p class="text-sm capitalize ">
-                            {{ $title }}
+                            @if($langSeg=='ar')
+                            {{$titlear}}
+                            @else
+                            {{$title}}
+                            @endif
                         </p>
                     </div>                    
                 </div>

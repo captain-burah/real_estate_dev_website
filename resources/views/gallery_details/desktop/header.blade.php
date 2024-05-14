@@ -74,7 +74,11 @@
                             /
                         </span> 
                         <p class="text-base font-thin">
-                            {{ $title }}
+                            @if($langSeg=='ar')
+                                {{$titlear}}
+                                @else
+                                {{$title}}
+                                @endif
                         </p>
                     </div>                    
                 </div>

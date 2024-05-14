@@ -25,6 +25,9 @@ if($seg1 == 'en' || $seg1 == 'ar'){
         .iti__flag-container{
             overflow: visible;
         }
+        span{
+            color: #ccc !important;
+        }
     </style>
 @endsection
 
@@ -36,6 +39,7 @@ if($seg1 == 'en' || $seg1 == 'ar'){
     $sluglink = $response['slug_link'];
     $thumbnail = $response['thumbnail'];
     $description = $response['description'];
+    $description_ar = $response['description_ar'];
     $header_image = $response['header_image'];
     $images = $response['website_news_images'];
     $created_at = $response['created_at'];

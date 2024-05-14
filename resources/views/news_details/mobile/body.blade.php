@@ -14,7 +14,7 @@
                             <div class="flex items-center overflow-x-auto whitespace-nowrap">
                                 <a href="/news" class="text-sm ">
                                     @if($langSeg=='ar')
-                                        risalat 'iikhbaria
+                                    رسالة إخبارية 
                                     @else
                                         Press Release
                                     @endif
@@ -23,12 +23,20 @@
                                     /
                                 </span> 
                                 <p class="text-sm capitalize ">
-                                    {{ $title }}
+                                    @if($langSeg=='ar')
+                                    {{$titlear}}
+                                    @else
+                                    {{$title}}
+                                    @endif
                                 </p>
                             </div>
 
                             <h1 class="text-2xl font-bold mt-2">
+                                @if($langSeg=='ar')
+                                {{$titlear}}
+                                @else
                                 {{$title}}
+                                @endif
                             </h1>
 
                             <div class="grid grid-cols-2 mt-2 gap-4 place-content-between">
@@ -44,7 +52,11 @@
 
                             <img src="{{ URL("https://mis.esnaad.com/uploads/news/".$id."/header_image/".$header_image)}}" alt="Ensaad-news-article-{{$title}}" class="object-cover w-full h-56 mb-6 rounded-0 shadow-md sm:h-80 2xl:h-[60vh]" onerror="this.onerror=null;this.src='https://www.esnaad.com/public/developments/12.webp';">
 
+                            @if($langSeg=='ar')
+                            {!! $description_ar !!}
+                            @else
                             {!! $description !!}
+                            @endif
                         </div>
                     </div>
                 </div>
