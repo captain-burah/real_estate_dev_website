@@ -17,9 +17,10 @@
                             <div>
                                 <p class="mt-4 pl-4 text-2xl text-center font-thin">
                                     @if($langSeg=='ar')
-                                    The Spark By ESNAAD
-                                    @else
+                                    
                                     ذا سبارك من إسناد
+                                    @else
+                                    The Spark By ESNAAD
                                     @endif
                                 </p>
                             </div>
@@ -45,7 +46,7 @@
 
         // Wait for 2 seconds and then navigate to the next page
         setTimeout(function() {
-            window.location.href = 'https://esnaad.com/en/media-gallery/the-spark-by-esnaad'; // URL of the next page
+            // window.location.href = 'https://esnaad.com/en/media-gallery/the-spark-by-esnaad'; // URL of the next page
         }, 500);
     }
 </script>

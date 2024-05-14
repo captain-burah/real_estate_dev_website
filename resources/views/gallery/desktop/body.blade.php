@@ -73,7 +73,7 @@
 
             // Wait for 2 seconds and then navigate to the next page
             setTimeout(function() {
-            window.location.href = 'https://esnaad.com/en/media-gallery/the-spark-by-esnaad'; // URL of the next page
+            // window.location.href = 'https://esnaad.com/en/media-gallery/the-spark-by-esnaad'; // URL of the next page
         }, 500);
         }
     </script>
