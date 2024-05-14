@@ -91,7 +91,7 @@
 
         // Wait for 2 seconds and then navigate to the next page
         setTimeout(function() {
-            window.location.href = 'https://www.esnaad.com/en/communities/mohammed-bin-rashid-city'; // URL of the next page
+            // window.location.href = 'https://www.esnaad.com/en/communities/mohammed-bin-rashid-city'; // URL of the next page
         }, 500);
     }
 </script>
