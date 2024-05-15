@@ -431,9 +431,15 @@
 
                     <div class="flex justify-left my-2">
                         <div>
-                            <p class="text-base ">
-                                ESNAAD © {{ now()->year }} All Rights Reserved | <a href="{{ URL($langSeg.'/terms-and-conditions') }}" aria-label="terms-and-conditions" > Terms & Conditions</a> | <a href="{{ URL($langSeg.'/privacy-and-policy') }}" aria-label="privacy-and-policy" > Privacy & Policy </a>
+                            @if($langSeg=="ar")
+                            <p class="text-base " dir="rtl">
+                                © {{ now()->year }} كل الحقوق محفوظة لشركة اسناد | <a href="{{ URL($langSeg.'/terms-and-conditions') }}" aria-label="terms-and-conditions" title="terms-and-conditions" rel="canonical"> الأحكام والشروط </a> | <a href="{{ URL($langSeg.'/privacy-and-policy') }}" aria-label="privacy-and-policy" title="privacy-policy" rel="canonical"> سياسة الخصوصية </a>
                             </p>
+                            @else
+                            <p class="text-base ">
+                                ESNAAD © {{ now()->year }} All Rights Reserved | <a href="{{ URL($langSeg.'/terms-and-conditions') }}" aria-label="terms-and-conditions" title="terms-and-conditions" rel="canonical"> Terms & Conditions</a> | <a href="{{ URL($langSeg.'/privacy-and-policy') }}" aria-label="privacy-and-policy" title="privacy-policy" rel="canonical"> Privacy & Policy </a>
+                            </p>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -642,11 +648,20 @@
                 <div class="col-span-2 mx-auto my-2">
                     <div class="flex justify-center mt  mt-6">
                         <div>
+                            @if($langSeg=="ar")
+                            <p class="text-base font-thin  leading-8">
+                                © {{ now()->year }} كل الحقوق محفوظة لشركة اسناد  <br>
+                                <a href="{{ URL($langSeg.'/terms-and-conditions') }}" aria-label="terms-and-conditions" title="terms-and-conditions" rel="canonical"> الأحكام والشروط </a>
+                                <a href="{{ URL($langSeg.'/privacy-and-policy') }}" aria-label="privacy-and-policy" title="privacy-policy" rel="canonical"> سياسة الخصوصية </a>
+                            </p>
+                            @else
                             <p class="text-base font-thin  leading-8">
                                 ESNAAD © {{ now()->year }} All Rights Reserved <br>
                                 <a href="{{ URL($langSeg.'/terms-and-conditions') }}" aria-label="terms-and-conditions" rel="canonical">Terms & Conditions</a>
                                 <a href="{{ URL($langSeg.'/privacy-and-policy') }}" aria-label="privacy-and-policy" rel="canonical">| Privacy & Policy</a>
                             </p>
+                            @endif
+                            
                             
                         </div>
                     </div>
