@@ -369,8 +369,8 @@ class FrontEndController extends Controller
     {
         try{
             $data = [
-                'name'      =>  $request->name, 
-                'email'     =>  $request->email, 
+                'name'      =>  $request->name,
+                'email'     =>  $request->email,
                 'phone'     =>  $request->phone,
                 'country_code'   =>  $request->country_code
             ];
@@ -828,10 +828,22 @@ class FrontEndController extends Controller
 
 
     public function contact_form_post($lang='', Request $request) {
-
-        if($request->expression_check != "12x" ){
-            return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
+        
+        $expression_check_img_type = $request->expression_check_img_type;
+        if($expression_check_img_type == "1"){
+            if($request->expression_check != "7" ){
+                return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
+            }
+        } elseif($expression_check_img_type == "2"){
+            if($request->expression_check != "9" ){
+                return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
+            }
+        } elseif($expression_check_img_type == "3"){
+            if($request->expression_check != "12" ){
+                return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
+            }
         }
+        
         
         $tel = $request->country_code + $request->phone;
 

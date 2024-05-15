@@ -259,7 +259,8 @@
                     <p>Please answer the captcha question</p>
                     <div class="flex">
                         <div class="flex-none w-30 ...">
-                            <img src="{{ asset('check.webp')}}">
+                            <img src="{{ asset('check.webp')}}" id="expression_check_img">
+                            <input type="hidden" name="expression_check_img_type" id="expression_check_img_type"/>
                         </div>
                         <div class="flex-initial w-64 h-auto">
                             <input type="text"  placeholder="1234x" name="expression_check" class="h-[100%] text-black" required>
@@ -287,94 +288,123 @@
 
 @section('intel-input')
     <script>
-
-        function setCookie(name, value, daysToExpire) {
-            var expires = "";
-            
-            if (daysToExpire) {
-                var date = new Date();
-                date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            
-            document.cookie = name + "=" + value + expires + "; path=/";
-        };
-
-        // Function to get a specific cookie by name
-        function getCookie(cookieName) {
-            var name = cookieName + "=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var cookieArray = decodedCookie.split(';');
-
-            for (var i = 0; i < cookieArray.length; i++) {
-                var cookie = cookieArray[i].trim();
-                if (cookie.indexOf(name) === 0) {
-                    return cookie.substring(name.length, cookie.length);
-                }
-            }
-
-            return null; // Return null if the cookie is not found
-        };
-
-        if (getCookie('_oCddWSYLEGqG')) {
-
-            document.getElementById("contact_submit").disabled = true;
-            document.getElementById('contact_submit').style.display = 'none';
-            document.getElementById('contact_submit_done').style.display = 'inline-block';
-            document.getElementById("contact_submit_done").disabled = false;
-        } else {
-            document.getElementById("contact_submit_done").disabled = true;
-            document.getElementById('contact_submit_done').style.display = 'none';
-            document.getElementById('contact_submit').style.display = 'inline-block';
-            document.getElementById("contact_submit").disabled = false;
-        };
         
+        // ALTERNATIVE TO CAPTCHA
+            function check_img(){
+                // RANDOM IMAGE GENERATOR
+                var randomImage = new Array();
+                randomImage[0] = ["{{asset('developments/4_3.webp')}}", "1"];
+                randomImage[1] = ["{{asset('developments/5_4.webp')}}", "2"];
+                randomImage[2] = ["{{asset('developments/7_5.webp')}}", "3"];
+                var number = Math.floor(Math.random() * randomImage.length);
+                return randomImage[number];
+            }
+            
+            //GET FORM VARIABLES
+            var expression_image = document.getElementById('expression_check_img');
+            var expression_check_img_type = document.getElementById('expression_check_img_type');
 
-        $('#contact-desktop-form').on('submit', function(e){
-            e.preventDefault();
 
-            // document.getElementById("contact_submit").disabled = true;
-            // document.getElementById('contact_submit').style.display = 'none';
-            // document.getElementById('contact_submit_verifying').style.display = 'inline-block';
+            // GENERATE RANDOM IMAGE
+            var random_value = check_img();
 
-            var formData = new FormData(this);
+            // ALLOCATE THE IMAGE AND TYPE
+            expression_image.src = random_value[0];
+            expression_check_img_type.value = random_value[1];
+        // ------/ ALTERNATIVE TO CAPTCHA
 
-            $.ajax({
-                type:'POST',
-                headers: //---set the headers for cross-origin policies between domains
-                {
-                    'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
-                    'Access-Control-Allow-Origin': 'https://esnaad.com/en/contact-form-post'
-                },
-                url: "/en/contact-form-post",
-                data: formData,
-                processData: false,
-                contentType: false,
-                success:function(data) 
-                {
-                    if($.isEmptyObject(data.error)){ //---if success
-                        setCookie("_oCddWSYLEGqG", true, 1);
-                        document.getElementById("contact_submit").disabled = true;
-                        document.getElementById('contact_submit').style.display = 'none';
-                        document.getElementById('contact_submit_done').style.display = 'inline-block';
-                        document.getElementById("contact_submit_done").disabled = false;
-                        $('#contact_submit_verifying').show();
-                        document.location.href = '/en/subscription/thanks';
-                    }else{
-                        printErrorMsg(data.error);//---show error
+
+
+
+        // ALTERNATIVE TO CAPTCHA 
+            function setCookie(name, value, daysToExpire) {
+                var expires = "";
+                
+                if (daysToExpire) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (daysToExpire * 5 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                
+                document.cookie = name + "=" + value + expires + "; path=/";
+            };
+
+            // Function to get a specific cookie by name
+            function getCookie(cookieName) {
+                var name = cookieName + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var cookieArray = decodedCookie.split(';');
+
+                for (var i = 0; i < cookieArray.length; i++) {
+                    var cookie = cookieArray[i].trim();
+                    if (cookie.indexOf(name) === 0) {
+                        return cookie.substring(name.length, cookie.length);
                     }
                 }
+
+                return null; // Return null if the cookie is not found
+            };
+
+            if (getCookie('_oCddWSYLEGqG')) {
+
+                document.getElementById("contact_submit").disabled = true;
+                document.getElementById('contact_submit').style.display = 'none';
+                document.getElementById('contact_submit_done').style.display = 'inline-block';
+                document.getElementById("contact_submit_done").disabled = false;
+            } else {
+                document.getElementById("contact_submit_done").disabled = true;
+                document.getElementById('contact_submit_done').style.display = 'none';
+                document.getElementById('contact_submit').style.display = 'inline-block';
+                document.getElementById("contact_submit").disabled = false;
+            };
+            
+
+            $('#contact-desktop-form').on('submit', function(e){
+                e.preventDefault();
+
+                // document.getElementById("contact_submit").disabled = true;
+                // document.getElementById('contact_submit').style.display = 'none';
+                // document.getElementById('contact_submit_verifying').style.display = 'inline-block';
+
+                var formData = new FormData(this);
+
+                $.ajax({
+                    type:'POST',
+                    headers: //---set the headers for cross-origin policies between domains
+                    {
+                        'X-CSRF-TOKEN': $('meta[name="XSRF-TOKEN"]').attr('content'),
+                        'Access-Control-Allow-Origin': 'https://esnaad.com/en/contact-form-post'
+                    },
+                    url: "/en/contact-form-post",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success:function(data) 
+                    {
+                        if($.isEmptyObject(data.error)){ //---if success
+                            setCookie("_oCddWSYLEGqG", true, 1);
+                            document.getElementById("contact_submit").disabled = true;
+                            document.getElementById('contact_submit').style.display = 'none';
+                            document.getElementById('contact_submit_done').style.display = 'inline-block';
+                            document.getElementById("contact_submit_done").disabled = false;
+                            $('#contact_submit_verifying').show();
+                            document.location.href = '/en/subscription/thanks';
+                        }else{
+                            printErrorMsg(data.error);//---show error
+                        }
+                    }
+                });
+
+                // Simulate a successful submission
+                // alert('Subscription successful!');
+
+                // Disable the form to prevent further submissions
+                // disableForm();
+
+                // Store the submission status in local storage
+                // localStorage.setItem('subscriptionSubmitted', 'true');
             });
-
-            // Simulate a successful submission
-            // alert('Subscription successful!');
-
-            // Disable the form to prevent further submissions
-            // disableForm();
-
-            // Store the submission status in local storage
-            // localStorage.setItem('subscriptionSubmitted', 'true');
-        });
+        //----------/ ALTERNATIVE TO CAPTCHA
 
     </script>
 @endsection
