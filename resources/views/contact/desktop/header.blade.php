@@ -56,13 +56,12 @@
                     {{__('frontend.contactH')}}
                 </h1>
                 <br>
-                <p class="w-[75%] mx-auto text-white font-thin leading-8 text-base text-center">
-                    
+                <p class="w-[75%] mx-auto text-white font-thin leading-8 text-base text-center" @if($langSeg=='ar') dir="rtl" @endif>
                     {{__('frontend.contactAddress')}}
                 </p>
                 <p class="w-[75%] mx-auto text-white font-thin leading-8 text-base text-center">
-                    <a href="tel:{{ env('COMPANY_PHONE') }}" >
-                    {{__('frontend.contactPhone')}} @if($langSeg=="ar")<span dir="ltr">+971 4 287 9506</span>@endif
+                    <a href="tel:+971800376223" class="inline-flex items-center">    
+                        @if($langSeg=="ar") 800 إسناد : <span>هاتف</span> @else Phone: 800 ESNAAD @endif
                     </a>
                 </p>
                 {{-- <p class="w-[75%] mx-auto text-white font-thin leading-8 text-base text-center">

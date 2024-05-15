@@ -360,7 +360,7 @@
                                 </li>
                                 <li class="text-md  my-2">
                                     <div class="inline-flex items-center">
-                                        <a href="tel:{{ env('COMPANY_PHONE') }}" class="inline-flex items-center"></a>
+                                        <a href="tel:+971800376223" class="inline-flex items-center"></a>
                                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                 width="13.000000pt" height="13.000000pt" viewBox="0 0 512.000000 512.000000"
                                                 preserveAspectRatio="xMidYMid meet">
@@ -380,7 +380,7 @@
                                             </svg>
                                             &nbsp;
                                             <span style="direction: ltr !important;">
-                                                {{ __('frontend.footerContact') }}                                            
+                                                800 ESNAAD                          
                                             </span>
                                         </a>
                                     </div>
@@ -489,7 +489,7 @@
                                         </li>
                                         <li class="text-md  my-2">
                                             <div class="inline-flex items-center">
-                                                <a href="tel:{{ env('COMPANY_PHONE') }}" class="inline-flex items-center"></a>
+                                                <a href="tel:+971800376223" class="inline-flex items-center"></a>
                                                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                         width="13.000000pt" height="13.000000pt" viewBox="0 0 512.000000 512.000000"
                                                         preserveAspectRatio="xMidYMid meet">
@@ -509,7 +509,7 @@
                                                     </svg>
                                                     &nbsp;
                                                     <span style="direction: ltr !important;">
-                                                        {{ __('frontend.footerContact') }}                                            
+                                                        800 ESNAAD                                        
                                                     </span>
                                                 </a>
                                             </div>

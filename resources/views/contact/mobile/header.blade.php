@@ -46,7 +46,7 @@
 
 <header>
     <div class="w-full bg-cover bg-center" style="height:60vh; background-image: url('{{ URL::asset('developments/banners/4.webp')}}'), url('{{ URL::asset('developments/banners/4.webp')}}');">
-        <div class="flex items-center justify-center h-full w-full  bg-black bg-opacity-40" @if($langSeg=='ar') dir="rtl" @endif> 
+        <div class="flex items-center justify-center h-full w-full  bg-black bg-opacity-40" > 
             <div class="container">
                     
                 <h1 class="text-3xl text-white font-light uppercase mx-auto text-center">
@@ -55,12 +55,13 @@
 
                 <br>
                 
-                <p class="w-[75%] mx-auto text-white font-base leading-8 text-lg text-center">
+                <p class="w-[75%] mx-auto text-white font-thin leading-8 text-lg text-center" @if($langSeg=='ar') dir="rtl" @endif>
                     {{__('frontend.contactAddress')}}
                 </p>
-                <p class="w-[75%] mx-auto text-white font-base leading-8 text-lg text-center">
-                    <a href="tel:{{ env('COMPANY_PHONE') }}" >
-                        {{__('frontend.contactPhone')}} 
+                <br>
+                <p class="w-[75%] mx-auto text-white font-thin leading-8 text-lg text-center">
+                    <a href="tel:+971800376223" class="inline-flex items-center" >
+                        @if($langSeg=="ar") 800 إسناد : <span>هاتف</span> @else Phone: 800 ESNAAD @endif
                     </a>
                 </p>
                 {{-- <p class="w-[75%] mx-auto text-white font-base leading-8 text-lg text-center">
