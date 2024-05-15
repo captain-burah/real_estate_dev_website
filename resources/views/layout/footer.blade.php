@@ -614,7 +614,7 @@
                     </div>
 
                     <div class="group flex flex-col gap-2 rounded-lg  " tabindex="1">
-                        <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
+                        {{-- <div class="flex cursor-pointer items-center justify-between border-b border-gray-700">
                             <span> {{ __('frontend.footerLinks') }} </span>
                             <img
                                 src="https://demo.esnaad.com/public/home/down-arrow.png"
@@ -641,7 +641,65 @@
 
                                 
                             </ul>
+                        </div> --}}
+                        <!-- component -->
+                        <div class="lg:container lg:py-2 md:py-2 py-2">
+                            <div class="lg:w-8/12 w-full mx-auto">
+                                <div class="w-full md:px-6">
+                                    <div id="mainHeading" class="flex justify-between items-center w-full" aria-label="toggler" data-menu>
+                                        <div class="">
+                                            <p class="flex justify-center text-white items-center font-medium text-thin"><span> {{ __('frontend.footerLinks') }} </span></p>
+                                        </div>
+                                        <button aria-label="toggler" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                                            <img class="transform dark:hidden w-8" src="https://demo.esnaad.com/public/home/down-arrow.png" alt="toggler">
+                                            <img class="transform dark:block hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                                        </button>
+                                    </div>
+                                    <div id="menu" class="hidden mt-6 w-full">
+                                        <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">
+                                            <ul class="list-none footer-li capitalize leading-8" style="padding-left: 0px !important;">
+                                                <li class="text-md  my-3">
+                                                    <a href="{{ URL($langSeg.'/about-us') }}" aria-label="about-us" rel="canonical">{{ __('frontend.footerLinksAboutEsnaad') }}</a>
+                                                </li>
+                
+                                                <li class="text-md  my-3">
+                                                    <a href="{{ URL($langSeg.'/invest-in-dubai') }}" aria-label="invest-in-dubai" rel="canonical">{{ __('frontend.footerLinksWhyInvest') }}</a>
+                                                </li>
+                
+                                                <li class="text-md  my-3">
+                                                    <a href="{{ URL($langSeg.'/agency-registration') }}" aria-label="agency-registration" rel="canonical">{{ __('frontend.footerLinksBrokerReg') }}</a>
+                                                </li>
+                
+                                                <li class="text-md  my-3">
+                                                    <a href="{{ URL($langSeg.'/careers')}}" aria-label="careers" rel="canonical">{{ __('frontend.footerLinksCareers') }}</a>
+                                                </li>
+                
+                                                
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <script>
+                            let elements = document.querySelectorAll("[data-menu]");
+                            for (let i = 0; i < elements.length; i++) {
+                            let main = elements[i];
+
+                            main.addEventListener("click", function () {
+                                let element = main.parentElement.parentElement;
+                                let indicators = main.querySelectorAll("img");
+                                let child = element.querySelector("#menu");
+                                let h = element.querySelector("#mainHeading>div>p");
+
+                                h.classList.toggle("font-semibold");
+                                child.classList.toggle("hidden");
+                                // console.log(indicators[0]);
+                                indicators[0].classList.toggle("rotate-180");
+                            });
+                            }
+                        </script>   
                     </div>
                 </div>
 
