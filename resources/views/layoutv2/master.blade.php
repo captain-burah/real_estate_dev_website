@@ -192,9 +192,7 @@
             
             @elseif($route_name == "esnaad.developments.slug")
                 <title>The Spark by ESNAAD</title>
-                <title>            ذا سبارك من اسناد|مشروع ذا سبارك دبي            </title>
                 <meta name="description" content="Be part of shaping the future of UAE communities! Explore rewarding career opportunities at ESNAAD Real Estate Development	" />
-                <meta name="description" content="مرحبًا بكم في عالم إسناد المبتكر، حيث يمثل مشروعنا الرائد  ذا سبارك من إسناد الكائن في ميدان ديستركت 11 ، مثالًا على التزامنا بتوفير مشروعات عقارية تتسم بالابتكار والجودة الفائقة." />
 
             @elseif($route_name == "esnaad.gallery.detail")
                 <title>The Spark by ESNAAD - Gallery</title>
