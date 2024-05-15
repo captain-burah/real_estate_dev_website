@@ -18,14 +18,16 @@
     }
 </style>
 <div class="sm:container sm:mx-auto mx-0 px-0 sm:px-4 my-8 sm:my-4 mx-auto" id="agency-registration-form">
-    <div class="container mx-auto my-8 px-4">
+    <div class="container mx-auto my-8 px-4" >
         <form class="flex flex-col items-start w-full"  method="post" action="/en/agency-registration-post" id="uploadForm">
             @csrf
                
             <div class="icon bg-black text-white w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
             
-            <p class="   mb-4">
+            <p class=" text-center  mb-4" >
                 @if($langSeg=='ar')
+                {{-- We are excited to establish partnerships 
+                with esteemed real estate agencies or broker companies. Please complete the following form to initiate the registration process. --}}
                 متحمسون لإقامة شراكات مع الوكالات العقارية المرموقة أو شركات الوساطة. برجاء استيفاء النموذج التالي لبدء عملية التسجيل
                 @else
                 We are excited to establish partnerships 
