@@ -11,7 +11,16 @@
 
     }
 </style>
-
+<?php
+    $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri_segments = explode('/', $uri_path);
+    $seg1 = $uri_segments[1];
+    if($seg1 == 'en' || $seg1 == 'ar'){
+        $langSeg = $uri_segments[1];
+    }else{
+        $langSeg = 'en';
+    }
+?>
     {{-- @notmobile --}}
     @if($route_name != 'esnaad.contact')
         @include('layout.footer_form')
@@ -360,7 +369,7 @@
                                 </li>
                                 <li class="text-md  my-2">
                                     <div class="inline-flex items-center">
-                                        <a href="tel:+971800376223" class="inline-flex items-center"></a>
+                                        <a href="{{ URL('/'.$langSeg.'/contact-us')}}" class="inline-flex items-center">
                                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                 width="13.000000pt" height="13.000000pt" viewBox="0 0 512.000000 512.000000"
                                                 preserveAspectRatio="xMidYMid meet">
@@ -380,7 +389,7 @@
                                             </svg>
                                             &nbsp;
                                             <span style="direction: ltr !important;">
-                                                800 ESNAAD                          
+                                                @if($langSeg=="ar") 800 إسناد @else 800 ESNAAD @endif 
                                             </span>
                                         </a>
                                     </div>
@@ -388,7 +397,7 @@
                                 <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
                                 <li class="text-md  my-2">
                                     <div class="inline-flex items-center" >
-                                        <a href="https://esnaad.com/en/contact-us" class="inline-flex items-center">
+                                        <a href="{{ URL('/'.$langSeg.'/contact-us')}}" class="inline-flex items-center">
                                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                 width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
                                                 preserveAspectRatio="xMidYMid meet">
@@ -406,7 +415,7 @@
                                                 </g>
                                             </svg>
                                             &nbsp;
-                                                {{ __('frontend.footerLinksEmailUs') }}
+                                            @if($langSeg=="ar") اتصل بنا @else Email Us @endif 
                                         </a>
                                     </div>
                                 </li>
@@ -489,7 +498,7 @@
                                         </li>
                                         <li class="text-md  my-2">
                                             <div class="inline-flex items-center">
-                                                <a href="tel:+971800376223" class="inline-flex items-center"></a>
+                                                <a href="{{ URL('/'.$langSeg.'/contact-us')}}" class="inline-flex items-center">
                                                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                         width="13.000000pt" height="13.000000pt" viewBox="0 0 512.000000 512.000000"
                                                         preserveAspectRatio="xMidYMid meet">
@@ -509,7 +518,7 @@
                                                     </svg>
                                                     &nbsp;
                                                     <span style="direction: ltr !important;">
-                                                        800 ESNAAD                                        
+                                                        @if($langSeg=="ar") 800 إسناد @else 800 ESNAAD @endif                 
                                                     </span>
                                                 </a>
                                             </div>
@@ -517,7 +526,7 @@
                                         <?php //EMAIL IS BELOW ENCODED OR IN OBFUSCATION ?>
                                         <li class="text-md  my-2">
                                             <div class="inline-flex items-center" >
-                                                <a href="https://esnaad.com/en/contact-us" class="inline-flex items-center">
+                                                <a href="{{ URL('/'.$langSeg.'/contact-us')}}" class="inline-flex items-center">
                                                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                                         width="15.000000pt" height="15.000000pt" viewBox="0 0 512.000000 512.000000"
                                                         preserveAspectRatio="xMidYMid meet">
@@ -535,7 +544,7 @@
                                                         </g>
                                                     </svg>
                                                     &nbsp;
-                                                    Email Us
+                                                    @if($langSeg=="ar") اتصل بنا @else Email Us @endif 
                                                 </a>
                                             </div>
                                         </li>
