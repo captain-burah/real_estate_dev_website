@@ -1547,7 +1547,7 @@
                     </div>
 
                     <div class="p-4 items-center w-full">
-                        <button type="submit" id="submitFormBrochure" class="bg-black hover:bg-white border border-black text-white hover:text-black w-full  py-2 px-4 rounded-0">
+                        <button type="submit" id="submitFormBrochure" class="bg-black hover:bg-white border border-black text-white hover:text-black w-full  py-2 px-4 rounded-0" onclick="load_borchure()">
                             {{ __('frontend.projectDownloadBrochure') }}
                         </button>      
                         <button type="button" id="submitVerifyingBrochure" hidden disabled class="bg-transparent border border-black text-black   py-2 px-4 rounded-0 ml-3"><div id="loading"></div> Verifying</button>                  
@@ -1628,5 +1628,10 @@
         var redirectWindow = window.open('https://esnaad.com/home/the-spark-by-esnaad.pdf', '_blank');
         redirectWindow.location;
     });
+
+    function load_borchure(){
+        var redirectWindow = window.open('https://esnaad.com/home/the-spark-by-esnaad.pdf', '_blank');
+        redirectWindow.location;
+    }
 
 </script>
