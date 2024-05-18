@@ -871,7 +871,7 @@ class FrontEndController extends Controller
             We have received your inquiry and a member of our team will be in touch with you shortly.'];
 
 
-            Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new ContactUs($data));
+            // Mail::mailer('noreply')->to('leads@notifications.esnaad.com')->send(new ContactUs($data));
             // Mail::mailer('noreply')->to($request->email)->send(new ThankYou($data2));
         } catch (\Exception $e) {
             
