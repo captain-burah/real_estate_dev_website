@@ -27,7 +27,7 @@
                     </div>
                     <div class="row text-center pb-5 pt-2 mt-3">
                         <a href="{{ URL('https://esnaad.com/'.$langSeg.'/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation')}}"
-                            class="bg-white text-black px-15 py-3"  onclick="showLoader()">
+                            class="bg-white text-black px-15 py-3"  >
                             <span id="buttonText">Explore More</span>
                             <img id="loaderImg" src="{{ asset('assets/img/loader/loader.gif') }}" style="width:40px" alt="Loading..." class="hidden">
                         </a>
@@ -39,15 +39,15 @@
 </div>
 
 <script>
-    function showLoader() {
-        // Hide the button text
-        document.getElementById('buttonText').style.display = 'none';
-        // Show the loader image
-        document.getElementById('loaderImg').style.display = 'inline';
+    // function showLoader() {
+    //     // Hide the button text
+    //     document.getElementById('buttonText').style.display = 'none';
+    //     // Show the loader image
+    //     document.getElementById('loaderImg').style.display = 'inline';
 
-        // Wait for 2 seconds and then navigate to the next page
-        setTimeout(function() {
-            // window.location.href = 'https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation'; // URL of the next page
-        }, 500);
-    }
+    //     // Wait for 2 seconds and then navigate to the next page
+    //     setTimeout(function() {
+    //         // window.location.href = 'https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation'; // URL of the next page
+    //     }, 500);
+    // }
 </script>

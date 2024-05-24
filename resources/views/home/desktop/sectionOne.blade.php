@@ -8,15 +8,15 @@
                     {{__('frontend.homeSectionOneH')}}
                 </h2>
 
-                <p class="text-sm xl:text-base leading-8 mt-2" @if($langSeg == 'ar') dir="rtl" @endif>
+                <p class="text-sm xl:text-base leading-8 mt-2" @if($langSeg == 'ar') dir="rtl" @endif style="font-size: 16px !important">
                     {{__('frontend.homeSectionOneP1')}}
                 </p>
 
-                <p class="text-sm xl:text-base leading-8 mt-2" @if($langSeg == 'ar') dir="rtl" @endif>
+                <p class="text-sm xl:text-base leading-8 mt-2" @if($langSeg == 'ar') dir="rtl" @endif style="font-size: 16px !important">
                     {{__('frontend.homeSectionOneP2')}}
                 </p>
 
-                <p class="text-sm xl:text-base leading-8 mt-2" @if($langSeg == 'ar') dir="rtl" @endif>
+                <p class="text-sm xl:text-base leading-8 mt-2" @if($langSeg == 'ar') dir="rtl" @endif style="font-size: 16px !important">
                     {{__('frontend.homeSectionOneP3')}}
                 </p>
             </div>

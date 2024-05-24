@@ -13,7 +13,7 @@
             </div>
             <style>
                 #amenities_desktop, ul, li, p, span{
-                    font-family: 'Readex Pro', sans-serif !important;
+                    font-family: ' ', sans-serif !important;
                     line-height: 1.5 !important;
                     color: #ccc !important;
                     font-size: 16px

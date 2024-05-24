@@ -8,23 +8,45 @@
     <div class="grid md:grid-cols-3 gap-7 mb-5 mx-auto" >
 
         <?php //LOAD COMPONENT INDEX CARD ?>
-        <x-index-card
-            description="homeSectionTwoDesign"
-            base="Design"
-            url="{{ asset('home/DESIGN.webp') }}"
-        />
 
-        <x-index-card
-            description="homeSectionTwoQuality"
-            base="QUALITY"
-            url="{{ asset('home/QUALITY.webp') }}"
-        />
+        @if($langSeg=='ar')
+            <x-index-card
+                description="homeSectionTwoDesign"
+                base="Design"
+                url="{{ asset('home/philosophies/DESIGN_AR.webp') }}"
+            />
 
-        <x-index-card
-            description="homeSectionTwoExcelence"
-            base="EXCELENCE"
-            url="{{ asset('home/EXCELLENCE.webp') }}"
-        />
+            <x-index-card
+                description="homeSectionTwoQuality"
+                base="QUALITY"
+                url="{{ asset('home/philosophies/QUALITY_AR.webp') }}"
+            />
+
+            <x-index-card
+                description="homeSectionTwoExcelence"
+                base="EXCELENCE"
+                url="{{ asset('home/philosophies/EXCELLENCE_AR.webp') }}"
+            />
+        @else
+            <x-index-card
+                description="homeSectionTwoDesign"
+                base="Design"
+                url="{{ asset('home/philosophies/DESIGN.webp') }}"
+            />
+
+            <x-index-card
+                description="homeSectionTwoQuality"
+                base="QUALITY"
+                url="{{ asset('home/philosophies/QUALITY.webp') }}"
+            />
+
+            <x-index-card
+                description="homeSectionTwoExcelence"
+                base="EXCELENCE"
+                url="{{ asset('home/philosophies/EXCELLENCE.webp') }}"
+            />
+        @endif
+        
     </div>
 
     <?php //SHOW ON MOBILE ONLY ?>

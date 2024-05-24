@@ -41,17 +41,17 @@
 </section>
 
 
-<ul id="thumbnails" class="thumbnails">
+{{-- <ul id="thumbnails" class="thumbnails">
     @foreach($images as $image)
         <li class="thumbnail">
             <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="lazy" >
         </li>
     @endforeach
-</ul>
+</ul> --}}
 
 
 
-<div class="sm:container sm:mx-auto mx-0 px-4 xl:my-10 sm:my-4 mx-auto">
+<div class="sm:container sm:mx-auto mx-0 px-4 sm:my-4 mx-auto">
     <div class="row-span-2 grid sm:grid-cols-2 gap-4 h-[100%] w-[100%]" @if($langSeg == 'ar') dir="rtl" @endif>
         <div>
             <h2 class=" text-justify font-base my-8 text-2xl xl:text-2xl w-[90%]">
@@ -71,7 +71,7 @@
         </div>
         <style>
             #amenities_desktop, ul, li, p, span{
-                font-family: 'Readex Pro', sans-serif !important;
+                /* font-family: ' ', sans-serif !important; */
                 line-height: 1.7 !important;
                 color: #ccc !important;
             }

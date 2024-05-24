@@ -58,7 +58,7 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4" style="background-color: #1C1C1C !important; color: #ccc !important;">
                 <a href="{{ url($langSeg.'/press-release') }}" class="text-dark flex" rel="canonical" style="background-color: #1C1C1C !important; color: #ccc !important;">{{ __('frontend.mobile_press_release') }}</a>
                 <a href="{{ url($langSeg.'/blogs') }}" class="text-dark flex" rel="canonical" style="background-color: #1C1C1C !important; color: #ccc !important;">{{ __('frontend.mobile_blogs') }}</a>
-                <a href="{{ url($langSeg.'/media-gallery') }}" class="text-dark flex" rel="canonical" style="background-color: #1C1C1C !important; color: #ccc !important;">{{ __('frontend.mobile_gallery') }}</a>
+                {{-- <a href="{{ url($langSeg.'/media-gallery') }}" class="text-dark flex" rel="canonical" style="background-color: #1C1C1C !important; color: #ccc !important;">{{ __('frontend.mobile_gallery') }}</a> --}}
                 <a href="{{ url($langSeg.'/careers') }}" class="text-dark flex" rel="canonical" style="background-color: #1C1C1C !important; color: #ccc !important;">{{ __('frontend.mobile_careers') }}</a>
               </div>
             </div>

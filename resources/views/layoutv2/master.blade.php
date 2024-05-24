@@ -489,6 +489,7 @@
                         display:block;
                     }
                 }
+                
             </style>
         @endif
 
@@ -531,6 +532,10 @@
             }
             body{
                 overflow: hidden;
+            }
+
+            .grecaptcha-badge{
+                visibility: hidden !important;
             }
         </style>
 
@@ -599,9 +604,9 @@
         <!-- End Google Tag Manager (noscript) -->
 
         <div class="min-h-screen ">
-            <div id="loader" style="background-color: #000 !important; position: fixed; height: 100vh; width: 100vw; z-index: 200 !important; opacity: .9; display: block">
+            {{-- <div id="loader" style="background-color: #000 !important; position: fixed; height: 100vh; width: 100vw; z-index: 200 !important; opacity: .9; display: block">
                 <img id="loading-image" src="{{ asset('loader5.gif')}}" alt="Loading..." style="height: 40px; width: 40px;"/>
-            </div>
+            </div> --}}
 
             @notmobile       
                 <nav x-data="{ open: false }" class="bg-white p-0 m-0 z-50 shadow "  id="sample" style="position: fixed; width: 100vw !important; background-color: #1C1C1C !important; color: #ccc !important;">
@@ -620,7 +625,7 @@
 
 
             @notmobile
-                <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 90px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+                <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 20px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
                     <style>
                         .bounce2 {
                             display: inline-block;
@@ -669,7 +674,7 @@
                     </div>
                 </section>
 
-                <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 160px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
+                <section class="" style="position: fixed; z-index: -10;  right: 15px; margin-bottom: 100px; bottom: 0; color: white; text-align: right; z-index: 5; background-c0lor: #000 !important;">
                     <style>
                         .bounce2 {
                             display: inline-block;

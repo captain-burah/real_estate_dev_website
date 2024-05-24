@@ -21,8 +21,8 @@
 </style>
 
 <div class="mx-0 px-0 ">
-    <div class="mx-0">
-        <button onclick="openModal('mymodalcentered-community-register')" class="w-full text-lg text-white border border-white py-4 px-2 rounded-0" type="button">
+    <div class="mx-4 mb-4">
+        <button onclick="openModal('mymodalcentered-community-register')" class="w-full text-lg text-black bg-white border border-white hover:border-white py-4 px-2 rounded-0" type="button">
             @if($langSeg=='ar')
             سجل اهتمامك
             @else

@@ -8,9 +8,9 @@
             <a href="{{ url('/'.$langSeg.'/blogs')}}" class=" text-xl font-light underline underline-offset-4">
                 {{ __('frontend.mediaH3') }}
             </a>
-            <a href="{{ url('/'.$langSeg.'/media-gallery')}}" class=" text-xl font-light transition duration-150 ease-out hover:ease-in">
+            {{-- <a href="{{ url('/'.$langSeg.'/media-gallery')}}" class=" text-xl font-light transition duration-150 ease-out hover:ease-in">
                 {{ __('frontend.mediaH4') }}
-            </a>
+            </a> --}}
         </div>
 
     </div>

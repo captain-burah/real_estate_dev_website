@@ -32,7 +32,9 @@ use App\Models\ProjectLocation;
 use App\Models\Landingpageseos;
 use App\Models\BrochureDownload;
 use App\Models\ContactLeads;
-  
+
+use App\Models\Models\Landingpageseo;
+
 use PDF;
 use Mail;
 use App\Mail\DemoEmail;
@@ -95,13 +97,14 @@ class FrontEndController extends Controller
 
     private function landingpageseos($id) {
 
-        // $this->data['landingpageseo'] = Landingpageseos::select('id', 'meta_title_en', 'meta_description_en', 'meta_keywords_en')->findorFail($id);
+         $this->data['landingpageseo'] = Landingpageseos::select('id', 'meta_title_en', 'meta_description_en', 'meta_keywords_en')->findorFail($id);
+         $response = Http::withHeaders([
+             'authkey' => 'YOUR_SECRET_KEY'
+         ])->get('www.mis.esnaad.com/api/v1/esnaad/seo/'.$id);
         
-       $response = Http::withHeaders([
-            'authkey' => 'YOUR_SECRET_KEY'
-        ])->get('www.mis.esnaad.com/api/v1/esnaad/seo/'.$id);
-
-        return $response;
+        // $seo = Landingpageseo::find($id);
+        
+        return $seo;
     }
 
 
@@ -153,7 +156,7 @@ class FrontEndController extends Controller
 
         // $jsonSEOData = $this->landingpageseos(1);
 
-        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $this->data['jsonSEOData'] =  $jsonSEOData;
 
         return view('welcome3');
     }
@@ -388,9 +391,9 @@ class FrontEndController extends Controller
     }
 
     public function ceo_msg($lang='') {
-        $jsonSEOData = $this->landingpageseos(7);
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
-        return view('ceo_msg', $this->data);
+        // $jsonSEOData = $this->landingpageseos(7);
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        return view('ceo_msg');
     }
 
     public function about($lang='') {
@@ -1052,11 +1055,11 @@ class FrontEndController extends Controller
 
 
     public function careers($lang='') {
-        $jsonSEOData = $this->landingpageseos(10);
+        // $jsonSEOData = $this->landingpageseos(10);
         
-        $this->data['jsonSEOData'] =  $jsonSEOData->json();
+        // $this->data['jsonSEOData'] =  $jsonSEOData->json();
 
-        return view('careers', $this->data);
+        return view('careers');
     }
 
 

@@ -27,7 +27,7 @@
                 Download Brochure
             </button>
         </a> --}}
-        <button onclick="openModal('mymodalcentered-brochure-register')"   class="underline text-lg mx-auto w-full py-3 border border-white" type="button">
+        <button onclick="openModal('mymodalcentered-brochure-register')"   class="text-lg mx-auto w-full text-black bg-white py-3 border border-white hover:border-white" type="button">
             {{ __('frontend.projectDownloadBrochure') }}
         </button>
 

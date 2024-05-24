@@ -180,9 +180,9 @@
                             {{ __('frontend.desktop_blogs') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link href="{{ url($langSeg.'/media-gallery') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  text-center  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
+                        {{-- <x-dropdown-link href="{{ url($langSeg.'/media-gallery') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  text-center  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
                             {{ __('frontend.desktop_gallery') }}
-                        </x-dropdown-link>
+                        </x-dropdown-link> --}}
 
                         <x-dropdown-link href="{{ url($langSeg.'/careers') }}" class="font-thin text-xs my-2 md:text-[12px] xl:text-[16px] 2xl:text-lg  text-center  leading-5 text-black transition duration-150 ease-in-out" aria-label="navbar-route" rel='canonical' style="background-color: #1C1C1C !important; color: #ccc !important;">
                             {{ __('frontend.desktop_careers') }}

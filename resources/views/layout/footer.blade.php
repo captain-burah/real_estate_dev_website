@@ -389,7 +389,7 @@
                                             </svg>
                                             &nbsp;
                                             <span style="direction: ltr !important;">
-                                                @if($langSeg=="ar") 800 إسناد @else 800 ESNAAD @endif 
+                                                @if($langSeg=="ar") (376223)&nbsp; <span>إسناد</span>-800: <span>هاتف</span> @else Phone: 800-ESNAAD (376223) @endif
                                             </span>
                                         </a>
                                     </div>

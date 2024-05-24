@@ -53,7 +53,11 @@
             </div> --}}
 
             <p class="text-base font-thin leading-8 mt-4 w-full" @if($langSeg=="ar") dir="rtl" @endif>
-                الرئيس التنفيذي أشرف البنداري
+                @if($langSeg=='ar')
+                    الرئيس التنفيذي أشرف البنداري
+                @else
+                    Ashraf Elbendary, CEO
+                @endif
             </p>
         </div>
 

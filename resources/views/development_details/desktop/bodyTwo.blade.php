@@ -1,5 +1,5 @@
 @if($project_video != null)
-<div class="sm:container sm:mx-auto mx-0 px-4 my-20 sm:my-4 mx-auto  xl:h-[50vh]">
+<div class="sm:container sm:mx-auto mx-0 px-4 my-10 sm:my-4 mx-auto  xl:h-[50vh]">
     <div class="row-span-2 @if($project_video != null) grid xl:grid-cols-2 @endif gap-4 h-[100%] w-[100%]"  @if($langSeg == 'ar') dir="rtl" @endif>
         <div>
             {{-- <video height="100%" width="100%" controls autoplay>

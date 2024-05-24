@@ -79,6 +79,7 @@
             -ms-filter: blur(2px);
             filter: blur(2px);
         }
+        
     </style>
 @endsection
 

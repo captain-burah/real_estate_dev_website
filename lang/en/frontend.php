@@ -198,9 +198,9 @@ return [
                 unparalleled value for money. For more information, visit and witness the commitment to
                 excellence that defines ESNAAD's approach to real estate.",
         
-        "aboutH1" => "Company Core Values",
-        "aboutH2" => "Company Mission",
-        "aboutH3" => "Company Vision",
+        "aboutH1" => "Core Values",
+        "aboutH2" => "Mission",
+        "aboutH3" => "Vision",
         "aboutP1" => "At ESNAAD, our values form the bedrock of
                 our endeavours, guiding every decision and action. Placing our customers at the heart of
                 everything we do, we are dedicated to understanding their needs and

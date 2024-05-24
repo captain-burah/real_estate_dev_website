@@ -37,27 +37,53 @@
     </div>
 
     <div class="owl-carousel">
-        <div class="item">  
-            <x-index-card-mobile
-                description="homeSectionTwoDesign"
-                base="DESIGN"
-                url="{{ asset('home/DESIGN.webp') }}"
-            />  
-        </div>
-        <div class="item">
-            <x-index-card-mobile
-                description="homeSectionTwoQuality"
-                base="QUALITY"
-                url="{{ asset('home/QUALITY.webp') }}"
-            />
-        </div>
-        <div class="item">
-            <x-index-card-mobile
-                description="homeSectionTwoExcelence"
-                base="EXCELENCE"
-                url="{{ asset('home/EXCELLENCE.webp') }}"
-            />
-        </div>
+
+        @if($langSeg=='ar')
+            <div class="item">  
+                <x-index-card-mobile
+                    description="homeSectionTwoDesign"
+                    base="DESIGN"
+                    url="{{ asset('home/philosophies/DESIGN_AR.webp') }}"
+                />  
+            </div>
+            <div class="item">
+                <x-index-card-mobile
+                    description="homeSectionTwoQuality"
+                    base="QUALITY"
+                    url="{{ asset('home/philosophies/QUALITY_AR.webp') }}"
+                />
+            </div>
+            <div class="item">
+                <x-index-card-mobile
+                    description="homeSectionTwoExcelence"
+                    base="EXCELENCE"
+                    url="{{ asset('home/philosophies/EXCELLENCE_AR.webp') }}"
+                />
+            </div>
+        @else
+            <div class="item">  
+                <x-index-card-mobile
+                    description="homeSectionTwoDesign"
+                    base="DESIGN"
+                    url="{{ asset('home/philosophies/DESIGN.webp') }}"
+                />  
+            </div>
+            <div class="item">
+                <x-index-card-mobile
+                    description="homeSectionTwoQuality"
+                    base="QUALITY"
+                    url="{{ asset('home/philosophies/QUALITY.webp') }}"
+                />
+            </div>
+            <div class="item">
+                <x-index-card-mobile
+                    description="homeSectionTwoExcelence"
+                    base="EXCELENCE"
+                    url="{{ asset('home/philosophies/EXCELLENCE.webp') }}"
+                />
+            </div>
+        @endif
+        
     </div>   
 </div>
 

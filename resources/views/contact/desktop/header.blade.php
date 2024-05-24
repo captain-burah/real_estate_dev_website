@@ -61,7 +61,7 @@
                 </p>
                 <p class="w-[75%] mx-auto text-white font-thin leading-8 text-base text-center">
                     <a href="tel:+971800376223" class="inline-flex items-center">    
-                        @if($langSeg=="ar") 800 إسناد : <span>هاتف</span> @else Phone: 800 ESNAAD @endif
+                        @if($langSeg=="ar") (376223)&nbsp; <span>إسناد</span>-800: <span>هاتف</span> @else Phone: 800-ESNAAD (376223) @endif
                     </a>
                 </p>
                 {{-- <p class="w-[75%] mx-auto text-white font-thin leading-8 text-base text-center">

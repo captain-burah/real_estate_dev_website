@@ -35,14 +35,14 @@
 
                                         <div class="mt-8 h-6 relative w-auto rounded-full overflow-hidden my-auto">
                                             <div class=" w-full h-full bg-gray-200 absolute "></div>
-                                            <div class=" h-full bg-yellow-400 sm:bg-green-500 absolute" style="width: 1%"><div class="h-full w-full mx-auto text-sm text-center pt-1 text-white font-bold"> &nbsp; &nbsp;</div></div>
+                                            <div class=" h-full bg-yellow-400 sm:bg-green-500 absolute" style="width: 5%"><div class="h-full w-full mx-auto text-sm text-center pt-1 text-white font-bold"> &nbsp; &nbsp;</div></div>
                                         </div>
 
                                         <p class="mt-4 pl-4 text-base text-center font-thin my-auto">
                                             @if($langSeg == 'ar')
                                             1% تقدم 
                                             @else
-                                            Progress 1%
+                                            Progress 5%
                                             @endif
                                                                                        
                                         </p>

@@ -27,6 +27,10 @@
         width: 100%;
         height: auto;
     }
+
+    span{
+        font-size: 16px !important;
+    }
 </style>
 
 
@@ -44,13 +48,13 @@
 </section>
 
 
-<ul id="thumbnails" class="thumbnails">
+{{-- <ul id="thumbnails" class="thumbnails">
 @foreach($images as $image)
   <li class="thumbnail">
     <img src="{{ url('https://mis.esnaad.com/uploads/projects/images/'.$project_image_id.'/'.$image['name']) }}" alt="{{$name}}-{{$image['id']}}" width="100%" height="auto" loading="eager" >
   </li>
 @endforeach
-</ul>
+</ul> --}}
 
 <div class="sm:container sm:mx-auto mx-0 px-4 xl:my-20 sm:my-4 mx-auto">
 

@@ -81,13 +81,13 @@
             @include('development_details.desktop.bodyOne')
         </section>
 
-        <section class="my-15 ">
+        <section class="mt-10 mb-5 ">
             @include('development_details.desktop.bodyFour')
         </section>
 
-        <section class="my-15">
+        {{-- <section class="mb-15 mt-0">
             @include('development_details.desktop.bodyTwo')
-        </section>
+        </section> --}}
 
 
         <section class="my-0" id="project_detail_map_section">

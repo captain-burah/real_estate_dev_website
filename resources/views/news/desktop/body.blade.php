@@ -7,9 +7,9 @@
             <a href="{{ url('/'.$langSeg.'/blogs')}}" class=" text-xl font-light  transition duration-150 ease-out hover:ease-in">
                 {{ __('frontend.mediaH3') }}
             </a>
-            <a href="{{ url('/'.$langSeg.'/media-gallery')}}" class="text-xl font-light   transition duration-150 ease-out hover:ease-in ">
+            {{-- <a href="{{ url('/'.$langSeg.'/media-gallery')}}" class="text-xl font-light   transition duration-150 ease-out hover:ease-in ">
                 {{ __('frontend.mediaH4') }}
-            </a>
+            </a> --}}
             
         </div>
 
@@ -47,7 +47,7 @@
                         </div>
                         <div class="row text-center pb-5 pt-2 mt-3">
                             <a href="{{ URL('https://esnaad.com/'.$langSeg.'/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation')}}"
-                                class="bg-white text-black px-15 py-3"  onclick="showLoader()">
+                                class="bg-white text-black px-15 py-3"  >
                                 <span id="buttonText">
                                     @if($langSeg=="ar")
                                     اكتشف المزيد
@@ -65,15 +65,15 @@
 </div>
 
 <script>
-    function showLoader() {
-        // Hide the button text
-        document.getElementById('buttonText').style.display = 'none';
-        // Show the loader image
-        document.getElementById('loaderImg').style.display = 'inline';
+    // function showLoader() {
+    //     // Hide the button text
+    //     document.getElementById('buttonText').style.display = 'none';
+    //     // Show the loader image
+    //     document.getElementById('loaderImg').style.display = 'inline';
 
-        // Wait for 2 seconds and then navigate to the next page
-        setTimeout(function() {
-            // window.location.href = 'https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation'; // URL of the next page
-        }, 500);
-    }
+    //     // Wait for 2 seconds and then navigate to the next page
+    //     setTimeout(function() {
+    //         // window.location.href = 'https://esnaad.com/en/press-release/esnaad-unveils-the-spark-by-esnaad-a-beacon-of-innovation'; // URL of the next page
+    //     }, 500);
+    // }
 </script>
