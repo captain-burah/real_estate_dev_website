@@ -936,7 +936,7 @@ class FrontEndController extends Controller
 
     public function project_detail_inquiry($lang='', Request $request) {
 
-        if($request->expression_check != "12x" ){
+        if($request->expression_check != "9" ){
             return redirect()->back()->with('message', 'Captcha Failed! Please try again.');
         }
         

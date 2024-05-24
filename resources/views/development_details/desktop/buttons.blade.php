@@ -961,13 +961,13 @@
                                     
                                 </tr>
                             </table>
-                            <p>Please answer the captcha question</p>
+                            <p class="text-black" style="color: #000 !important;">Please answer the captcha question</p>
                             <div class="flex" dir="ltr">
                                 <div class="flex-none w-30 ...">
-                                    <img src="{{ asset('check.webp')}}">
+                                    <img src="{{ asset('developments/5_4.webp')}}">
                                 </div>
                                 <div class="flex-initial w-100 h-auto">
-                                    <input type="text"  placeholder="1234x" name="expression_check" class="h-[100%] w-[100%] text-black" id="brochure_expression_check" required>
+                                    <input type="text"  placeholder="12345" name="expression_check" class="h-[100%] w-[100%] text-black" id="brochure_expression_check" required>
                                 </div>
                             </div>
                         </div>
